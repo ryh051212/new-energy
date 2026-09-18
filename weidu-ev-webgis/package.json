@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@turf/turf": "^7.4.0",
     "maplibre-gl": "^6.10.0",
     "vue": "^3.5.42"
   },

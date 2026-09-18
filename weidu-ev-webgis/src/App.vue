@@ -1,7 +1,7 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import MapView from './components/MapView.vue'
 </script>
 
 <template>
-  <HelloWorld />
+  <MapView />
 </template>
