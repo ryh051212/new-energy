@@ -6,7 +6,7 @@
       "properties": {
         "id": 1,
         "name": "测试充电站A",
-        "chargingType": "快充",
+        "chargeType": "fast",
         "guns": 20
       },
       "geometry": {

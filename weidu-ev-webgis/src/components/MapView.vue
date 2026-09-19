@@ -58,7 +58,9 @@ onMounted(() => {
               ["get", "chargeType"],
               "slow",
               "#2563eb",
+              "fast",
               "#16a34a",
+              "#6b7280",
             ],
             "circle-radius": ["match", ["get", "chargeType"], "slow", 9, 7],
             /*if (chargeType === "slow") {
@@ -79,7 +81,34 @@ onMounted(() => {
       `${import.meta.env.BASE_URL}geojson/weidu.json`,
     );
     map.on("click", "stations-circle", (e) => {
-      console.log(e.features[0].properties);
+      const station = e.features?.[0];
+      if (!station || !station.geometry) return;
+
+      const properties = station.properties || {};
+      const coordinates = station.geometry.coordinates;//經緯度坐標
+
+      // 实例化窗口
+      new maplibregl.Popup()
+        .setLngLat(coordinates)//把这个坐标传给 Popup，让弹窗显示在该点的位置。
+        .setHTML(`
+    <div style="
+      padding: 12px 14px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+      border: 1px solid #e5e7eb;
+      color: purple;
+      font-size: 14px;
+      line-height: 1.7;
+    ">
+      <div style="font-size:15px; font-weight:700; color:pink; margin-bottom:6px;">
+        ${properties.name || "充电站"}
+      </div>
+      类型：${properties.chargeType || "未知"}<br>
+      充电枪数量：${properties.guns || "未記錄"}
+    </div>
+  `)
+        .addTo(map);
     });
 
     const weiduGeoJSON = await response.json();
