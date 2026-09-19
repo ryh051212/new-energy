@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "name": "测试充电站A",
+        "chargingType": "快充",
+        "guns": 20
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [113.84, 34.03]
+      }
+    },
+    {
+    "type": "Feature",
+    "properties": {
+      "name": "慢充站",
+      "chargeType": "slow",
+      "guns":10
+    },
+    "geometry": {
+      "type": "Point",
+      "coordinates": [113.82, 34.05]
+    }
+  }
+  ]
+}
