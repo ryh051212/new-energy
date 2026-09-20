@@ -9,6 +9,7 @@ import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
 maplibregl.setWorkerUrl(workerUrl);
 
 const mapEl = ref(null);
+const weiduStationCount = ref(0);
 let map;
 
 onMounted(() => {
@@ -77,9 +78,10 @@ onMounted(() => {
   });
   map.on("load", async () => {
     //地图和 Style 加载完成以后，再执行里面的代码。
-    const response = await fetch(
-      `${import.meta.env.BASE_URL}geojson/weidu.json`,
-    );
+    const [boundaryResponse, stationsResponse] = await Promise.all([
+      fetch(`${import.meta.env.BASE_URL}geojson/weidu.json`),
+      fetch(`${import.meta.env.BASE_URL}geojson/stations.json`),
+    ]);
     map.on("click", "stations-circle", (e) => {
       const station = e.features?.[0];
       if (!station || !station.geometry) return;
@@ -104,15 +106,24 @@ onMounted(() => {
       <div style="font-size:15px; font-weight:700; color:pink; margin-bottom:6px;">
         ${properties.name || "充电站"}
       </div>
-      类型：${properties.chargeType || "未知"}<br>
-      充电枪数量：${properties.guns || "未記錄"}
+      地址：${properties.address || '暂无'}
+      <br>
+      编码：${properties.id || "未知"}<br>
+      类型：${properties.type || "未記錄"}
     </div>
   `)
         .addTo(map);
     });
 
-    const weiduGeoJSON = await response.json();
+    const weiduGeoJSON = await boundaryResponse.json();
+    const stationsGeoJSON = await stationsResponse.json();//地址传输的json数据
+    const weiduStations = stationsGeoJSON.features.filter((station) => {
+      return station.properties?.district === "魏都区";
+    });
 
+    weiduStationCount.value = weiduStations.length;
+    console.log(`当前魏都区充电站数量：${weiduStationCount.value}`);
+    
     const bbox = turf.bbox(weiduGeoJSON);
 
     map.fitBounds(
@@ -145,14 +156,39 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div ref="mapEl" class="map"></div>
+  <div class="map-wrapper">
+    <div ref="mapEl" class="map"></div>
+    <div class="station-count">
+      魏都区充电站：{{ weiduStationCount }} 个
+    </div>
+  </div>
 </template>
 
 <style scoped>
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
 .map {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   min-height: 400px;
   text-align: left;
+}
+
+.station-count {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 600;
 }
 </style>

@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.env.local
+
+# Local backup before flattening the project
+.flatten-backup/

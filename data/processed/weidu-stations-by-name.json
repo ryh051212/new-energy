@@ -1,0 +1,214 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LRJ4GMGV",
+        "name": "京能汽车充电站(得瑞充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "京能汽车充电",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797969,
+          34.051736
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K2H5EYKY",
+        "name": "星星充电汽车充电站(城发新能源金石国际充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "金石许都府东门西北50米",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.847723,
+          34.034608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LRK7IIGU",
+        "name": "特来电汽车充电站(特来电许昌市投文峰广场充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "前进路西段(塔东路与文峰路)文峰广场停车场西侧",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837201,
+          34.018354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L25SC56J",
+        "name": "特来电汽车充电站(特来电许昌市投百花北路充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "百花北路与建安大道北10米停车场内",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842858,
+          34.035561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IKHSCAZG",
+        "name": "中国石化北俎庄充电站",
+        "type": "汽车服务;充电站;充电站",
+        "address": "许昌市魏都区北环路与文峰路交叉口东南角",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841748,
+          34.066793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KK97S804",
+        "name": "特来电汽车充电站(特来电许昌市投烈士陵园充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "文峰街道许都路许昌革命烈士纪念馆(长青街)",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83982,
+          34.02692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L2LZPE68",
+        "name": "新电途汽车充电站(曹魏欢乐城充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "灞陵路168号(曹魏欢乐城东门南170米)",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.79071,
+          34.011486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KG5BXSEW",
+        "name": "中国石化汽车充电站(春海医院站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "德星路与学府街交叉口西南角春海医院停车场内",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.860698,
+          34.043006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L0RM55XP",
+        "name": "特来电汽车充电站(特来电许昌市投鸿宝酒店充电站)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "南关街道颍昌路565号鸿宝大酒店",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82247,
+          34.0221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MA5ZNQ5P",
+        "name": "启充云汽车充电站(火车站停车场充电桩项目)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "河南省许昌市魏都区颖昌街道颖昌社区居委会七一路与颖昌路交叉口",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.821222,
+          34.021771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0M6X7SML5",
+        "name": "惠利充汽车充电站(物资局家属院)",
+        "type": "汽车服务;充电站;充电站",
+        "address": "新兴路物资局家属院7号楼旁停车场",
+        "district": "魏都区",
+        "city": "许昌市",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.80471,
+          34.011063
+        ]
+      }
+    }
+  ]
+}
