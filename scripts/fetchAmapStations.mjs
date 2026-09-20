@@ -1,9 +1,8 @@
 import fs from 'node:fs'
-import path from 'node:path'
 import dotenv from 'dotenv'
 
 dotenv.config({
-  path: '.env.local',
+  path: new URL('../.env.local', import.meta.url),
 })
 
 const key = process.env.AMAP_KEY
@@ -12,9 +11,7 @@ if (!key) {
   throw new Error('没有找到 AMAP_KEY')
 }
 
-const outputPath = path.resolve(
-  'data/raw/amap-stations.json'
-)
+const outputPath = new URL('../data/raw/amap-stations.json', import.meta.url)
 
 const pageSize = 25
 const requestIntervalMs = 1200
@@ -31,10 +28,26 @@ const sleep = (milliseconds) => {
 
 const fetchPage = async (url, pageNumber) => {
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
-    const response = await fetch(url)
-    const data = await response.json()
+    let data
+    try {
+      const response = await fetch(url, { signal: AbortSignal.timeout(15000) })
+      if (!response.ok) {
+        const error = new Error(`HTTP ${response.status}`)
+        error.retryable = response.status === 429 || response.status >= 500
+        throw error
+      }
+      data = await response.json()
+    } catch (error) {
+      if (attempt === maxRetries || error.retryable === false) {
+        // 不打印可能携带 key 的请求 URL。
+        throw new Error(`第 ${pageNumber} 页请求失败，原数据未覆盖`)
+      }
+      await sleep(2000 * (attempt + 1))
+      continue
+    }
 
     if (data.status === '1') {
+      if (!Array.isArray(data.pois)) throw new Error('接口返回的 pois 不是数组，原数据未覆盖')
       return data
     }
 
@@ -42,7 +55,6 @@ const fetchPage = async (url, pageNumber) => {
       data.infocode !== '10021' ||
       attempt === maxRetries
     ) {
-      console.error(data)
       throw new Error('高德接口请求失败')
     }
 
@@ -87,7 +99,7 @@ while (true) {
 
   // 防止无限循环
   if (pageNum > 20) {
-    break
+    throw new Error('达到 20 页上限，结果可能不完整，原数据未覆盖')
   }
 }
 
@@ -100,7 +112,7 @@ const result = {
 }
 
 fs.mkdirSync(
-  path.dirname(outputPath),
+  new URL('.', outputPath),
   {
     recursive: true,
   }

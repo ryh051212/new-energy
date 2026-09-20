@@ -10,7 +10,8 @@
         "address": "京能汽车充电",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -29,7 +30,8 @@
         "address": "金石许都府东门西北50米",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -48,7 +50,8 @@
         "address": "前进路西段(塔东路与文峰路)文峰广场停车场西侧",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -67,7 +70,8 @@
         "address": "百花北路与建安大道北10米停车场内",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -86,7 +90,8 @@
         "address": "许由路与文峰路交叉口向西300米",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -105,7 +110,8 @@
         "address": "魏武大道与莲城大道东500米路南",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -124,7 +130,8 @@
         "address": "长兴路中段长兴办事处西临路北极兔快递院内",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -143,7 +150,8 @@
         "address": "京港澳高速收费站东北500米",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -162,7 +170,8 @@
         "address": "许昌市魏都区北环路与文峰路交叉口东南角",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -181,7 +190,8 @@
         "address": "星星充电途欢新能源超级充电站",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -200,7 +210,8 @@
         "address": "文峰街道许都路许昌革命烈士纪念馆(长青街)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -219,7 +230,8 @@
         "address": "尚集镇宋庄社区党群服务中心一楼105号",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -238,7 +250,8 @@
         "address": "灞陵路168号(曹魏欢乐城东门南170米)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -257,7 +270,8 @@
         "address": "褚河街道103省道",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -276,7 +290,8 @@
         "address": "石象镇保台线长葛市众邑肉食有限公司",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -295,7 +310,8 @@
         "address": "德星路与学府街交叉口西南角春海医院停车场内",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -314,7 +330,8 @@
         "address": "石象镇新107国道和开许路交叉口向南50米路东19号",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -333,7 +350,8 @@
         "address": "颍阳镇311国道",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -352,7 +370,8 @@
         "address": "南关街道颍昌路565号鸿宝大酒店",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -371,7 +390,8 @@
         "address": "河南省许昌市魏都区颖昌街道颖昌社区居委会七一路与颖昌路交叉口",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -390,7 +410,8 @@
         "address": "南四环梁北生态园停车场旭涛充电站",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -409,7 +430,8 @@
         "address": "新兴路物资局家属院7号楼旁停车场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -428,7 +450,8 @@
         "address": "东腾南郡2期地面停车场",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -447,7 +470,8 @@
         "address": "画圣路337号中国石化站内",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -466,7 +490,8 @@
         "address": "彭店镇230国道",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -485,7 +510,8 @@
         "address": "和谐路18号",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -504,7 +530,8 @@
         "address": "华佗路与向阳路交叉口西60米西关里文创社区停车场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -523,7 +550,8 @@
         "address": "滨河路与新元大道交叉口往北100米路西停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -542,7 +570,8 @@
         "address": "新合作广场停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -561,7 +590,8 @@
         "address": "七一路888号许昌大酒店院内地面停车场/入口七一路",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -580,7 +610,8 @@
         "address": "颖昌街道",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -599,7 +630,8 @@
         "address": "滨河大道与轩辕路交叉口西北角",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -618,7 +650,8 @@
         "address": "瑞贝卡大道与许州路交叉口西南角中国石化加油站内",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -637,7 +670,8 @@
         "address": "G240长葛市广琪机械厂",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -656,7 +690,8 @@
         "address": "昌盛街道大学路常绿北海壹号院",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -675,7 +710,8 @@
         "address": "阳翟大道95号",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -694,7 +730,8 @@
         "address": "半截河街道青梅路中央公园内(南侧)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -713,7 +750,8 @@
         "address": "新大新超市体验店",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -732,7 +770,8 @@
         "address": "魏武大道西侧万象路1号",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -751,7 +790,8 @@
         "address": "225省道与刘庄村交叉口",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -770,7 +810,8 @@
         "address": "建安大道高速口许昌旅游服务中心停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -789,7 +830,8 @@
         "address": "长南路719号",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -808,7 +850,8 @@
         "address": "半截河市场监督管理所院内停车场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -827,7 +870,8 @@
         "address": "泰山牌石膏板系统南",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -846,7 +890,8 @@
         "address": "老城镇魏武中路与秦公东路交叉口东南200米电子信息产业园3号楼1楼",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -865,7 +910,8 @@
         "address": "建安大道3696号",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -884,7 +930,8 @@
         "address": "S83(兰南高速)驴充充充电站",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -903,7 +950,8 @@
         "address": "建安大道与三里桥街交叉口西南角金石国际地下停车场负一层和负二层北侧s区",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -922,7 +970,8 @@
         "address": "中央公园内(南侧)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -941,7 +990,8 @@
         "address": "蒋李集镇许昌南服务区驿充电汽车充电站许昌南服务区",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -960,7 +1010,8 @@
         "address": "建安大道与学院北路交叉口向东300米中原国际饭店地下一层",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -979,7 +1030,8 @@
         "address": "火龙镇葛村",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -998,7 +1050,8 @@
         "address": "许都路与三里桥街交叉路口往东北约200米地面停车场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1017,7 +1070,8 @@
         "address": "聂政台路147号",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1036,7 +1090,8 @@
         "address": "237省道与天宝路",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1055,7 +1110,8 @@
         "address": "长村张街道南环西路河南路畅养护机械制造有限公司",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1074,7 +1130,8 @@
         "address": "邓庄街道中原路",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1093,7 +1150,8 @@
         "address": "许由西路与解放南路交叉口向西300米路北(睿蓝4S店东侧进院)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1112,7 +1170,8 @@
         "address": "前进路辅路",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1131,7 +1190,8 @@
         "address": "许州路150号公交充电站",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1150,7 +1210,8 @@
         "address": "天宝路劳动路交叉口向西10米路南万里租车院内",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1169,7 +1230,8 @@
         "address": "319省道附近",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1188,7 +1250,8 @@
         "address": "安罗高速彭店出口南一公里处路东",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1207,7 +1270,8 @@
         "address": "郑石高速褚河上道口",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1226,7 +1290,8 @@
         "address": "地面停车场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1245,7 +1310,8 @@
         "address": "许禹路与西环交汇处西北角",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1264,7 +1330,8 @@
         "address": "文峰中路364号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1283,7 +1350,8 @@
         "address": "火龙镇恒丰公寓",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1302,7 +1370,8 @@
         "address": "长兴路街道钟繇大道北段长葛市公安局交通管理大队",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1321,7 +1390,8 @@
         "address": "南环西路G311国道高峰路桥",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1340,7 +1410,8 @@
         "address": "好万家家具广场附近)",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1359,7 +1430,8 @@
         "address": "天宝路街道天宝东路保利堂悦",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1378,7 +1450,8 @@
         "address": "三国大酒店(胖东来时代广场曹魏古城店)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1397,7 +1470,8 @@
         "address": "建安大道九洲溪雅园西门",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1416,7 +1490,8 @@
         "address": "将官池镇梨园转盘3公里107国道与高铁桥交汇处路东",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1435,7 +1510,8 @@
         "address": "G240与董永路交叉口正南方向193米睿达公司",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1454,7 +1530,8 @@
         "address": "梁北镇陕汽商用车禹州中联服务站东风商用车禹州金顺达4s店",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1473,7 +1550,8 @@
         "address": "311国道与017乡道交口东北侧",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1492,7 +1570,8 @@
         "address": "G240乐盛新型建材科技有限公司旁50米",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1511,7 +1590,8 @@
         "address": "颍昌路与七一路交叉口南100米地面停车场101",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1530,7 +1610,8 @@
         "address": "颍昌路201号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1549,7 +1630,8 @@
         "address": "G240与董永路交叉口正北方向100米左右",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1568,7 +1650,8 @@
         "address": "地面停车场16",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1587,7 +1670,8 @@
         "address": "五女店镇周店村",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1606,7 +1690,8 @@
         "address": "建安大道1502号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1625,7 +1710,8 @@
         "address": "建安大道1527号许都公园西侧停车场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1644,7 +1730,8 @@
         "address": "顺店镇顺南村四组",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1663,7 +1750,8 @@
         "address": "许昌南服务区北侧",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1682,7 +1770,8 @@
         "address": "祥云大道东段药慧园内大汉药业斜对面",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1701,7 +1790,8 @@
         "address": "许繁路3935号",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1720,7 +1810,8 @@
         "address": "京港澳高速许昌服务区西侧西北地面停车场",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1739,7 +1830,8 @@
         "address": "滨河大道(东段)颍河石化加油站内",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1758,7 +1850,8 @@
         "address": "颍川街道禹王大道和谐佳苑",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1777,7 +1870,8 @@
         "address": "文峰北路许昌恒大悦府东北侧约250米",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1796,7 +1890,8 @@
         "address": "长村张客运站地面停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1815,7 +1910,8 @@
         "address": "花石镇夏庄村2组",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1834,7 +1930,8 @@
         "address": "郭连镇103省道地面停车场",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1853,7 +1950,8 @@
         "address": "邓庄街道办事处莲城大道与雪松路交叉口红路灯路北门口",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1872,7 +1970,8 @@
         "address": "南环路与许繁路交叉口",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1891,45 +1990,8 @@
         "address": "灞陵路许昌中梁西都府超充站",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.79153,
-          34.005333
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0L6GP0Q95",
-        "name": "昆仑网电汽车充电站(中石油许昌第八充电站)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "南环路与许繁路交叉口",
-        "district": "建安区",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.81823,
-          33.977319
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0M6LA4LE1",
-        "name": "特来电汽车充电站(特来电许昌中梁西都府超充站)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "灞陵路许昌中梁西都府超充站",
-        "district": "魏都区",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1948,7 +2010,8 @@
         "address": "永宁街088号",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1967,7 +2030,8 @@
         "address": "瑞祥路中段许昌双龙湖地面停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -1986,7 +2050,8 @@
         "address": "南关街道车站路10号许昌站",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2005,7 +2070,8 @@
         "address": "双庙乡门楼李村",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2024,7 +2090,8 @@
         "address": "321省道",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2043,7 +2110,8 @@
         "address": "邓庄街道东苑街东城区产业孵化园",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2062,7 +2130,8 @@
         "address": "保台线长葛市君益加油站东南侧",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2081,7 +2150,8 @@
         "address": "长葛京港澳高速路口东北300米",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2100,7 +2170,8 @@
         "address": "许昌经济技术开发区长村张乡许广高速许昌南收费站向北1.7公里路西中国石油加油站",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2119,7 +2190,8 @@
         "address": "坡胡镇水磨河社区党群服务中心",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2138,7 +2210,8 @@
         "address": "许都路万达广场",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2157,7 +2230,8 @@
         "address": "紫云大道湛北镇侯楼村润泽加气站",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2176,7 +2250,8 @@
         "address": "河南省许昌市长葛市河南省许昌市长葛市大周镇",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2195,7 +2270,8 @@
         "address": "古城镇103国道与龙屯西街交叉口200米",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2214,7 +2290,8 @@
         "address": "河南和之源充换电站",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2233,7 +2310,8 @@
         "address": "夏都街道夏都路99号",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2252,7 +2330,8 @@
         "address": "小吕镇吕梁路",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2271,7 +2350,8 @@
         "address": "五一路街道许昌市阳光天使心理咨询中心假日宾馆",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2290,7 +2370,8 @@
         "address": "花都大道与合欢路交叉口中国石化站内",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2309,7 +2390,8 @@
         "address": "山头店乡寺门村",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2328,7 +2410,8 @@
         "address": "石象镇车庄",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2347,7 +2430,8 @@
         "address": "卓宇路1号",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2366,64 +2450,8 @@
         "address": "神垕镇解放路东段(镇政府斜对面)",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.230934,
-          34.121865
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0LKHOSBMY",
-        "name": "新电途汽车充电站(长葛市悦实充电站)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "石象镇车庄",
-        "district": "长葛市",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.969635,
-          34.184742
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0J3C5GRVZ",
-        "name": "理想汽车超级充电站(理想5C超充站京港澳高速许昌服务区北京方向)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "卓宇路1号",
-        "district": "长葛市",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.815359,
-          34.297575
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0L6KRQUFJ",
-        "name": "云快充汽车充电站(孔家大酒店充电站)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "神垕镇解放路东段(镇政府斜对面)",
-        "district": "禹州市",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2442,7 +2470,8 @@
         "address": "襄禹路瑞源汽修",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2461,7 +2490,8 @@
         "address": "建安区学院南路(万顺机动车检测北邻)",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2480,7 +2510,8 @@
         "address": "许州路150号公交充电站地面停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2499,7 +2530,8 @@
         "address": "建安区人民政府北邻",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2518,7 +2550,8 @@
         "address": "夏都街道邢口胡同夏都路西",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2537,7 +2570,8 @@
         "address": "迎宾路东段君豪宾馆院内",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2556,7 +2590,8 @@
         "address": "药诚路郑州轻工业学院禹州校区西侧50米",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2575,7 +2610,8 @@
         "address": "103省道东南侧",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2594,7 +2630,8 @@
         "address": "赵湾路新田360广场(许昌亨源通店)(南侧)亨源通世纪广地面停车位",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2613,7 +2650,8 @@
         "address": "大周镇梅胡路中段",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2632,7 +2670,8 @@
         "address": "无梁镇寇庄村路东",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2651,7 +2690,8 @@
         "address": "许都路魏文路交叉口万达地面停车场C219",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2670,7 +2710,8 @@
         "address": "邓庄街道中国石化加气站",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2689,7 +2730,8 @@
         "address": "城关街道北汝河国家湿地公园",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2708,7 +2750,8 @@
         "address": "新兴西路1号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2727,7 +2770,8 @@
         "address": "将官池镇梨园大转盘",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2746,7 +2790,8 @@
         "address": "新兴东路4336号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2765,7 +2810,8 @@
         "address": "东西北街与钟繇大道交叉口西北130米",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2784,7 +2830,8 @@
         "address": "星星充电途欢新能源超级充电站",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2803,7 +2850,8 @@
         "address": "神垕镇关爷庙居委会龙山大道3号金庭钧瓷坊",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2822,7 +2870,8 @@
         "address": "京澳线与丰产路交叉口往东南约20米地面停车场",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2841,26 +2890,8 @@
         "address": "103省道与禹襄路十字路口红绿灯向西300米路北院内",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.46925,
-          34.123773
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0MAM459K5",
-        "name": "云快充超级充电站(禹州市合一重卡充电站)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "103省道与禹襄路十字路口红绿灯向西300米路北院内",
-        "district": "禹州市",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2879,7 +2910,8 @@
         "address": "京港澳高速许昌服务区2号充电站(北京方向)",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2898,7 +2930,8 @@
         "address": "禹州服务区地面停车场",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2917,7 +2950,8 @@
         "address": "韩城街道后屯刘家美食",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2936,7 +2970,8 @@
         "address": "老城镇长社东路2926号翰创超级充电站(重卡超充)",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2955,7 +2990,8 @@
         "address": "北大街道八一西路恒达金汇广场商业街6号楼1层116号库迪咖啡",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2974,7 +3010,8 @@
         "address": "陶城镇S129",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -2993,7 +3030,8 @@
         "address": "紫云大道与八七路交叉口西北角",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3012,7 +3050,8 @@
         "address": "高铁东站客运站站前广场停车场",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3031,7 +3070,8 @@
         "address": "发展燃气许昌南服务区LNG加气站西南侧90米",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3050,7 +3090,8 @@
         "address": "劳动北路4590号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3069,7 +3110,8 @@
         "address": "许昌服务区",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3088,7 +3130,8 @@
         "address": "紫云大道与八七路交叉口西北角",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3107,7 +3150,8 @@
         "address": "阳光大道与延安路交叉口东北角龙湖金座",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3126,7 +3170,8 @@
         "address": "丁庄街道毅辰汽车照明",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3145,7 +3190,8 @@
         "address": "半截河街道亨源通世纪广场(入口赵湾路)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3164,7 +3210,8 @@
         "address": "紫云大道十三矿路中国石化加油站",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3183,7 +3230,8 @@
         "address": "柏梁镇西311国道路北伍子段",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3202,7 +3250,8 @@
         "address": "新兴路35号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3221,7 +3270,8 @@
         "address": "夏都路与禹王大道交叉口西南角中国石化站内",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3240,7 +3290,8 @@
         "address": "石象镇苗庄社区对面",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3259,7 +3310,8 @@
         "address": "鄢望路10-5号",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3278,7 +3330,8 @@
         "address": "浅井镇铁石坡",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3297,7 +3350,8 @@
         "address": "河南福侨石油装备公司",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3316,26 +3370,8 @@
         "address": "九弟万丰购物广场(东门)以北",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          113.83686,
-          34.04227
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "id": "B0L3TX8A7D",
-        "name": "平高智联汽车充电站(魏都区仁和骨科医院充电站)",
-        "type": "汽车服务;充电站;充电站",
-        "address": "九弟万丰购物广场(东门)以北",
-        "district": "魏都区",
-        "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3354,7 +3390,8 @@
         "address": "佛耳湖镇许昌服务区(广州方向)地面停车场",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3373,7 +3410,8 @@
         "address": "富澳珺庭花园大门口东侧",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3392,7 +3430,8 @@
         "address": "颍川街道禹王大道十里商住小区",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3411,7 +3450,8 @@
         "address": "中孚金属",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3430,7 +3470,8 @@
         "address": "无梁镇姚店村京华石油城加油站北30米",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3449,7 +3490,8 @@
         "address": "老城镇森源东路公园华府超级充电站",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3468,7 +3510,8 @@
         "address": "魏武大道与隆昌路交汇东南许昌5G创新应用产业园",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3487,7 +3530,8 @@
         "address": "无梁镇无梁路口北1000米路西,曹楼东牌坊西",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3506,7 +3550,8 @@
         "address": "无梁镇103省道金源门窗厂",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3525,7 +3570,8 @@
         "address": "钟繇大道与长社路交汇处东南角",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3544,7 +3590,8 @@
         "address": "邓庄街道新东街长城家园",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3563,7 +3610,8 @@
         "address": "佛耳湖镇许昌服务区(北京方向)地面停车场",
         "district": "长葛市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3582,7 +3630,8 @@
         "address": "西大街道西大街591号西湖公园内(南侧)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3601,7 +3650,8 @@
         "address": "兴业路118号",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3620,7 +3670,8 @@
         "address": "张良大道138号",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3639,7 +3690,8 @@
         "address": "邓庄街道中铁十六局集团有限公司许昌东站",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3658,7 +3710,8 @@
         "address": "花都大道与忠武路交叉口向东100米路北",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3677,7 +3730,8 @@
         "address": "半截河街道魏都万达广场(入口魏文路)",
         "district": "魏都区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3696,7 +3750,8 @@
         "address": "S237和谐东路京辉汽修汽配对面",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3715,7 +3770,8 @@
         "address": "中原花木博览园南1门东240米",
         "district": "鄢陵县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3734,7 +3790,8 @@
         "address": "大禹像南150米路东",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3753,7 +3810,8 @@
         "address": "火龙镇燕磨路河南省禹州市火龙镇剑桥幼儿园",
         "district": "禹州市",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3772,7 +3830,8 @@
         "address": "屯田路许昌经济开发区高创科技孵化器",
         "district": "建安区",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
@@ -3791,7 +3850,8 @@
         "address": "八七路东段路南王庄村",
         "district": "襄城县",
         "city": "许昌市",
-        "coordSystem": "GCJ-02"
+        "coordSystem": "GCJ-02",
+        "chargeType": "unknown"
       },
       "geometry": {
         "type": "Point",
