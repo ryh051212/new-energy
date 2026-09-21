@@ -5,19 +5,28 @@ import vm from 'node:vm'
 import * as turf from '@turf/turf'
 
 // 执行 MapView 真实的内联事件代码，使用本地数据和模拟地图检查功能。
-async function mount(failFile = '') {
+async function mount(failFile = '', leaveDuringFetch = false) {
   const source = fs.readFileSync(new URL('../src/components/MapView.vue', import.meta.url), 'utf8')
   const script = source.split('<script setup>')[1].split('</script>')[0]
     .replace(/^import .*;\r?\n/gm, '').replaceAll('import.meta.env.BASE_URL', '"/"')
   const handlers = {}
   const sources = {}
   const popups = []
+  const visibility = {}
+  let options
+  let removed = false
+  let requestSignal
   let ready
   let cleanup
   const map = {
     on(name, layer, callback) { handlers[`${name}:${typeof layer === 'string' ? layer : ''}`] = callback || layer },
-    getSource(name) { return { setData(data) { sources[name] = data } } },
-    fitBounds() {}, getCanvas() { return {} }, resize() {}, remove() {},
+    getSource(name) {
+      assert.equal(removed, false, '卸载后不能继续访问地图')
+      return { setData(data) { sources[name] = data } }
+    },
+    getLayer() { return {} },
+    setLayoutProperty(id, property, value) { visibility[id] = value },
+    fitBounds() {}, getCanvas() { return {} }, resize() {}, remove() { removed = true },
     queryRenderedFeatures() { return [] },
   }
   class Popup {
@@ -30,21 +39,43 @@ async function mount(failFile = '') {
   const context = vm.createContext({
     ref: value => ({ value }), onMounted: callback => { ready = callback },
     onBeforeUnmount: callback => { cleanup = callback }, turf, workerUrl: '',
-    maplibregl: { setWorkerUrl() {}, Map: function () { return map }, Popup },
+    maplibregl: { setWorkerUrl() {}, Map: function (config) { options = config; return map }, Popup },
     AbortController, AbortSignal, ResizeObserver: class { observe() {} disconnect() {} },
     console: { error() {} },
     document: { createElement() { return { children: [], append(child) { this.children.push(child) } } } },
-    fetch: async url => {
+    fetch: async (url, config) => {
+      requestSignal = config.signal
       const filename = url.split('/').pop()
-      return { ok: filename !== failFile, json: async () => JSON.parse(fs.readFileSync(new URL(`../public/geojson/${filename}`, import.meta.url), 'utf8')) }
+      return { ok: filename !== failFile, json: async () => {
+        // 模拟响应解析期间离开页面，此时异步回调仍可能返回。
+        if (leaveDuringFetch && filename === 'stations.json') cleanup()
+        return JSON.parse(fs.readFileSync(new URL(`../public/geojson/${filename}`, import.meta.url), 'utf8'))
+      } }
     },
   })
   vm.runInContext(script, context)
   ready()
   await handlers['load:']()
-  return { sources, handlers, popups, map, cleanup,
+  return { sources, handlers, popups, map, cleanup, options, visibility, requestSignal,
     state: vm.runInContext('({ count: weiduStationCount.value, error: loadError.value, warning: gridWarning.value, loading: loading.value })', context) }
 }
+
+test('热力图默认隐藏，网格填充和边线默认显示', async () => {
+  const app = await mount()
+  const heatmap = app.options.style.layers.find(layer => layer.id === 'stations-heatmap')
+  assert.equal(heatmap.layout.visibility, 'none')
+  assert.equal(app.visibility['stations-heatmap'], 'none')
+  assert.equal(app.visibility['hexgrid-fill'], 'visible')
+  assert.equal(app.visibility['hexgrid-outline'], 'visible')
+  app.cleanup()
+})
+
+test('加载期间卸载会取消请求，也不会继续更新地图', async () => {
+  const app = await mount('', true)
+  assert.equal(app.requestSignal.aborted, true)
+  assert.deepEqual(app.sources, {})
+  assert.equal(app.state.error, '')
+})
 
 test('MapView 内联筛选与网格累计数量一致', async () => {
   const app = await mount()

@@ -4,7 +4,8 @@ import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import * as turf from "@turf/turf";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
-
+import AnalysisPanel
+  from './panels/AnalysisPanel.vue'
 import LayerControl
   from './map/LayerControl.vue'
 // 让 Vite 同时打包 MapLibre 处理地图数据的 Worker。
@@ -14,8 +15,16 @@ const mapEl = ref(null);
 const weiduStationCount = ref(0);
 let map;
 let popup;
+const stationCount = ref(0)//真实的充电桩数量
 
+const hexCount = ref(0)// 六边形总数
+
+const occupiedHexCount = ref(0)//至少有一个充电桩的六边形数量
+
+const selectedHex = ref(null)//当前点击的六边形
+loadStatistics()
 onMounted(() => {
+  
   map = new maplibregl.Map({
     container: mapEl.value,
     center: [113.85, 34.04],
@@ -293,6 +302,10 @@ onMounted(() => {
       if (stations.length > 0) return;
 
       const hex = e.features[0];
+      selectedHex.value = {
+        id: hex.properties.id,
+        stationCount: Number(hex.properties.stationCount),
+      };
       if (popup) {
         popup.remove();
       }
@@ -373,7 +386,7 @@ function toggleLayer(groupId, visible) {
   const group =
     layerGroups.value.find(
       item => item.id === groupId
-    )
+    )//检查图层组
 
   if (!group) return
 
@@ -381,7 +394,7 @@ function toggleLayer(groupId, visible) {
 
     if (!map.getLayer(layerId)) {
       return
-    }
+    }//检查图层组地图图层
 
     map.setLayoutProperty(//隐藏函数
       layerId,
@@ -394,6 +407,38 @@ function toggleLayer(groupId, visible) {
 
   group.visible = visible
 }
+//右侧属性面板
+async function loadStatistics() {
+
+  const stationResponse =
+    await fetch(
+      `${import.meta.env.BASE_URL}geojson/stations.json`
+    )
+
+  const stationData =
+    await stationResponse.json()
+
+  stationCount.value =
+    stationData.features.length
+
+
+  const hexResponse =
+    await fetch(
+      `${import.meta.env.BASE_URL}geojson/hex-grid.json`
+    )
+
+  const hexData =
+    await hexResponse.json()
+
+  hexCount.value =
+    hexData.features.length
+
+  occupiedHexCount.value =
+    hexData.features.filter(
+      hex =>
+        hex.properties.stationCount > 0
+    ).length
+}
 </script>
 
 <template>
@@ -403,6 +448,13 @@ function toggleLayer(groupId, visible) {
     <LayerControl
       :layers="layerGroups"
       @toggle="toggleLayer"
+    />
+//这段代码把父组件 MapView.vue 中的数据传给子组件v-bind
+    <AnalysisPanel
+      :station-count="stationCount"
+      :hex-count="hexCount"
+      :occupied-hex-count="occupiedHexCount"
+      :selected-hex="selectedHex"
     />
   </div>
 </template>

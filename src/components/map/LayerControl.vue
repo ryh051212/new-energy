@@ -1,4 +1,3 @@
-//UI控制
 <script setup>//父组件传数据给子组件
 defineProps({
   layers: {
@@ -40,18 +39,17 @@ const emit = defineEmits(['toggle'])//声明子组件可以向父组件发送哪
 
 <style scoped>
 .layer-control {
+  /* 放在地图上方，并避开左上角的站点数量。 */
   position: absolute;
-
-  top: 20px;
-  left: 20px;
-
+  top: 72px;
+  left: 16px;
   z-index: 10;
-
   width: 190px;
 
   padding: 16px;
 
   background: rgba(255, 255, 255, 0.95);
+  color: #334155;
 
   border-radius: 10px;
 
