@@ -1,0 +1,82 @@
+//UI控制
+<script setup>//父组件传数据给子组件
+defineProps({
+  layers: {
+    type: Array,
+    required: true
+  }
+})
+
+const emit = defineEmits(['toggle'])//声明子组件可以向父组件发送哪些自定义事件。
+</script>
+
+<template>
+  <div class="layer-control">
+
+    <h3>图层管理器</h3>
+
+    <label
+      v-for="layer in layers"
+      :key="layer.id"
+      class="layer-item"
+    >
+      <input
+        type="checkbox"
+        :checked="layer.visible"
+        @change="
+          emit(
+            'toggle',//事件
+            layer.id,//标识
+            $event.target.checked//是否选择
+          )
+        "
+      >
+
+      <span>{{ layer.label }}</span>
+    </label>
+
+  </div>
+</template>
+
+<style scoped>
+.layer-control {
+  position: absolute;
+
+  top: 20px;
+  left: 20px;
+
+  z-index: 10;
+
+  width: 190px;
+
+  padding: 16px;
+
+  background: rgba(255, 255, 255, 0.95);
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.layer-control h3 {
+  margin:
+    0
+    0
+    12px;
+
+  font-size: 16px;
+}
+
+.layer-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+</style>
