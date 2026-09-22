@@ -1,4 +1,6 @@
 <script setup>
+import HexDistributionChart from '../charts/HexDistributionChart.vue'
+const emit = defineEmits(['selectStationCount'])
 defineProps({
   stationCount: {
     type: Number,
@@ -18,8 +20,22 @@ defineProps({
   selectedHex: {
     type: Object,
     default: null
+  },
+  hexDistribution: {
+    type: Array,
+    default: () => []
   }
 })
+function handleStationCountSelect(
+  stationCount
+) {
+  console.log(
+    'AnalysisPanel 收到：',
+    stationCount
+  )
+  // 组件事件不会自动向上冒泡，需要转发给 MapView。
+  emit('selectStationCount', stationCount)
+}
 </script>
 
 <template>
@@ -41,6 +57,13 @@ defineProps({
       <span>有站网格</span>
       <strong>{{ occupiedHexCount }}</strong>
     </div>
+
+    <HexDistributionChart 
+    :data="hexDistribution" 
+     @selectStationCount="handleStationCountSelect"
+     
+    />
+   
 
     <div
       v-if="selectedHex"
@@ -71,11 +94,14 @@ defineProps({
 
   z-index: 10;
 
-  width: 230px;
+  width: 300px;
+  max-width: calc(100vw - 72px);
+  max-height: calc(100vh - 72px);
+  overflow-y: auto;
 
   padding: 16px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(236, 232, 232, 0.95);
 
   border-radius: 10px;
 

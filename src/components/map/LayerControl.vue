@@ -48,7 +48,7 @@ const emit = defineEmits(['toggle'])//声明子组件可以向父组件发送哪
 
   padding: 16px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(224, 217, 217, 0.95);
   color: #334155;
 
   border-radius: 10px;
