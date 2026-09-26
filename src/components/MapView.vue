@@ -18,6 +18,8 @@ const stationCount = ref(0); //真实的充电桩数量
 const hexCount = ref(0); // 六边形总数
 
 const occupiedHexCount = ref(0); //至少有一个充电桩的六边形数量
+const residentialCount = ref(0); // 居民小区总数
+const commercialCount = ref(0); // 商业设施总数
 
 const selectedHex = ref(null); //当前点击的六边形
 const hexDistribution = ref([]);
@@ -70,7 +72,18 @@ onMounted(() => {
           type: "geojson",
           data: { type: "FeatureCollection", features: [] },
         },
+        residential: {
+          type: "geojson",
+          // 读取刚才脚本生成的居民小区 GeoJSON
+          data: `${import.meta.env.BASE_URL}geojson/residential-pois.json`,
+        },
+        commercial: {
+          type: "geojson",
+          // 读取刚刚生成的商业 POI
+          data: `${import.meta.env.BASE_URL}geojson/commercial-pois.json`,
+        },
       },
+
       layers: [
         {
           id: "background",
@@ -176,11 +189,104 @@ onMounted(() => {
             "heatmap-opacity": 0.75,
           },
         },
+
         {
-          id: "weidu-outline",
-          type: "line",
-          source: "weidu",
-          paint: { "line-color": "#0369a1", "line-width": 2 },
+          // 这个名字以后图层控制会使用
+          id: "residential-circle",
+
+          // GeoJSON 中是 Point，所以先用 circle 显示
+          type: "circle",
+
+          // 使用刚才创建的 residential Source
+          source: "residential",
+
+          paint: {
+            // 居民小区只作为辅助需求数据，
+            // 圆点不要比充电站更加醒目
+            "circle-radius": 4,
+
+            "circle-color": "#8b5cf6",
+
+            "circle-opacity": 0.7,
+
+            "circle-stroke-color": "#ffffff",
+
+            "circle-stroke-width": 1,
+          },
+        },
+        {
+          // 商业设施点图层
+          id: "commercial-circle",
+
+          type: "circle",
+
+          // 对应上面的 commercial Source
+          source: "commercial",
+
+          paint: {
+            // 商业 POI 和居民小区区分开
+            "circle-radius": 4,
+
+            "circle-color": "#f59e0b",
+
+            "circle-opacity": 0.8,
+
+            "circle-stroke-color": "#ffffff",
+
+            "circle-stroke-width": 1,
+          },
+        },
+        {
+          // 居民小区潜在需求六边形图层
+          id: "residential-demand-fill",
+
+          // 六边形是 Polygon，所以使用 fill
+          type: "fill",
+
+          // 继续使用原来的 hexgrid Source
+          source: "hexgrid",
+
+          // 默认关闭
+          // 避免它和“六边形供给”同时叠在地图上
+          layout: {
+            visibility: "none",
+          },
+
+          paint: {
+            // 根据每个六边形的 residentialCount 分级设色
+            "fill-color": [
+              "step",
+
+              // 从当前六边形 properties 中读取 residentialCount
+              ["get", "residentialCount"],
+
+              // 0个居民小区
+              "#f8fafc",
+
+              // >= 1
+              1,
+              "#ede9fe",
+
+              // >= 3
+              3,
+              "#c4b5fd",
+
+              // >= 5
+              5,
+              "#8b5cf6",
+
+              // >= 8
+              8,
+              "#6d28d9",
+            ],
+
+            // 让底图仍然能够看见
+            "fill-opacity": 0.7,
+
+            // 给每个六边形简单加边界
+            // 这样不需要再专门创建一个 outline Layer
+            "fill-outline-color": "#94a3b8",
+          },
         },
         {
           id: "stations-circle",
@@ -206,6 +312,12 @@ onMounted(() => {
             "circle-stroke-width": 2,
           },
         },
+        {
+          id: "weidu-outline",
+          type: "line",
+          source: "weidu",
+          paint: { "line-color": "#0369a1", "line-width": 2 },
+        },
       ],
     },
   });
@@ -214,11 +326,24 @@ onMounted(() => {
       layerGroups.value.forEach((group) =>
         toggleLayer(group.id, group.visible),
       );
+      map.on("click", "residential-circle", (e) => {
+        const residential = e.features?.[0];
+        if (!residential) return;
+
+        console.log("居民小区：", residential.properties.name);
+        console.log("地址：", residential.properties.address);
+      });
       //地图和 Style 加载完成以后，再执行里面的代码。
-      const [weiduGeoJSON, stationsGeoJSON] = await Promise.all([
-        readGeoJSON("weidu.json"),
-        readGeoJSON("stations.json"),
-      ]);
+      const [weiduGeoJSON, stationsGeoJSON, residentialGeoJSON, commercialGeoJSON] =
+        await Promise.all([
+          readGeoJSON("weidu.json"),
+          readGeoJSON("stations.json"),
+          readGeoJSON("residential-pois.json"),
+          readGeoJSON("commercial-pois.json"),
+        ]);
+
+      residentialCount.value = residentialGeoJSON?.features?.length ?? 0;
+      commercialCount.value = commercialGeoJSON?.features?.length ?? 0;
       map.on("click", "stations-circle", (e) => {
         const station = e.features?.[0];
         if (!station || !station.geometry) return;
@@ -338,9 +463,12 @@ onMounted(() => {
         if (stations.length > 0) return;
 
         const hex = e.features[0];
+
+        //selectedHex表示当前点击的六边形
         selectedHex.value = {
           id: hex.properties.id,
           stationCount: Number(hex.properties.stationCount),
+          commercialCount: Number(hex.properties.commercialCount ?? 0),
         };
         if (popup) {
           popup.remove();
@@ -351,9 +479,21 @@ onMounted(() => {
             popupContent([
               "网格 " + hex.properties.id,
               "充电站数量：" + hex.properties.stationCount,
+              "商业设施数量：" + (hex.properties.commercialCount ?? 0),
             ]),
           )
           .addTo(map);
+      });
+      map.on("click", (e) => {
+        const features = map.queryRenderedFeatures(e.point, {
+          layers: ["hexgrid-fill", "stations-circle"],
+        });
+        if (features.length > 0) return;
+
+        map.setFilter("hexgrid-highlight", ["==", ["get", "stationCount"], -1]);
+        selectedHex.value = null;
+        popup?.remove(); //组件
+        popup = null;
       });
       map.on("mouseenter", "hexgrid-fill", () => {
         map.getCanvas().style.cursor = "pointer";
@@ -367,6 +507,26 @@ onMounted(() => {
     } finally {
       loading.value = false;
     }
+    map.on(
+  'click',
+  'commercial-circle',
+  (e) => {
+
+    // 用户当前点击的商业 POI
+    const feature = e.features?.[0]
+
+    if (!feature) return
+
+    console.log(
+      '商业设施：',
+      feature.properties
+    )
+
+    // 这里不要新建第二套属性面板
+    // 把 feature / properties
+    // 传给你现有的属性面板状态即可
+  }
+)
   });
 });
 
@@ -416,29 +576,56 @@ const layerGroups = ref([
 
     visible: false,
   },
+  {
+    id: "residential",
+
+    label: "居民小区",
+
+    // 对应真正的 MapLibre Layer
+    layerIds: ["residential-circle"],
+
+    visible: true,
+  },
+  {
+    id: "commercial",
+
+    label: "商业设施",
+
+    // 控制真正的 MapLibre Layer
+    layerIds: ["commercial-circle"],
+
+    visible: true,
+  },
+  {
+    // 控制面板内部ID
+    id: "residentialDemand",
+
+    // 用户看到的名字
+    label: "居民需求分布",
+
+    // 它真正控制的 MapLibre 图层
+    layerIds: ["residential-demand-fill"],
+
+    // 默认关闭
+    visible: false,
+  },
 ]);
 function highlightHexByStationCount(stationCount) {
   // 先确认高亮图层已经存在
   // 防止地图还没加载完成时调用导致报错
-  if (!map.getLayer('hexgrid-highlight')) {
-    return
+  if (!map.getLayer("hexgrid-highlight")) {
+    return;
   }
 
-  console.log(
-    'MapView 收到 stationCount：',
-    stationCount
-  )
+  console.log("MapView 收到 stationCount：", stationCount);
 
   // 修改 hexgrid-highlight 的筛选条件
   // 只显示 stationCount 等于用户所选值的六边形
-  map.setFilter(
-    'hexgrid-highlight',
-    [
-      '==',
-      ['get', 'stationCount'],
-      stationCount
-    ]
-  )
+  map.setFilter("hexgrid-highlight", [
+    "==",
+    ["get", "stationCount"],
+    stationCount,
+  ]);
 }
 function toggleLayer(groupId, visible) {
   const group = layerGroups.value.find((item) => item.id === groupId); //检查图层组
@@ -495,6 +682,8 @@ function loadStatistics(hexData) {
       :station-count="stationCount"
       :hex-count="hexCount"
       :occupied-hex-count="occupiedHexCount"
+      :residential-count="residentialCount"
+      :commercial-count="commercialCount"
       :selected-hex="selectedHex"
       :hex-distribution="hexDistribution"
       @selectStationCount="highlightHexByStationCount"

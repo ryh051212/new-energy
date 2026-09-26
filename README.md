@@ -1,4 +1,4 @@
-﻿# 魏都区充电设施 WebGIS
+# 魏都区充电设施 WebGIS
 
 基于 Vue 3、Vite、MapLibre GL 和 Turf 的地图应用。
 
@@ -14,18 +14,25 @@ Windows PowerShell 若禁止运行 npm.ps1，使用 `npm.cmd run dev`。
 ## 目录
 
 - `src/`：页面、组件和样式。
-- `public/geojson/`：地图使用的边界和站点数据。
+- `public/geojson/`：地图使用的边界、站点和六边形网格数据。
 - `data/raw/`：原始数据。
 - `data/processed/`：转换及筛选结果。
+- `scripts/`：离线数据管线。
+- `docs/项目逻辑梳理.md`：数据流、运行时逻辑与已知问题的完整说明。
 - `vite.config.js`：开发与构建配置。
 
 整理前的外层依赖与包配置保存在 `.flatten-backup/`，该目录已忽略，不参与运行。
 
-## 更新站点数据
+## 更新数据
 
-在项目根目录依次执行 `node scripts/convertStations.mjs` 和
-`node scripts/filterWeiduStations.mjs`。前者清洗本地原始 POI，后者按边界筛选，
-并同时更新处理结果与网页读取的 `public/geojson/stations.json`。
+在项目根目录依次执行以下三条命令，顺序不能颠倒：
+
+1. `node scripts/convertStations.mjs`：清洗本地原始 POI。
+2. `node scripts/filterWeiduStations.mjs`：按边界筛选，并同时更新处理结果与网页读取的
+   `public/geojson/stations.json`。
+3. `node scripts/buildHexGrid.mjs`：依据上一步的站点重新生成并统计
+   `public/geojson/hex-grid.json`。
+
 只有需要重新请求高德数据时才执行 `node scripts/fetchAmapStations.mjs`。
 
 地图与数量统计均采用空间范围口径，不再要求 `district` 同时等于“魏都区”。
@@ -35,4 +42,4 @@ Windows PowerShell 若禁止运行 npm.ps1，使用 `npm.cmd run dev`。
 目前没有执行坐标转换，因此空间筛选结果的地理准确性需在确认边界实际坐标系后复核。
 `coordSystem` 字段只是标记，不会转换坐标。
 
-运行 `node --test tests/stations.test.mjs` 检查转换与空间筛选逻辑。
+运行 `node --test tests/` 检查全部用例（转换、空间筛选、网格计数与 MapView 加载流程）。

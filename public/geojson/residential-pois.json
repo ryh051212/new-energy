@@ -1,0 +1,4280 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHEDDZQ",
+        "name": "恒达金汇广场",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "北关大街丽枫酒店",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831962,
+          34.040322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFV6F4I",
+        "name": "恒大绿洲",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街与南海街二巷交叉口南220米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.865925,
+          34.049913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKV8MZP",
+        "name": "天悦广场",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "万达广场东侧许都路与兴业路交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.861111,
+          34.03025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGUNBFA",
+        "name": "瑞贝卡和天下",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街与魏文路交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858269,
+          34.049643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600P8Q",
+        "name": "祥瑞小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.847666,
+          34.040925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGMSHTA",
+        "name": "未来东岸华城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八龙路109号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.843631,
+          34.03716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIQSRE5",
+        "name": "瑞贝卡兴天下",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "东城区管委会社区魏文路与南海街交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.857376,
+          34.053928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFV45TH",
+        "name": "腾飞鹿鸣湖畔",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街与魏武大道交汇处西北角",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.871514,
+          34.054461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N4MQ",
+        "name": "瑞贝卡·家天下",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.857749,
+          34.044794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFF6Y49H",
+        "name": "腾飞·奥体花城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街北50米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.864589,
+          34.053274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N3MQ",
+        "name": "学府名苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八龙路与学府街交叉路口往东约200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.847074,
+          34.04454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600RFF",
+        "name": "九洲溪雅苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "建安大道",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.866332,
+          34.038185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NEGT",
+        "name": "府西·雅园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路中段路南",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.846507,
+          34.037687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG4B9QS",
+        "name": "建业壹号城邦",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与陈庄街交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852571,
+          34.058389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600RFJ",
+        "name": "帝豪花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路学府街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853135,
+          34.041925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NEGG",
+        "name": "永丰新城国际",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "智慧大道929正东方向130米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852515,
+          34.029651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BB0",
+        "name": "祥和小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路和兴业路交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.863565,
+          34.016156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSER",
+        "name": "水木清华",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一东路2369号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.86122,
+          34.03856
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKS7I86",
+        "name": "一峰国际都汇",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许都路与德星街交叉口西南100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.863039,
+          34.030789
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFF6WD2S",
+        "name": "建业·森林半岛",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "紫云路与新东街交叉路口往东南约180米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.87139,
+          34.026688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJGUIPW",
+        "name": "鹿鸣湖壹号御府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与文轩路交叉口西北240米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852357,
+          34.062086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI2EJUR",
+        "name": "魏昌佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "东环路辅路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855867,
+          34.065054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG5854H",
+        "name": "恒达·名门尚居",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "莲城大道",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853204,
+          34.024239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFSPNJS",
+        "name": "东方雅苑南苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "学府街1047号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858116,
+          34.041737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTQ1F",
+        "name": "桃源名郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库路1381号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.832771,
+          34.004935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFME4QUD",
+        "name": "鹿鸣湖壹号和府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845776,
+          34.061989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019DL",
+        "name": "三里桥小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与学府街交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852703,
+          34.044145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH9AQMH",
+        "name": "金石·星海湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与陈庄街交叉口西南240米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853038,
+          34.053427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MYXZ",
+        "name": "大正·壹品蓝湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴东路与魏文路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.860216,
+          34.013548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI993S1",
+        "name": "恒达·西郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路运粮河街交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.812739,
+          34.014301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGA39FQ",
+        "name": "徐湾小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "万福街天明城西侧约150米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.875262,
+          34.031978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJFBEF0",
+        "name": "保利堂悦",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝路与文峰路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.839917,
+          34.047278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGZV60V",
+        "name": "恒大翡翠华庭",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街与学院路交叉口向西100米路北",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859637,
+          34.052883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI1B59Z",
+        "name": "裕祥花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "龙祥路与天宝西路交叉口西北300米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.783746,
+          34.048051
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFS99WI",
+        "name": "瑞嘉祥花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.867116,
+          34.054029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NCE1",
+        "name": "孙湾小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许都路与兴业路交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.861704,
+          34.032445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G0OUVBYB",
+        "name": "桃溪苑小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "兴业路与东泰街交叉口东北240米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.862466,
+          34.026422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N3MR",
+        "name": "健发御园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许都公园东邻",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855067,
+          34.032933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSCB",
+        "name": "宏伟西雅图",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "灞陵路与许继大道交叉口东南",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.793154,
+          34.021693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTQ18",
+        "name": "高庄家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "兴华路7号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824161,
+          34.005814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFSJ7LB",
+        "name": "六和花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏武大道与前进路交汇处北300米路西",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.875468,
+          34.024037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600P9E",
+        "name": "怡景花城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855098,
+          34.020684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFL5FX9J",
+        "name": "德鸿迎宾府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "灞陵路与新兴西路交汇处南600米路东",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.792824,
+          34.009254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI0TTNS",
+        "name": "豫中桂园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由西路与延安南路交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.796127,
+          34.005982
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760195I",
+        "name": "腾飞花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八龙路666号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841489,
+          34.044227
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJ8X0R6",
+        "name": "阳光城·翡丽花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰南路与许由路向南200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837654,
+          33.999217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJRW5HZ",
+        "name": "金石许都府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "三里桥街与建安大道交叉口西南100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.846854,
+          34.033742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KR4HHD6S",
+        "name": "鹿鸣湖壹号2期悦府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与永昌东路辅路交叉口西南200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.85219,
+          34.065187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N5CG",
+        "name": "城标·尚郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路与学院路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.86899,
+          34.017674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKKV323",
+        "name": "海盛湖滨豪庭",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴西路与灞陵路交汇处南685米路西",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.789874,
+          34.007611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MXL2",
+        "name": "阳光花墅(前进路)",
+        "type": "商务住宅;住宅区;别墅|商务住宅;住宅区;住宅小区",
+        "typecode": "120301|120302",
+        "address": "魏武大道与前进路交汇处(近许昌市体育馆)",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.879625,
+          34.021703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHGP8R9",
+        "name": "亚恒橡树湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新东街与景福路交叉口西路南",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.879227,
+          34.027229
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600PBG",
+        "name": "建业帕拉帝奥",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "东城区管委会建安大道与兴业路交叉口往北50米路西",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858112,
+          34.036707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFL4CBQ0",
+        "name": "碧桂园·凯旋府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.884573,
+          34.021293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HR6U9OUZ",
+        "name": "旭辉江山花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "青梅路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845883,
+          34.059208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIRDFHZ",
+        "name": "中梁魏都府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝路与八龙路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842676,
+          34.047481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG11LQ9",
+        "name": "卓建·水岸金城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "解放路许由西路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.813326,
+          34.005906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MWS0",
+        "name": "景鸿·城市之心",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴西路602东北方向90米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82943,
+          34.012594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHD8L11",
+        "name": "鹿鸣湖壹号首府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "永昌东路与学院北路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.85845,
+          34.064939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTK6E",
+        "name": "鼎鑫鑫悦广场",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰路中段三鼎华悦大酒店对面",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836106,
+          34.026846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BBK",
+        "name": "万象新天",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路2536号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803228,
+          34.034466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE2Q8Q",
+        "name": "裴山庙小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库路与振兴路交叉口西南140米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829094,
+          34.005373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HKCCCSE0",
+        "name": "恒达名筑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "裕丰路与恒丰路交会处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.835097,
+          34.061904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601CM2",
+        "name": "骏景尚都",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路许昌学院对面",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.870925,
+          34.039515
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BAY",
+        "name": "三达·上东城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "唐岗街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.86177,
+          34.024006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600RMA",
+        "name": "绿城小区(许都路)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许都路418正北方向80米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842214,
+          34.029614
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NDIJ",
+        "name": "瑞贝卡新天下",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与建安大道交叉口向东100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858364,
+          34.033218
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHMDN03",
+        "name": "河湾新家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路与八龙路向西100米魏都分局西邻",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842126,
+          34.040107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFF38XAI",
+        "name": "骏景·中央公园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路与魏文路交叉口西北侧",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.856086,
+          34.015975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFL1QM99",
+        "name": "鼎泰公园壹号院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝西路与延安北路交叉口东200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.802162,
+          34.047488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHOT03F",
+        "name": "西席雅苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街与八龙路交叉口东北180米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845689,
+          34.051824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019W7",
+        "name": "碧水名郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路与光明路交汇处向南500米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.809371,
+          34.016489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N4ML",
+        "name": "雅居小区(毓秀路)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "毓秀路3号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844916,
+          34.012481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176001A7",
+        "name": "滨河花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "莲城大道846号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844848,
+          34.024373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OUZ",
+        "name": "茂源·金色家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一西路136号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83568,
+          34.039744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176001F7",
+        "name": "恒达都市花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天平街137号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.828662,
+          34.027488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFF858FX",
+        "name": "十辈陈庄社区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八龙路与陈庄街交叉口东南220米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845563,
+          34.053677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K1SZ9W06",
+        "name": "文峰上城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴东路与文峰中路交叉口东北160米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837699,
+          34.012691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIYS6DR",
+        "name": "隆基泰和铂悦山",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路与天宝西路交叉口东北260米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.809099,
+          34.047593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019Y9",
+        "name": "东方花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰中路167号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837026,
+          34.031979
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601AIF",
+        "name": "新加坡长和花园小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "聚奎街202号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831209,
+          34.027267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFGXOEF",
+        "name": "大众锦绣佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏武大道中段与建安大道交叉口东200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.878038,
+          34.035237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601ATS",
+        "name": "鼎鑫龙湖湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文翠街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841239,
+          34.032102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IG5SJ6SO",
+        "name": "恒实·城央名筑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "青梅路与陈庄街交汇处向北20米路西",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845966,
+          34.057187
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE3NFX",
+        "name": "唐岗佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与前进路交叉口东南380米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859855,
+          34.015544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600P29",
+        "name": "许继花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许继大道891号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.805896,
+          34.022562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G13D1012",
+        "name": "恒达·新北家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "奎楼商业街a39号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831661,
+          34.042593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L66A88HO",
+        "name": "鹿鸣湖壹号玺府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "永昌大道与青梅路交汇处向南200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845682,
+          34.064559
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JK27W8ET",
+        "name": "万盛幸福里",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "延安北路2529号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797137,
+          34.047981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NKV4",
+        "name": "鸿景苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路东段与紫云路交会处东南角",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.872187,
+          34.018571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019Q9",
+        "name": "新景苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "工农路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.807071,
+          34.010197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHPO95N",
+        "name": "中奥鑫天",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝路与文峰路交汇处(区政府东侧)",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.832961,
+          34.046922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NEGC",
+        "name": "汇润·印象",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路与新兴路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.812393,
+          34.01257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NHZ8",
+        "name": "湖畔名居",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "帝豪路西段七里店办事处东",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.784681,
+          34.031857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600P9F",
+        "name": "青竹苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴东路1549西北方向200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852658,
+          34.013008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K6MDB02B",
+        "name": "金石·星海湾北院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与陈庄街交叉口西180米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852966,
+          34.05449
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IB5MJ64V",
+        "name": "许昌瑞贝卡瑞和苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与万通街交会处西南侧",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852045,
+          34.070091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJLZ8XZ",
+        "name": "丽晶天城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "灞陵中路1100号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.789625,
+          34.026561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H1G5UC2L",
+        "name": "中航城市花园二期",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰路与新兴路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.838091,
+          34.010746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJRV9OS",
+        "name": "鼎鑫鑫悦广场北区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "东大街与东关北巷交叉口东南100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836143,
+          34.027386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N5BZ",
+        "name": "滨河名郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "莲城大道附近",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842598,
+          34.022916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NO3R",
+        "name": "龙湖西苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "董碾路与塑料厂街交叉口南220米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803146,
+          34.010362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFF2EN9N",
+        "name": "时代皇庭",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "东邻运粮河",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.814071,
+          34.01681
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601B53",
+        "name": "金质西湖花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "清虚街9号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824452,
+          34.030085
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N59L",
+        "name": "欧陆阳光",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "唐岗街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.863543,
+          34.024111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MYYN",
+        "name": "广杰御萃花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰南路附近",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834762,
+          34.00117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGLRX6G",
+        "name": "祥祐家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库路与瑞贝卡大道交叉口西南160米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833667,
+          33.995646
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFGX23J",
+        "name": "宇华·名郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824536,
+          34.040664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSCO",
+        "name": "枫丹白露",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰中路688号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.835925,
+          34.018376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600RQ4",
+        "name": "半截河小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859407,
+          34.022239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG2GH8P",
+        "name": "莲城首府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文化路与玉皇阁路交汇处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826568,
+          34.042597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G0K7SPLI",
+        "name": "福桂园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "孔场街东段",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855291,
+          34.029167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGCUY5G",
+        "name": "万象春天",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "府西路以东",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.851747,
+          34.045574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH0XKZS",
+        "name": "潩龙俎苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "裕丰路北侧",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.839382,
+          34.060853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HDD7BLUS",
+        "name": "当代阅MOMA",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路与劳动路交汇处向西200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.814629,
+          34.04331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OU1",
+        "name": "鼎鑫丽景苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰北路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83865,
+          34.032307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFXWEWQ",
+        "name": "锦绣华府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许继大道与延安路交汇处西侧",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797409,
+          34.024842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG6GZLZ",
+        "name": "天宝华府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "玉皇阁路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833117,
+          34.044486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BBG",
+        "name": "鼎鑫盛世嘉苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "中房大街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844248,
+          34.027404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600P64",
+        "name": "许由庄园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库路与许由路交叉口东南200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833138,
+          34.002868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHVX2PO",
+        "name": "静波宁武苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "万丰北路788号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.830987,
+          34.048663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTK7L",
+        "name": "尚景园小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "兴业路与学府街交叉口东南100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859957,
+          34.042654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHSQZH4",
+        "name": "翠堤湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴路与延安路交汇口向西100米路南",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.796574,
+          34.01536
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OY9",
+        "name": "延中小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "延安路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.796737,
+          34.021196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NEGJ",
+        "name": "宏安·世纪宏城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许繁路519号阳光中小学",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822708,
+          33.998319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE2Q2V",
+        "name": "向阳花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "向阳路37号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.801662,
+          34.016792
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019XF",
+        "name": "祥泰家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库路1300号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831511,
+          33.999883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760195A",
+        "name": "东方雅苑北苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.8606,
+          34.044927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFY3W98",
+        "name": "明珠港",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "延安北路与华佗路交叉口北380米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.798001,
+          34.032888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE3LF7",
+        "name": "菁华名家",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "民声巷附近",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.835434,
+          34.041392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600PAF",
+        "name": "东方米兰花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "塔湾街217号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.8392,
+          34.015822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFMCEKB7",
+        "name": "棕榈泉佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由路与兴华路交叉口西南280米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.820692,
+          34.001676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N1VH",
+        "name": "莲城国际",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一路西段洞上社区",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.81455,
+          34.040547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OY0",
+        "name": "都市家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路与华佗路交叉口向西400米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.804961,
+          34.03154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600PAI",
+        "name": "文峰花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文博路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.839589,
+          34.017308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IUR5M1E9",
+        "name": "建业山海云筑(建设中)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许昌市中央公园竹林路与心怡路交会处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.85188,
+          34.073762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L6F5HECW",
+        "name": "许昌碧桂园翘楚棠",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "塑料厂街与董碾路交叉口东南400米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.80516,
+          34.009243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019PW",
+        "name": "鸿业花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路30号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.809171,
+          34.020352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFVB9MW",
+        "name": "报业小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "学府街与八龙路交叉口西200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842769,
+          34.04331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTX36",
+        "name": "文景苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "长青街493西南方向60米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840765,
+          34.025734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019GM",
+        "name": "水语花城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴路与仓库路交汇处南100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829724,
+          34.010315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFF6YRCB",
+        "name": "万象蓝天",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝路瑞贝卡家天下第47幢1单元东3号正东方向120米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.860806,
+          34.046117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600PH1",
+        "name": "帝豪花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "五一路附近",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.805388,
+          34.03674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHVW8FG",
+        "name": "鼎鑫运河鑫城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "八一西路与五一路交叉口西南160米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.805667,
+          34.037905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFSRMTE",
+        "name": "南苑小区(新兴西路)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "六一路与新兴西路交叉口东南60米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833479,
+          34.01113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE3NCY",
+        "name": "珑绣花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "兴华路西100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.821562,
+          34.005822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600QJ3",
+        "name": "许通家苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "解放路246号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.811542,
+          34.032152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K16HROC6",
+        "name": "滨河花园C区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "鼎鑫滨河花园C区3号楼",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844158,
+          34.023378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OX9",
+        "name": "关帝新村",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "西大街80号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826172,
+          34.028952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGIPK1O",
+        "name": "书香苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "安书巷与八一西路交叉口南280米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815195,
+          34.036516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSF7",
+        "name": "华蓉小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "解放路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.818248,
+          34.011726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHQN53D",
+        "name": "南海雅苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南海街南侧",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840393,
+          34.049756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JB31KD4D",
+        "name": "中航城市花园一期",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰中路与新兴东路交叉口东北120米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837703,
+          34.013807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG8FMW3",
+        "name": "瑞贝卡新天下南院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "安和街与兴业路交叉口西南180米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.85842,
+          34.032277
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KGDHQLZ2",
+        "name": "阳光城文澜花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "延安北路m8号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.796997,
+          34.050649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGA8DGG",
+        "name": "祥云花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "东城街与紫云路交汇处东100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.871947,
+          34.017284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601A9R",
+        "name": "书香美林",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "清虚街384号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824879,
+          34.031698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H2XAF78V",
+        "name": "罗马阳光",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "莲城大道253号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.839199,
+          34.019469
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIJYLYZ",
+        "name": "宏伟九庭",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝西路与劳动路交叉口西240米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.818077,
+          34.046605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFSG33V",
+        "name": "馨怡佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "华佗路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.795731,
+          34.03103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601ALC",
+        "name": "德丰九曲苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "北九曲街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825419,
+          34.026621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE5853",
+        "name": "莲韵雅苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "莲城大道与毓秀路交叉口西北",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842619,
+          34.024204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601ASH",
+        "name": "裴山·新家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库路1865号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833288,
+          34.00115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KADSOKX0",
+        "name": "百瑞泓城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "华佗路与向阳路交叉口西北240米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.802517,
+          34.031475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKUS43X",
+        "name": "雅居乐·铂爵郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "学院北路与陈庄街交汇处向东100米路北",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.866451,
+          34.057021
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019RQ",
+        "name": "恒达·相府1号院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "商业街a区-23号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825798,
+          34.031104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK0KBMP",
+        "name": "西关新家苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "华佗路与向阳路交叉口东南240米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.805876,
+          34.028186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019R3",
+        "name": "金桥园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴路东段2146号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.863986,
+          34.013191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019RV",
+        "name": "建安名家南区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "建安名家商业街18号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829582,
+          34.031915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSBI",
+        "name": "毓秀新村",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "望田路910号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.850707,
+          34.015201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HUN7A01F",
+        "name": "万象城水岸香郡",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.805764,
+          34.052741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OWV",
+        "name": "西湖左岸",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "建安大道西段784号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.828884,
+          34.035824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KKU5EUEH",
+        "name": "中原建业·天誉(建设中)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "莲城大道与魏武大道交会处",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.877395,
+          34.037767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BN6",
+        "name": "春秋花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "南奎楼街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82928,
+          34.023933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019D3",
+        "name": "瑞东花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由西路746号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834124,
+          34.004413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KAGAMVRN",
+        "name": "万里江山悦居",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "交通医院对面",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.820839,
+          34.009597
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFSEHBS",
+        "name": "名都新苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "文峰中路与文峰南路交叉口西100米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834928,
+          34.008327
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIAHHN2",
+        "name": "骏景·溪悦",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由西路与仓库路交叉口西南200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829954,
+          34.0024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK0NS9T",
+        "name": "半截河新苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "赵湾路与唐岗街交叉口东北120米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855214,
+          34.023911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH3YP6W",
+        "name": "恒达·相府",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "府后街与衙后街交叉口东北60米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.827026,
+          34.032807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600P8J",
+        "name": "森泰家园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝西路1500号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822293,
+          34.0473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K6KCW9E7",
+        "name": "海盛湖滨豪庭二号院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "灞陵路与许由西路交叉口西北260米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.789877,
+          34.006057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK3KZQ5",
+        "name": "福兴花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由路南邦壹号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.81545,
+          34.002194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGAANGF",
+        "name": "青年公寓",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "延中小区里面",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.798505,
+          34.022694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTIZA",
+        "name": "张炉第二小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴东路与潩水路交叉口西260米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.851992,
+          34.011391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE2RVP",
+        "name": "恒达·立体国际",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许继大道与向阳路交叉口",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.804182,
+          34.024058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH2HNGS",
+        "name": "赵湾小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "潩河北路与学府街交叉口东180米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841112,
+          34.041645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600W9H",
+        "name": "金石·凤凰城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "六一路15号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831439,
+          34.016923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE4XHZ",
+        "name": "林溪公馆",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由西路2956号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.809747,
+          34.004404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JURU8XWN",
+        "name": "瑞贝卡新天下北院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "安和街与兴业路交叉口西北180米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858315,
+          34.034267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHVX525",
+        "name": "赵湾小区2期",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "潩河北路与学府街交叉口东200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841225,
+          34.041616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGYMOP4",
+        "name": "许都花苑徐场小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许都路与三里桥街交叉口东南160米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.849699,
+          34.029671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K6MDFGUB",
+        "name": "金石·星海湾南院",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "魏文路与南海街交叉口西北200米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853107,
+          34.052585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE598Y",
+        "name": "华星嘉园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "兴华路371号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.823211,
+          34.009365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE51CQ",
+        "name": "茂源·国际公寓",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许都路125号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.838891,
+          34.028061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSCM",
+        "name": "宏伟佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "劳动路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.819117,
+          34.066471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601AEF",
+        "name": "大众佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "光明路582号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.810131,
+          34.01938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGMR22T",
+        "name": "玉龙湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "半截河街道建安大道",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845291,
+          34.034095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KUZCNE7Q",
+        "name": "吴庄新城",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "霸陵路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.789616,
+          34.026551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BAT",
+        "name": "万里星河花园小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "解放路万里星河花园20号楼3单元3层东402",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.819164,
+          34.013316
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600PF9",
+        "name": "中原文化小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "北大街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829531,
+          34.028896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BC1",
+        "name": "富贵家园(玉皇阁路)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "玉皇阁路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834064,
+          34.043448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE3JYO",
+        "name": "建安丰泽园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "建安大道北、河天路东",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.832606,
+          34.035788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFVPD75",
+        "name": "怡通·蓝堡佳苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许由路661号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834861,
+          34.002884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019O0",
+        "name": "四通丞相府苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "府前街魏武帝广场",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826076,
+          34.030066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600QG9",
+        "name": "绿茵花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "工农路8号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.807308,
+          34.008409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601A1P",
+        "name": "广杰怡和花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "振兴路125号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836939,
+          34.005651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G1V5B7LB",
+        "name": "莅源小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "智慧大道与唐岗街交叉口南60米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.851431,
+          34.022124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHNNEU9",
+        "name": "天基幸福里菜鸟驿站",
+        "type": "商务住宅;住宅区;住宅小区|生活服务;物流速递;物流速递",
+        "typecode": "120302|070500",
+        "address": "众粮八宝粥旁边",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.817511,
+          34.020816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019Q4",
+        "name": "日月苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴路53号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.807809,
+          34.011809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760NEGI",
+        "name": "运河湾",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "解放北路260西北方向110米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.816099,
+          34.014107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTMO6",
+        "name": "金祥小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "塔东路与文翠街交叉口东南80米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840036,
+          34.030201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFHB819",
+        "name": "许富花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "许继大道41号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.808289,
+          34.022834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601A9D",
+        "name": "绿岸小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "议台路",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.849343,
+          34.019816
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600U5I",
+        "name": "安居小区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "劳动南路2638号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.819446,
+          34.048693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG0S2TU",
+        "name": "金信苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "青芳街与紫云路交叉口西120米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.868778,
+          34.022882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601BN5",
+        "name": "春秋北苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "察苑西街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829485,
+          34.024568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019X9",
+        "name": "清雅苑",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "仓库南路1036号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831065,
+          34.00241
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600OU6",
+        "name": "鼎鑫新世纪花园",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "建安大道229号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840666,
+          34.033993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJ3YIEM",
+        "name": "顶秀清溪南区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "前进路与紫云路交叉口西北120米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.869443,
+          34.020224
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTIEC",
+        "name": "汇润地产·百合佳苑南区",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "新兴西路与五一路交叉口东南300米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.813636,
+          34.010266
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600143",
+        "name": "清华苑(七一路)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "七一路423号",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831154,
+          34.018652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKBCJKI",
+        "name": "万象城水岸香榭",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "天宝路与五一路交叉口向北五百米路西万象城二期",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.805891,
+          34.050715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKBCK86",
+        "name": "益和·雅居",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "华佗路与五一路交叉口西260米",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.806643,
+          34.028873
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSFA",
+        "name": "福居苑(北关大街)",
+        "type": "商务住宅;住宅区;住宅小区",
+        "typecode": "120302",
+        "address": "北关大街",
+        "category": "residential",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831171,
+          34.038292
+        ]
+      }
+    }
+  ]
+}

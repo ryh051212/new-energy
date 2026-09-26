@@ -1,0 +1,3805 @@
+﻿{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J6YS04RS",
+        "name": "DL胖东来(许昌天使城店)",
+        "type": "购物服务;商场;商场",
+        "typecode": "060100",
+        "address": "建安大道与八龙路交叉口东北角建安文化广场内",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.846681,
+          34.03593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSB0",
+        "name": "DL胖东来(许昌时代广场店)",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "南关街道七一路277号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833148,
+          34.018443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG1WWSM",
+        "name": "DL胖东来(许昌生活广场店)",
+        "type": "购物服务;商场;商场",
+        "typecode": "060100",
+        "address": "南关大街42号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825097,
+          34.018074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHOTQ8E",
+        "name": "万达广场",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "许都路",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858707,
+          34.029955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGER3FB",
+        "name": "新田360广场(许昌亨源通店)",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "智慧大道亨源通世纪广场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852482,
+          34.027358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IGVU2P4U",
+        "name": "DL胖东来超市(许昌金汇店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "北关大街恒达金汇广场B1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831525,
+          34.038875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HGJ1K3SL",
+        "name": "魏悦城",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "延安北路2529号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797205,
+          34.04654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GK193A4S",
+        "name": "新大新·幸福时代广场",
+        "type": "购物服务;专卖店;烟酒专卖店|购物服务;商场;商场",
+        "typecode": "061210|060100",
+        "address": "半截河街道许都路赵湾路交汇处东南角幸福大厦",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.85457,
+          34.030347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFQ8T4B",
+        "name": "绿洲·梦想广场",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "颖昌路南段",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824303,
+          34.016797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J2CS8DBA",
+        "name": "曹魏不夜城",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "衙前街南侧",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.827029,
+          34.028422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601AG5",
+        "name": "新玛特(鸿宝店)",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "建设路708号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829023,
+          34.022251
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJVJ683",
+        "name": "DL胖东来超市(许昌人民店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.820277,
+          34.025688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600ORH",
+        "name": "思故台商业街",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "三八路109号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829589,
+          34.013825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIC100B",
+        "name": "时代广场超市(胖东来时代广场店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "七一路277号DL胖东来许昌时代广场店F1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833111,
+          34.018829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MGGY38I6",
+        "name": "胖子店生活广场(北环店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "万通街50号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83974,
+          34.075069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFOI9YB",
+        "name": "九弟万丰购物广场",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "九弟万丰购物广场(文峰中路西)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836547,
+          34.041627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760119Y",
+        "name": "DL胖东来超市(许昌劳动店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "劳动南路与西湖北街交叉口路东",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.821375,
+          34.036715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H2JAUJ9F",
+        "name": "DL超市(胖东来生活广场店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "南关大街42号DL胖东来许昌生活广场店F1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825033,
+          34.018108
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L0TCAGQ5",
+        "name": "西关里文创社区",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "华佗路与向阳路西南侧",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.80316,
+          34.02938
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019J6",
+        "name": "许昌开源市场",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "仓库路开源市场临街门面房6号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.827377,
+          34.012671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176001DF",
+        "name": "奎楼商业街",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "奎楼商业街与文庙前街交叉口东北20米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82923,
+          34.025139
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KRBZSYDG",
+        "name": "八戒折扣仓",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "新兴路霸凌路交叉口东20米路南安顺驾校院里",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.792756,
+          34.014705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHC1GUW",
+        "name": "亨源通超市(许昌新田360广场店)",
+        "type": "购物服务;专卖店;烟酒专卖店|购物服务;超级市场;超市|购物服务;便民商店/便利店;便民商店/便利店|餐饮服务;餐饮相关场所;餐饮相关",
+        "typecode": "061210|060400|060200|050000",
+        "address": "赵湾路孔场街交叉口世纪广场B1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853937,
+          34.028011
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H2CGTMCG",
+        "name": "喜盈门超市(学院店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "许昌学院家属院西南门南60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.863944,
+          34.043367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J0NU3HZI",
+        "name": "许昌新旧货市场",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "八一西路与灞陵路交叉口东120米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.792554,
+          34.037521
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0I13OZ9UJ",
+        "name": "东来茶叶超市(胖东来时代广场店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "七一路277号DL胖东来许昌时代广场店F1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833118,
+          34.018372
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HK7DKYQE",
+        "name": "国富农场超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新兴路与解放路交叉口向东20米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.819033,
+          34.011551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MSAM",
+        "name": "新世纪服饰广场(许昌医药经营大楼东南)",
+        "type": "购物服务;服装鞋帽皮具店;服装鞋帽皮具店|购物服务;综合市场;综合市场",
+        "typecode": "061100|060700",
+        "address": "三八路西段(许昌医药经营大楼东南)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.828744,
+          34.014406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIGCUBH",
+        "name": "新田360超市(新田360广场店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "半截河街道莲城大道82号新田360广场(许昌亨源通店)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852311,
+          34.02756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JBR5OA3X",
+        "name": "许昌市新旧货市场",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "许由路与兴华路交叉口南500米路东新旧货市场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822965,
+          34.001339
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGTD117",
+        "name": "紫云路农贸市场",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "紫云路与紫云路一巷交叉口东南80米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.870349,
+          34.023516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG7DLT6",
+        "name": "福金购物广场",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新兴东路与魏武大道南段交叉口西北60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.877602,
+          34.013888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760198Z",
+        "name": "延安旧货调剂中心(延安北路)",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "延安北路与八一西路交叉口西北260米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797207,
+          34.040351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LB2ZPU08",
+        "name": "喜盈门超市(毓秀店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "毓秀路与前进路交叉口西南20米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844202,
+          34.017971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JBA6ZD1K",
+        "name": "向阳路农贸市场",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "向阳路21号排4号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803544,
+          34.021053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017600WH5",
+        "name": "开源批发市场",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "南关大街235号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826561,
+          34.01358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJYKKAP",
+        "name": "9盛祥生活超市(城标·尚郡店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "前进路城标尚郡",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.869882,
+          34.018677
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MUGSJP02",
+        "name": "FLY福来鲜生超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "腾飞·奥体花城南门东140米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.865975,
+          34.052367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G211BDYF",
+        "name": "新大新生活超市(新大新·幸福时代广场店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新大新·幸福时代广场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.854541,
+          34.030282
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHLL9GN",
+        "name": "绿洲梦想广场C座",
+        "type": "购物服务;商场;普通商场",
+        "typecode": "060102",
+        "address": "绿洲·海龙国际梦想广场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824447,
+          34.016321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKS8IFG",
+        "name": "樊文花(万达广场店)",
+        "type": "购物服务;个人用品/化妆品店;其它个人用品店|购物服务;商场;商场",
+        "typecode": "061400|060100",
+        "address": "半截河街道许都路与赵湾路交叉口新大新·幸福时代广场一楼",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858698,
+          34.029926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K09SM1I6",
+        "name": "胖子旧货 尾货折扣仓",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "许昌美达塑钢门窗有限公司南门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.792999,
+          34.038053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHK608D",
+        "name": "正旺购物中心",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "许继大道与灞陵路交叉口西200米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.788785,
+          34.022568
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHOHA7V",
+        "name": "许昌旧货交易中心",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "解放路与解放北路交叉口南240米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.813252,
+          34.036631
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LUX7PPZ9",
+        "name": "张三新旧货家电批发仓",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "陈庄街灞陵路交叉口路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.79176,
+          34.054333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKSIPAJ",
+        "name": "胖东来年货福利购物中心",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "人民路与劳动南路交叉口东60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.821046,
+          34.025463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JRCZ7K83",
+        "name": "义乌商品城(祥瑞小区店)",
+        "type": "购物服务;综合市场;小商品市场",
+        "typecode": "060701",
+        "address": "学府街575号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.849433,
+          34.042573
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019VP",
+        "name": "九弟超市(延安店)",
+        "type": "购物服务;专卖店;烟酒专卖店|购物服务;超级市场;超市",
+        "typecode": "061210|060400",
+        "address": "延安路与新兴路交叉口",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.798712,
+          34.014711
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J0VZWF7T",
+        "name": "盛翔购物广场(华佗路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "华佗路与延安路东100米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.800861,
+          34.029695
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MGTU8KYS",
+        "name": "家园新旧货交易市场",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "魏武大道中段刘庄路口北侧第1号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.877778,
+          34.024367
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760024D",
+        "name": "恒达利市场",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "恒达利商贸城(解放路店)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.814108,
+          34.028495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI1EQNW",
+        "name": "恒烨生活购物广场(水木清华店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "水木清华西门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859851,
+          34.038633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKBMZHP",
+        "name": "恒达利商贸城(解放路店)",
+        "type": "购物服务;商场;普通商场",
+        "typecode": "060102",
+        "address": "解放路186万里金港花园西南",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.814271,
+          34.028882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MAGSYKII",
+        "name": "盛翔购物广场(陈庄街店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "陈庄街与劳动路东150米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822155,
+          34.054575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0ID7CE08V",
+        "name": "正旺购物中心(八一路店)",
+        "type": "购物服务;商场;购物中心",
+        "typecode": "060101",
+        "address": "八一西路与延安北路交叉口西60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.798299,
+          34.038604
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K2LOMCYH",
+        "name": "东东旧货",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "灞陵路与天宝西路交叉口南200米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.791087,
+          34.043913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KRD7OY3C",
+        "name": "鼓楼悦尚超市(许昌万达广场店)",
+        "type": "购物服务;超级市场;超市|购物服务;便民商店/便利店;便民商店/便利店",
+        "typecode": "060400|060200",
+        "address": "天宝路街道兴业路92号万达广场B1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859375,
+          34.029975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFLM3F41",
+        "name": "许昌俊峰旧货回收",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "解放路北头绿洲旧货市场院内",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.813536,
+          34.037245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JBZUMQSM",
+        "name": "喜悦生活超市(湖畔名居店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "华佗路西段",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.785289,
+          34.031109
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G2OZFJ2V",
+        "name": "老杨二手家电",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "帝豪路与五一路交叉口向西300米路北984号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.806912,
+          34.026314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K0THXH0C",
+        "name": "盛美来超市(魏悦城店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "延安北路2529号魏悦城F1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797055,
+          34.046698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIEUI2E",
+        "name": "嗨果儿(学府街店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "学府街帝豪花园B幢1层北侧东起第5间店面",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853904,
+          34.042751
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH0OED3",
+        "name": "佰果汇(曹魏古城清虚街店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "清虚街384号书香美林",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825023,
+          34.032625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G17CX6RX",
+        "name": "许昌小奇旧货大全(延安旧货调剂中心店)",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "延安旧货调剂中心(延安北路)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797026,
+          34.04039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0I12CCHVY",
+        "name": "诚信志远果业(瑞贝卡和天下店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "瑞贝卡和天下东北门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858956,
+          34.05127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG0FRE1",
+        "name": "盛翔购物广场(文峰北路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "文峰中路与南海街交叉口西南100米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.838466,
+          34.049861
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI8B77Y",
+        "name": "恒达·相府商业街",
+        "type": "购物服务;超级市场;卜蜂莲花|购物服务;特色商业街;特色商业街",
+        "typecode": "060409|061000",
+        "address": "府前街曹丞相府西侧",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82629,
+          34.030809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJC1PJE",
+        "name": "栗不了(许昌解放路)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "解放路与许继大道交叉口东南角栗不了",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.816287,
+          34.024012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KKCSMRT4",
+        "name": "许昌车优多二手车",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "延安路北段M8链车",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.798075,
+          34.059275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0ID77MPV6",
+        "name": "永惠生活广场",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "北环西路长江国际商城",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.782661,
+          34.058069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK2AP3D",
+        "name": "锅圈食汇火锅烧烤食材超市(东城学府店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "学府街李庄社区13号楼营业房东起7号商铺",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.857706,
+          34.042927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L6TLEFC7",
+        "name": "盈合购物广场许扶店",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "莲城大道与毓秀路交叉口盈合购物广场许扶店",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844079,
+          34.02262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFMHT3AC",
+        "name": "锅圈食汇(五一路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "建设路小学",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.810173,
+          34.024927
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019TK",
+        "name": "金三角购物中心",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "西大街760号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815283,
+          34.027486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFOXGF9",
+        "name": "冻货大世界(新兴路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "新兴农贸市场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.830291,
+          34.011346
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GRB7EYDE",
+        "name": "锅圈食汇火锅烧烤食材超市(南海街店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "东城区管委会学院路3777号恒大绿洲17幢1层东侧北起第二间",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.867676,
+          34.051503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI5AG44",
+        "name": "锅圈食汇火锅烧烤食材超市(清虚街店)",
+        "type": "购物服务;综合市场;农副产品市场|餐饮服务;餐饮相关场所;餐饮相关",
+        "typecode": "060703|050000",
+        "address": "清虚街55号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825125,
+          34.032325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFVHH6O",
+        "name": "德宜来生活超市(前进店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "兴业路附近",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.86131,
+          34.019928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIMS8Z5",
+        "name": "嗨果儿(兴业路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "李庄幸福小区174号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859501,
+          34.037956
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JGBC5R89",
+        "name": "喜悦生活超市(翡翠华庭店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "恒大翡翠华庭西1门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858292,
+          34.052321
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHJ46PO",
+        "name": "美高美生活超市(八一路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "八一东路与紫云路交叉口西南50米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.867873,
+          34.039548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H3A5C4ZZ",
+        "name": "京东超市(恒大绿洲店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "龙兴路礼贤路口",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.868099,
+          34.048686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG8N5SA",
+        "name": "德宜来超市(学府店)",
+        "type": "购物服务;超级市场;超市|购物服务;便民商店/便利店;便民商店/便利店",
+        "typecode": "060400|060200",
+        "address": "东方雅苑南苑北门西50米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.857495,
+          34.042913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L0PC1J0F",
+        "name": "折扣牛24小时超市(许昌祥和小区店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "祥和小区",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.86164,
+          34.016361
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI8FCIG",
+        "name": "酒吧一条街",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "酒吧休闲商业街与湖滨路交叉口东20米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.819349,
+          34.028424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MGUSBZDQ",
+        "name": "花花牛专卖(华佗路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "许昌卷烟厂北家属院南门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.807804,
+          34.029667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GKOZ8LRB",
+        "name": "锅圈食汇(许都路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "魏文路与许都路交叉口健发御园14幢1层东起第10间",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855068,
+          34.031496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IRJZOAU3",
+        "name": "爱家生活超市(劳动路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "北大办事处劳动局粮油公司2幢1层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.820161,
+          34.04721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFLHWAFW",
+        "name": "果然鲜(学府街店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "帝豪花园北门西110米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.850913,
+          34.042744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIBO4KM",
+        "name": "栗不了(向阳路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "向阳路与光明路交叉口西南角",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803626,
+          34.018633
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHPYSE7",
+        "name": "大军生活超市(美来六一花园店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "美来六一花园西门南70米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833358,
+          34.011784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G03HFD3Q",
+        "name": "锅圈食汇火锅烧烤食材超市(嘉福名苑店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "许都路塔东路交叉口东北角/许都路168号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83973,
+          34.028397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601A8X",
+        "name": "志强炒货",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "劳动路与八一路交叉口向南10米路西",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82083,
+          34.038152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JDNUEFOM",
+        "name": "祥云生活超市(天基幸福里店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "解放路中段东侧梦想佳苑1幢1层门面房",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.816729,
+          34.020606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K6GSULW7",
+        "name": "栗不了(东大街店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "东大街与安怀街交叉口处商业楼门面房11号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.830773,
+          34.028281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J36SNSPZ",
+        "name": "玖盛祥生活超市(魏昌佳苑店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "魏文路与清苑路交叉口中心医院北门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.856275,
+          34.064025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MDHRSSFM",
+        "name": "诚信志远果业(鑫悦广场店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文峰路鑫悦广场5幢1层104号商铺",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83735,
+          34.026866
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIIN1N5",
+        "name": "果然鲜",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文峰街道莲城大道滨河名郡大门向西100米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842286,
+          34.021825
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGO56X4",
+        "name": "优果佳鲜果行天下娜娜鲜果行(文化路店)(暂停营业)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文化路与袁庄街交叉口东北20米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825951,
+          34.037415
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG8VFTB",
+        "name": "帝豪路菜市场",
+        "type": "购物服务;综合市场;蔬菜市场",
+        "typecode": "060705",
+        "address": "帝豪路1226号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.804785,
+          34.026996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHVUKZF",
+        "name": "佳鸿超市(瑞贝卡和天下店)",
+        "type": "购物服务;便民商店/便利店;便民商店/便利店|购物服务;超级市场;超市",
+        "typecode": "060200|060400",
+        "address": "瑞贝卡和天下东北门西70米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858097,
+          34.051104
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HU9D5IU0",
+        "name": "柒号果仓鲜果行",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "新兴东路1050号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.847869,
+          34.011868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G3ZMPN4F",
+        "name": "优李果园(莲礼苑店)",
+        "type": "购物服务;综合市场;果品市场|购物服务;便民商店/便利店;便民商店/便利店",
+        "typecode": "060704|060200",
+        "address": "南顺河街21号(莲礼苑西北门东60米)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.827743,
+          34.021274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE2VKC",
+        "name": "胖子店(文翠街店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "鼎鑫丽都苑北区南门东70米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.839441,
+          34.030893
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J0OC7RF3",
+        "name": "诚信志远果业(鹿鸣湖店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "魏昌佳苑南门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.855375,
+          34.063916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IU6A8YB7",
+        "name": "汇乐多超市(御府店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "鹿鸣湖壹号御府西门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.8512,
+          34.062512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG6IZ1X",
+        "name": "易购超市(六和花园店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "六和花园1号楼",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.875315,
+          34.025322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HRRHU1BJ",
+        "name": "锅圈食汇火锅烧烤食材超市(许昌市新兴路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "新兴办事处向阳路以西新兴西路以南华庭新苑2幢西单元1层西户",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.802125,
+          34.013925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MAJS31IH",
+        "name": "诚信志远果业(许昌曹魏古城店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "西大街131号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825635,
+          34.02804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LA39E7PT",
+        "name": "嗨果儿兴天下店",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "南海街兴天下27栋105门面",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.857855,
+          34.053555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MYG4",
+        "name": "花花牛专卖(健康路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "健康路小学西50米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824471,
+          34.035198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHXLC7H",
+        "name": "天泉甜甜干果(毓秀路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文峰街道毓秀路与前进路交叉口向北100米路西塔湾七组集资楼02号营业房",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844129,
+          34.019364
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GUBSLU13",
+        "name": "栗不了(许昌六一路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "河南省水利第一工程局许昌办事处六一路家属院西门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83419,
+          34.018297
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0ID77L4J5",
+        "name": "梅恒旧货(延安旧货调剂中心店)",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "延安旧货调剂中心(延安北路)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797896,
+          34.041007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K1MSQD4Q",
+        "name": "鲜果优果(五一路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "五一路光明路口北20米路西",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.810494,
+          34.019495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HBK6NL6B",
+        "name": "双汇连锁店(学府名苑店)436店",
+        "type": "购物服务;综合市场;农副产品市场|购物服务;便民商店/便利店;便民商店/便利店",
+        "typecode": "060703|060200",
+        "address": "八龙路与学府街交叉口向北100米学府名苑附近",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845128,
+          34.044331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFMB0A7C",
+        "name": "三国市集农贸街区",
+        "type": "购物服务;综合市场;综合市场",
+        "typecode": "060700",
+        "address": "三国昶源小区东门北100米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.817229,
+          34.013327
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE4Z34",
+        "name": "双龙购物中心",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新兴路西段双龙购物中心",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.777252,
+          34.012707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFWIO6K",
+        "name": "享购超市(兴华路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新兴西路与兴华路交叉口向南50米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822132,
+          34.010583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFI5ZTKO",
+        "name": "林果超市(龙分店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "八龙路学府名苑西门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844988,
+          34.044323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFVKGTI",
+        "name": "新之源干果批发商行",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "解放路南段三国商贸城南排5号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.816763,
+          34.013234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JRCH2A13",
+        "name": "屈臣氏(万达广场店)",
+        "type": "购物服务;超级市场;屈臣氏",
+        "typecode": "060411",
+        "address": "半截河街道魏文路与许都路交叉口东南角万达广场首层",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.858034,
+          34.03001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J39A8VKR",
+        "name": "栗不了(许昌文博路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "塔湾街与文博路交叉口西10米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840198,
+          34.016425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601AK1",
+        "name": "大永兴(向阳店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "向阳路114号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803499,
+          34.021661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFLIM9O9",
+        "name": "旧货公司",
+        "type": "购物服务;综合市场;旧货市场",
+        "typecode": "060702",
+        "address": "八一西路与西环北路交叉口东160米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.775253,
+          34.036775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH99DNQ",
+        "name": "许昌民间收藏商业街",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "灞陵路与许继大道交叉口北400米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.79065,
+          34.02642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJUFTZ5",
+        "name": "大军生鲜烟酒(八龙路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "祥瑞小区西门南180米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845256,
+          34.039495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HKYDU9Y5",
+        "name": "一分利火锅烧烤食材超市(六一路店)",
+        "type": "购物服务;综合市场;水产海鲜市场",
+        "typecode": "060706",
+        "address": "新兴路与六一路向南20米路东",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833167,
+          34.00959
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFPTWXB",
+        "name": "华亚粮油商行",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "天宝西路与文峰中路交叉口西30米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837565,
+          34.046069
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J2DR1I8F",
+        "name": "许昌市魏都农贸市场嗨鲜水产品店",
+        "type": "购物服务;综合市场;水产海鲜市场",
+        "typecode": "060706",
+        "address": "魏都农贸市场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.814361,
+          34.024943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LUL597ZG",
+        "name": "悦龙台生鲜超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "文峰路与裕丰路交汇处魏都悦龙台13号楼1层101",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83638,
+          34.057409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KRMO6WQL",
+        "name": "佳合购物广场",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "颍昌街道派出所西侧70米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.782457,
+          34.031773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G1SK9823",
+        "name": "佰果汇(兴天下店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "东城区瑞贝卡兴天下42号楼103商铺",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.857325,
+          34.051932
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760MWTD",
+        "name": "兴德隆超市",
+        "type": "购物服务;便民商店/便利店;便民商店/便利店|购物服务;超级市场;超市",
+        "typecode": "060200|060400",
+        "address": "新兴路与工农路交叉口向东50米路南",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.810058,
+          34.011696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKGBY00",
+        "name": "许昌市魏都区玲珑姑娘生鲜货仓(许模小区店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "五一路2416号许模小区门面房",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.807829,
+          34.033995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760198C",
+        "name": "好生活超市(劳动北路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "劳动北路与北环西路交叉口北40米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.818948,
+          34.063214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JBPL9C8O",
+        "name": "硕果果儿(新兴路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "新兴东路与毓秀路交叉口东60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845055,
+          34.011872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760N13P",
+        "name": "四季鲜超市(许昌魏都区)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新玛特鸿宝店东门南130米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829192,
+          34.021196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GUXOBTL6",
+        "name": "田仓生鲜(三达·上东城店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "三达·上东城10号楼",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.862318,
+          34.024715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK1LYPX",
+        "name": "果唯伊(No.ZZ0038店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "健发御园北区西1门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.854112,
+          34.032333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IROC0QT2",
+        "name": "兄弟海鲜冻品商行",
+        "type": "购物服务;综合市场;水产海鲜市场",
+        "typecode": "060706",
+        "address": "融昌街与六一路交叉口东南20米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833152,
+          34.008692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHVX1W7",
+        "name": "鑫悦超市(鼎鑫鑫悦广场店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "文峰路与东大街交汇处3号楼1层3102号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.835994,
+          34.026963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B01760198W",
+        "name": "晓勇烟酒超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "八一西路与解放北路交叉口西北50米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.810322,
+          34.039162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G2F71YFB",
+        "name": "锅圈食汇火锅烧烤食材超市(兴业路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "兴业路326号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.861346,
+          34.015225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0IKD55WIT",
+        "name": "鲜果优果(市一中店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "建安大道177号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.835708,
+          34.035024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFKJC88P",
+        "name": "家和生鲜(文博路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "文博路与望田路向北20米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840338,
+          34.015513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KD1RGZMI",
+        "name": "长寿乳业北关大街店(八一路小学南邻)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "北关大街与八一西路交叉口南120米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.830599,
+          34.037577
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHTLWAU",
+        "name": "魏都便民点",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "解放路132号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815524,
+          34.025159
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHGTA3N",
+        "name": "丞相府商业街B区",
+        "type": "购物服务;特色商业街;特色商业街",
+        "typecode": "061000",
+        "address": "衙后街恒达·相府",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826051,
+          34.03188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFJCGHPI",
+        "name": "万佳鲜活果业(向阳路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "向阳路406号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803752,
+          34.017356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K3BHKXJG",
+        "name": "鲜果优果西大街店",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "西大街与古槐街向东100米路南",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826055,
+          34.028095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K21DX2OV",
+        "name": "长寿乳业育才路旗舰店",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "文峰中路育才路口向西30米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836168,
+          34.017704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G3T9S4BO",
+        "name": "小伟水产批发(许继大道店)",
+        "type": "购物服务;综合市场;水产海鲜市场",
+        "typecode": "060706",
+        "address": "解放北路1568号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.81556,
+          34.025126
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0J335SZQU",
+        "name": "锅圈食汇火锅烧烤食材超市(文博路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "文博路与塔湾街交叉口门面房1-2",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.840261,
+          34.016237
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B017601AKT",
+        "name": "政实达超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "毓秀路25号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844161,
+          34.014374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GK0AATMI",
+        "name": "鲜果优果(宇华·名郡店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "宇华·名郡东门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825425,
+          34.040164
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0176019L7",
+        "name": "胜利生活广场(周庄总店)",
+        "type": "购物服务;超级市场;超市|购物服务;便民商店/便利店;便民商店/便利店",
+        "typecode": "060400|060200",
+        "address": "新兴西路周庄胜利生活广场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.779195,
+          34.013176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HD9BZN1R",
+        "name": "youli优李果园(莲城大道店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "莲城大道,二院向东300米,优李果园",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.846488,
+          34.02296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H6LRGPVK",
+        "name": "星河生活超市(工农路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "工农路小铁路交叉口东北角",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.809511,
+          34.010891
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFG11QSV",
+        "name": "向阳炒货(向阳路店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "向阳路中段路西农商行楼下向阳炒货658号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.803567,
+          34.02005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHW5NFA",
+        "name": "魏都平价烟酒超市",
+        "type": "购物服务;超级市场;超市|购物服务;便民商店/便利店;便民商店/便利店",
+        "typecode": "060400|060200",
+        "address": "颍昌路565号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822122,
+          34.021345
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK1L3YQ",
+        "name": "鲜果味水果",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "申庄社区申庄街道第三间门面",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.877158,
+          34.01615
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFP3TPH",
+        "name": "韩记小磨香油现吃现榨",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "望田路910号毓秀新村",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.849621,
+          34.014635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MAP1XDUZ",
+        "name": "向阳生活超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "学院路城标尚郡西门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.867803,
+          34.017629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K0S56V57",
+        "name": "孬蛋生鲜牛羊肉",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "文会街和东顺河街交叉口",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.834853,
+          34.025076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G2LHLI6J",
+        "name": "汇鲜生活超市(恒达·西郡店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "河南省许昌市魏都区五一路路东恒达西郡西门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.811323,
+          34.014349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFOXDI3",
+        "name": "新兴海鲜调料商行",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "新兴路新兴市场",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829917,
+          34.01134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0H3KCXTTS",
+        "name": "鲜果缘水果店(许昌学院店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "紫云路与八一路交叉口向南10米路西",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.868051,
+          34.038973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFST7I4",
+        "name": "福牛超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "莲城大道986号(许昌市畜牧局东20O米)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.847004,
+          34.023659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHW2954",
+        "name": "老摊水果店",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "振兴路与六一路交叉口西北40米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.832596,
+          34.006753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0KGN5Z4TL",
+        "name": "易惠超市(魏都店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "城标·尚郡",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.870134,
+          34.018154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFRRHGJ",
+        "name": "浩源蔬菜配送中心",
+        "type": "购物服务;综合市场;农副产品市场|购物服务;综合市场;蔬菜市场",
+        "typecode": "060703|060705",
+        "address": "许昌浩源农产品蔬菜批发市场北2门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.794212,
+          34.037612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0GUV5W0OS",
+        "name": "佳佳好生活超市(金石·星海湾店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "竹林路金石星海湾22-125-127",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852519,
+          34.053834
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0MUCS0ZCD",
+        "name": "安井冻品批发超市(雪糕冻品批发生鲜)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "许州路以、景福路以东、天瑞街以北、新东街以南御景华庭西门10幢103商铺",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.881378,
+          34.027709
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LGZ7UY1Z",
+        "name": "二娟便民店",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "华佗路卷烟厂北院门口",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.807562,
+          34.02969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HD0MWR6E",
+        "name": "甜果仓",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "北关大街",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831215,
+          34.03808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K3UHIRV0",
+        "name": "嘉荣生鲜超市(广杰御萃花园店)",
+        "type": "购物服务;综合市场;农副产品市场|购物服务;超级市场;超市",
+        "typecode": "060703|060400",
+        "address": "广杰御萃花园东门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.835417,
+          34.001375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L3ZC0Y25",
+        "name": "好时节·鲜生活",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "老吴营广场东南角",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.799748,
+          34.080438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFL271OQ",
+        "name": "万家惠(劳动南路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "劳动南路与劳动西巷交叉口南120米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.820742,
+          34.040322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFITUNIG",
+        "name": "果唯伊(曹魏古城店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文昌阁工商所东北门东100米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824679,
+          34.024785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFK0MV3R",
+        "name": "润福超市(九洲溪雅苑店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "九洲溪雅苑北门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.866426,
+          34.039503
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0JDSAKVLO",
+        "name": "果中原(毓秀路文峰新村店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文峰新村东1门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.844098,
+          34.015255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HDCCKRAJ",
+        "name": "果沃鲜果(金信苑店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "金信苑南门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.868674,
+          34.022658
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFIBWB6H",
+        "name": "臻心鲜超市(汇润地产·百合佳苑北区店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "新兴路与五一路交叉口东100米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.812447,
+          34.011708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFILE4XJ",
+        "name": "有色生活超市(健康路店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "健康路与北关大街交叉口西20米路北",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829811,
+          34.035066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0G2AK1M95",
+        "name": "果小胖鲜果行(高庄家园店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "高庄家园西门西南50米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.822546,
+          34.005888
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0HUACDY2P",
+        "name": "润福超市(安和街分店)",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "景鸿东湖翡翠南门西50米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.861085,
+          34.033706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0L1PR85NS",
+        "name": "乐果儿折扣仓(中央公园店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "竹林路与陈庄街交叉口东南角金石星海湾20幢1层104号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.851748,
+          34.054868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFH35T77",
+        "name": "老路放心肉店",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "文化路与袁庄街交叉口西北60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825463,
+          34.037694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFL94PAE",
+        "name": "嗨果儿(南海街9店)",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "恒大绿洲北门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.867144,
+          34.051561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFVCKK6",
+        "name": "胖红粉条店(九弟万丰购物广场店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "九弟万丰购物广场西南门旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836439,
+          34.041571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFSR8ZX",
+        "name": "许昌振兴食化",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "新兴西路许昌新兴食品原料商贸旁",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.832275,
+          34.011371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0LRG4SHXF",
+        "name": "东瑞牛羊肉",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "西关街道解放路(许昌医院东家属院南邻第二间)1520门面房",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815771,
+          34.024772
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFHVWJWW",
+        "name": "果蔬香超市(府西·雅园店)",
+        "type": "购物服务;综合市场;蔬菜市场",
+        "typecode": "060705",
+        "address": "八龙路府西雅园西门",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845853,
+          34.037454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K135RC5U",
+        "name": "柒号果仓",
+        "type": "购物服务;综合市场;果品市场",
+        "typecode": "060704",
+        "address": "文峰中路与新兴东路交叉口东北60米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836625,
+          34.012075
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFLQAD1F",
+        "name": "湾湾川超市(学院北路店)",
+        "type": "购物服务;超级市场;超市|购物服务;便民商店/便利店;便民商店/便利店|生活服务;生活服务场所;生活服务场所",
+        "typecode": "060400|060200|070000",
+        "address": "学院路东侧城标尚郡第20号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.867677,
+          34.017391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0K1HLMLMD",
+        "name": "爱乐达甄选生活超市",
+        "type": "购物服务;超级市场;超市",
+        "typecode": "060400",
+        "address": "毓秀路农贸市场东门28号",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.845112,
+          34.020307
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFZTWKC",
+        "name": "雏牧香(仓库路店)",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "三八路12附1附近",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829494,
+          34.015057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFFE3CSI",
+        "name": "百家全超市(健康店)",
+        "type": "购物服务;专卖店;烟酒专卖店|购物服务;超级市场;超市",
+        "typecode": "061210|060400",
+        "address": "建安大道1136号(近健康路小学)",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.825482,
+          34.035287
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "B0FFGB4V8D",
+        "name": "老孙清真宰鸡店",
+        "type": "购物服务;综合市场;农副产品市场",
+        "typecode": "060703",
+        "address": "电业局家属院东门南180米",
+        "category": "commercial",
+        "coordSystem": "GCJ-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833901,
+          34.025831
+        ]
+      }
+    }
+  ]
+}

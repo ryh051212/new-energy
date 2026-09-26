@@ -5,7 +5,9 @@
       "type": "Feature",
       "properties": {
         "id": 1,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -47,7 +49,9 @@
       "type": "Feature",
       "properties": {
         "id": 2,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -89,7 +93,9 @@
       "type": "Feature",
       "properties": {
         "id": 3,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -131,7 +137,9 @@
       "type": "Feature",
       "properties": {
         "id": 4,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -173,7 +181,9 @@
       "type": "Feature",
       "properties": {
         "id": 5,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -215,7 +225,9 @@
       "type": "Feature",
       "properties": {
         "id": 6,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -257,7 +269,9 @@
       "type": "Feature",
       "properties": {
         "id": 7,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -299,7 +313,9 @@
       "type": "Feature",
       "properties": {
         "id": 8,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -341,7 +357,9 @@
       "type": "Feature",
       "properties": {
         "id": 9,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -383,7 +401,9 @@
       "type": "Feature",
       "properties": {
         "id": 10,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -425,7 +445,9 @@
       "type": "Feature",
       "properties": {
         "id": 11,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -467,7 +489,9 @@
       "type": "Feature",
       "properties": {
         "id": 12,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -509,7 +533,9 @@
       "type": "Feature",
       "properties": {
         "id": 13,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -551,7 +577,9 @@
       "type": "Feature",
       "properties": {
         "id": 14,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -593,7 +621,9 @@
       "type": "Feature",
       "properties": {
         "id": 15,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -635,7 +665,9 @@
       "type": "Feature",
       "properties": {
         "id": 16,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -677,7 +709,9 @@
       "type": "Feature",
       "properties": {
         "id": 17,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -719,7 +753,9 @@
       "type": "Feature",
       "properties": {
         "id": 18,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -761,7 +797,9 @@
       "type": "Feature",
       "properties": {
         "id": 19,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -803,7 +841,9 @@
       "type": "Feature",
       "properties": {
         "id": 20,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -845,7 +885,9 @@
       "type": "Feature",
       "properties": {
         "id": 21,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -887,7 +929,9 @@
       "type": "Feature",
       "properties": {
         "id": 22,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -929,7 +973,9 @@
       "type": "Feature",
       "properties": {
         "id": 23,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -971,7 +1017,9 @@
       "type": "Feature",
       "properties": {
         "id": 24,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -1013,7 +1061,9 @@
       "type": "Feature",
       "properties": {
         "id": 25,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1055,7 +1105,9 @@
       "type": "Feature",
       "properties": {
         "id": 26,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1097,7 +1149,9 @@
       "type": "Feature",
       "properties": {
         "id": 27,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1139,7 +1193,9 @@
       "type": "Feature",
       "properties": {
         "id": 28,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1181,7 +1237,9 @@
       "type": "Feature",
       "properties": {
         "id": 29,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1223,7 +1281,9 @@
       "type": "Feature",
       "properties": {
         "id": 30,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -1265,7 +1325,9 @@
       "type": "Feature",
       "properties": {
         "id": 31,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1307,7 +1369,9 @@
       "type": "Feature",
       "properties": {
         "id": 32,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -1349,7 +1413,9 @@
       "type": "Feature",
       "properties": {
         "id": 33,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1391,7 +1457,9 @@
       "type": "Feature",
       "properties": {
         "id": 34,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1433,7 +1501,9 @@
       "type": "Feature",
       "properties": {
         "id": 35,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1475,7 +1545,9 @@
       "type": "Feature",
       "properties": {
         "id": 36,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -1517,7 +1589,9 @@
       "type": "Feature",
       "properties": {
         "id": 37,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1559,7 +1633,9 @@
       "type": "Feature",
       "properties": {
         "id": 38,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1601,7 +1677,9 @@
       "type": "Feature",
       "properties": {
         "id": 39,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1643,7 +1721,9 @@
       "type": "Feature",
       "properties": {
         "id": 40,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1685,7 +1765,9 @@
       "type": "Feature",
       "properties": {
         "id": 41,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -1727,7 +1809,9 @@
       "type": "Feature",
       "properties": {
         "id": 42,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -1769,7 +1853,9 @@
       "type": "Feature",
       "properties": {
         "id": 43,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1811,7 +1897,9 @@
       "type": "Feature",
       "properties": {
         "id": 44,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -1853,7 +1941,9 @@
       "type": "Feature",
       "properties": {
         "id": 45,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1895,7 +1985,9 @@
       "type": "Feature",
       "properties": {
         "id": 46,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -1937,7 +2029,9 @@
       "type": "Feature",
       "properties": {
         "id": 47,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -1979,7 +2073,9 @@
       "type": "Feature",
       "properties": {
         "id": 48,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2021,7 +2117,9 @@
       "type": "Feature",
       "properties": {
         "id": 49,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2063,7 +2161,9 @@
       "type": "Feature",
       "properties": {
         "id": 50,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2105,7 +2205,9 @@
       "type": "Feature",
       "properties": {
         "id": 51,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2147,7 +2249,9 @@
       "type": "Feature",
       "properties": {
         "id": 52,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2189,7 +2293,9 @@
       "type": "Feature",
       "properties": {
         "id": 53,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2231,7 +2337,9 @@
       "type": "Feature",
       "properties": {
         "id": 54,
-        "stationCount": 2
+        "stationCount": 2,
+        "residentialCount": 1,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -2273,7 +2381,9 @@
       "type": "Feature",
       "properties": {
         "id": 55,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2315,7 +2425,9 @@
       "type": "Feature",
       "properties": {
         "id": 56,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -2357,7 +2469,9 @@
       "type": "Feature",
       "properties": {
         "id": 57,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -2399,7 +2513,9 @@
       "type": "Feature",
       "properties": {
         "id": 58,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -2441,7 +2557,9 @@
       "type": "Feature",
       "properties": {
         "id": 59,
-        "stationCount": 2
+        "stationCount": 2,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2483,7 +2601,9 @@
       "type": "Feature",
       "properties": {
         "id": 60,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -2525,7 +2645,9 @@
       "type": "Feature",
       "properties": {
         "id": 61,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2567,7 +2689,9 @@
       "type": "Feature",
       "properties": {
         "id": 62,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2609,7 +2733,9 @@
       "type": "Feature",
       "properties": {
         "id": 63,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -2651,7 +2777,9 @@
       "type": "Feature",
       "properties": {
         "id": 64,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2693,7 +2821,9 @@
       "type": "Feature",
       "properties": {
         "id": 65,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2735,7 +2865,9 @@
       "type": "Feature",
       "properties": {
         "id": 66,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 5,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -2777,7 +2909,9 @@
       "type": "Feature",
       "properties": {
         "id": 67,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -2819,7 +2953,9 @@
       "type": "Feature",
       "properties": {
         "id": 68,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -2861,7 +2997,9 @@
       "type": "Feature",
       "properties": {
         "id": 69,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 4,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -2903,7 +3041,9 @@
       "type": "Feature",
       "properties": {
         "id": 70,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -2945,7 +3085,9 @@
       "type": "Feature",
       "properties": {
         "id": 71,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -2987,7 +3129,9 @@
       "type": "Feature",
       "properties": {
         "id": 72,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3029,7 +3173,9 @@
       "type": "Feature",
       "properties": {
         "id": 73,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3071,7 +3217,9 @@
       "type": "Feature",
       "properties": {
         "id": 74,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3113,7 +3261,9 @@
       "type": "Feature",
       "properties": {
         "id": 75,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3155,7 +3305,9 @@
       "type": "Feature",
       "properties": {
         "id": 76,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3197,7 +3349,9 @@
       "type": "Feature",
       "properties": {
         "id": 77,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3239,7 +3393,9 @@
       "type": "Feature",
       "properties": {
         "id": 78,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3281,7 +3437,9 @@
       "type": "Feature",
       "properties": {
         "id": 79,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 7,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -3323,7 +3481,9 @@
       "type": "Feature",
       "properties": {
         "id": 80,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -3365,7 +3525,9 @@
       "type": "Feature",
       "properties": {
         "id": 81,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 7
       },
       "geometry": {
         "type": "Polygon",
@@ -3407,7 +3569,9 @@
       "type": "Feature",
       "properties": {
         "id": 82,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -3449,7 +3613,9 @@
       "type": "Feature",
       "properties": {
         "id": 83,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3491,7 +3657,9 @@
       "type": "Feature",
       "properties": {
         "id": 84,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3533,7 +3701,9 @@
       "type": "Feature",
       "properties": {
         "id": 85,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3575,7 +3745,9 @@
       "type": "Feature",
       "properties": {
         "id": 86,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3617,7 +3789,9 @@
       "type": "Feature",
       "properties": {
         "id": 87,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3659,7 +3833,9 @@
       "type": "Feature",
       "properties": {
         "id": 88,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3701,7 +3877,9 @@
       "type": "Feature",
       "properties": {
         "id": 89,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3743,7 +3921,9 @@
       "type": "Feature",
       "properties": {
         "id": 90,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -3785,7 +3965,9 @@
       "type": "Feature",
       "properties": {
         "id": 91,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -3827,7 +4009,9 @@
       "type": "Feature",
       "properties": {
         "id": 92,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -3869,7 +4053,9 @@
       "type": "Feature",
       "properties": {
         "id": 93,
-        "stationCount": 3
+        "stationCount": 3,
+        "residentialCount": 0,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -3911,7 +4097,9 @@
       "type": "Feature",
       "properties": {
         "id": 94,
-        "stationCount": 3
+        "stationCount": 3,
+        "residentialCount": 1,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -3953,7 +4141,9 @@
       "type": "Feature",
       "properties": {
         "id": 95,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 6
       },
       "geometry": {
         "type": "Polygon",
@@ -3995,7 +4185,9 @@
       "type": "Feature",
       "properties": {
         "id": 96,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -4037,7 +4229,9 @@
       "type": "Feature",
       "properties": {
         "id": 97,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -4079,7 +4273,9 @@
       "type": "Feature",
       "properties": {
         "id": 98,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -4121,7 +4317,9 @@
       "type": "Feature",
       "properties": {
         "id": 99,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 1,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -4163,7 +4361,9 @@
       "type": "Feature",
       "properties": {
         "id": 100,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4205,7 +4405,9 @@
       "type": "Feature",
       "properties": {
         "id": 101,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4247,7 +4449,9 @@
       "type": "Feature",
       "properties": {
         "id": 102,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4289,7 +4493,9 @@
       "type": "Feature",
       "properties": {
         "id": 103,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4331,7 +4537,9 @@
       "type": "Feature",
       "properties": {
         "id": 104,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4373,7 +4581,9 @@
       "type": "Feature",
       "properties": {
         "id": 105,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 6,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -4415,7 +4625,9 @@
       "type": "Feature",
       "properties": {
         "id": 106,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 10
       },
       "geometry": {
         "type": "Polygon",
@@ -4457,7 +4669,9 @@
       "type": "Feature",
       "properties": {
         "id": 107,
-        "stationCount": 3
+        "stationCount": 3,
+        "residentialCount": 3,
+        "commercialCount": 6
       },
       "geometry": {
         "type": "Polygon",
@@ -4499,7 +4713,9 @@
       "type": "Feature",
       "properties": {
         "id": 108,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 6,
+        "commercialCount": 6
       },
       "geometry": {
         "type": "Polygon",
@@ -4541,7 +4757,9 @@
       "type": "Feature",
       "properties": {
         "id": 109,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 4,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -4583,7 +4801,9 @@
       "type": "Feature",
       "properties": {
         "id": 110,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 5,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4625,7 +4845,9 @@
       "type": "Feature",
       "properties": {
         "id": 111,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4667,7 +4889,9 @@
       "type": "Feature",
       "properties": {
         "id": 112,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4709,7 +4933,9 @@
       "type": "Feature",
       "properties": {
         "id": 113,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4751,7 +4977,9 @@
       "type": "Feature",
       "properties": {
         "id": 114,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4793,7 +5021,9 @@
       "type": "Feature",
       "properties": {
         "id": 115,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4835,7 +5065,9 @@
       "type": "Feature",
       "properties": {
         "id": 116,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -4877,7 +5109,9 @@
       "type": "Feature",
       "properties": {
         "id": 117,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -4919,7 +5153,9 @@
       "type": "Feature",
       "properties": {
         "id": 118,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 4,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -4961,7 +5197,9 @@
       "type": "Feature",
       "properties": {
         "id": 119,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 5,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -5003,7 +5241,9 @@
       "type": "Feature",
       "properties": {
         "id": 120,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 6,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -5045,7 +5285,9 @@
       "type": "Feature",
       "properties": {
         "id": 121,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 5,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -5087,7 +5329,9 @@
       "type": "Feature",
       "properties": {
         "id": 122,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 5,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -5129,7 +5373,9 @@
       "type": "Feature",
       "properties": {
         "id": 123,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 3,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -5171,7 +5417,9 @@
       "type": "Feature",
       "properties": {
         "id": 124,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -5213,7 +5461,9 @@
       "type": "Feature",
       "properties": {
         "id": 125,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5255,7 +5505,9 @@
       "type": "Feature",
       "properties": {
         "id": 126,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -5297,7 +5549,9 @@
       "type": "Feature",
       "properties": {
         "id": 127,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5339,7 +5593,9 @@
       "type": "Feature",
       "properties": {
         "id": 128,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5381,7 +5637,9 @@
       "type": "Feature",
       "properties": {
         "id": 129,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -5423,7 +5681,9 @@
       "type": "Feature",
       "properties": {
         "id": 130,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 7
       },
       "geometry": {
         "type": "Polygon",
@@ -5465,7 +5725,9 @@
       "type": "Feature",
       "properties": {
         "id": 131,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5507,7 +5769,9 @@
       "type": "Feature",
       "properties": {
         "id": 132,
-        "stationCount": 5
+        "stationCount": 5,
+        "residentialCount": 4,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -5549,7 +5813,9 @@
       "type": "Feature",
       "properties": {
         "id": 133,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -5591,7 +5857,9 @@
       "type": "Feature",
       "properties": {
         "id": 134,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5633,7 +5901,9 @@
       "type": "Feature",
       "properties": {
         "id": 135,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5675,7 +5945,9 @@
       "type": "Feature",
       "properties": {
         "id": 136,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5717,7 +5989,9 @@
       "type": "Feature",
       "properties": {
         "id": 137,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5759,7 +6033,9 @@
       "type": "Feature",
       "properties": {
         "id": 138,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5801,7 +6077,9 @@
       "type": "Feature",
       "properties": {
         "id": 139,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -5843,7 +6121,9 @@
       "type": "Feature",
       "properties": {
         "id": 140,
-        "stationCount": 2
+        "stationCount": 2,
+        "residentialCount": 3,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -5885,7 +6165,9 @@
       "type": "Feature",
       "properties": {
         "id": 141,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 6,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -5927,7 +6209,9 @@
       "type": "Feature",
       "properties": {
         "id": 142,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -5969,7 +6253,9 @@
       "type": "Feature",
       "properties": {
         "id": 143,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -6011,7 +6297,9 @@
       "type": "Feature",
       "properties": {
         "id": 144,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 5,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -6053,7 +6341,9 @@
       "type": "Feature",
       "properties": {
         "id": 145,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -6095,7 +6385,9 @@
       "type": "Feature",
       "properties": {
         "id": 146,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6137,7 +6429,9 @@
       "type": "Feature",
       "properties": {
         "id": 147,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6179,7 +6473,9 @@
       "type": "Feature",
       "properties": {
         "id": 148,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6221,7 +6517,9 @@
       "type": "Feature",
       "properties": {
         "id": 149,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -6263,7 +6561,9 @@
       "type": "Feature",
       "properties": {
         "id": 150,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -6305,7 +6605,9 @@
       "type": "Feature",
       "properties": {
         "id": 151,
-        "stationCount": 5
+        "stationCount": 5,
+        "residentialCount": 4,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -6347,7 +6649,9 @@
       "type": "Feature",
       "properties": {
         "id": 152,
-        "stationCount": 2
+        "stationCount": 2,
+        "residentialCount": 3,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -6389,7 +6693,9 @@
       "type": "Feature",
       "properties": {
         "id": 153,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 3,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -6431,7 +6737,9 @@
       "type": "Feature",
       "properties": {
         "id": 154,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 4,
+        "commercialCount": 5
       },
       "geometry": {
         "type": "Polygon",
@@ -6473,7 +6781,9 @@
       "type": "Feature",
       "properties": {
         "id": 155,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6515,7 +6825,9 @@
       "type": "Feature",
       "properties": {
         "id": 156,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6557,7 +6869,9 @@
       "type": "Feature",
       "properties": {
         "id": 157,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6599,7 +6913,9 @@
       "type": "Feature",
       "properties": {
         "id": 158,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6641,7 +6957,9 @@
       "type": "Feature",
       "properties": {
         "id": 159,
-        "stationCount": 1
+        "stationCount": 1,
+        "residentialCount": 4,
+        "commercialCount": 4
       },
       "geometry": {
         "type": "Polygon",
@@ -6683,7 +7001,9 @@
       "type": "Feature",
       "properties": {
         "id": 160,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 3,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -6725,7 +7045,9 @@
       "type": "Feature",
       "properties": {
         "id": 161,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6767,7 +7089,9 @@
       "type": "Feature",
       "properties": {
         "id": 162,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 3
       },
       "geometry": {
         "type": "Polygon",
@@ -6809,7 +7133,9 @@
       "type": "Feature",
       "properties": {
         "id": 163,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -6851,7 +7177,9 @@
       "type": "Feature",
       "properties": {
         "id": 164,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6893,7 +7221,9 @@
       "type": "Feature",
       "properties": {
         "id": 165,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -6935,7 +7265,9 @@
       "type": "Feature",
       "properties": {
         "id": 166,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 2
       },
       "geometry": {
         "type": "Polygon",
@@ -6977,7 +7309,9 @@
       "type": "Feature",
       "properties": {
         "id": 167,
-        "stationCount": 2
+        "stationCount": 2,
+        "residentialCount": 1,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -7019,7 +7353,9 @@
       "type": "Feature",
       "properties": {
         "id": 168,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 1,
+        "commercialCount": 1
       },
       "geometry": {
         "type": "Polygon",
@@ -7061,7 +7397,9 @@
       "type": "Feature",
       "properties": {
         "id": 169,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 2,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",
@@ -7103,7 +7441,9 @@
       "type": "Feature",
       "properties": {
         "id": 170,
-        "stationCount": 0
+        "stationCount": 0,
+        "residentialCount": 0,
+        "commercialCount": 0
       },
       "geometry": {
         "type": "Polygon",

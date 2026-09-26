@@ -49,7 +49,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
       return { ok: filename !== failFile, json: async () => {
         // 模拟响应解析期间离开页面，此时异步回调仍可能返回。
         if (leaveDuringFetch && filename === 'stations.json') cleanup()
-        return JSON.parse(fs.readFileSync(new URL(`../public/geojson/${filename}`, import.meta.url), 'utf8'))
+        return JSON.parse(fs.readFileSync(new URL(`../public/geojson/${filename}`, import.meta.url), 'utf8').replace(/^\uFEFF/, ''))
       } }
     },
   })
@@ -57,7 +57,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
   ready()
   await handlers['load:']()
   return { sources, handlers, popups, map, cleanup, options, visibility, requestSignal,
-    state: vm.runInContext('({ count: weiduStationCount.value, error: loadError.value, warning: gridWarning.value, loading: loading.value })', context) }
+    state: vm.runInContext('({ count: weiduStationCount.value, commercialCount: commercialCount.value, error: loadError.value, warning: gridWarning.value, loading: loading.value })', context) }
 }
 
 test('热力图默认隐藏，网格填充和边线默认显示', async () => {
@@ -81,7 +81,9 @@ test('MapView 内联筛选与网格累计数量一致', async () => {
   const app = await mount()
   assert.equal(app.state.error, '')
   assert.equal(app.state.count, 52)
+  assert.equal(app.state.commercialCount, 200)
   assert.equal(app.sources.hexgrid.features.reduce((sum, hex) => sum + hex.properties.stationCount, 0), 52)
+  assert.equal(app.sources.hexgrid.features.reduce((sum, hex) => sum + hex.properties.commercialCount, 0), 200)
   app.cleanup()
 })
 
@@ -110,5 +112,6 @@ test('站点优先、弹窗文字安全、零数量保留、旧弹窗关闭', as
   app.handlers['click:hexgrid-fill'](event)
   assert.equal(app.popups[0].removed, true)
   assert.equal(app.popups[1].content.children[1].textContent, '充电站数量：0')
+  assert.equal(app.popups[1].content.children[2].textContent, '商业设施数量：0')
   app.cleanup()
 })

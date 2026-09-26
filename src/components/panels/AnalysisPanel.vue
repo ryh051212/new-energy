@@ -17,6 +17,15 @@ defineProps({
     default: 0
   },
 
+  residentialCount: {
+    type: Number,
+    default: 0
+  },
+  commercialCount: {
+    type: Number,
+    default: 0
+  },
+
   selectedHex: {
     type: Object,
     default: null
@@ -58,6 +67,16 @@ function handleStationCountSelect(
       <strong>{{ occupiedHexCount }}</strong>
     </div>
 
+    <div class="stat-item">
+      <span>居民小区总数</span>
+      <strong>{{ residentialCount }}</strong>
+    </div>
+
+    <div class="stat-item">
+      <span>商业设施总数</span>
+      <strong>{{ commercialCount }}</strong>
+    </div>
+
     <HexDistributionChart 
     :data="hexDistribution" 
      @selectStationCount="handleStationCountSelect"
@@ -79,6 +98,11 @@ function handleStationCountSelect(
       <p>
         充电站：
         {{ selectedHex.stationCount }}
+      </p>
+
+      <p>
+        商业设施：
+        {{ selectedHex.commercialCount }}
       </p>
     </div>
 

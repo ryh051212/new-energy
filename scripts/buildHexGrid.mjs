@@ -1,12 +1,18 @@
 import fs from 'node:fs'
 import { fileURLToPath } from 'node:url'
-import { countHexStations } from '../src/utils/hexGrid.js'
 import { filterStations } from '../src/utils/stations.js'
 import * as turf from '@turf/turf'
 // 文件位置相对于当前脚本，换目录执行时也能找到数据。
 const boundaryPath = new URL('../public/geojson/weidu.json', import.meta.url)
 
 const stationsPath = new URL('../public/geojson/stations.json', import.meta.url)
+const residentialPath = path.resolve(
+  'public/geojson/residential-pois.json'
+)
+// 商业 POI 文件
+const commercialPath = path.resolve(
+  'public/geojson/commercial-pois.json'
+)
 
 const outputPath = new URL('../public/geojson/hex-grid.json', import.meta.url)
 
@@ -20,6 +26,18 @@ const boundaryData = JSON.parse(
 //读取充电桩数据
 const stations = JSON.parse(
   fs.readFileSync(stationsPath, 'utf-8')
+)
+// 读取居民小区 GeoJSON
+const residentialPois = JSON.parse(
+  fs.readFileSync(residentialPath, 'utf-8')
+)
+
+// 读取商业设施 GeoJSON
+const commercialPois = JSON.parse(
+  fs.readFileSync(
+    commercialPath,
+    'utf-8'
+  )
 )
 
 // ==============================
@@ -74,11 +92,40 @@ console.log(
 )
 
 // ==============================
-// 5. 统计每个网格中的充电站
+// 5. 统计每个网格中的充电站和居民小区
 // ==============================
 
-// 只统计范围内站点，每个站点最多计入一个网格；遗漏时停止写入。
-const countedGrid = countHexStations(hexGrid, filteredStations)
+const countedGrid = {
+  ...hexGrid,
+  features: hexGrid.features.map((hex, index) => {
+    const stationsInside = turf.pointsWithinPolygon(
+      filteredStations,
+      hex
+    )
+
+    const residentialInside = turf.pointsWithinPolygon(
+      residentialPois,
+      hex
+    )
+    // 找出当前六边形内部的商业 POI
+const commercialInside =
+  turf.pointsWithinPolygon(
+    commercialPois,
+    hex
+  )
+
+    return {
+      ...hex,//“先保留原对象，然后在其上追加新的属性”
+      properties: {
+        ...hex.properties,
+        id: index + 1,
+        stationCount: stationsInside.features.length,
+        residentialCount: residentialInside.features.length,
+        commercialInside:commercialInside.features.length
+      },
+    }
+  }),
+}
 
 // ==============================
 // 6. 保存结果
@@ -101,4 +148,66 @@ fs.writeFileSync(
 
 console.log(
   `已生成：${fileURLToPath(outputPath)}`
+)
+// ======================================
+// 数据质量检查：
+// 把所有六边形中的居民小区数量加起来
+// ======================================
+const residentialCountInHex =
+  countedGrid.features.reduce(
+    (total, hex) => {
+      return total + Number(hex.properties.residentialCount || 0)
+    },
+    0
+  )
+
+
+// 原始居民小区 Point 总数
+const originalResidentialCount =
+  residentialPois.features.length
+
+
+console.log(
+  '原始居民小区总数：',
+  originalResidentialCount
+)
+
+console.log(
+  '六边形内居民小区总数：',
+  residentialCountInHex
+)
+// ======================================
+// 检查商业 POI 是否基本全部进入六边形
+// ======================================
+
+const commercialCountInHex =
+  hexGrid.features.reduce(
+    (total, hex) => {
+
+      return (
+        total +
+        Number(
+          hex.properties
+            .commercialCount ?? 0
+        )
+      )
+    },
+
+    0
+  )
+
+
+// 原始商业 POI 总数
+const originalCommercialCount =
+  commercialPois.features.length
+
+
+console.log(
+  '原始商业POI总数：',
+  originalCommercialCount
+)
+
+console.log(
+  '六边形内商业POI总数：',
+  commercialCountInHex
 )
