@@ -19,7 +19,7 @@ const hexCount = ref(0); // 六边形总数
 
 const occupiedHexCount = ref(0); //至少有一个充电桩的六边形数量
 const residentialCount = ref(0); // 居民小区总数
-const commercialCount = ref(0); // 商业设施总数
+const commercialCount = ref(0); // 网格内商业设施总数
 
 const selectedHex = ref(null); //当前点击的六边形
 const hexDistribution = ref([]);
@@ -125,6 +125,166 @@ onMounted(() => {
 
             // 稍微透明，底下的地图仍然能看见
             "fill-opacity": 0.65,
+          },
+        },
+        {
+          // 综合潜在充电需求专题图
+          id: "demand-index-fill",
+
+          // 六边形是 Polygon，所以使用 fill
+          type: "fill",
+
+          // 继续使用统一的六边形 Source
+          source: "hexgrid",
+
+          // 默认关闭，避免与其他专题图互相覆盖
+          layout: {
+            visibility: "none",
+          },
+
+          paint: {
+            // 根据每个六边形的 demandIndex 进行分级设色
+            "fill-color": [
+              "step",
+
+              // 读取当前六边形的综合需求指数
+              ["get", "demandIndex"],
+
+              // demandIndex < 0.2
+              "#f7fee7",
+
+              // >= 0.2
+              0.2,
+              "#d9f99d",
+
+              // >= 0.4
+              0.4,
+              "#bef264",
+
+              // >= 0.6
+              0.6,
+              "#84cc16",
+
+              // >= 0.8
+              0.8,
+              "#3f6212",
+            ],
+
+            "fill-opacity": 0.75,
+
+            // 六边形边界
+            "fill-outline-color": "#94a3b8",
+          },
+        },
+        {
+          // =====================================
+          // 供需错配专题图
+          // =====================================
+          id: "mismatch-fill",
+
+          // 六边形是 Polygon
+          type: "fill",
+
+          // mismatchIndex 已经存在 hex-grid.json 中
+          source: "hexgrid",
+
+          // 默认关闭，避免和其他专题图叠在一起
+          layout: {
+            visibility: "none",
+          },
+
+          paint: {
+            // =====================================
+            // 根据 mismatchIndex 连续设色
+            //
+            // 负值：供给相对高
+            // 0附近：需求与供给相对接近
+            // 正值：需求相对高
+            // =====================================
+            "fill-color": [
+              "interpolate",
+
+              // 线性渐变
+              ["linear"],
+
+              // 读取当前六边形的 mismatchIndex
+              // 如果不存在，则按0处理
+              ["coalesce", ["get", "mismatchIndex"], 0],
+
+              // -1：供给明显高于需求
+              -1,
+              "#2166ac",
+
+              // -0.4
+              -0.4,
+              "#67a9cf",
+
+              // 0：相对接近
+              0,
+              "#f7f7f7",
+
+              // +0.4
+              0.4,
+              "#ef8a62",
+
+              // +1：需求明显高于供给
+              1,
+              "#b2182b",
+            ],
+
+            "fill-opacity": 0.78,
+
+            // 六边形轮廓
+            "fill-outline-color": "#94a3b8",
+          },
+        },
+        {
+          // =====================================
+          // 供需类型四象限专题图
+          // =====================================
+          id: "supply-demand-type-fill",
+
+          type: "fill",
+
+          // 分类结果仍然存在统一的 hexgrid Source 中
+          source: "hexgrid",
+
+          layout: {
+            visibility: "none",
+          },
+
+          paint: {
+            // 根据 supplyDemandType
+            // 给四类网格设置不同颜色
+            "fill-color": [
+              "match",
+
+              ["get", "supplyDemandType"],
+
+              // 高需求 + 低供给
+              // 后续重点关注
+              "high-demand-low-supply",
+              "#dc2626",
+
+              // 高需求 + 高供给
+              "high-demand-high-supply",
+              "#f59e0b",
+
+              // 低需求 + 高供给
+              "low-demand-high-supply",
+              "#2563eb",
+
+              // 低需求 + 低供给
+              "low-demand-low-supply",
+              "#d1d5db",
+
+              // 防止异常数据没有匹配到
+              "#ffffff",
+            ],
+
+            "fill-opacity": 0.78,
+
+            "fill-outline-color": "#94a3b8",
           },
         },
         {
@@ -334,16 +494,14 @@ onMounted(() => {
         console.log("地址：", residential.properties.address);
       });
       //地图和 Style 加载完成以后，再执行里面的代码。
-      const [weiduGeoJSON, stationsGeoJSON, residentialGeoJSON, commercialGeoJSON] =
+      const [weiduGeoJSON, stationsGeoJSON, residentialGeoJSON] =
         await Promise.all([
           readGeoJSON("weidu.json"),
           readGeoJSON("stations.json"),
           readGeoJSON("residential-pois.json"),
-          readGeoJSON("commercial-pois.json"),
         ]);
 
       residentialCount.value = residentialGeoJSON?.features?.length ?? 0;
-      commercialCount.value = commercialGeoJSON?.features?.length ?? 0;
       map.on("click", "stations-circle", (e) => {
         const station = e.features?.[0];
         if (!station || !station.geometry) return;
@@ -451,44 +609,65 @@ onMounted(() => {
       }
       map.getSource("hexgrid").setData(hexGrid);
       loadStatistics(hexGrid);
+      commercialCount.value = hexGrid.features.reduce(
+        (total, hex) => total + Number(hex.properties.commercialCount ?? 0),
+        0,
+      );
 
-      map.on("click", "hexgrid-fill", (e) => {
-        // 点到充电站时，只显示站点弹窗，不再弹出网格信息。
+      map.on("click", (e) => {
+        // 站点有自己的弹窗，点击站点时不切换网格。
         const stations = map.queryRenderedFeatures(e.point, {
-          /*/e.point 是鼠标点击位置的屏幕坐标。
-
-  queryRenderedFeatures 用来查询这个位置当前是否渲染了 stations-circle 图层中的充电站。 */
           layers: ["stations-circle"],
         });
         if (stations.length > 0) return;
 
-        const hex = e.features[0];
-
-        //selectedHex表示当前点击的六边形
-        selectedHex.value = {
-          id: hex.properties.id,
-          stationCount: Number(hex.properties.stationCount),
-          commercialCount: Number(hex.properties.commercialCount ?? 0),
-        };
-        if (popup) {
-          popup.remove();
-        } //如果地图上已经有旧弹窗，就先删除，防止多个弹窗同时存在。
-        popup = new maplibregl.Popup()
-          .setLngLat(e.lngLat)
-          .setDOMContent(
-            popupContent([
-              "网格 " + hex.properties.id,
-              "充电站数量：" + hex.properties.stationCount,
-              "商业设施数量：" + (hex.properties.commercialCount ?? 0),
-            ]),
-          )
-          .addTo(map);
-      });
-      map.on("click", (e) => {
-        const features = map.queryRenderedFeatures(e.point, {
-          layers: ["hexgrid-fill", "stations-circle"],
-        });
-        if (features.length > 0) return;
+        // 各专题图层共用同一份六边形网格数据。
+        const hex = map.queryRenderedFeatures(e.point, {
+          layers: [
+            "supply-demand-type-fill",
+            "mismatch-fill",
+            "demand-index-fill",
+            "residential-demand-fill",
+            "hexgrid-fill",
+          ],
+        })[0];
+        if (hex) {
+          const properties = hex.properties ?? {};
+          const supplyDemandType = {
+            "high-demand-low-supply": "高需求、低供给",
+            "high-demand-high-supply": "高需求、高供给",
+            "low-demand-high-supply": "低需求、高供给",
+            "low-demand-low-supply": "低需求、低供给",
+          }[properties.supplyDemandType] ?? "未分类";
+          selectedHex.value = {
+            id: properties.id,
+            stationCount: Number(properties.stationCount ?? 0),
+            residentialCount: Number(properties.residentialCount ?? 0),
+            commercialCount: Number(properties.commercialCount ?? 0),
+            demandIndex: Number(properties.demandIndex ?? 0),
+            // 标准化后的相对供给水平
+            supplyIndex: Number(properties.supplyIndex ?? 0),
+            mismatchIndex: Number(properties.mismatchIndex ?? 0),
+            supplyDemandType,
+          };
+          popup?.remove();
+          popup = new maplibregl.Popup()
+            .setLngLat(e.lngLat)
+            .setDOMContent(
+              popupContent([
+                "网格 " + properties.id,
+                "充电站数量：" + (properties.stationCount ?? 0),
+                "居民小区数量：" + (properties.residentialCount ?? 0),
+                "商业设施数量：" + (properties.commercialCount ?? 0),
+                "综合需求指数：" + (properties.demandIndex ?? 0),
+                "供给指数：" + (properties.supplyIndex ?? 0),
+                "供需错配指数：" + (properties.mismatchIndex ?? 0),
+                "供需类型：" + supplyDemandType,
+              ]),
+            )
+            .addTo(map);
+          return;
+        }
 
         map.setFilter("hexgrid-highlight", ["==", ["get", "stationCount"], -1]);
         selectedHex.value = null;
@@ -507,26 +686,18 @@ onMounted(() => {
     } finally {
       loading.value = false;
     }
-    map.on(
-  'click',
-  'commercial-circle',
-  (e) => {
+    map.on("click", "commercial-circle", (e) => {
+      // 用户当前点击的商业 POI
+      const feature = e.features?.[0];
 
-    // 用户当前点击的商业 POI
-    const feature = e.features?.[0]
+      if (!feature) return;
 
-    if (!feature) return
+      console.log("商业设施：", feature.properties);
 
-    console.log(
-      '商业设施：',
-      feature.properties
-    )
-
-    // 这里不要新建第二套属性面板
-    // 把 feature / properties
-    // 传给你现有的属性面板状态即可
-  }
-)
+      // 这里不要新建第二套属性面板
+      // 把 feature / properties
+      // 传给你现有的属性面板状态即可
+    });
   });
 });
 
@@ -609,6 +780,37 @@ const layerGroups = ref([
     // 默认关闭
     visible: false,
   },
+  {
+    id: "demandIndex",
+
+    label: "综合需求分布",
+
+    // 注意这里仍然是 Layer ID
+    layerIds: ["demand-index-fill"],
+
+    visible: false,
+  },
+  {
+    id: "mismatch",
+
+    label: "供需错配",
+
+    // 控制真正的 MapLibre Layer
+    layerIds: ["mismatch-fill"],
+
+    visible: false,
+  },
+  {
+  id: 'supplyDemandType',
+
+  label: '供需类型',
+
+  layerIds: [
+    'supply-demand-type-fill'
+  ],
+
+  visible: false
+}
 ]);
 function highlightHexByStationCount(stationCount) {
   // 先确认高亮图层已经存在

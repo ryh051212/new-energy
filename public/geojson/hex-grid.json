@@ -7,7 +7,13 @@
         "id": 1,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -51,7 +57,13 @@
         "id": 2,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -95,7 +107,13 @@
         "id": 3,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -139,7 +157,13 @@
         "id": 4,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -183,7 +207,13 @@
         "id": 5,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -227,7 +257,13 @@
         "id": 6,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -271,7 +307,13 @@
         "id": 7,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -315,7 +357,13 @@
         "id": 8,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -359,7 +407,13 @@
         "id": 9,
         "stationCount": 1,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.2,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -403,7 +457,13 @@
         "id": 10,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -447,7 +507,13 @@
         "id": 11,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -491,7 +557,13 @@
         "id": 12,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -535,7 +607,13 @@
         "id": 13,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -579,7 +657,13 @@
         "id": 14,
         "stationCount": 1,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.2,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -623,7 +707,13 @@
         "id": 15,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -667,7 +757,13 @@
         "id": 16,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -711,7 +807,13 @@
         "id": 17,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -755,7 +857,13 @@
         "id": 18,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -799,7 +907,13 @@
         "id": 19,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -843,7 +957,13 @@
         "id": 20,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -887,7 +1007,13 @@
         "id": 21,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -931,7 +1057,13 @@
         "id": 22,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -975,7 +1107,13 @@
         "id": 23,
         "stationCount": 1,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.2,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1019,7 +1157,13 @@
         "id": 24,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1063,7 +1207,13 @@
         "id": 25,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1107,7 +1257,13 @@
         "id": 26,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1151,7 +1307,13 @@
         "id": 27,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1195,7 +1357,13 @@
         "id": 28,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1239,7 +1407,13 @@
         "id": 29,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1283,7 +1457,13 @@
         "id": 30,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.1,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.1,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1327,7 +1507,13 @@
         "id": 31,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1371,7 +1557,13 @@
         "id": 32,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.171,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.171,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1415,7 +1607,13 @@
         "id": 33,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1459,7 +1657,13 @@
         "id": 34,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1503,7 +1707,13 @@
         "id": 35,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1547,7 +1757,13 @@
         "id": 36,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1591,7 +1807,13 @@
         "id": 37,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1635,7 +1857,13 @@
         "id": 38,
         "stationCount": 1,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.2,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1679,7 +1907,13 @@
         "id": 39,
         "stationCount": 1,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.2,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1723,7 +1957,13 @@
         "id": 40,
         "stationCount": 1,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.014,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1767,7 +2007,13 @@
         "id": 41,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1811,7 +2057,13 @@
         "id": 42,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.243,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.243,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1855,7 +2107,13 @@
         "id": 43,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1899,7 +2157,13 @@
         "id": 44,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.15,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.15,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1943,7 +2207,13 @@
         "id": 45,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -1987,7 +2257,13 @@
         "id": 46,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2031,7 +2307,13 @@
         "id": 47,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2075,7 +2357,13 @@
         "id": 48,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2119,7 +2407,13 @@
         "id": 49,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2163,7 +2457,13 @@
         "id": 50,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2207,7 +2507,13 @@
         "id": 51,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2251,7 +2557,13 @@
         "id": 52,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2295,7 +2607,13 @@
         "id": 53,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2339,7 +2657,13 @@
         "id": 54,
         "stationCount": 2,
         "residentialCount": 1,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.171,
+        "supplyIndex": 0.4,
+        "mismatchIndex": -0.229,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2383,7 +2707,13 @@
         "id": 55,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.214,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2427,7 +2757,13 @@
         "id": 56,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.193,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.193,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2471,7 +2807,13 @@
         "id": 57,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.221,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.221,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2515,7 +2857,13 @@
         "id": 58,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.271,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.271,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2559,7 +2907,13 @@
         "id": 59,
         "stationCount": 2,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0.4,
+        "mismatchIndex": -0.329,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2603,7 +2957,13 @@
         "id": 60,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2647,7 +3007,13 @@
         "id": 61,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2691,7 +3057,13 @@
         "id": 62,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2735,7 +3107,13 @@
         "id": 63,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2779,7 +3157,13 @@
         "id": 64,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2823,7 +3207,13 @@
         "id": 65,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2867,7 +3257,13 @@
         "id": 66,
         "stationCount": 1,
         "residentialCount": 5,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.7142857142857143,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.407,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.207,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2911,7 +3307,13 @@
         "id": 67,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.364,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.364,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2955,7 +3357,13 @@
         "id": 68,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.536,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.536,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -2999,7 +3407,13 @@
         "id": 69,
         "stationCount": 1,
         "residentialCount": 4,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.486,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.286,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3043,7 +3457,13 @@
         "id": 70,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.193,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.193,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3087,7 +3507,13 @@
         "id": 71,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.214,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3131,7 +3557,13 @@
         "id": 72,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3175,7 +3607,13 @@
         "id": 73,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3219,7 +3657,13 @@
         "id": 74,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3263,7 +3707,13 @@
         "id": 75,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3307,7 +3757,13 @@
         "id": 76,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3351,7 +3807,13 @@
         "id": 77,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3395,7 +3857,13 @@
         "id": 78,
         "stationCount": 1,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.014,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3439,7 +3907,13 @@
         "id": 79,
         "stationCount": 0,
         "residentialCount": 7,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 1,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.75,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.75,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3483,7 +3957,13 @@
         "id": 80,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.343,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.343,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3527,7 +4007,13 @@
         "id": 81,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 7
+        "commercialCount": 7,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.7,
+        "demandIndex": 0.421,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.421,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3571,7 +4057,13 @@
         "id": 82,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.171,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.171,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3615,7 +4107,13 @@
         "id": 83,
         "stationCount": 1,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.057,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3659,7 +4157,13 @@
         "id": 84,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3703,7 +4207,13 @@
         "id": 85,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3747,7 +4257,13 @@
         "id": 86,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3791,7 +4307,13 @@
         "id": 87,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3835,7 +4357,13 @@
         "id": 88,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3879,7 +4407,13 @@
         "id": 89,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3923,7 +4457,13 @@
         "id": 90,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -3967,7 +4507,13 @@
         "id": 91,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.193,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.193,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4011,7 +4557,13 @@
         "id": 92,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.436,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.436,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4055,7 +4607,13 @@
         "id": 93,
         "stationCount": 3,
         "residentialCount": 0,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.2,
+        "supplyIndex": 0.6,
+        "mismatchIndex": -0.4,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4099,7 +4657,13 @@
         "id": 94,
         "stationCount": 3,
         "residentialCount": 1,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.271,
+        "supplyIndex": 0.6,
+        "mismatchIndex": -0.329,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4143,7 +4707,13 @@
         "id": 95,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 6
+        "commercialCount": 6,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.6,
+        "demandIndex": 0.586,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.586,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4187,7 +4757,13 @@
         "id": 96,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.321,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.321,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4231,7 +4807,13 @@
         "id": 97,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.264,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.264,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4275,7 +4857,13 @@
         "id": 98,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4319,7 +4907,13 @@
         "id": 99,
         "stationCount": 1,
         "residentialCount": 1,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.121,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.079,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4363,7 +4957,13 @@
         "id": 100,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4407,7 +5007,13 @@
         "id": 101,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4451,7 +5057,13 @@
         "id": 102,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4495,7 +5107,13 @@
         "id": 103,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4539,7 +5157,13 @@
         "id": 104,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.214,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4583,7 +5207,13 @@
         "id": 105,
         "stationCount": 0,
         "residentialCount": 6,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.8571428571428571,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.529,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.529,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4627,7 +5257,13 @@
         "id": 106,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 10
+        "commercialCount": 10,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 1,
+        "demandIndex": 0.786,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.786,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4671,7 +5307,13 @@
         "id": 107,
         "stationCount": 3,
         "residentialCount": 3,
-        "commercialCount": 6
+        "commercialCount": 6,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.6,
+        "demandIndex": 0.514,
+        "supplyIndex": 0.6,
+        "mismatchIndex": -0.086,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4715,7 +5357,13 @@
         "id": 108,
         "stationCount": 0,
         "residentialCount": 6,
-        "commercialCount": 6
+        "commercialCount": 6,
+        "residentialNorm": 0.8571428571428571,
+        "commercialNorm": 0.6,
+        "demandIndex": 0.729,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.729,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4759,7 +5407,13 @@
         "id": 109,
         "stationCount": 1,
         "residentialCount": 4,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.536,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.336,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4803,7 +5457,13 @@
         "id": 110,
         "stationCount": 0,
         "residentialCount": 5,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.7142857142857143,
+        "commercialNorm": 0,
+        "demandIndex": 0.357,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.357,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4847,7 +5507,13 @@
         "id": 111,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4891,7 +5557,13 @@
         "id": 112,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4935,7 +5607,13 @@
         "id": 113,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -4979,7 +5657,13 @@
         "id": 114,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5023,7 +5707,13 @@
         "id": 115,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5067,7 +5757,13 @@
         "id": 116,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5111,7 +5807,13 @@
         "id": 117,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.264,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.264,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5155,7 +5857,13 @@
         "id": 118,
         "stationCount": 1,
         "residentialCount": 4,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.336,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.136,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5199,7 +5907,13 @@
         "id": 119,
         "stationCount": 1,
         "residentialCount": 5,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.7142857142857143,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.607,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.407,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5243,7 +5957,13 @@
         "id": 120,
         "stationCount": 1,
         "residentialCount": 6,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.8571428571428571,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.629,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.429,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5287,7 +6007,13 @@
         "id": 121,
         "stationCount": 0,
         "residentialCount": 5,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.7142857142857143,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.457,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.457,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5331,7 +6057,13 @@
         "id": 122,
         "stationCount": 1,
         "residentialCount": 5,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.7142857142857143,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.457,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.257,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5375,7 +6107,13 @@
         "id": 123,
         "stationCount": 1,
         "residentialCount": 3,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.314,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.114,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5419,7 +6157,13 @@
         "id": 124,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5463,7 +6207,13 @@
         "id": 125,
         "stationCount": 1,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.057,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5507,7 +6257,13 @@
         "id": 126,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5551,7 +6307,13 @@
         "id": 127,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5595,7 +6357,13 @@
         "id": 128,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5639,7 +6407,13 @@
         "id": 129,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.393,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.393,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5683,7 +6457,13 @@
         "id": 130,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 7
+        "commercialCount": 7,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.7,
+        "demandIndex": 0.564,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.564,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5727,7 +6507,13 @@
         "id": 131,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.214,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5771,7 +6557,13 @@
         "id": 132,
         "stationCount": 5,
         "residentialCount": 4,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.436,
+        "supplyIndex": 1,
+        "mismatchIndex": -0.564,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5815,7 +6607,13 @@
         "id": 133,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.486,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.486,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5859,7 +6657,13 @@
         "id": 134,
         "stationCount": 1,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.057,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5903,7 +6707,13 @@
         "id": 135,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0,
+        "demandIndex": 0.214,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.214,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5947,7 +6757,13 @@
         "id": 136,
         "stationCount": 1,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0.2,
+        "mismatchIndex": -0.129,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -5991,7 +6807,13 @@
         "id": 137,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6035,7 +6857,13 @@
         "id": 138,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.143,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6079,7 +6907,13 @@
         "id": 139,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.143,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6123,7 +6957,13 @@
         "id": 140,
         "stationCount": 2,
         "residentialCount": 3,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.364,
+        "supplyIndex": 0.4,
+        "mismatchIndex": -0.036,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6167,7 +7007,13 @@
         "id": 141,
         "stationCount": 1,
         "residentialCount": 6,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.8571428571428571,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.679,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.479,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6211,7 +7057,13 @@
         "id": 142,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.364,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.364,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6255,7 +7107,13 @@
         "id": 143,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.314,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.314,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6299,7 +7157,13 @@
         "id": 144,
         "stationCount": 0,
         "residentialCount": 5,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.7142857142857143,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.507,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.507,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6343,7 +7207,13 @@
         "id": 145,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.436,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.436,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6387,7 +7257,13 @@
         "id": 146,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.143,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6431,7 +7307,13 @@
         "id": 147,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6475,7 +7357,13 @@
         "id": 148,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6519,7 +7407,13 @@
         "id": 149,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.386,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.386,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6563,7 +7457,13 @@
         "id": 150,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.314,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.314,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6607,7 +7507,13 @@
         "id": 151,
         "stationCount": 5,
         "residentialCount": 4,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.436,
+        "supplyIndex": 1,
+        "mismatchIndex": -0.564,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6651,7 +7557,13 @@
         "id": 152,
         "stationCount": 2,
         "residentialCount": 3,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.364,
+        "supplyIndex": 0.4,
+        "mismatchIndex": -0.036,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6695,7 +7607,13 @@
         "id": 153,
         "stationCount": 1,
         "residentialCount": 3,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.264,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.064,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6739,7 +7657,13 @@
         "id": 154,
         "stationCount": 0,
         "residentialCount": 4,
-        "commercialCount": 5
+        "commercialCount": 5,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.5,
+        "demandIndex": 0.536,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.536,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6783,7 +7707,13 @@
         "id": 155,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6827,7 +7757,13 @@
         "id": 156,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6871,7 +7807,13 @@
         "id": 157,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6915,7 +7857,13 @@
         "id": 158,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -6959,7 +7907,13 @@
         "id": 159,
         "stationCount": 1,
         "residentialCount": 4,
-        "commercialCount": 4
+        "commercialCount": 4,
+        "residentialNorm": 0.5714285714285714,
+        "commercialNorm": 0.4,
+        "demandIndex": 0.486,
+        "supplyIndex": 0.2,
+        "mismatchIndex": 0.286,
+        "supplyDemandType": "high-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7003,7 +7957,13 @@
         "id": 160,
         "stationCount": 0,
         "residentialCount": 3,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.42857142857142855,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.364,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.364,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7047,7 +8007,13 @@
         "id": 161,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7091,7 +8057,13 @@
         "id": 162,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 3
+        "commercialCount": 3,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.3,
+        "demandIndex": 0.221,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.221,
+        "supplyDemandType": "high-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7135,7 +8107,13 @@
         "id": 163,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.05,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.05,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7179,7 +8157,13 @@
         "id": 164,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0,
+        "demandIndex": 0.071,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.071,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7223,7 +8207,13 @@
         "id": 165,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7267,7 +8257,13 @@
         "id": 166,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 2
+        "commercialCount": 2,
+        "residentialNorm": 0,
+        "commercialNorm": 0.2,
+        "demandIndex": 0.1,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.1,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7311,7 +8307,13 @@
         "id": 167,
         "stationCount": 2,
         "residentialCount": 1,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.121,
+        "supplyIndex": 0.4,
+        "mismatchIndex": -0.279,
+        "supplyDemandType": "low-demand-high-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7355,7 +8357,13 @@
         "id": 168,
         "stationCount": 0,
         "residentialCount": 1,
-        "commercialCount": 1
+        "commercialCount": 1,
+        "residentialNorm": 0.14285714285714285,
+        "commercialNorm": 0.1,
+        "demandIndex": 0.121,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.121,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7399,7 +8407,13 @@
         "id": 169,
         "stationCount": 0,
         "residentialCount": 2,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0.2857142857142857,
+        "commercialNorm": 0,
+        "demandIndex": 0.143,
+        "supplyIndex": 0,
+        "mismatchIndex": 0.143,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",
@@ -7443,7 +8457,13 @@
         "id": 170,
         "stationCount": 0,
         "residentialCount": 0,
-        "commercialCount": 0
+        "commercialCount": 0,
+        "residentialNorm": 0,
+        "commercialNorm": 0,
+        "demandIndex": 0,
+        "supplyIndex": 0,
+        "mismatchIndex": 0,
+        "supplyDemandType": "low-demand-low-supply"
       },
       "geometry": {
         "type": "Polygon",

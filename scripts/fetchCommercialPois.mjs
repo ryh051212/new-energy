@@ -1,4 +1,4 @@
-// 抓取商业设施 POI 数据
+//抓取居民点数据
 import fs from 'node:fs'
 import path from 'node:path'
 import dotenv from 'dotenv'
@@ -21,7 +21,7 @@ if (!key) {
 // 魏都区行政区划代码
 const REGION = '411002'
 
-// 高德 POI 分类：商业设施
+// 高德 POI 分类：住宅小区
 // 集中写在这里，后面分类码变化也方便修改
 const COMMERCIAL_TYPES =
   '060100|060400|060700|061000'
@@ -47,7 +47,7 @@ async function fetchPage(pageNum) {
     // 高德 Web Service Key
     url.searchParams.set('key', key)
 
-    // 查询商业设施
+    // 查询住宅小区
     url.searchParams.set(
       'types',
       COMMERCIAL_TYPES
@@ -208,33 +208,39 @@ const features = uniquePois
     }
 
     return {
-      type: 'Feature',
+  type: 'Feature',
 
-      properties: {
-        id: poi.id ?? '',
-        name: poi.name ?? '',
-        type: poi.type ?? '',
-        typecode:
-          poi.typecode ?? '',
-        address:
-          poi.address ?? '',
+  properties: {
+    // 高德 POI 唯一标识
+    id: poi.id,
 
-        // 我们自己定义的需求分类
-        category: 'commercial',
+    // 商业设施名称
+    name: poi.name,
 
-        // 高德返回坐标为 GCJ-02
-        coordSystem: 'GCJ-02'
-      },
+    // 高德原始分类信息
+    type: poi.type,
+    typecode: poi.typecode,
 
-      geometry: {
-        type: 'Point',
+    // 地址
+    address: poi.address,
 
-        coordinates: [
-          lng,
-          lat
-        ]
-      }
-    }
+    // 我们项目自己的业务分类
+    // 后面统计 commercialCount 就靠这个概念
+    category: 'commercial',
+
+    // 保留坐标系信息，避免以后自己把自己坑了
+    coordSystem: 'GCJ-02'
+  },
+
+  geometry: {
+    type: 'Point',
+
+    coordinates: [
+      lng,
+      lat
+    ]
+  }
+}
   })
 
   // 移除前面产生的 null
@@ -249,7 +255,9 @@ const features = uniquePois
   features
 }
 //保存数据
-const outputPath = new URL('../public/geojson/commercial-pois.json', import.meta.url)
+const outputPath = path.resolve(
+  'public/geojson/commercial-pois.json'
+)
 
 // 确保文件夹存在
 fs.mkdirSync(
@@ -262,14 +270,11 @@ fs.mkdirSync(
 // 写入 GeoJSON 文件
 fs.writeFileSync(
   outputPath,
-  JSON.stringify(
-    geojson,
-    null,
-    2
-  ),
+  JSON.stringify(geojson, null, 2),
   'utf-8'
 )
 
 console.log(
-  `已生成 ${features.length} 个商业设施 POI`
+  `商业 POI 获取完成：${geojson.features.length} 个`
 )
+

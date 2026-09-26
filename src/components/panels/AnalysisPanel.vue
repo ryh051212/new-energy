@@ -76,7 +76,6 @@ function handleStationCountSelect(
       <span>商业设施总数</span>
       <strong>{{ commercialCount }}</strong>
     </div>
-
     <HexDistributionChart 
     :data="hexDistribution" 
      @selectStationCount="handleStationCountSelect"
@@ -101,8 +100,30 @@ function handleStationCountSelect(
       </p>
 
       <p>
+        居民小区：
+        {{ selectedHex.residentialCount }}
+      </p>
+
+      <p>
         商业设施：
         {{ selectedHex.commercialCount }}
+      </p>
+
+      <p>
+        综合需求指数：
+        {{ selectedHex.demandIndex }}
+      </p>
+      <p>
+        供给指数：
+        {{ selectedHex.supplyIndex }}
+      </p>
+      <p>
+        供需错配指数：
+        {{ selectedHex.mismatchIndex }}
+      </p>
+      <p>
+        供需类型：
+        {{ selectedHex.supplyDemandType }}
       </p>
     </div>
 
