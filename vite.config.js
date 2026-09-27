@@ -4,4 +4,20 @@ import { defineConfig } from 'vite'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  build: {
+    // MapLibre's indivisible main module builds to about 544 kB.
+    chunkSizeWarningLimit: 550,
+    rolldownOptions: {
+      output: {
+        codeSplitting: {
+          groups: [
+            { name: 'maplibre-shared', test: /node_modules[\\/]maplibre-gl[\\/]dist[\\/]maplibre-gl-shared\.mjs/ },
+            { name: 'maplibre', test: /node_modules[\\/]maplibre-gl[\\/]/ },
+            { name: 'echarts', test: /node_modules[\\/]echarts[\\/]/ },
+            { name: 'turf', test: /node_modules[\\/]@turf[\\/]/ },
+          ],
+        },
+      },
+    },
+  },
 })

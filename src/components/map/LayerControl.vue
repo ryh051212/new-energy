@@ -39,12 +39,16 @@ const emit = defineEmits(['toggle'])//声明子组件可以向父组件发送哪
 
 <style scoped>
 .layer-control {
-  /* 放在地图上方，并避开左上角的站点数量。 */
+  /* 在地图左侧垂直居中。 */
   position: absolute;
-  top: 72px;
+  top: 50%;
   left: 16px;
+  transform: translateY(-50%);
   z-index: 10;
   width: 190px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  box-sizing: border-box;
 
   padding: 16px;
 

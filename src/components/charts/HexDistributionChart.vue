@@ -6,7 +6,22 @@ import {
   watch
 } from 'vue'
 
-import * as echarts from 'echarts'
+import * as echarts from 'echarts/core'
+import { BarChart } from 'echarts/charts'
+import {
+  GridComponent,
+  TitleComponent,
+  TooltipComponent
+} from 'echarts/components'
+import { CanvasRenderer } from 'echarts/renderers'
+
+echarts.use([
+  BarChart,
+  GridComponent,
+  TitleComponent,
+  TooltipComponent,
+  CanvasRenderer
+])
 const emit = defineEmits(['selectStationCount'])//传输给父组件
 
 function handleBarClick(params) {

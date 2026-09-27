@@ -33,6 +33,15 @@ defineProps({
   hexDistribution: {
     type: Array,
     default: () => []
+  },
+  supplyDemandStats: {
+    type: Object,
+    default: () => ({
+      highDemandLowSupply: 0,
+      highDemandHighSupply: 0,
+      lowDemandHighSupply: 0,
+      lowDemandLowSupply: 0
+    })
   }
 })
 function handleStationCountSelect(
@@ -76,6 +85,43 @@ function handleStationCountSelect(
       <span>商业设施总数</span>
       <strong>{{ commercialCount }}</strong>
     </div>
+    <div class="supply-demand-summary">
+
+  <h4>供需类型统计</h4>
+
+  <div class="summary-row">
+    <span class="summary-label"><i class="legend-color red" aria-hidden="true"></i>高需求-低供给</span>
+
+    <strong>
+      {{ supplyDemandStats.highDemandLowSupply }}
+    </strong>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-label"><i class="legend-color orange" aria-hidden="true"></i>高需求-高供给</span>
+
+    <strong>
+      {{ supplyDemandStats.highDemandHighSupply }}
+    </strong>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-label"><i class="legend-color blue" aria-hidden="true"></i>低需求-高供给</span>
+
+    <strong>
+      {{ supplyDemandStats.lowDemandHighSupply }}
+    </strong>
+  </div>
+
+  <div class="summary-row">
+    <span class="summary-label"><i class="legend-color gray" aria-hidden="true"></i>低需求-低供给</span>
+
+    <strong>
+      {{ supplyDemandStats.lowDemandLowSupply }}
+    </strong>
+  </div>
+
+</div>
     <HexDistributionChart 
     :data="hexDistribution" 
      @selectStationCount="handleStationCountSelect"
@@ -166,6 +212,37 @@ function handleStationCountSelect(
 
   border-bottom: 1px solid #e5e7eb;
 }
+
+.supply-demand-summary h4 {
+  margin: 18px 0 8px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 0;
+}
+
+.summary-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  flex: none;
+  border-radius: 2px;
+}
+
+.red { background: #dc2626; }
+.orange { background: #f59e0b; }
+.blue { background: #2563eb; }
+.gray { background: #d1d5db; }
 
 .selected-info {
   margin-top: 18px;

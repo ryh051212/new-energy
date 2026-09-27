@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import * as turf from "@turf/turf";
@@ -22,11 +22,19 @@ const residentialCount = ref(0); // 居民小区总数
 const commercialCount = ref(0); // 网格内商业设施总数
 
 const selectedHex = ref(null); //当前点击的六边形
+// 传给统计图表的“站点数-网格数”分布数据。
 const hexDistribution = ref([]);
+// 保存加载并处理后的六边形 GeoJSON，供统计和供需分类使用。
+const hexData = ref(null);
+// 地图数据尚未全部加载完成时为 true。
 const loading = ref(true);
+// 地图主要数据加载失败时显示的错误信息。
 const loadError = ref("");
+// 六边形网格单独加载失败时显示的提示信息。
 const gridWarning = ref("");
+// 组件卸载时用它取消尚未完成的 GeoJSON 请求。
 const controller = new AbortController();
+// 从 public/geojson 读取指定文件，并解析为 JavaScript 数据。
 async function readGeoJSON(filename) {
   const response = await fetch(
     `${import.meta.env.BASE_URL}geojson/${filename}`,
@@ -608,6 +616,7 @@ onMounted(() => {
         }
       }
       map.getSource("hexgrid").setData(hexGrid);
+      hexData.value = hexGrid;
       loadStatistics(hexGrid);
       commercialCount.value = hexGrid.features.reduce(
         (total, hex) => total + Number(hex.properties.commercialCount ?? 0),
@@ -736,7 +745,7 @@ const layerGroups = ref([
 
     layerIds: ["hexgrid-fill", "hexgrid-outline"],
 
-    visible: true,
+    visible: false,
   },
 
   {
@@ -803,13 +812,13 @@ const layerGroups = ref([
   {
   id: 'supplyDemandType',
 
-  label: '供需类型',
+  label: '供需四象限地图',
 
   layerIds: [
     'supply-demand-type-fill'
   ],
 
-  visible: false
+  visible: true
 }
 ]);
 function highlightHexByStationCount(stationCount) {
@@ -870,6 +879,65 @@ function loadStatistics(hexData) {
     }))
     .sort((a, b) => a.stationCount - b.stationCount);
 }
+//供需类型数据汇总
+// ==========================================
+// 统计四种供需类型分别有多少个六边形
+// ==========================================
+const supplyDemandStats = computed(() => {
+
+  // 初始四种类型都从 0 开始
+  const result = {
+    highDemandLowSupply: 0,
+    highDemandHighSupply: 0,
+    lowDemandHighSupply: 0,
+    lowDemandLowSupply: 0
+  }
+
+  // 如果六边形数据还没加载，就先返回全 0
+  if (!hexData.value?.features) {
+    return result
+  }
+
+  hexData.value.features.forEach((feature) => {
+
+    const type =
+      feature.properties?.supplyDemandType
+
+    if (type === 'high-demand-low-supply') {
+      result.highDemandLowSupply++
+    }
+
+    else if (
+      type === 'high-demand-high-supply'
+    ) {
+      result.highDemandHighSupply++
+    }
+
+    else if (
+      type === 'low-demand-high-supply'
+    ) {
+      result.lowDemandHighSupply++
+    }
+
+    else if (
+      type === 'low-demand-low-supply'
+    ) {
+      result.lowDemandLowSupply++
+    }
+  })
+
+  return result
+})
+/*hexData
+↓
+170个 Feature
+↓
+读取 supplyDemandType
+↓
+分类计数
+↓
+supplyDemandStats */
+
 </script>
 
 <template>
@@ -888,6 +956,7 @@ function loadStatistics(hexData) {
       :commercial-count="commercialCount"
       :selected-hex="selectedHex"
       :hex-distribution="hexDistribution"
+      :supply-demand-stats="supplyDemandStats"
       @selectStationCount="highlightHexByStationCount"
     />
   </div>
