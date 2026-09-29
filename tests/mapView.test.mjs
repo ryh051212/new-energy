@@ -11,6 +11,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
     .replace(/^import .*;\r?\n/gm, '').replaceAll('import.meta.env.BASE_URL', '"/"')
   const handlers = {}
   const sources = {}
+  const requests = []
   const popups = []
   const visibility = {}
   let options
@@ -28,6 +29,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
     setLayoutProperty(id, property, value) { visibility[id] = value },
     fitBounds() {}, getCanvas() { return {} }, resize() {}, remove() { removed = true },
     queryRenderedFeatures() { return [] },
+    setFilter() {},
   }
   class Popup {
     constructor() { popups.push(this) }
@@ -37,36 +39,42 @@ async function mount(failFile = '', leaveDuringFetch = false) {
     remove() { this.removed = true }
   }
   const context = vm.createContext({
-    ref: value => ({ value }), onMounted: callback => { ready = callback },
+    ref: value => ({ value }), computed: callback => ({ get value() { return callback() } }),
+    onMounted: callback => { ready = callback },
     onBeforeUnmount: callback => { cleanup = callback }, turf, workerUrl: '',
     maplibregl: { setWorkerUrl() {}, Map: function (config) { options = config; return map }, Popup },
     AbortController, AbortSignal, ResizeObserver: class { observe() {} disconnect() {} },
-    console: { error() {} },
+    console: { error() {}, log() {} },
     document: { createElement() { return { children: [], append(child) { this.children.push(child) } } } },
     fetch: async (url, config) => {
-      requestSignal = config.signal
-      const filename = url.split('/').pop()
+      requests.push(url)
+      if (config?.signal) requestSignal = config.signal
+      const filename = url.includes('/api/stations') ? 'stations.json' : url.split('/').pop()
       return { ok: filename !== failFile, json: async () => {
+        if (filename === 'health') return { status: 'ok' }
         // 模拟响应解析期间离开页面，此时异步回调仍可能返回。
         if (leaveDuringFetch && filename === 'stations.json') cleanup()
-        return JSON.parse(fs.readFileSync(new URL(`../public/geojson/${filename}`, import.meta.url), 'utf8').replace(/^\uFEFF/, ''))
+        const data = JSON.parse(fs.readFileSync(new URL(`../public/geojson/${filename}`, import.meta.url), 'utf8').replace(/^\uFEFF/, ''))
+        const name = new URL(url, 'http://localhost').searchParams.get('name')
+        if (name) data.features = data.features.filter(feature => feature.properties.name.includes(name))
+        return data
       } }
     },
   })
   vm.runInContext(script, context)
   ready()
   await handlers['load:']()
-  return { sources, handlers, popups, map, cleanup, options, visibility, requestSignal,
+  return { sources, handlers, popups, map, cleanup, options, visibility, requestSignal, requests, context,
     state: vm.runInContext('({ count: weiduStationCount.value, commercialCount: commercialCount.value, error: loadError.value, warning: gridWarning.value, loading: loading.value })', context) }
 }
 
-test('热力图默认隐藏，网格填充和边线默认显示', async () => {
+test('热力图与网格默认隐藏', async () => {
   const app = await mount()
   const heatmap = app.options.style.layers.find(layer => layer.id === 'stations-heatmap')
   assert.equal(heatmap.layout.visibility, 'none')
   assert.equal(app.visibility['stations-heatmap'], 'none')
-  assert.equal(app.visibility['hexgrid-fill'], 'visible')
-  assert.equal(app.visibility['hexgrid-outline'], 'visible')
+  assert.equal(app.visibility['hexgrid-fill'], 'none')
+  assert.equal(app.visibility['hexgrid-outline'], 'none')
   app.cleanup()
 })
 
@@ -106,12 +114,27 @@ test('站点优先、弹窗文字安全、零数量保留、旧弹窗关闭', as
   assert.equal(app.popups[0].content.children[2].textContent, '编码：0')
   app.map.queryRenderedFeatures = () => [{}]
   const event = { point: {}, lngLat: {}, features: [{ properties: { id: 1, stationCount: 0 } }] }
-  app.handlers['click:hexgrid-fill'](event)
+  app.handlers['click:'](event)
   assert.equal(app.popups.length, 1)
-  app.map.queryRenderedFeatures = () => []
-  app.handlers['click:hexgrid-fill'](event)
+  app.map.queryRenderedFeatures = (_point, options) =>
+    options.layers.includes('stations-circle') ? [] : event.features
+  app.handlers['click:'](event)
   assert.equal(app.popups[0].removed, true)
   assert.equal(app.popups[1].content.children[1].textContent, '充电站数量：0')
-  assert.equal(app.popups[1].content.children[2].textContent, '商业设施数量：0')
+  assert.equal(app.popups[1].content.children[3].textContent, '商业设施数量：0')
+  app.cleanup()
+})
+
+test('按站名搜索并清空搜索后恢复站点', async () => {
+  const app = await mount()
+  const name = app.sources.stations.features[0].properties.name
+  vm.runInContext(`stationKeyword.value = ${JSON.stringify(name)}`, app.context)
+  await vm.runInContext('searchStation()', app.context)
+  assert.ok(app.requests.at(-1).includes(`name=${encodeURIComponent(name)}`))
+  assert.ok(app.sources.stations.features.length >= 1)
+  assert.ok(app.sources.stations.features.every(feature => feature.properties.name.includes(name)))
+  vm.runInContext("stationKeyword.value = ''", app.context)
+  await vm.runInContext('searchStation()', app.context)
+  assert.equal(app.sources.stations.features.length, 52)
   app.cleanup()
 })

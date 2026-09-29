@@ -24,5 +24,12 @@ dist-ssr
 *.sw?
 .env.local
 
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
 # Local backup before flattening the project
 .flatten-backup/

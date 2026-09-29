@@ -1,0 +1,27 @@
+# 魏都区充电设施 WebGIS —— FastAPI 后端依赖
+# 目标环境：Python 3.12.6 / Windows 11
+# 安装：pip install -r requirements.txt
+#
+# 编码提示：本文件由 pip 以 UTF-8 读取，可安全使用中文注释。
+# 对比：%APPDATA%\pip\pip.ini 必须保持纯 ASCII，因为 pip 用系统编码 cp936 解析它。
+#
+# 只列直接依赖并锁定版本；传递依赖（starlette、pydantic、numpy 等）由 pip 自动解析。
+# 需要完整可复现的快照时执行：pip freeze > requirements.lock.txt
+
+# ---- Web 框架 ----
+fastapi==0.141.1
+uvicorn[standard]==0.54.0
+# 说明：[standard] 附带 watchfiles（热重载）、httptools（更快的 HTTP 解析）、
+# websockets、PyYAML。不带 [standard] 也能运行，但 --reload 会退化为低效的轮询扫描。
+
+# ---- 配置管理 ----
+python-dotenv==1.2.3
+psycopg2-binary==2.9.13
+# 用途：读取 .env / .env.local，管理高德 API Key、数据库连接串等敏感配置。
+
+# ---- GIS 空间计算 ----
+shapely==2.1.2
+# 用途：点面判断（站点是否落在魏都区边界内）、缓冲区、距离计算。
+# 它是 GEOS 的 Python 绑定，Windows 有官方预编译 wheel。
+# 刻意不引入 geopandas：它在 Windows 上依赖 GDAL，编译安装麻烦，
+# 且本项目数据已经是 GeoJSON，直接用 shapely + 标准库 json 即可。

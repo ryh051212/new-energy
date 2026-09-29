@@ -1,4 +1,59 @@
 <script setup>
+// 检查 Vue 是否可以正常访问 FastAPI
+async function checkBackend() {
+  try {
+    // 向 FastAPI 的健康检查接口发送 GET 请求
+    const response = await fetch(
+      'http://127.0.0.1:8000/api/health'
+    )
+
+    // 把后端返回的 JSON 转成 JavaScript 对象
+    const data = await response.json()
+
+    console.log(
+      '后端返回：',
+      data
+    )
+  } catch (error) {
+    console.error(
+      '后端连接失败：',
+      error
+    )
+  }
+}
+//搜索框函数
+async function searchStation() {
+  try {
+    if (loading.value || !map) return
+    searchError.value = ''
+    //去掉输入框前后的空格
+    const keyword = stationKeyword.value.trim()
+    const url = keyword
+      ? `http://127.0.0.1:8000/api/stations?name=${encodeURIComponent(keyword)}`
+      : 'http://127.0.0.1:8000/api/stations'
+    // 向 FastAPI 请求符合条件的充电站
+    const response = await fetch(url, { signal: controller.signal })
+    if (!response.ok) throw new Error(`搜索请求失败：HTTP ${response.status}`)
+    //转换为geojson
+    const geojson = await response.json()
+    controller.signal.throwIfAborted()
+    //获取已经存在的stations数据
+    const stations = map.getSource('stations')
+    //更新stations数据
+    if (stations) {
+      stations.setData({
+        type: 'FeatureCollection',
+        features: geojson.features.filter(station =>
+          weiduPolygons.some(polygon => turf.booleanPointInPolygon(station, polygon))),
+      })
+    }
+  } catch (error) {
+    if (!controller.signal.aborted) {
+      searchError.value = '搜索充电站失败，请稍后重试'
+      console.error('搜索充电站失败：', error)
+    }
+  }
+}
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
@@ -8,11 +63,13 @@ import AnalysisPanel from "./panels/AnalysisPanel.vue";
 import LayerControl from "./map/LayerControl.vue";
 // 让 Vite 同时打包 MapLibre 处理地图数据的 Worker。
 maplibregl.setWorkerUrl(workerUrl);
-
+// 用户输入的充电站名称
+const stationKeyword = ref('')
 const mapEl = ref(null);
 const weiduStationCount = ref(0);
 let map;
 let popup;
+let weiduPolygons = [];
 const stationCount = ref(0); //真实的充电桩数量
 
 const hexCount = ref(0); // 六边形总数
@@ -30,11 +87,13 @@ const hexData = ref(null);
 const loading = ref(true);
 // 地图主要数据加载失败时显示的错误信息。
 const loadError = ref("");
+const searchError = ref("");
 // 六边形网格单独加载失败时显示的提示信息。
 const gridWarning = ref("");
 // 组件卸载时用它取消尚未完成的 GeoJSON 请求。
 const controller = new AbortController();
 // 从 public/geojson 读取指定文件，并解析为 JavaScript 数据。
+
 async function readGeoJSON(filename) {
   const response = await fetch(
     `${import.meta.env.BASE_URL}geojson/${filename}`,
@@ -43,6 +102,16 @@ async function readGeoJSON(filename) {
     },
   );
   if (!response.ok) throw new Error(`${filename} 加载失败`);
+  const data = await response.json();
+  controller.signal.throwIfAborted();
+  return data;
+}
+
+async function readStations() {
+  const response = await fetch("http://127.0.0.1:8000/api/stations", {
+    signal: controller.signal,
+  });
+  if (!response.ok) throw new Error("stations.json 加载失败");
   const data = await response.json();
   controller.signal.throwIfAborted();
   return data;
@@ -58,6 +127,8 @@ function popupContent(lines) {
   return content;
 }
 onMounted(() => {
+
+checkBackend()
   map = new maplibregl.Map({
     container: mapEl.value,
     center: [113.85, 34.04],
@@ -73,7 +144,7 @@ onMounted(() => {
         stations: {
           // 充电站要素
           type: "geojson",
-          data: `${import.meta.env.BASE_URL}geojson/stations.json`,
+          data: { type: "FeatureCollection", features: [] },
         },
         hexgrid: {
           // 先放一个空数据，统计完每格的站点数量后再显示。
@@ -505,7 +576,7 @@ onMounted(() => {
       const [weiduGeoJSON, stationsGeoJSON, residentialGeoJSON] =
         await Promise.all([
           readGeoJSON("weidu.json"),
-          readGeoJSON("stations.json"),
+          readStations(),
           readGeoJSON("residential-pois.json"),
         ]);
 
@@ -539,6 +610,7 @@ onMounted(() => {
       if (weiduGeoJSON.type === "FeatureCollection") {
         polygons = weiduGeoJSON.features;
       }
+      weiduPolygons = polygons;
       const weiduStations = [];
       for (const station of stationsGeoJSON.features) {
         for (const polygon of polygons) {
@@ -945,9 +1017,20 @@ supplyDemandStats */
     <div ref="mapEl" class="map"></div>
     <div class="station-count">魏都区充电站：{{ weiduStationCount }} 个</div>
     <LayerControl :layers="layerGroups" @toggle="toggleLayer" />
-    <div v-if="loadError || gridWarning" class="load-message" role="alert">
-      {{ loadError || gridWarning }}
+    <div v-if="loadError || gridWarning || searchError" class="load-message" role="alert">
+      {{ loadError || gridWarning || searchError }}
     </div>
+    <div class="station-search">
+  <input
+    v-model="stationKeyword"
+    placeholder="输入充电站名称"
+    @keyup.enter="searchStation"
+  />
+
+  <button :disabled="loading" @click="searchStation">
+    搜索
+  </button>
+</div>
     <AnalysisPanel
       :station-count="stationCount"
       :hex-count="hexCount"
@@ -975,7 +1058,31 @@ supplyDemandStats */
   min-height: 400px;
   text-align: left;
 }
+.station-search {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
 
+  display: flex;
+  gap: 6px;
+}
+
+.station-search input {
+  width: 180px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+}
+
+.station-search button {
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid black;
+  outline: none;
+}
 .station-count {
   position: absolute;
   top: 16px;

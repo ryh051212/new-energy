@@ -9,6 +9,19 @@
 首次下载后执行 `npm install`，然后执行 `npm run dev`。
 Windows PowerShell 若禁止运行 npm.ps1，使用 `npm.cmd run dev`。
 
+若前端需要从 PostgreSQL 读取充电站，先在 `backend/` 安装依赖并配置密码：
+
+```powershell
+cd backend
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env.local
+# 编辑 .env.local，将 DB_PASSWORD 设为本机 postgres 用户的实际密码
+python -m uvicorn main:app --reload
+```
+
+后端默认连接本机 `5433` 端口的 `nev_webgis` 数据库。密码也可以写在项目根目录现有的 `.env.local` 中；读取顺序为进程环境变量、`backend/.env.local`、项目根目录 `.env.local`。
+这些 `.env.local` 文件已被 Git 忽略，不要将密码提交到仓库。配置后重新启动后端。
+
 执行 `npm run build` 构建至 `dist/`，执行 `npm run preview` 预览构建结果。
 
 ## 目录
