@@ -5,13 +5,14 @@ import vm from 'node:vm'
 import * as turf from '@turf/turf'
 
 // 执行 MapView 真实的内联事件代码，使用本地数据和模拟地图检查功能。
-async function mount(failFile = '', leaveDuringFetch = false) {
+async function mount(failFile = '', leaveDuringFetch = false, activeRoute = '/') {
   const source = fs.readFileSync(new URL('../src/components/MapView.vue', import.meta.url), 'utf8')
   const script = source.split('<script setup>')[1].split('</script>')[0]
     .replace(/^import .*;\r?\n/gm, '').replaceAll('import.meta.env.BASE_URL', '"/"')
   const handlers = {}
   const sources = {}
   const requests = []
+  const filters = {}
   const popups = []
   const visibility = {}
   let options
@@ -29,7 +30,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
     setLayoutProperty(id, property, value) { visibility[id] = value },
     fitBounds() {}, getCanvas() { return {} }, resize() {}, remove() { removed = true },
     queryRenderedFeatures() { return [] },
-    setFilter() {},
+    setFilter(id, filter) { filters[id] = filter },
   }
   class Popup {
     constructor() { popups.push(this) }
@@ -39,6 +40,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
     remove() { this.removed = true }
   }
   const context = vm.createContext({
+    defineProps: () => ({ activeRoute }), watch() {},
     ref: value => ({ value }), computed: callback => ({ get value() { return callback() } }),
     onMounted: callback => { ready = callback },
     onBeforeUnmount: callback => { cleanup = callback }, turf, workerUrl: '',
@@ -50,7 +52,7 @@ async function mount(failFile = '', leaveDuringFetch = false) {
       requests.push(url)
       if (config?.signal) requestSignal = config.signal
       const filename = url.includes('/api/stations') ? 'stations.json' : url.split('/').pop()
-      return { ok: filename !== failFile, json: async () => {
+      return { ok: filename !== failFile && !(failFile === 'api-only' && url.includes('/api/stations')), json: async () => {
         if (filename === 'health') return { status: 'ok' }
         // 模拟响应解析期间离开页面，此时异步回调仍可能返回。
         if (leaveDuringFetch && filename === 'stations.json') cleanup()
@@ -64,17 +66,44 @@ async function mount(failFile = '', leaveDuringFetch = false) {
   vm.runInContext(script, context)
   ready()
   await handlers['load:']()
-  return { sources, handlers, popups, map, cleanup, options, visibility, requestSignal, requests, context,
+  return { sources, handlers, popups, map, cleanup, options, visibility, filters, requestSignal, requests, context,
     state: vm.runInContext('({ count: weiduStationCount.value, commercialCount: commercialCount.value, error: loadError.value, warning: gridWarning.value, loading: loading.value })', context) }
 }
 
-test('热力图与网格默认隐藏', async () => {
+test('首页默认显示热力图并隐藏供给网格', async () => {
   const app = await mount()
   const heatmap = app.options.style.layers.find(layer => layer.id === 'stations-heatmap')
   assert.equal(heatmap.layout.visibility, 'none')
-  assert.equal(app.visibility['stations-heatmap'], 'none')
+  assert.equal(app.visibility['stations-heatmap'], 'visible')
   assert.equal(app.visibility['hexgrid-fill'], 'none')
   assert.equal(app.visibility['hexgrid-outline'], 'none')
+  app.cleanup()
+})
+
+test('专题路由直接访问和切换时打开对应图层', async () => {
+  const app = await mount('', false, '/monitoring/demand')
+  assert.equal(app.visibility['demand-index-fill'], 'visible')
+  assert.equal(app.visibility['stations-heatmap'], 'none')
+  for (const [path, layer] of [
+    ['/monitoring/supply', 'hexgrid-fill'],
+    ['/monitoring/mismatch', 'mismatch-fill'],
+    ['/planning/problems', 'supply-demand-type-fill'],
+  ]) {
+    vm.runInContext(`props.activeRoute = ${JSON.stringify(path)}; applyRouteView()`, app.context)
+    assert.equal(app.visibility[layer], 'visible')
+    assert.equal(app.visibility['demand-index-fill'], 'none')
+  }
+  vm.runInContext("props.activeRoute = '/monitoring/stations'; applyRouteView()", app.context)
+  assert.equal(app.visibility['stations-circle'], 'visible')
+  assert.equal(app.visibility['supply-demand-type-fill'], 'none')
+  app.cleanup()
+})
+
+test('后端未启动时使用本地站点数据', async () => {
+  const app = await mount('api-only')
+  assert.equal(app.state.count, 52)
+  assert.equal(app.state.error, '')
+  assert.ok(app.requests.some(url => url.endsWith('/geojson/stations.json')))
   app.cleanup()
 })
 
@@ -136,5 +165,64 @@ test('按站名搜索并清空搜索后恢复站点', async () => {
   vm.runInContext("stationKeyword.value = ''", app.context)
   await vm.runInContext('searchStation()', app.context)
   assert.equal(app.sources.stations.features.length, 52)
+  app.cleanup()
+})
+
+test('测距：两个点连成线，长度按米 / 千米显示', async () => {
+  const app = await mount()
+  // 同一纬度上相差 0.012° 经度，在 34°N 约 1.1 千米
+  vm.runInContext('measurePoints.value = [[113.85, 34.04], [113.862, 34.04]]', app.context)
+  vm.runInContext('refreshMeasureLayer()', app.context)
+  // 传进地图的数据 = 1 条折线 + 2 个点
+  assert.equal(app.sources.measure.features.length, 3)
+  assert.equal(app.sources.measure.features[0].geometry.type, 'LineString')
+  assert.match(vm.runInContext('measureText.value', app.context), /^1\.1\d 千米$/)
+  // 只差 0.002°（约 180 米）时改用米显示
+  vm.runInContext('measurePoints.value = [[113.85, 34.04], [113.852, 34.04]]', app.context)
+  assert.match(vm.runInContext('measureText.value', app.context), /^1\d\d 米$/)
+  // 清除以后数据回到空
+  vm.runInContext('clearMeasure()', app.context)
+  assert.equal(app.sources.measure.features.length, 0)
+  app.cleanup()
+})
+
+test('充电站头上的闪电图标跟着「充电站」开关一起显隐', async () => {
+  const app = await mount()
+  const bolt = app.options.style.layers.find(layer => layer.id === 'stations-bolt')
+  assert.equal(bolt.type, 'symbol')
+  assert.equal(bolt.layout['icon-image'], 'bolt-icon')
+  // 充电站默认打开，所以闪电也是可见的
+  assert.equal(app.visibility['stations-bolt'], 'visible')
+  // 关掉「充电站」以后两个图层一起隐藏
+  vm.runInContext("toggleLayer('stations', false)", app.context)
+  assert.equal(app.visibility['stations-circle'], 'none')
+  assert.equal(app.visibility['stations-bolt'], 'none')
+  app.cleanup()
+})
+
+test('勾选「只看快充」会给站点图层加过滤条件，取消后恢复', async () => {
+  const app = await mount()
+  vm.runInContext('toggleFastOnly(true)', app.context)
+  // 用 JSON 比较：过滤条件是 vm 里创建的数组，不能直接跨环境比较
+  const expected = '["==",["get","chargeType"],"fast"]'
+  assert.equal(JSON.stringify(app.filters['stations-circle']), expected)
+  assert.equal(JSON.stringify(app.filters['stations-bolt']), expected)
+  assert.equal(JSON.stringify(app.filters['stations-heatmap']), expected)
+  vm.runInContext('toggleFastOnly(false)', app.context)
+  assert.equal(app.filters['stations-circle'], null)
+  app.cleanup()
+})
+
+test('快捷图层面板只列出还没打开的图层', async () => {
+  const app = await mount()
+  const ids = () => vm.runInContext("switchableLayers.value.map(item => item.id).join(',')", app.context)
+  // 默认打开边界、站点、热力图，所以常用图层里只剩这三个可切换
+  assert.equal(ids(), 'hexgrid,residential,commercial')
+  // 打开居民小区后，它就从列表里消失
+  vm.runInContext("showLayer('residential')", app.context)
+  assert.equal(ids(), 'hexgrid,commercial')
+  // 点“更多”后，专题图层也一起列出来
+  vm.runInContext('showAllLayers.value = true', app.context)
+  assert.equal(ids(), 'hexgrid,commercial,residentialDemand,demandIndex,mismatch,supplyDemandType')
   app.cleanup()
 })

@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 from getpass import getpass
 
-import psycopg2
+from database import get_db_connection
 
 
 # --------------------------------
@@ -28,13 +28,7 @@ with open(file_path, "r", encoding="utf-8") as file:
 # --------------------------------
 password = getpass("请输入 postgres 密码：")
 
-conn = psycopg2.connect(
-    dbname="nev_webgis",
-    user="postgres",
-       password=password,
-       host="localhost",
-       port=5433
-)
+conn = get_db_connection(password)
 
 cursor = conn.cursor()
 

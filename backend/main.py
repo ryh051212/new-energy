@@ -1,15 +1,13 @@
 import json
-from pathlib import Path
 import os
 from contextlib import closing
-import psycopg2
-from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
-backend_dir = Path(__file__).resolve().parent
-load_dotenv(backend_dir / ".env.local")
-load_dotenv(backend_dir.parent / ".env.local")
+if __package__:
+    from .database import get_db_connection
+else:
+    from database import get_db_connection
 
 app = FastAPI(title="新能源汽车充电 WebGIS API")
 
@@ -45,13 +43,7 @@ def get_stations(name: str | None = None):
         )
 
     # 无论查询是否成功，都要释放数据库连接。
-    with closing(psycopg2.connect(
-        dbname="nev_webgis",
-        user="postgres",
-        password=password,
-        host="localhost",
-        port=5433,
-    )) as conn:
+    with closing(get_db_connection()) as conn:
         with conn.cursor() as cursor:
             sql = "SELECT id, name, address, ST_X(geom), ST_Y(geom) FROM stations"
             if name:
@@ -90,21 +82,74 @@ def get_stations(name: str | None = None):
 @app.get("/api/hex-grid")
 def get_hex_grid():
     """
-    返回六边形分析结果 GeoJSON。
+    从 PostgreSQL / PostGIS 查询六边形分析结果，
+    并返回 GeoJSON。
     """
 
-    file_path = (
-        Path(__file__).resolve().parent.parent
-        / "public"
-        / "geojson"
-        / "hex-grid.json"
-    )
+    conn = get_db_connection()
 
-    with open(
-        file_path,
-        "r",
-        encoding="utf-8"
-    ) as file:
-        hex_grid = json.load(file)
+    cursor = conn.cursor()
 
-    return hex_grid
+    cursor.execute("""
+        SELECT
+            id,
+            station_count,
+            residential_count,
+            commercial_count,
+            demand_index,
+            supply_index,
+            mismatch_index,
+            supply_demand_type,
+
+            -- 把 PostGIS Polygon 转回 GeoJSON
+            ST_AsGeoJSON(geom)
+        FROM hex_grid;
+    """)
+
+    rows = cursor.fetchall()
+
+    features = []
+
+    for row in rows:
+        (
+            hex_id,
+            station_count,
+            residential_count,
+            commercial_count,
+            demand_index,
+            supply_index,
+            mismatch_index,
+            supply_demand_type,
+            geometry_json
+        ) = row
+
+        features.append({
+            "type": "Feature",
+
+            "properties": {
+                "id": hex_id,
+
+                # 属性名继续保持前端原来使用的写法
+                "stationCount": station_count,
+                "residentialCount": residential_count,
+                "commercialCount": commercial_count,
+
+                "demandIndex": demand_index,
+                "supplyIndex": supply_index,
+                "mismatchIndex": mismatch_index,
+
+                "supplyDemandType": supply_demand_type
+            },
+
+            # ST_AsGeoJSON 返回的是字符串，
+            # 所以转换成真正的 Python 对象
+            "geometry": json.loads(geometry_json)
+        })
+
+    cursor.close()
+    conn.close()
+
+    return {
+        "type": "FeatureCollection",
+        "features": features
+    }

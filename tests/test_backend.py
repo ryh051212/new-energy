@@ -8,9 +8,10 @@ from backend import main
 
 class StationsApiTests(unittest.TestCase):
     @patch.dict("os.environ", {"DB_PASSWORD": "test-password"})
-    @patch.object(main.psycopg2, "connect")
-    def test_query_with_and_without_name(self, connect):
-        cursor = connect.return_value.cursor.return_value.__enter__.return_value
+    @patch.object(main, "get_db_connection")
+    def test_query_with_and_without_name(self, get_db_connection):
+        connection = get_db_connection.return_value
+        cursor = connection.cursor.return_value.__enter__.return_value
         cursor.fetchall.return_value = [("station-1", "测试充电站", "测试地址", 113.8, 34.0)]
 
         result = main.get_stations("测试")
@@ -18,7 +19,7 @@ class StationsApiTests(unittest.TestCase):
         self.assertIn("WHERE name ILIKE %s", sql)
         self.assertEqual(params, ("%测试%",))
         self.assertEqual(result["features"][0]["geometry"]["coordinates"], [113.8, 34.0])
-        self.assertTrue(connect.return_value.close.called)
+        self.assertTrue(connection.close.called)
 
         cursor.execute.reset_mock()
         main.get_stations()

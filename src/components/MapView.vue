@@ -1,26 +1,4 @@
 <script setup>
-// 检查 Vue 是否可以正常访问 FastAPI
-async function checkBackend() {
-  try {
-    // 向 FastAPI 的健康检查接口发送 GET 请求
-    const response = await fetch(
-      'http://127.0.0.1:8000/api/health'
-    )
-
-    // 把后端返回的 JSON 转成 JavaScript 对象
-    const data = await response.json()
-
-    console.log(
-      '后端返回：',
-      data
-    )
-  } catch (error) {
-    console.error(
-      '后端连接失败：',
-      error
-    )
-  }
-}
 //搜索框函数
 async function searchStation() {
   try {
@@ -31,22 +9,32 @@ async function searchStation() {
     const url = keyword
       ? `http://127.0.0.1:8000/api/stations?name=${encodeURIComponent(keyword)}`
       : 'http://127.0.0.1:8000/api/stations'
-    // 向 FastAPI 请求符合条件的充电站
-    const response = await fetch(url, { signal: controller.signal })
-    if (!response.ok) throw new Error(`搜索请求失败：HTTP ${response.status}`)
-    //转换为geojson
-    const geojson = await response.json()
-    controller.signal.throwIfAborted()
+    let features
+    try {
+      const response = await fetch(url, { signal: controller.signal })
+      if (!response.ok) throw new Error(`HTTP ${response.status}`)
+      const geojson = await response.json()
+      controller.signal.throwIfAborted()
+      features = geojson.features.filter(station =>
+        weiduPolygons.some(polygon => turf.booleanPointInPolygon(station, polygon)))
+    } catch (error) {
+      if (controller.signal.aborted) throw error
+      features = allStationFeatures.value.filter(station =>
+        !keyword || station.properties?.name?.includes(keyword))
+    }
     //获取已经存在的stations数据
     const stations = map.getSource('stations')
     //更新stations数据
     if (stations) {
       stations.setData({
         type: 'FeatureCollection',
-        features: geojson.features.filter(station =>
-          weiduPolygons.some(polygon => turf.booleanPointInPolygon(station, polygon))),
+        features,
       })
     }
+    if (keyword && features.length === 1 && map.flyTo) {
+      map.flyTo({ center: features[0].geometry.coordinates, zoom: 14, duration: 600 })
+    }
+    searchResultCount.value = features.length
   } catch (error) {
     if (!controller.signal.aborted) {
       searchError.value = '搜索充电站失败，请稍后重试'
@@ -54,15 +42,16 @@ async function searchStation() {
     }
   }
 }
-import { ref, computed, onMounted, onBeforeUnmount } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount, watch } from "vue";
 import * as maplibregl from "maplibre-gl";
 import "maplibre-gl/dist/maplibre-gl.css";
 import * as turf from "@turf/turf";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url";
-import AnalysisPanel from "./panels/AnalysisPanel.vue";
-import LayerControl from "./map/LayerControl.vue";
+import UiIcon from "./UiIcon.vue";
 // 让 Vite 同时打包 MapLibre 处理地图数据的 Worker。
 maplibregl.setWorkerUrl(workerUrl);
+const props = defineProps({ activeRoute: { type: String, default: '/' }, page: { type: Object, default: null } });
+const searchInput = ref(null);
 // 用户输入的充电站名称
 const stationKeyword = ref('')
 const mapEl = ref(null);
@@ -71,6 +60,31 @@ let map;
 let popup;
 let weiduPolygons = [];
 const stationCount = ref(0); //真实的充电桩数量
+const allStationFeatures = ref([]);
+const searchResultCount = ref(null);
+const activeBasemap = ref('street');
+const collapsedSections = ref({});
+// ==================== 本次新增的界面状态 ====================
+// 测距：是否正在测距、已经点过的坐标、是否显示测距结果面板
+const measuring = ref(false);
+const measurePoints = ref([]);
+const measurePanelOpen = ref(false);
+// 快捷图层面板：是否展开、是否显示全部图层（含专题图层）
+const quickPanelOpen = ref(false);
+const showAllLayers = ref(false);
+// 全屏：为 true 时隐藏左右两侧属性栏，让地图铺满
+const isFullscreen = ref(false);
+// 只看快充：勾上以后地图上只留 chargeType 为 fast 的站点
+const fastOnly = ref(false);
+const fastCount = computed(() => allStationFeatures.value.filter(item => item.properties?.chargeType === 'fast').length);
+const slowCount = computed(() => allStationFeatures.value.filter(item => item.properties?.chargeType === 'slow').length);
+const unknownCount = computed(() => allStationFeatures.value.filter(item => !['fast', 'slow'].includes(item.properties?.chargeType)).length);
+const hasChargeTypeData = computed(() => fastCount.value + slowCount.value > 0);
+const coverageRate = computed(() => hexCount.value ? Math.round(occupiedHexCount.value / hexCount.value * 100) : 0);
+const priorityHexes = computed(() => (hexData.value?.features || [])
+  .filter(item => item.properties?.supplyDemandType === 'high-demand-low-supply')
+  .sort((a, b) => Number(b.properties?.demandIndex || 0) - Number(a.properties?.demandIndex || 0))
+  .slice(0, 3));
 
 const hexCount = ref(0); // 六边形总数
 
@@ -108,13 +122,18 @@ async function readGeoJSON(filename) {
 }
 
 async function readStations() {
-  const response = await fetch("http://127.0.0.1:8000/api/stations", {
-    signal: controller.signal,
-  });
-  if (!response.ok) throw new Error("stations.json 加载失败");
-  const data = await response.json();
-  controller.signal.throwIfAborted();
-  return data;
+  try {
+    const response = await fetch("http://127.0.0.1:8000/api/stations", {
+      signal: controller.signal,
+    });
+    if (!response.ok) throw new Error("API 暂不可用");
+    const data = await response.json();
+    controller.signal.throwIfAborted();
+    return data;
+  } catch (error) {
+    if (controller.signal.aborted) throw error;
+    return readGeoJSON("stations.json");
+  }
 }
 
 function popupContent(lines) {
@@ -127,8 +146,6 @@ function popupContent(lines) {
   return content;
 }
 onMounted(() => {
-
-checkBackend()
   map = new maplibregl.Map({
     container: mapEl.value,
     center: [113.85, 34.04],
@@ -137,6 +154,24 @@ checkBackend()
     style: {
       version: 8,
       sources: {
+        streetTiles: {
+          type: "raster",
+          tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+          tileSize: 256,
+          attribution: "© OpenStreetMap contributors",
+        },
+        satelliteTiles: {
+          type: "raster",
+          tiles: ["https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"],
+          tileSize: 256,
+          attribution: "Tiles © Esri",
+        },
+        terrainTiles: {
+          type: "raster",
+          tiles: ["https://a.tile.opentopomap.org/{z}/{x}/{y}.png"],
+          tileSize: 256,
+          attribution: "© OpenTopoMap contributors",
+        },
         weidu: {
           type: "geojson",
           data: `${import.meta.env.BASE_URL}geojson/weidu.json`,
@@ -161,19 +196,27 @@ checkBackend()
           // 读取刚刚生成的商业 POI
           data: `${import.meta.env.BASE_URL}geojson/commercial-pois.json`,
         },
+        measure: {
+          // 测距工具画的线，先放一个空数据，用户点击测距后再填内容
+          type: "geojson",
+          data: { type: "FeatureCollection", features: [] },
+        },
       },
 
       layers: [
         {
           id: "background",
           type: "background",
-          paint: { "background-color": "#f1f5f9" },
+          paint: { "background-color": "#e8f2f4" },
         },
+        { id: "street-base", type: "raster", source: "streetTiles" },
+        { id: "satellite-base", type: "raster", source: "satelliteTiles", layout: { visibility: "none" } },
+        { id: "terrain-base", type: "raster", source: "terrainTiles", layout: { visibility: "none" } },
         {
           id: "weidu-fill",
           type: "fill",
           source: "weidu",
-          paint: { "fill-color": "#38bdf8", "fill-opacity": 0.4 },
+          paint: { "fill-color": "#2563eb", "fill-opacity": 0.045 },
         },
         {
           id: "hexgrid-fill",
@@ -539,7 +582,7 @@ checkBackend()
               "#2563eb",
               "fast",
               "#16a34a",
-              "#6b7280",
+              "#2563eb",
             ],
             "circle-radius": ["match", ["get", "chargeType"], "slow", 9, 7],
             /*if (chargeType === "slow") {
@@ -552,10 +595,47 @@ checkBackend()
           },
         },
         {
+          // 充电站头上的白色闪电图标
+          // 图标本身要在地图 load 时用 addImage 注册，这里只负责引用
+          id: "stations-bolt",
+          type: "symbol",
+          source: "stations",
+          layout: {
+            "icon-image": "bolt-icon",
+            "icon-size": 0.62,
+            // 站点挨得近时也照常显示，不参与避让
+            "icon-allow-overlap": true,
+            "icon-ignore-placement": true,
+          },
+        },
+        {
           id: "weidu-outline",
           type: "line",
           source: "weidu",
-          paint: { "line-color": "#0369a1", "line-width": 2 },
+          paint: { "line-color": "#ef4444", "line-width": 2, "line-dasharray": [2, 2] },
+        },
+        {
+          // 测距折线：把用户点过的点依次连起来
+          id: "measure-line",
+          type: "line",
+          source: "measure",
+          // 同一个数据源里既有线也有点，这里只画线
+          filter: ["==", ["geometry-type"], "LineString"],
+          paint: { "line-color": "#f97316", "line-width": 3, "line-dasharray": [2, 1.2] },
+        },
+        {
+          // 测距顶点：每次点击的位置画一个小圆点
+          id: "measure-point",
+          type: "circle",
+          source: "measure",
+          // 这里只画点，不画线
+          filter: ["==", ["geometry-type"], "Point"],
+          paint: {
+            "circle-radius": 5,
+            "circle-color": "#ffffff",
+            "circle-stroke-color": "#f97316",
+            "circle-stroke-width": 2.5,
+          },
         },
       ],
     },
@@ -565,6 +645,8 @@ checkBackend()
       layerGroups.value.forEach((group) =>
         toggleLayer(group.id, group.visible),
       );
+      // 地图加载完才有 addImage，闪电图标在这里注册
+      registerBoltIcon();
       map.on("click", "residential-circle", (e) => {
         const residential = e.features?.[0];
         if (!residential) return;
@@ -582,6 +664,8 @@ checkBackend()
 
       residentialCount.value = residentialGeoJSON?.features?.length ?? 0;
       map.on("click", "stations-circle", (e) => {
+        // 测距时点击只用来取点，不弹站点信息
+        if (measuring.value) return;
         const station = e.features?.[0];
         if (!station || !station.geometry) return;
 
@@ -627,6 +711,7 @@ checkBackend()
 
       weiduStationCount.value = weiduStations.length;
       stationCount.value = weiduStations.length;
+      allStationFeatures.value = weiduStations;
 
       const bbox = turf.bbox(weiduGeoJSON);
 
@@ -636,15 +721,17 @@ checkBackend()
           [bbox[2], bbox[3]],
         ],
         {
-          padding: 50,
+          padding: 20,
+          duration: 0,
         },
       );
+      if (map.getZoom && map.zoomTo) map.zoomTo(map.getZoom() + 0.35, { duration: 0 });
       map.on("mouseenter", "weidu-fill", () => {
-        map.getCanvas().style.cursor = "pointer";
+        setCursor("pointer");
       });
 
       map.on("mouseleave", "weidu-fill", () => {
-        map.getCanvas().style.cursor = "";
+        setCursor("");
       });
 
       // 读取六边形多边形数据。
@@ -696,6 +783,8 @@ checkBackend()
       );
 
       map.on("click", (e) => {
+        // 测距时点击只用来取点，不再选中网格
+        if (measuring.value) return;
         // 站点有自己的弹窗，点击站点时不切换网格。
         const stations = map.queryRenderedFeatures(e.point, {
           layers: ["stations-circle"],
@@ -756,16 +845,17 @@ checkBackend()
         popup = null;
       });
       map.on("mouseenter", "hexgrid-fill", () => {
-        map.getCanvas().style.cursor = "pointer";
+        setCursor("pointer");
       });
       map.on("mouseleave", "hexgrid-fill", () => {
-        map.getCanvas().style.cursor = "";
+        setCursor("");
       });
     } catch (error) {
       if (!controller.signal.aborted)
         loadError.value = "地图数据加载失败，请刷新重试";
     } finally {
       loading.value = false;
+      if (!controller.signal.aborted) applyRouteView();
     }
     map.on("click", "commercial-circle", (e) => {
       // 用户当前点击的商业 POI
@@ -787,6 +877,181 @@ onBeforeUnmount(() => {
   popup?.remove();
   map?.remove();
 });
+function setBasemap(type) {
+  if (!map) return;
+  activeBasemap.value = type;
+  ['street', 'satellite', 'terrain'].forEach(name => {
+    if (map.getLayer(`${name}-base`)) map.setLayoutProperty(`${name}-base`, 'visibility', name === type ? 'visible' : 'none');
+  });
+}
+// 用 canvas 临时画一个白色闪电，注册成地图图标，
+// 这样 stations-bolt 图层才能用 icon-image: "bolt-icon" 引用它。
+function registerBoltIcon() {
+  // 单元测试里的假地图没有 addImage，直接跳过
+  if (!map || typeof map.addImage !== 'function') return;
+  const size = 24; // 图标画布 24×24，闪电居中
+  const canvas = document.createElement('canvas');
+  canvas.width = size;
+  canvas.height = size;
+  const ctx = canvas.getContext('2d');
+  ctx.fillStyle = '#ffffff';
+  // 闪电的顶点坐标和 UiIcon 里的 bolt 图标一致
+  ctx.beginPath();
+  ctx.moveTo(13, 2);
+  ctx.lineTo(4, 13);
+  ctx.lineTo(11, 13);
+  ctx.lineTo(10, 22);
+  ctx.lineTo(20, 10);
+  ctx.lineTo(13, 10);
+  ctx.closePath();
+  ctx.fill();
+  map.addImage('bolt-icon', ctx.getImageData(0, 0, size, size));
+}
+// 只看快充：给站点相关的三个图层统一加/去过滤条件
+function toggleFastOnly(checked) {
+  fastOnly.value = checked;
+  // null 表示不加过滤，恢复显示全部站点
+  const filter = checked ? ['==', ['get', 'chargeType'], 'fast'] : null;
+  ['stations-circle', 'stations-bolt', 'stations-heatmap'].forEach((layerId) => {
+    if (map?.getLayer(layerId)) map.setFilter(layerId, filter);
+  });
+}
+function toggleSection(id) {
+  collapsedSections.value[id] = !collapsedSections.value[id];
+}
+function zoomMap(delta) { map?.zoomTo(map.getZoom() + delta, { duration: 350 }); }
+function resetView() {
+  if (!map) return;
+  map.flyTo({ center: [113.8356, 34.0268], zoom: 11.9, duration: 600 });
+}
+// 全屏：隐藏左右两侧属性栏，再点一次恢复
+function toggleFullscreen() {
+  isFullscreen.value = !isFullscreen.value;
+  // 侧栏隐藏后地图容器会变宽，等浏览器排好版再让地图重新量一次尺寸
+  setTimeout(() => map?.resize(), 0);
+}
+// ===================== 测距工具 =====================
+// 设置鼠标指针样式；测距时十字光标优先，不被悬停效果覆盖
+function setCursor(cursor) {
+  if (measuring.value) return;
+  map.getCanvas().style.cursor = cursor;
+}
+// 双击时浏览器会先发出两次单击，最后两个点几乎重合，这个距离内的点当成同一个点
+const MEASURE_DUPLICATE_KM = 0.03; // 约 30 米
+// 1 千米 = 1000 米，用来决定面板显示"米"还是"千米"
+const METERS_PER_KILOMETER = 1000;
+
+// 把点过的坐标变成地图要画的数据：一条折线 + 每个点一个圆点
+function measureFeatures() {
+  const points = measurePoints.value;
+  const features = [];
+  if (points.length > 1) {
+    features.push(turf.lineString(points)); // 折线：把点依次连起来
+  }
+  points.forEach((point) => {
+    features.push(turf.point(point)); // 圆点：标出每次点击的位置
+  });
+  return features;
+}
+
+// 计算总长度，单位千米（不到两个点时长度是 0）
+function measureKilometers() {
+  const points = measurePoints.value;
+  if (points.length < 2) return 0;
+  return turf.length(turf.lineString(points), { units: "kilometers" });
+}
+
+// 面板里显示的长度文字
+const measureText = computed(() => {
+  const kilometers = measureKilometers();
+  // 不到 1 千米用米，读起来更直观
+  if (kilometers < 1) return Math.round(kilometers * METERS_PER_KILOMETER) + " 米";
+  return kilometers.toFixed(2) + " 千米";
+});
+
+// 操作提示，跟着测距进度变化
+const measureHint = computed(() => {
+  const count = measurePoints.value.length;
+  if (measuring.value) {
+    return count < 2 ? "在地图上单击起点，双击结束" : "继续单击加点，双击结束";
+  }
+  return count < 2 ? "点右侧直尺按钮开始测量" : "已完成测量";
+});
+
+// 把最新的点和线交给地图显示
+function refreshMeasureLayer() {
+  map?.getSource("measure")?.setData({
+    type: "FeatureCollection",
+    features: measureFeatures(),
+  });
+}
+
+// 单击地图：记录一个点
+function addMeasurePoint(event) {
+  measurePoints.value = measurePoints.value.concat([event.lngLat.toArray()]);
+  refreshMeasureLayer();
+}
+
+// 开始测距：进入测距模式，并清掉上一次的结果
+function startMeasure() {
+  if (!map) return;
+  measuring.value = true;
+  measurePanelOpen.value = true;
+  measurePoints.value = [];
+  refreshMeasureLayer();
+  map.getCanvas().style.cursor = "crosshair"; // 十字光标提示正在取点
+  map.doubleClickZoom.disable(); // 双击要用来结束测距，先关掉双击缩放
+  map.on("click", addMeasurePoint);
+  map.on("dblclick", finishMeasure);
+}
+
+// 结束测距：画好的线保留，只是不再继续加点
+function finishMeasure() {
+  if (!map) return;
+  // 双击会先产生两次单击，去掉那个几乎重合的多余点
+  const points = measurePoints.value;
+  if (points.length >= 2) {
+    const last = points[points.length - 1];
+    const before = points[points.length - 2];
+    if (turf.distance(before, last, { units: "kilometers" }) < MEASURE_DUPLICATE_KM) {
+      measurePoints.value = points.slice(0, -1);
+      refreshMeasureLayer();
+    }
+  }
+  measuring.value = false;
+  map.getCanvas().style.cursor = "";
+  map.doubleClickZoom.enable();
+  map.off("click", addMeasurePoint);
+  map.off("dblclick", finishMeasure);
+}
+
+// 清除：把点过的点全部删掉，回到地图空白状态
+function clearMeasure() {
+  measurePoints.value = [];
+  refreshMeasureLayer();
+}
+
+// 关闭测距面板：结束测距并清空画好的线
+function closeMeasurePanel() {
+  if (measuring.value) finishMeasure();
+  clearMeasure();
+  measurePanelOpen.value = false;
+}
+
+// 右上角直尺按钮：没在测距就开始，正在测距就结束
+function toggleMeasure() {
+  if (measuring.value) {
+    finishMeasure();
+  } else {
+    startMeasure();
+  }
+}
+function focusHex(feature) {
+  if (!map || !feature) return;
+  const center = turf.centerOfMass(feature).geometry.coordinates;
+  map.flyTo({ center, zoom: Math.max(map.getZoom(), 13), duration: 600 });
+  map.setFilter('hexgrid-highlight', ['==', ['get', 'id'], feature.properties.id]);
+}
 //图层控制模块
 const layerGroups = ref([
   {
@@ -806,7 +1071,8 @@ const layerGroups = ref([
     id: "stations",
     label: "充电站",
 
-    layerIds: ["stations-circle"],
+    // 圆点 + 头上的闪电图标一起开关
+    layerIds: ["stations-circle", "stations-bolt"],
 
     visible: true,
   },
@@ -826,7 +1092,7 @@ const layerGroups = ref([
 
     layerIds: ["stations-heatmap"],
 
-    visible: false,
+    visible: true,
   },
   {
     id: "residential",
@@ -836,7 +1102,7 @@ const layerGroups = ref([
     // 对应真正的 MapLibre Layer
     layerIds: ["residential-circle"],
 
-    visible: true,
+    visible: false,
   },
   {
     id: "commercial",
@@ -846,7 +1112,7 @@ const layerGroups = ref([
     // 控制真正的 MapLibre Layer
     layerIds: ["commercial-circle"],
 
-    visible: true,
+    visible: false,
   },
   {
     // 控制面板内部ID
@@ -890,7 +1156,7 @@ const layerGroups = ref([
     'supply-demand-type-fill'
   ],
 
-  visible: true
+  visible: false
 }
 ]);
 function highlightHexByStationCount(stationCount) {
@@ -929,6 +1195,67 @@ function toggleLayer(groupId, visible) {
   });
 
   group.visible = visible;
+}
+// ---------------- 快捷图层面板（搜索框下方） ----------------
+// 常用图层：面板默认只列这几个
+function applyRouteView() {
+  if (loading.value || !map) return;
+  const views = {
+    '/': ['boundary', 'stations', 'heatmap'],
+    '/monitoring/stations': ['boundary', 'stations', 'heatmap'],
+    '/monitoring/demand': ['boundary', 'stations', 'demandIndex'],
+    '/monitoring/supply': ['boundary', 'stations', 'hexgrid'],
+    '/monitoring/mismatch': ['boundary', 'stations', 'mismatch'],
+    '/planning/problems': ['boundary', 'stations', 'supplyDemandType'],
+  };
+  const visible = views[props.activeRoute] || views['/'];
+  layerGroups.value.forEach(group => toggleLayer(group.id, visible.includes(group.id)));
+  collapsedSections.value.types = false;
+  selectedHex.value = null;
+  popup?.remove();
+  if (map.getLayer('hexgrid-highlight')) map.setFilter('hexgrid-highlight', ['==', ['get', 'stationCount'], -1]);
+}
+watch(() => props.activeRoute, applyRouteView);
+const QUICK_LAYER_IDS = ["stations", "residential", "commercial", "hexgrid"];
+// 每个图层用哪个图标，左侧"地图设置"和快捷面板共用这一张表
+const layerIcons = {
+  boundary: "layers",
+  stations: "pin",
+  heatmap: "bolt",
+  hexgrid: "hexagon",
+  residential: "home",
+  commercial: "building",
+  residentialDemand: "home",
+  demandIndex: "chart",
+  mismatch: "alert",
+  supplyDemandType: "chart",
+};
+// 面板里真正列出来的图层：
+// 先按"常用 / 更多"挑出候选，再只留下当前是关闭的（已经打开的不用再切换）
+const switchableLayers = computed(() => {
+  const ids = showAllLayers.value
+    ? layerGroups.value.map((item) => item.id)
+    : QUICK_LAYER_IDS;
+  return layerGroups.value.filter((item) => ids.includes(item.id) && !item.visible);
+});
+// 点开 / 收起快捷面板
+function toggleQuickPanel() {
+  if (quickPanelOpen.value) {
+    closeQuickPanelFromOutside();
+    return;
+  }
+  quickPanelOpen.value = true;
+  // 面板打开期间才监听整个页面：点到面板外面就自动收起
+  document.addEventListener("click", closeQuickPanelFromOutside);
+}
+// 点到面板以外的地方，收起面板
+function closeQuickPanelFromOutside() {
+  quickPanelOpen.value = false;
+  document.removeEventListener("click", closeQuickPanelFromOutside);
+}
+// 在面板里点一个图层：把它打开（打开后它会从列表里消失）
+function showLayer(groupId) {
+  toggleLayer(groupId, true);
 }
 //右侧属性面板
 function loadStatistics(hexData) {
@@ -1011,98 +1338,59 @@ const supplyDemandStats = computed(() => {
 supplyDemandStats */
 
 </script>
-
 <template>
-  <div class="map-wrapper">
-    <div ref="mapEl" class="map"></div>
-    <div class="station-count">魏都区充电站：{{ weiduStationCount }} 个</div>
-    <LayerControl :layers="layerGroups" @toggle="toggleLayer" />
-    <div v-if="loadError || gridWarning || searchError" class="load-message" role="alert">
-      {{ loadError || gridWarning || searchError }}
-    </div>
-    <div class="station-search">
-  <input
-    v-model="stationKeyword"
-    placeholder="输入充电站名称"
-    @keyup.enter="searchStation"
-  />
-
-  <button :disabled="loading" @click="searchStation">
-    搜索
-  </button>
-</div>
-    <AnalysisPanel
-      :station-count="stationCount"
-      :hex-count="hexCount"
-      :occupied-hex-count="occupiedHexCount"
-      :residential-count="residentialCount"
-      :commercial-count="commercialCount"
-      :selected-hex="selectedHex"
-      :hex-distribution="hexDistribution"
-      :supply-demand-stats="supplyDemandStats"
-      @selectStationCount="highlightHexByStationCount"
-    />
+  <div :class="['dashboard',{ 'map-fullscreen': isFullscreen }]">
+    <slot name="header" />
+    <main class="workspace">
+      <aside class="left-sidebar" aria-label="地图控制">
+        <section v-if="page" class="side-card route-context"><span>{{ page.group }}</span><h1>{{ page.title }}</h1><p>{{ page.description }}</p></section>
+        <section class="side-card">
+          <button class="panel-heading" @click="toggleSection('layers')"><span><UiIcon name="settings" />地图设置</span><UiIcon name="chevron" :class="['heading-chevron',{folded:collapsedSections.layers}]" :size="16" /></button>
+          <div v-if="!collapsedSections.layers" class="layer-list">
+            <label v-for="group in layerGroups.filter(item => ['boundary','stations','heatmap','hexgrid','residential','commercial'].includes(item.id))" :key="group.id" class="layer-row">
+              <input type="checkbox" :checked="group.visible" @change="toggleLayer(group.id, $event.target.checked)" />
+              <span :class="['layer-symbol',group.id]"><UiIcon :name="layerIcons[group.id] || 'layers'" :size="16" /></span><span>{{ group.label }}</span>
+            </label>
+          </div>
+        </section>
+        <section class="side-card">
+          <button class="panel-heading" @click="toggleSection('time')"><span><UiIcon name="clock" />时间选择</span><UiIcon name="chevron" :class="['heading-chevron',{folded:collapsedSections.time}]" :size="16" /></button>
+          <div v-if="!collapsedSections.time" class="time-content"><div class="segmented"><a class="selected" href="#/time-analysis">今天</a><a href="#/time-analysis">本周</a><a href="#/time-analysis">本月</a></div><a class="date-display" href="#/time-analysis"><span>时间数据待接入</span><UiIcon name="calendar" :size="17" /></a></div>
+        </section>
+        <section class="side-card">
+          <button class="panel-heading" @click="toggleSection('types')"><span><UiIcon name="bolt" />充电类型</span><UiIcon name="chevron" :class="['heading-chevron',{folded:collapsedSections.types}]" :size="16" /></button>
+          <div v-if="!collapsedSections.types" class="type-list"><label :class="['layer-row',{muted:!hasChargeTypeData}]"><input type="checkbox" :checked="fastOnly" :disabled="!hasChargeTypeData" @change="toggleFastOnly($event.target.checked)" /><span class="type-dot fast"><UiIcon name="bolt" :size="14" /></span><span>只看快充</span></label><p class="data-note">{{ hasChargeTypeData ? '已标注 ' + fastCount + ' 个快充站' : unknownCount + ' 个站点暂无充电类型，勾选暂不可用' }}</p></div>
+        </section>
+        <section class="side-card advanced-card"><button class="panel-heading" @click="toggleSection('advanced')"><span><UiIcon name="layers" />专题图层</span><UiIcon name="chevron" :class="['heading-chevron',{folded:collapsedSections.advanced}]" :size="16" /></button><div v-if="!collapsedSections.advanced" class="layer-list"><label v-for="group in layerGroups.filter(item => !['boundary','stations','heatmap','hexgrid','residential','commercial'].includes(item.id))" :key="group.id" class="layer-row"><input type="checkbox" :checked="group.visible" @change="toggleLayer(group.id, $event.target.checked)" /><span class="layer-symbol thematic"><UiIcon :name="layerIcons[group.id] || 'chart'" :size="16" /></span>{{ group.label }}</label></div></section>
+      </aside>
+      <section class="map-area" aria-label="魏都区充电设施地图">
+        <div ref="mapEl" class="map-canvas"></div>
+        <form class="map-search" @submit.prevent="searchStation"><UiIcon name="search" :size="21" /><input ref="searchInput" v-model="stationKeyword" aria-label="搜索充电站" placeholder="搜索充电站名称" /><button type="submit" :disabled="loading">搜索</button></form>
+        <div v-if="searchResultCount !== null" class="search-feedback" role="status">找到 {{ searchResultCount }} 个站点 <button aria-label="关闭搜索提示" @click="searchResultCount = null"><UiIcon name="close" :size="14" /></button></div>
+        <div class="basemap-switch" aria-label="底图切换"><button v-for="item in [{id:'street',label:'标准'},{id:'satellite',label:'卫星'},{id:'terrain',label:'地形'}]" :key="item.id" :class="['basemap-option',item.id,{chosen:activeBasemap===item.id}]" @click="setBasemap(item.id)"><span class="basemap-preview"></span><span>{{ item.label }}</span></button></div>
+        <!-- 右上角工具：图层切换、测距、全屏 -->
+        <div class="map-tools map-tools-top" aria-label="地图工具"><button :class="{active:quickPanelOpen}" title="图层切换" aria-label="图层切换" :aria-expanded="quickPanelOpen" aria-controls="map-layer-panel" @click.stop="toggleQuickPanel"><UiIcon name="layers" /></button><button :class="{active:measuring}" title="测距" aria-label="测距" @click="toggleMeasure"><UiIcon name="ruler" /></button><button :class="{active:isFullscreen}" :title="isFullscreen ? '退出全屏' : '全屏'" :aria-label="isFullscreen ? '退出全屏' : '全屏'" @click="toggleFullscreen"><UiIcon :name="isFullscreen ? 'compress' : 'expand'" /></button></div>
+        <!-- 测距面板：显示总长度和操作提示 -->
+        <div v-if="measurePanelOpen" class="measure-panel"><button class="selected-close" aria-label="关闭测距面板" @click="closeMeasurePanel"><UiIcon name="close" :size="15" /></button><b>测距</b><span class="measure-value">{{ measureText }}</span><span class="measure-hint">{{ measureHint }}</span><div class="measure-actions"><button v-if="measuring" @click="finishMeasure">结束</button><button @click="clearMeasure">清除</button></div></div>
+        <!-- 快捷图层：平时只显示一个按钮，点开才列出还没打开的图层 -->
+          <div v-if="quickPanelOpen" id="map-layer-panel" class="quick-panel map-layer-panel" aria-label="地图图层切换" @click.stop>
+            <p class="quick-panel-title">点击打开图层</p>
+            <button v-for="group in switchableLayers" :key="group.id" class="quick-layer-row" @click="showLayer(group.id)"><span :class="['filter-icon',group.id]"><UiIcon :name="layerIcons[group.id] || 'layers'" :size="18" /></span>{{ group.label }}</button>
+            <p v-if="!switchableLayers.length" class="quick-panel-empty">图层已全部打开</p>
+            <button class="quick-more" @click="showAllLayers = !showAllLayers"><UiIcon :name="showAllLayers ? 'minus' : 'plus'" :size="15" />{{ showAllLayers ? '收起' : '更多' }}</button>
+          </div>
+        <div v-if="loadError || gridWarning || searchError" class="load-message" role="alert"><UiIcon name="alert" :size="17" />{{ loadError || gridWarning || searchError }}</div>
+        <div class="map-legend"><h3>图例</h3><div><i class="legend-boundary"></i>魏都区边界</div><div><i class="legend-station"></i>充电站（类型待补充）</div><div><i class="legend-heat"></i>站点密度热力图</div><div class="legend-scale-label">站点密度</div><div class="legend-gradient"></div><div class="legend-range"><span>低</span><span>高</span></div></div>
+        <div class="map-tools"><button title="放大" aria-label="放大" @click="zoomMap(1)"><UiIcon name="plus" /></button><button title="缩小" aria-label="缩小" @click="zoomMap(-1)"><UiIcon name="minus" /></button><button title="回到魏都区" aria-label="回到魏都区" @click="resetView"><UiIcon name="locate" /></button></div>
+        <div v-if="selectedHex" class="selected-hex"><button class="selected-close" aria-label="关闭网格详情" @click="selectedHex = null"><UiIcon name="close" :size="15" /></button><b>网格 #{{ selectedHex.id }}</b><span>充电站 {{ selectedHex.stationCount }} · 小区 {{ selectedHex.residentialCount }} · 商业 {{ selectedHex.commercialCount }}</span><small>{{ selectedHex.supplyDemandType }}</small></div>
+      </section>
+      <aside class="right-sidebar" aria-label="数据分析">
+        <section class="right-card"><div class="right-heading"><span><UiIcon name="chart" />数据一览</span><small>魏都区</small></div><div class="metrics-grid"><div class="metric"><span class="metric-icon green"><UiIcon name="pin" /></span><div><span>站点总数</span><strong>{{ stationCount }}</strong><small>本地站点数据</small></div></div><div class="metric"><span class="metric-icon red"><UiIcon name="bolt" /></span><div><span>快充站</span><strong>{{ hasChargeTypeData ? fastCount : '—' }}</strong><small>{{ fastCount ? '已标注类型' : '暂无类型数据' }}</small></div></div><div class="metric"><span class="metric-icon blue"><UiIcon name="layers" /></span><div><span>网格覆盖率</span><strong>{{ coverageRate }}%</strong><small>{{ occupiedHexCount }} / {{ hexCount }} 个网格</small></div></div></div></section>
+        <section class="right-card chart-card"><div class="right-heading"><span><UiIcon name="chart" />充电设施分布</span><small>网格统计</small></div><p class="section-caption">每个网格内的充电站数量</p><div v-if="hexDistribution.length" class="distribution-chart"><button v-for="item in hexDistribution.slice(0,7)" :key="item.stationCount" class="chart-column" :title="item.stationCount + ' 站网格：' + item.hexCount + ' 个'" @click="highlightHexByStationCount(item.stationCount)"><span class="bar-count">{{ item.hexCount }}</span><span class="bar-track"><span class="bar-fill" :style="{height: Math.max(7,item.hexCount / Math.max(...hexDistribution.map(row=>row.hexCount)) * 100) + '%'}"></span></span><span class="bar-label">{{ item.stationCount }}站</span></button></div><p v-else class="empty-state">网格数据加载中…</p></section>
+        <section class="right-card recommendation-card"><div class="right-heading"><span><UiIcon name="pin" />推荐区域</span><small>供需分析</small></div><p class="section-caption">优先关注高需求、低供给网格</p><button v-for="(feature,index) in priorityHexes" :key="feature.properties.id" class="recommendation-row" @click="focusHex(feature)"><span :class="['rank','rank-'+(index+1)]">{{ index+1 }}</span><span class="recommendation-text"><strong>魏都区 · 网格 #{{ feature.properties.id }}</strong><small>需求指数 {{ Number(feature.properties.demandIndex || 0).toFixed(2) }} · 现有站点 {{ feature.properties.stationCount }}</small></span><span class="priority-badge">建议关注</span></button><p v-if="!priorityHexes.length" class="empty-state">暂无符合条件的网格</p></section>
+        <section class="right-card forecast-card"><div class="right-heading"><span><UiIcon name="chart" />AI预测</span><a href="#/ai/forecast">查看详情</a></div><p>预测模型尚未接入</p><a href="#/ai/forecast" class="forecast-link">了解预测功能 →</a></section>
+      </aside>
+    </main>
+    <footer class="statusbar"><span><UiIcon name="pin" :size="15" />当前位置：许昌市 魏都区</span><span>数据范围：魏都区 · {{ stationCount }} 个站点</span><span class="status-weather"><UiIcon name="sun" :size="17" /> WebGIS 地图服务</span></footer>
   </div>
 </template>
-
-<style scoped>
-.map-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.map {
-  width: 100%;
-  height: 100vh;
-  min-height: 400px;
-  text-align: left;
-}
-.station-search {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  z-index: 10;
-
-  display: flex;
-  gap: 6px;
-}
-
-.station-search input {
-  width: 180px;
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid black;
-  outline: none;
-}
-
-.station-search button {
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 1px solid black;
-  outline: none;
-}
-.station-count {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  z-index: 1;
-  padding: 8px 12px;
-  border-radius: 6px;
-  background: #ffffff;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
-  color: #0f172a;
-  font-size: 14px;
-  font-weight: 600;
-}
-.load-message {
-  position: absolute;
-  bottom: 20px;
-  left: 16px;
-  padding: 10px;
-  background: white;
-  color: #b91c1c;
-  z-index: 10;
-}
-</style>
