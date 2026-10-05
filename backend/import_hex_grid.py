@@ -1,115 +1,106 @@
+"""按稳定的网格 ID 更新分析结果；保留已有表结构和其他数据。"""
+
 import json
+import math
+import sys
+from contextlib import closing
 from pathlib import Path
-from getpass import getpass
 
-from database import get_db_connection
+if __package__:
+    from .database import get_db_connection
+    from .geometry_import import update_geometry
+    from .spatial_migration import source_srid, recalculate_indicators
+else:
+    from database import get_db_connection
+    from geometry_import import update_geometry
+    from spatial_migration import source_srid, recalculate_indicators
 
-
-# 找到项目中的六边形 GeoJSON
-file_path = (
-    Path(__file__).resolve().parent.parent
-    / "public"
-    / "geojson"
-    / "hex-grid.json"
-)
-
-
-# 读取 GeoJSON
-with open(file_path, "r", encoding="utf-8") as file:
-    geojson = json.load(file)
-
-
-# 输入 PostgreSQL 密码
-password = getpass("请输入 postgres 密码：")
+GEOJSON_PATH = Path(__file__).resolve().parent.parent / "public/geojson/hex-grid.json"
+COUNT_FIELDS = ("stationCount", "residentialCount", "commercialCount")
+INDEX_FIELDS = ("residentialNorm", "commercialNorm", "demandIndex", "supplyIndex", "mismatchIndex")
+CLASSIFICATIONS = {
+    "high-demand-low-supply", "high-demand-high-supply",
+    "low-demand-high-supply", "low-demand-low-supply",
+}
 
 
-# 连接数据库
-conn = get_db_connection(password)
-
-cursor = conn.cursor()
-
-
-# 为了防止重复运行脚本后出现重复六边形，
-# 每次导入前先清空 hex_grid
-cursor.execute("""
-    TRUNCATE TABLE hex_grid
-    RESTART IDENTITY;
-""")
+def _is_valid_number(value):
+    """接受有限的 int/float，但拒绝 None、bool 和非数值字符串。"""
+    return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
-count = 0
+def read_grid_rows(path=GEOJSON_PATH):
+    """先验证整份输入，避免坏数据导致部分导入。"""
+    data = json.loads(Path(path).read_text(encoding="utf-8-sig"))
+    if data.get("type") != "FeatureCollection" or not data.get("features"):
+        raise ValueError("网格文件必须是非空 FeatureCollection")
+    rows, ids = [], set()
+    for feature in data["features"]:
+        properties = feature.get("properties") or {}
+        grid_id = properties.get("id", feature.get("id"))
+        if type(grid_id) is not int or grid_id <= 0 or grid_id in ids:
+            raise ValueError(f"网格 ID 必须是唯一正整数：{grid_id}")
+        ids.add(grid_id)
+        geometry = feature.get("geometry") or {}
+        if geometry.get("type") != "Polygon" or not geometry.get("coordinates"):
+            raise ValueError(f"网格 {grid_id} 缺少 Polygon 几何")
+        counts = [properties.get(field) for field in COUNT_FIELDS]
+        if any(not _is_valid_number(value) or value < 0 for value in counts):
+            raise ValueError(f"网格 {grid_id} 的数量字段必须为非负整数")
+        indices = [properties.get(field) for field in INDEX_FIELDS]
+        if any(not _is_valid_number(value) for value in indices):
+            raise ValueError(f"网格 {grid_id} 缺少有效分析指数")
+        if any(not 0 <= value <= 1 for value in indices[:4]) or not -1 <= indices[4] <= 1:
+            raise ValueError(f"网格 {grid_id} 的分析指数超出范围")
+        classification = properties.get("supplyDemandType")
+        if not isinstance(classification, str) or classification not in CLASSIFICATIONS:
+            raise ValueError(f"网格 {grid_id} 的供需类型无效")
+        rows.append((grid_id, *counts, *indices, classification, json.dumps(geometry)))
+    return rows
 
 
-# 一个 Feature 就是一个六边形
-for feature in geojson["features"]:
-
-    properties = feature.get("properties", {})
-    geometry = feature.get("geometry")
-
-    if not geometry:
-        continue
-
-    # 读取之前已经计算好的分析结果
-    station_count = properties.get("stationCount", 0)
-    residential_count = properties.get("residentialCount", 0)
-    commercial_count = properties.get("commercialCount", 0)
-
-    demand_index = properties.get("demandIndex", 0)
-    supply_index = properties.get("supplyIndex", 0)
-    mismatch_index = properties.get("mismatchIndex", 0)
-
-    supply_demand_type = properties.get(
-        "supplyDemandType",
-        ""
-    )
-
-    # PostGIS 可以直接把 GeoJSON geometry
-    # 转换成真正的 Polygon 空间对象
-    geometry_json = json.dumps(geometry)
-
-    cursor.execute(
-        """
-        INSERT INTO hex_grid (
-            station_count,
-            residential_count,
-            commercial_count,
-            demand_index,
-            supply_index,
-            mismatch_index,
-            supply_demand_type,
-            geom
-        )
-        VALUES (
-            %s,
-            %s,
-            %s,
-            %s,
-            %s,
-            %s,
-            %s,
-            ST_GeomFromGeoJSON(%s)
-        );
-        """,
-        (
-            station_count,
-            residential_count,
-            commercial_count,
-            demand_index,
-            supply_index,
-            mismatch_index,
-            supply_demand_type,
-            geometry_json
-        )
-    )
-
-    count += 1
+def import_hex_grid(connection, path=GEOJSON_PATH):
+    """调用方管理事务，可提交整批更新，也可回滚试运行。"""
+    rows = read_grid_rows(path)
+    try:
+        with connection.cursor() as cursor:
+            for row in rows:
+                cursor.execute("""
+                    INSERT INTO hex_grid (
+                        id, station_count, residential_count, commercial_count,
+                        residential_norm, commercial_norm, demand_index, supply_index,
+                        mismatch_index, supply_demand_type
+                    ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    ON CONFLICT (id) DO UPDATE SET
+                        station_count = EXCLUDED.station_count,
+                        residential_count = EXCLUDED.residential_count,
+                        commercial_count = EXCLUDED.commercial_count,
+                        residential_norm = EXCLUDED.residential_norm,
+                        commercial_norm = EXCLUDED.commercial_norm,
+                        demand_index = EXCLUDED.demand_index,
+                        supply_index = EXCLUDED.supply_index,
+                        mismatch_index = EXCLUDED.mismatch_index,
+                        supply_demand_type = EXCLUDED.supply_demand_type
+                """, row[:10])
+                update_geometry(cursor, "hex_grid", row[0], json.loads(row[10]))
+            if source_srid(cursor, "hex_grid") == 4326:
+                recalculate_indicators(cursor)
+        return len(rows)
+    except Exception:
+        connection.rollback()
+        raise
 
 
-# 保存修改
-conn.commit()
+def main():
+    try:
+        with closing(get_db_connection()) as connection:
+            with connection:
+                count = import_hex_grid(connection)
+        print(f"六边形更新完成，共处理 {count} 个网格")
+    except Exception as exc:
+        print(f"六边形网格导入失败：{exc}", file=sys.stderr)
+        raise
 
-cursor.close()
-conn.close()
 
-
-print(f"六边形导入完成，共导入 {count} 个")
+if __name__ == "__main__":
+    main()

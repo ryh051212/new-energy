@@ -30,6 +30,7 @@ venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+backend/backups/
 
 # Local backup before flattening the project
 .flatten-backup/

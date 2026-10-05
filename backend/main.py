@@ -1,6 +1,7 @@
 import json
 import os
 from contextlib import closing
+from typing import Literal
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -23,133 +24,395 @@ app.add_middleware(
 )
 
 
-@app.get("/api/health")
-def health_check():
-    return {"status": "ok"}
-
-
 @app.get("/api/stations")
-def get_stations(name: str | None = None):
-    """
-    从 PostgreSQL/PostGIS 查询充电站，
-    然后转换成 GeoJSON 返回给前端。
-    """
-
-    password = os.getenv("DB_PASSWORD")
-    if not password:
-        raise HTTPException(
-            status_code=503,
-            detail="数据库密码未配置，请在 backend/.env.local 或项目根目录 .env.local 中设置 DB_PASSWORD。",
-        )
-
-    # 无论查询是否成功，都要释放数据库连接。
-    with closing(get_db_connection()) as conn:
-        with conn.cursor() as cursor:
-            sql = "SELECT id, name, address, ST_X(geom), ST_Y(geom) FROM stations"
-            if name:
-                cursor.execute(sql + " WHERE name ILIKE %s", (f"%{name}%",))
-            else:
-                cursor.execute(sql)
-            rows = cursor.fetchall()
-
-    features = []
-
-    # 把数据库中的每一行重新组装成 GeoJSON Feature
-    for row in rows:
-        station_id, name, address, lng, lat = row
-
-        features.append({
-            "type": "Feature",
-
-            "properties": {
-                "id": station_id,
-                "name": name,
-                "address": address
-            },
-
-            "geometry": {
-                "type": "Point",
-                "coordinates": [lng, lat]
-            }
-        })
-
-    # 返回完整 GeoJSON
-    return {
-        "type": "FeatureCollection",
-        "features": features
-    }
-#六边形网络
-@app.get("/api/hex-grid")
-def get_hex_grid():
-    """
-    从 PostgreSQL / PostGIS 查询六边形分析结果，
-    并返回 GeoJSON。
-    """
+def get_stations(name: str = ""):
 
     conn = get_db_connection()
+    cur = conn.cursor()
 
-    cursor = conn.cursor()
+    try:
 
-    cursor.execute("""
-        SELECT
-            id,
-            station_count,
-            residential_count,
-            commercial_count,
-            demand_index,
-            supply_index,
-            mismatch_index,
-            supply_demand_type,
+        # -------------------------------------------------
+        # 所有坐标统一从 PostGIS 的正式 geom 获取。
+        #
+        # 当前 geom 已经是：
+        # WGS84 / EPSG:4326
+        #
+        # 不再依赖旧 GeoJSON，也不单独相信 lng / lat。
+        # geom 才是数据库中的正式空间数据。
+        # -------------------------------------------------
 
-            -- 把 PostGIS Polygon 转回 GeoJSON
-            ST_AsGeoJSON(geom)
-        FROM hex_grid;
-    """)
+        if name.strip():
 
-    rows = cursor.fetchall()
+            cur.execute(
+                """
+                SELECT
+                    id,
+                    name,
+                    address,
+                    ST_AsGeoJSON(geom)
+                FROM stations
+                WHERE name ILIKE %s
+                ORDER BY name;
+                """,
+                (
+                    f"%{name.strip()}%",
+                )
+            )
 
-    features = []
+        else:
 
-    for row in rows:
-        (
-            hex_id,
-            station_count,
-            residential_count,
-            commercial_count,
-            demand_index,
-            supply_index,
-            mismatch_index,
-            supply_demand_type,
+            cur.execute(
+                """
+                SELECT
+                    id,
+                    name,
+                    address,
+                    ST_AsGeoJSON(geom)
+                FROM stations
+                ORDER BY name;
+                """
+            )
+
+
+        rows = cur.fetchall()
+
+
+        # -------------------------------------------------
+        # 转换成标准 GeoJSON FeatureCollection
+        #
+        # MapLibre 可以直接使用这个结构。
+        # -------------------------------------------------
+
+        features = []
+
+        for (
+            station_id,
+            station_name,
+            address,
             geometry_json
-        ) = row
+        ) in rows:
 
-        features.append({
-            "type": "Feature",
+            if geometry_json is None:
+                continue
 
-            "properties": {
-                "id": hex_id,
+            feature = {
+                "type": "Feature",
 
-                # 属性名继续保持前端原来使用的写法
-                "stationCount": station_count,
-                "residentialCount": residential_count,
-                "commercialCount": commercial_count,
+                "properties": {
+                    "id": station_id,
+                    "name": station_name,
+                    "address": address,
+                },
 
-                "demandIndex": demand_index,
-                "supplyIndex": supply_index,
-                "mismatchIndex": mismatch_index,
+                "geometry": json.loads(
+                    geometry_json
+                )
+            }
 
-                "supplyDemandType": supply_demand_type
-            },
+            features.append(feature)
 
-            # ST_AsGeoJSON 返回的是字符串，
-            # 所以转换成真正的 Python 对象
-            "geometry": json.loads(geometry_json)
-        })
 
-    cursor.close()
-    conn.close()
+        return {
+            "type": "FeatureCollection",
+            "features": features
+        }
 
-    return {
-        "type": "FeatureCollection",
-        "features": features
-    }
+
+    finally:
+
+        cur.close()
+        conn.close()
+# 六边形网格
+@app.get("/api/hex-grid")
+def get_hex_grid():
+
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+
+        # -------------------------------------------------
+        # 所有分析结果直接读取 PostGIS。
+        #
+        # 前端不再重新计算 demand / supply / mismatch。
+        # geom 已统一为 WGS84 / EPSG:4326。
+        # -------------------------------------------------
+
+        cur.execute("""
+            SELECT
+                id,
+
+                station_count,
+                residential_count,
+                commercial_count,
+
+                residential_norm,
+                commercial_norm,
+
+                demand_index,
+                supply_index,
+                mismatch_index,
+
+                supply_demand_type,
+
+                ST_AsGeoJSON(geom)
+
+            FROM hex_grid
+
+            ORDER BY id;
+        """)
+
+        rows = cur.fetchall()
+
+
+        # -------------------------------------------------
+        # 转成标准 GeoJSON FeatureCollection。
+        #
+        # properties 保存分析指标，
+        # geometry 保存六边形空间位置。
+        # -------------------------------------------------
+
+        features = []
+
+        for (
+            grid_id,
+
+            station_count,
+            residential_count,
+            commercial_count,
+
+            residential_norm,
+            commercial_norm,
+
+            demand_index,
+            supply_index,
+            mismatch_index,
+
+            supply_demand_type,
+
+            geometry_json
+
+        ) in rows:
+
+            if geometry_json is None:
+                continue
+
+
+            feature = {
+                "type": "Feature",
+
+                "properties": {
+
+                    "id": grid_id,
+
+                    # 保持和你现有 Vue 前端字段命名一致
+                    "stationCount": station_count,
+
+                    "residentialCount": residential_count,
+
+                    "commercialCount": commercial_count,
+
+                    "residentialNorm": residential_norm,
+
+                    "commercialNorm": commercial_norm,
+
+                    "demandIndex": demand_index,
+
+                    "supplyIndex": supply_index,
+
+                    "mismatchIndex": mismatch_index,
+
+                    "supplyDemandType": supply_demand_type,
+                },
+
+                "geometry": json.loads(
+                    geometry_json
+                )
+            }
+
+            features.append(feature)
+
+
+        return {
+            "type": "FeatureCollection",
+            "features": features
+        }
+
+
+    finally:
+
+        cur.close()
+        conn.close()
+        
+        
+@app.get("/api/boundary")
+def get_boundary():
+
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+
+        # 魏都区边界已经统一为
+        # WGS84 / EPSG:4326。
+        #
+        # 直接从正式 geom 输出 GeoJSON，
+        # 前端不再读取 weidu.json。
+        cur.execute("""
+            SELECT
+                id,
+                name,
+                ST_AsGeoJSON(geom)
+            FROM weidu_boundary
+            ORDER BY id;
+        """)
+
+        rows = cur.fetchall()
+
+        features = []
+
+        for (
+            boundary_id,
+            boundary_name,
+            geometry_json
+        ) in rows:
+
+            if geometry_json is None:
+                continue
+
+            features.append({
+                "type": "Feature",
+
+                "properties": {
+                    "id": boundary_id,
+                    "name": boundary_name
+                },
+
+                "geometry": json.loads(
+                    geometry_json
+                )
+            })
+
+        return {
+            "type": "FeatureCollection",
+            "features": features
+        }
+
+    finally:
+
+        cur.close()
+        conn.close()
+@app.get("/api/residential-pois")
+def get_residential_pois():
+
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+
+        # 居民 POI 的正式空间数据已经统一为
+        # WGS84 / EPSG:4326。
+        #
+        # geom 是唯一正式空间数据源，
+        # 不再通过 lng / lat 重新拼 Point。
+        cur.execute("""
+            SELECT
+                id,
+                name,
+                address,
+                ST_AsGeoJSON(geom)
+            FROM residential_pois
+            WHERE geom IS NOT NULL
+            ORDER BY id;
+        """)
+
+        rows = cur.fetchall()
+
+        features = []
+
+        for (
+            poi_id,
+            poi_name,
+            address,
+            geometry_json
+        ) in rows:
+
+            features.append({
+                "type": "Feature",
+
+                "properties": {
+                    "id": poi_id,
+                    "name": poi_name,
+                    "address": address
+                },
+
+                "geometry": json.loads(
+                    geometry_json
+                )
+            })
+
+        return {
+            "type": "FeatureCollection",
+            "features": features
+        }
+
+    finally:
+
+        cur.close()
+        conn.close()
+        
+@app.get("/api/commercial-pois")
+def get_commercial_pois():
+
+    conn = get_db_connection()
+    cur = conn.cursor()
+
+    try:
+        # 商业 POI 的正式空间数据已经统一为
+        # WGS84 / EPSG:4326。
+        # 前端只读取数据库中的正式 geom。
+        cur.execute("""
+            SELECT
+                id,
+                name,
+                address,
+                ST_AsGeoJSON(geom)
+            FROM commercial_pois
+            WHERE geom IS NOT NULL
+            ORDER BY id;
+        """)
+
+        rows = cur.fetchall()
+
+        features = []
+
+        for (
+            poi_id,
+            poi_name,
+            address,
+            geometry_json
+        ) in rows:
+
+            features.append({
+                "type": "Feature",
+
+                "properties": {
+                    "id": poi_id,
+                    "name": poi_name,
+                    "address": address
+                },
+
+                "geometry": json.loads(
+                    geometry_json
+                )
+            })
+
+        return {
+            "type": "FeatureCollection",
+            "features": features
+        }
+
+    finally:
+        cur.close()
+        conn.close()

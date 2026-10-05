@@ -1,0 +1,83 @@
+{
+  "checked_at": "2026-10-04T11:08:14.239150+08:00",
+  "tables": {
+    "stations": {
+      "count": 52,
+      "missing_geometry": 0,
+      "invalid_geometry": 0,
+      "srids": [
+        0
+      ],
+      "spatial_indexes": [
+        "idx_stations_geom_gist"
+      ]
+    },
+    "residential_pois": {
+      "count": 225,
+      "missing_geometry": 0,
+      "invalid_geometry": 0,
+      "srids": [
+        0
+      ],
+      "spatial_indexes": [
+        "idx_residential_pois_geom_gist"
+      ]
+    },
+    "commercial_pois": {
+      "count": 200,
+      "missing_geometry": 0,
+      "invalid_geometry": 0,
+      "srids": [
+        0
+      ],
+      "spatial_indexes": [
+        "idx_commercial_pois_geom_gist"
+      ]
+    },
+    "hex_grid": {
+      "count": 170,
+      "missing_geometry": 0,
+      "invalid_geometry": 0,
+      "srids": [
+        0
+      ],
+      "spatial_indexes": [
+        "idx_hex_grid_geom_gist"
+      ]
+    },
+    "weidu_boundary": {
+      "count": 1,
+      "missing_geometry": 0,
+      "invalid_geometry": 0,
+      "srids": [
+        0
+      ],
+      "spatial_indexes": [
+        "idx_weidu_boundary_geom_gist"
+      ]
+    }
+  },
+  "point_coverage": {
+    "stations": {
+      "inside_boundary": 52,
+      "inside_grid": 52,
+      "outside_boundary": 0
+    },
+    "residential_pois": {
+      "inside_boundary": 224,
+      "inside_grid": 224,
+      "outside_boundary": 1
+    },
+    "commercial_pois": {
+      "inside_boundary": 200,
+      "inside_grid": 200,
+      "outside_boundary": 0
+    }
+  },
+  "grid_analysis": {
+    "station_total": 52,
+    "residential_total": 224,
+    "commercial_total": 200,
+    "missing_normalization": 0
+  }
+}

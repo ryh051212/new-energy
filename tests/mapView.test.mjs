@@ -3,18 +3,24 @@ import assert from 'node:assert/strict'
 import fs from 'node:fs'
 import vm from 'node:vm'
 import * as turf from '@turf/turf'
+import * as Vue from 'vue'
+import { compile } from '@vue/compiler-dom'
+import { renderToString } from '@vue/server-renderer'
 
 // 执行 MapView 真实的内联事件代码，使用本地数据和模拟地图检查功能。
 async function mount(failFile = '', leaveDuringFetch = false, activeRoute = '/') {
   const source = fs.readFileSync(new URL('../src/components/MapView.vue', import.meta.url), 'utf8')
   const script = source.split('<script setup>')[1].split('</script>')[0]
-    .replace(/^import .*;\r?\n/gm, '').replaceAll('import.meta.env.BASE_URL', '"/"')
+    .replace(/^import\b[\s\S]*?["'][^"']+["'];?[ \t]*\r?\n/gm, '').replaceAll('import.meta.env.BASE_URL', '"/"')
   const handlers = {}
   const sources = {}
   const requests = []
   const filters = {}
   const popups = []
   const visibility = {}
+  const paint = {}
+  const bounds = []
+  const listeners = new Map()
   let options
   let removed = false
   let requestSignal
@@ -28,7 +34,8 @@ async function mount(failFile = '', leaveDuringFetch = false, activeRoute = '/')
     },
     getLayer() { return {} },
     setLayoutProperty(id, property, value) { visibility[id] = value },
-    fitBounds() {}, getCanvas() { return {} }, resize() {}, remove() { removed = true },
+    setPaintProperty(id, property, value) { paint[`${id}:${property}`] = value },
+    fitBounds(...args) { bounds.push(args) }, getCanvas() { return {} }, resize() {}, remove() { removed = true },
     queryRenderedFeatures() { return [] },
     setFilter(id, filter) { filters[id] = filter },
   }
@@ -47,7 +54,11 @@ async function mount(failFile = '', leaveDuringFetch = false, activeRoute = '/')
     maplibregl: { setWorkerUrl() {}, Map: function (config) { options = config; return map }, Popup },
     AbortController, AbortSignal, ResizeObserver: class { observe() {} disconnect() {} },
     console: { error() {}, log() {} },
-    document: { createElement() { return { children: [], append(child) { this.children.push(child) } } } },
+    document: {
+      createElement() { return { children: [], append(child) { this.children.push(child) } } },
+      addEventListener(name, callback) { listeners.set(name, callback) },
+      removeEventListener(name, callback) { if (listeners.get(name) === callback) listeners.delete(name) },
+    },
     fetch: async (url, config) => {
       requests.push(url)
       if (config?.signal) requestSignal = config.signal
@@ -66,7 +77,7 @@ async function mount(failFile = '', leaveDuringFetch = false, activeRoute = '/')
   vm.runInContext(script, context)
   ready()
   await handlers['load:']()
-  return { sources, handlers, popups, map, cleanup, options, visibility, filters, requestSignal, requests, context,
+  return { sources, handlers, popups, map, cleanup, options, visibility, paint, bounds, listeners, filters, requestSignal, requests, context,
     state: vm.runInContext('({ count: weiduStationCount.value, commercialCount: commercialCount.value, error: loadError.value, warning: gridWarning.value, loading: loading.value })', context) }
 }
 
@@ -213,16 +224,127 @@ test('勾选「只看快充」会给站点图层加过滤条件，取消后恢�
   app.cleanup()
 })
 
-test('快捷图层面板只列出还没打开的图层', async () => {
+test('业务图层可以反复开关，常用和全部列表均不包含行政边界', async () => {
   const app = await mount()
   const ids = () => vm.runInContext("switchableLayers.value.map(item => item.id).join(',')", app.context)
-  // 默认打开边界、站点、热力图，所以常用图层里只剩这三个可切换
-  assert.equal(ids(), 'hexgrid,residential,commercial')
-  // 打开居民小区后，它就从列表里消失
-  vm.runInContext("showLayer('residential')", app.context)
-  assert.equal(ids(), 'hexgrid,commercial')
-  // 点“更多”后，专题图层也一起列出来
+  assert.equal(ids(), 'stations,hexgrid,heatmap,residential,commercial')
+  vm.runInContext("toggleLayer('residential', true)", app.context)
+  assert.equal(app.visibility['residential-circle'], 'visible')
+  assert.equal(ids(), 'stations,hexgrid,heatmap,residential,commercial')
+  vm.runInContext("toggleLayer('residential', false)", app.context)
+  assert.equal(app.visibility['residential-circle'], 'none')
   vm.runInContext('showAllLayers.value = true', app.context)
-  assert.equal(ids(), 'hexgrid,commercial,residentialDemand,demandIndex,mismatch,supplyDemandType')
+  assert.equal(ids(), 'stations,hexgrid,heatmap,residential,commercial,residentialDemand,demandIndex,mismatch,supplyDemandType')
+  app.cleanup()
+})
+
+test('边界显示、填充和不透明度独立控制，专题切换保留设置', async () => {
+  const app = await mount()
+  vm.runInContext('toggleBoundaryFill(false); setBoundaryOpacity(12.5)', app.context)
+  assert.equal(app.visibility['weidu-fill'], 'none')
+  assert.equal(app.visibility['weidu-outline'], 'visible')
+  assert.equal(app.paint['weidu-fill:fill-opacity'], 0.125)
+  vm.runInContext("toggleLayer('boundary', false); props.activeRoute = '/monitoring/demand'; applyRouteView()", app.context)
+  assert.equal(app.visibility['weidu-outline'], 'none')
+  assert.equal(app.visibility['demand-index-fill'], 'visible')
+  vm.runInContext("toggleLayer('boundary', true)", app.context)
+  assert.equal(app.visibility['weidu-fill'], 'none')
+  assert.equal(app.visibility['weidu-outline'], 'visible')
+  vm.runInContext('toggleBoundaryFill(true); fitBoundary()', app.context)
+  assert.equal(app.visibility['weidu-fill'], 'visible')
+  assert.equal(JSON.stringify(app.bounds.at(-1)[0]), JSON.stringify(app.bounds[0][0]))
+  assert.equal(app.bounds.at(-1)[1].duration, 600)
+  app.cleanup()
+})
+
+test('边界与图层面板互斥，点击外部或 Escape 关闭，卸载清理监听', async () => {
+  const app = await mount()
+  const state = () => vm.runInContext('[boundaryPanelOpen.value, quickPanelOpen.value].join()', app.context)
+  vm.runInContext('toggleBoundaryPanel()', app.context)
+  assert.equal(state(), 'true,false')
+  vm.runInContext('toggleQuickPanel()', app.context)
+  assert.equal(state(), 'false,true')
+  app.listeners.get('keydown')({ key: 'Enter' })
+  assert.equal(state(), 'false,true')
+  app.listeners.get('keydown')({ key: 'Escape' })
+  assert.equal(state(), 'false,false')
+  assert.equal(app.listeners.size, 0)
+  vm.runInContext('toggleBoundaryPanel()', app.context)
+  app.listeners.get('click')()
+  assert.equal(state(), 'false,false')
+  vm.runInContext('toggleQuickPanel()', app.context)
+  app.cleanup()
+  assert.equal(app.listeners.size, 0)
+})
+
+const legendState = app => JSON.parse(vm.runInContext('JSON.stringify(activeLegends.value)', app.context))
+
+test('图例随图层开关增加、移除并支持多层同时展示，全部关闭时为空', async () => {
+  const app = await mount()
+  const ids = () => legendState(app).map(legend => legend.id)
+  assert.deepEqual(ids(), ['stations', 'heatmap'])
+  vm.runInContext("toggleLayer('heatmap', false); toggleLayer('residential', true); toggleLayer('commercial', true); toggleLayer('residentialDemand', true)", app.context)
+  assert.deepEqual(ids(), ['stations', 'residential', 'commercial', 'residentialDemand'])
+  assert.equal(legendState(app).find(legend => legend.id === 'residential').items[0].color,
+    app.options.style.layers.find(layer => layer.id === 'residential-circle').paint['circle-color'])
+  vm.runInContext('layerGroups.value.forEach(group => toggleLayer(group.id, false))', app.context)
+  assert.deepEqual(ids(), [])
+  app.cleanup()
+})
+
+test('专题路由和手动开启的专题图例独立，显示完整分级并对应地图颜色', async () => {
+  const app = await mount('', false, '/monitoring/demand')
+  assert.deepEqual(legendState(app).map(legend => legend.id), ['stations', 'demandIndex'])
+  vm.runInContext("toggleLayer('demandIndex', false); toggleLayer('hexgrid', true); toggleLayer('supplyDemandType', true); toggleLayer('residentialDemand', true)", app.context)
+  const legends = legendState(app)
+  assert.deepEqual(legends.map(legend => legend.id), ['stations', 'hexgrid', 'residentialDemand', 'supplyDemandType'])
+  const supply = legends.find(legend => legend.id === 'hexgrid').items
+  assert.equal(supply.at(-1).label, '0 站')
+  assert.equal(supply.at(-1).color, app.sources.hexgrid.features.find(feature => feature.properties.stationCount === 0).properties.color)
+  for (const [id, mapLayerId] of [['residentialDemand', 'residential-demand-fill'], ['supplyDemandType', 'supply-demand-type-fill']]) {
+    const colors = app.options.style.layers.find(layer => layer.id === mapLayerId).paint['fill-color']
+    assert.ok(legends.find(legend => legend.id === id).items.every(item => colors.includes(item.color)))
+  }
+  vm.runInContext("props.activeRoute = '/monitoring/mismatch'; applyRouteView()", app.context)
+  assert.deepEqual(legendState(app).map(legend => legend.id), ['stations', 'mismatch'])
+  assert.ok(legendState(app).find(legend => legend.id === 'mismatch').gradient.includes('#2166ac'))
+  app.cleanup()
+})
+
+test('站点图例跟随真实类型和快充筛选', async () => {
+  const app = await mount()
+  assert.deepEqual(legendState(app).find(legend => legend.id === 'stations').items.map(item => item.label), ['充电站（类型未标注）'])
+  vm.runInContext("allStationFeatures.value = [{ properties: { chargeType: 'fast' } }, { properties: { chargeType: 'slow' } }, { properties: { chargeType: 'unknown' } }]", app.context)
+  assert.deepEqual(legendState(app).find(legend => legend.id === 'stations').items.map(item => item.label), ['快充站', '慢充站', '充电站（类型未标注）'])
+  vm.runInContext('toggleFastOnly(true)', app.context)
+  assert.deepEqual(legendState(app).find(legend => legend.id === 'stations').items.map(item => item.label), ['快充站'])
+  vm.runInContext("toggleLayer('stations', false)", app.context)
+  assert.ok(!legendState(app).some(legend => legend.id === 'stations'))
+  app.cleanup()
+})
+
+test('网格加载失败时不显示没有数据的专题图例', async () => {
+  const app = await mount('hex-grid.json', false, '/monitoring/demand')
+  assert.ok(!legendState(app).some(legend => legend.id === 'demandIndex'))
+  vm.runInContext("toggleLayer('hexgrid', true); toggleLayer('mismatch', true)", app.context)
+  assert.ok(!legendState(app).some(legend => ['hexgrid', 'mismatch'].includes(legend.id)))
+  app.cleanup()
+})
+
+test('实际图例模板按当前状态渲染，关闭全部图层后隐藏容器', async () => {
+  const app = await mount()
+  const source = fs.readFileSync(new URL('../src/components/MapView.vue', import.meta.url), 'utf8')
+  const template = source.split('<!-- 图例：同时展示')[1].split('<!-- 缩放与定位 -->')[0].replace(/^[\s\S]*?-->/, '')
+  const render = new Function('Vue', compile(template, { mode: 'function', prefixIdentifiers: true }).code)(Vue)
+  const html = () => renderToString(Vue.createSSRApp({ render, setup: () => ({ loading: false, activeLegends: legendState(app) }) }))
+  vm.runInContext("toggleLayer('heatmap', false); toggleLayer('commercial', true); toggleLayer('residentialDemand', true)", app.context)
+  const visibleHtml = await html()
+  assert.match(visibleHtml, /商业设施图例/)
+  assert.match(visibleHtml, /居民需求分布图例/)
+  assert.doesNotMatch(visibleHtml, /密度热力图/)
+  assert.doesNotMatch(visibleHtml, /魏都区.*边界|行政区域填充/)
+  vm.runInContext('layerGroups.value.forEach(group => toggleLayer(group.id, false))', app.context)
+  vm.runInContext("toggleLayer('boundary', true)", app.context)
+  assert.doesNotMatch(await html(), /map-legend/)
   app.cleanup()
 })

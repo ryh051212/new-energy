@@ -1,0 +1,120 @@
+{
+  "migration_id": "gcj02_to_wgs84_v1",
+  "checked_at": "2026-10-04T11:35:49.432772+08:00",
+  "source": "GCJ-02",
+  "target": "EPSG:4326",
+  "tables": {
+    "stations": {
+      "count": 52,
+      "vertices": 52,
+      "max_roundtrip_error_degrees": 1.5337775494117523e-10,
+      "min_shift_degrees": 0.006032574747952611,
+      "max_shift_degrees": 0.00627390452899683,
+      "invalid_geometry": 0,
+      "main_srid": 4326
+    },
+    "residential_pois": {
+      "count": 225,
+      "vertices": 225,
+      "max_roundtrip_error_degrees": 1.5356249605247285e-10,
+      "min_shift_degrees": 0.006024097076902158,
+      "max_shift_degrees": 0.006241516097321181,
+      "invalid_geometry": 0,
+      "main_srid": 4326
+    },
+    "commercial_pois": {
+      "count": 200,
+      "vertices": 200,
+      "max_roundtrip_error_degrees": 1.5342038750532083e-10,
+      "min_shift_degrees": 0.006029492736036197,
+      "max_shift_degrees": 0.006253345256136165,
+      "invalid_geometry": 0,
+      "main_srid": 4326
+    },
+    "hex_grid": {
+      "count": 170,
+      "vertices": 1190,
+      "max_roundtrip_error_degrees": 1.539035565656377e-10,
+      "min_shift_degrees": 0.0060231938785602415,
+      "max_shift_degrees": 0.00627714007988835,
+      "invalid_geometry": 0,
+      "main_srid": 4326
+    },
+    "weidu_boundary": {
+      "count": 1,
+      "vertices": 558,
+      "max_roundtrip_error_degrees": 1.538893457109225e-10,
+      "min_shift_degrees": 0.006019771326235905,
+      "max_shift_degrees": 0.006276845410384261,
+      "invalid_geometry": 0,
+      "main_srid": 4326
+    }
+  },
+  "spatial_validation": {
+    "stations:weidu_boundary": {
+      "before": 52,
+      "after": 52,
+      "changed_pairs": 0
+    },
+    "stations:hex_grid": {
+      "before": 52,
+      "after": 52,
+      "changed_pairs": 0
+    },
+    "residential_pois:weidu_boundary": {
+      "before": 224,
+      "after": 224,
+      "changed_pairs": 0
+    },
+    "residential_pois:hex_grid": {
+      "before": 224,
+      "after": 224,
+      "changed_pairs": 0
+    },
+    "commercial_pois:weidu_boundary": {
+      "before": 200,
+      "after": 200,
+      "changed_pairs": 0
+    },
+    "commercial_pois:hex_grid": {
+      "before": 200,
+      "after": 200,
+      "changed_pairs": 0
+    },
+    "grid_intersections": {
+      "before": 450,
+      "after": 450,
+      "changed_pairs": 0
+    }
+  },
+  "recalculated_indicators": {
+    "stations": 52,
+    "residential_pois": 224,
+    "commercial_pois": 200,
+    "classifications": {
+      "high-demand-high-supply": 21,
+      "high-demand-low-supply": 40,
+      "low-demand-high-supply": 12,
+      "low-demand-low-supply": 97
+    },
+    "edge_tolerance_metres": 5,
+    "edge_assignments": [
+      {
+        "table": "residential_pois",
+        "point_id": "B0FFL4CBQ0",
+        "grid_id": 167,
+        "distance_metres": 3.98541459,
+        "reason": "inside_boundary_but_grid_edge_gap"
+      }
+    ]
+  },
+  "steps_completed": [
+    "batch_conversion",
+    "coordinate_validation",
+    "spatial_validation",
+    "switch_epsg4326",
+    "recalculate_indicators"
+  ],
+  "committed": true,
+  "backup": "D:\\jstrae\\项目学习\\weidu-ev-webgis\\backend\\backups\\nev_webgis_before_wgs84_20261004_113549.dump"
+}

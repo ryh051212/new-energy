@@ -1,4 +1,15 @@
 import { distance } from '@turf/turf'
+import coordtransform from 'coordtransform'
+
+// 浏览器定位与 OpenStreetMap 使用 WGS84；只转换明确标记为 GCJ-02 的地点。
+export function normalizeChargingPoint(feature) {
+  if (feature.geometry?.type !== 'Point' || feature.properties?.coordSystem !== 'GCJ-02') return feature
+  return {
+    ...feature,
+    geometry: { ...feature.geometry, coordinates: coordtransform.gcj02towgs84(...feature.geometry.coordinates) },
+    properties: { ...feature.properties, coordSystem: 'WGS84' },
+  }
+}
 
 export function stationDistance(feature, location) {
   return location ? distance(location, feature.geometry.coordinates, { units: 'kilometers' }) : null
