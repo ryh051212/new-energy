@@ -1,5 +1,9 @@
+export const chargingDemo = {
+  path: '/charging/demo',
+  url: 'https://xuchang-ev-sandbox-a119.business-tea-6566.chatgpt.site/',
+}
+
 export const navigationGroups = [
-  { path: '/charging', label: '找充电', icon: 'search', direct: true, children: [] },
   { path: '/monitoring', label: '供需监测', icon: 'chart', children: [
     { path: '/monitoring/stations', title: '充电站分布', map: true, description: '查看充电站位置与站点密度热力图。' },
     { path: '/monitoring/demand', title: '需求分布', map: true, description: '查看基于居民小区与商业设施计算的潜在需求指数。' },

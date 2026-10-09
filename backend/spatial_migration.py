@@ -100,6 +100,7 @@ def recalculate_indicators(cursor):
                         g.id LIMIT 1
                 ) h
                 WHERE EXISTS (SELECT 1 FROM weidu_boundary b WHERE ST_Covers(b.geom,p.geom))
+                    AND (to_jsonb(p)->>'status') IS DISTINCT FROM 'retired'
             ), counts AS (
                 SELECT hex_id,count(*)::integer AS n FROM assigned GROUP BY hex_id
             ), complete AS (
@@ -111,6 +112,7 @@ def recalculate_indicators(cursor):
             CROSS JOIN LATERAL (SELECT g.id,g.geom FROM hex_grid g
                 ORDER BY ST_Distance(g.geom::geography,p.geom::geography),g.id LIMIT 1) h
             WHERE EXISTS (SELECT 1 FROM weidu_boundary b WHERE ST_Covers(b.geom,p.geom))
+                AND (to_jsonb(p)->>'status') IS DISTINCT FROM 'retired'
                 AND NOT EXISTS (SELECT 1 FROM hex_grid g WHERE ST_Covers(g.geom,p.geom))
         """).format(sql.Identifier(table)))
         for point_id, grid_id, distance in cursor.fetchall():
@@ -145,7 +147,8 @@ def recalculate_indicators(cursor):
     for table, field in (("stations", "station_count"), ("residential_pois", "residential_count"),
                          ("commercial_pois", "commercial_count")):
         cursor.execute(sql.SQL("""SELECT count(*) FROM {} p WHERE EXISTS
-            (SELECT 1 FROM weidu_boundary b WHERE ST_Covers(b.geom,p.geom))""").format(sql.Identifier(table)))
+            (SELECT 1 FROM weidu_boundary b WHERE ST_Covers(b.geom,p.geom))
+            AND (to_jsonb(p)->>'status') IS DISTINCT FROM 'retired'""").format(sql.Identifier(table)))
         expected = cursor.fetchone()[0]
         cursor.execute(sql.SQL("SELECT SUM({}) FROM hex_grid").format(sql.Identifier(field)))
         actual = cursor.fetchone()[0]

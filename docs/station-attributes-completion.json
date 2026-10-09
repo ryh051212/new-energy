@@ -1,0 +1,26 @@
+{
+  "existing_stations": 52,
+  "updated_existing_stations": 52,
+  "simulated_fields": {
+    "availableCount": 52,
+    "chargeType": 52,
+    "electricityPrice": 52,
+    "fastCount": 52,
+    "observedAt": 52,
+    "openingHours": 52,
+    "operator": 52,
+    "parkingFee": 52,
+    "powerKw": 52,
+    "regularCount": 52,
+    "servicePrice": 52,
+    "siteType": 52,
+    "totalCount": 52
+  },
+  "charge_types": {
+    "fast": 196,
+    "regular": 96
+  },
+  "committed": true,
+  "backup": "D:\\jstrae\\项目学习\\weidu-ev-webgis\\backend\\backups\\nev_webgis_before_wgs84_20261005_172746.dump",
+  "maintenance_file": "D:\\jstrae\\项目学习\\weidu-ev-webgis\\data\\managed\\existing-stations-enriched.csv"
+}

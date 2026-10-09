@@ -1,0 +1,33 @@
+{
+  "input_records": 240,
+  "inserted": 240,
+  "updated": 0,
+  "retired_demo": 0,
+  "grid_analysis": {
+    "stations": 172,
+    "residential_pois": 224,
+    "commercial_pois": 200,
+    "classifications": {
+      "high-demand-high-supply": 20,
+      "high-demand-low-supply": 41,
+      "low-demand-high-supply": 22,
+      "low-demand-low-supply": 87
+    },
+    "edge_tolerance_metres": 5,
+    "edge_assignments": [
+      {
+        "table": "residential_pois",
+        "point_id": "B0FFL4CBQ0",
+        "grid_id": 167,
+        "distance_metres": 3.98541459,
+        "reason": "inside_boundary_but_grid_edge_gap"
+      }
+    ]
+  },
+  "active_stations": 292,
+  "synthetic_stations": 240,
+  "existing_or_real_stations": 52,
+  "committed": false,
+  "source_file": "xuchang-stations.csv",
+  "backup": null
+}

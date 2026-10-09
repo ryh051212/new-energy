@@ -1,9 +1,9 @@
 <script setup>
 import { computed } from 'vue'
+import { CHARGING_ICONS } from '../utils/chargingIcons.js'
 
 const props = defineProps({ name: { type: String, required: true }, size: { type: [Number, String], default: 20 } })
 const paths = {
-  car: ['M5 17h2m10 0h2M5 17a2 2 0 1 0 4 0m6 0a2 2 0 1 0 4 0M3 17V9l2-5h14l2 5v8h-2M3 17h2m4 0h6M3 10h18'],
   home: ['m3 10 9-7 9 7', 'M5 9v12h14V9', 'M9 21v-7h6v7'],
   search: ['m21 21-4.3-4.3', 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16'],
   compass: ['m3 11 18-8-8 18-2-8-8-2Z'],
@@ -13,6 +13,7 @@ const paths = {
   user: ['M20 21a8 8 0 0 0-16 0', 'M12 13a5 5 0 1 0 0-10 5 5 0 0 0 0 10'],
   settings: ['M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7', 'M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.07-2.85 2.85-.07-.06A1.7 1.7 0 0 0 15 19.4l-.1.02V22h-4v-2.58L10.8 19.4a1.7 1.7 0 0 0-1.88.34l-.07.06L6 16.95l.06-.07A1.7 1.7 0 0 0 6.4 15l-.02-.1H4v-4h2.38l.02-.1a1.7 1.7 0 0 0-.34-1.88L6 8.85 8.85 6l.07.06A1.7 1.7 0 0 0 10.8 6.4l.1-.02V4h4v2.38l.1.02a1.7 1.7 0 0 0 1.88-.34l.07-.06 2.85 2.85-.06.07A1.7 1.7 0 0 0 19.4 10.8l.02.1H22v4h-2.58l-.02.1Z'],
   clock: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20', 'M12 6v6l4 2'],
+  car: ['M5 16h14l-1.5-6A2 2 0 0 0 15.6 8H8.4a2 2 0 0 0-1.9 1.5L5 16Z', 'M8 16v2', 'M16 16v2', 'M7 12h10', 'M7 8l1-2h8l1 2'],
   bolt: ['m13 2-9 11h7l-1 9 10-12h-7V2Z'],
   pin: ['M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z', 'M12 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5'],
   layers: ['m12 2 9 5-9 5-9-5 9-5Z', 'm3 12 9 5 9-5', 'm3 17 9 5 9-5'],
@@ -38,10 +39,11 @@ const paths = {
   building: ['M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z', 'M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2', 'M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2', 'M10 6h4', 'M10 10h4', 'M10 14h4', 'M10 18h4'],
 }
 const iconPaths = computed(() => paths[props.name] || paths.info)
+const chargingIcon = computed(() => CHARGING_ICONS[props.name])
 </script>
 
 <template>
-  <svg :width="size" :height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path v-for="(path, index) in iconPaths" :key="index" :d="path" />
+  <svg :width="size" :height="size" viewBox="0 0 24 24" :fill="chargingIcon ? 'currentColor' : 'none'" :stroke="chargingIcon ? 'none' : 'currentColor'" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path v-for="(path, index) in (chargingIcon?.paths || iconPaths)" :key="index" :d="path" :fill-rule="chargingIcon ? 'evenodd' : undefined" />
   </svg>
 </template>

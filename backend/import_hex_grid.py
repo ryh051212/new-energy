@@ -5,6 +5,7 @@ import math
 import sys
 from contextlib import closing
 from pathlib import Path
+from typing import TypeGuard
 
 if __package__:
     from .database import get_db_connection
@@ -24,12 +25,17 @@ CLASSIFICATIONS = {
 }
 
 
-def _is_valid_number(value):
-    """接受有限的 int/float，但拒绝 None、bool 和非数值字符串。"""
+def _is_valid_number(value) -> TypeGuard[int | float]:
+    """接受有限的 int/float，但拒绝 None、bool 和非数值字符串。
+
+    返回 TypeGuard 而非普通 bool，让类型检查器在通过校验后
+    把 value 收窄为 int | float，后续比较和入库才不会被判为 None。
+    """
     return isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value)
 
 
 def read_grid_rows(path=GEOJSON_PATH):
+    
     """先验证整份输入，避免坏数据导致部分导入。"""
     data = json.loads(Path(path).read_text(encoding="utf-8-sig"))
     if data.get("type") != "FeatureCollection" or not data.get("features"):
@@ -44,12 +50,20 @@ def read_grid_rows(path=GEOJSON_PATH):
         geometry = feature.get("geometry") or {}
         if geometry.get("type") != "Polygon" or not geometry.get("coordinates"):
             raise ValueError(f"网格 {grid_id} 缺少 Polygon 几何")
-        counts = [properties.get(field) for field in COUNT_FIELDS]
-        if any(not _is_valid_number(value) or value < 0 for value in counts):
-            raise ValueError(f"网格 {grid_id} 的数量字段必须为非负整数")
-        indices = [properties.get(field) for field in INDEX_FIELDS]
-        if any(not _is_valid_number(value) for value in indices):
-            raise ValueError(f"网格 {grid_id} 缺少有效分析指数")
+        # 用显式循环收集字段：校验通过后 value 已被收窄为数值类型，
+        # counts / indices 因此是 list[int | float]，后续比较才有类型保证。
+        counts = []
+        for field in COUNT_FIELDS:
+            value = properties.get(field)
+            if not _is_valid_number(value) or value < 0:
+                raise ValueError(f"网格 {grid_id} 的数量字段必须为非负整数")
+            counts.append(value)
+        indices = []
+        for field in INDEX_FIELDS:
+            value = properties.get(field)
+            if not _is_valid_number(value):
+                raise ValueError(f"网格 {grid_id} 缺少有效分析指数")
+            indices.append(value)
         if any(not 0 <= value <= 1 for value in indices[:4]) or not -1 <= indices[4] <= 1:
             raise ValueError(f"网格 {grid_id} 的分析指数超出范围")
         classification = properties.get("supplyDemandType")

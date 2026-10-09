@@ -2,9 +2,11 @@
 import { onMounted, onBeforeUnmount, ref, computed } from 'vue'
 import MapView from './components/MapView.vue'
 import ChargingView from './components/ChargingView.vue'
+import ChargingDemoView from './components/ChargingDemoView.vue'
+import ChargingSettingsView from './components/ChargingSettingsView.vue'
 import MainNavigation from './components/MainNavigation.vue'
 import UiIcon from './components/UiIcon.vue'
-import { routePages, resolveRoute } from './navigation.js'
+import { chargingDemo, routePages, resolveRoute } from './navigation.js'
 
 const route = ref(resolveRoute(window.location.hash.slice(1)))
 const utilityPages = {
@@ -25,6 +27,8 @@ onBeforeUnmount(() => window.removeEventListener('hashchange', syncRoute))
 
 <template>
   <ChargingView v-if="route === '/charging'" />
+  <ChargingSettingsView v-else-if="route === '/charging/settings'" />
+  <ChargingDemoView v-else-if="route === chargingDemo.path" />
   <MapView v-else-if="route === '/' || page?.map" :active-route="route" :page="page">
     <template #header><MainNavigation :route="route" /></template>
   </MapView>

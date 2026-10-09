@@ -16,7 +16,7 @@ test('转换保留无 ID 站点，重复 ID 保留最后一个有效记录', () 
   ])
   assert.equal(result.features.length, 3)
   assert.deepEqual(result.features[2].geometry.coordinates, [114,35])
-  assert.equal(result.features[0].properties.chargeType, 'unknown')
+  assert.equal(result.features[0].properties.chargeType, 'regular')
 })
 test('转换拒绝空坐标、越界坐标、错误维数和非字符串', () => {
   const values = [',34', '113,', '181,34', '113,91', 'NaN,34', '1,2,3', []]

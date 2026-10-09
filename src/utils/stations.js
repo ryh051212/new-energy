@@ -66,7 +66,7 @@ export function convertPois(pois) {
       properties: {
         id, name: text(poi.name), type: text(poi.type), address: text(poi.address),
         district: text(poi.adname), city: text(poi.cityname), coordSystem: 'GCJ-02',
-        chargeType: ['fast', 'slow'].includes(poi.chargeType) ? poi.chargeType : 'unknown'
+        chargeType: poi.chargeType === 'fast' ? 'fast' : 'regular'
       },
       geometry: { type: 'Point', coordinates }
     })

@@ -36,7 +36,10 @@ def import_weidu_boundary():
                         row_id = rows[0][0]
                     else:
                         cursor.execute("INSERT INTO weidu_boundary (name) VALUES (%s) RETURNING id", (name,))
-                        row_id = cursor.fetchone()[0]
+                        inserted = cursor.fetchone()
+                        if inserted is None:
+                            raise RuntimeError("研究区边界写入失败：INSERT 未返回主键 ID")
+                        row_id = inserted[0]
                     update_geometry(cursor, "weidu_boundary", row_id, geometry)
                 if source_srid(cursor, "weidu_boundary") == 4326:
                     recalculate_indicators(cursor)

@@ -8,7 +8,7 @@ const opened = ref('')
 const header = ref(null)
 watch(() => props.route, () => { opened.value = '' })
 function closeOutside(event) {
-  if (!header.value?.contains(event.target)) opened.value = ''
+  if (!event.target?.closest?.('.nav-group')) opened.value = ''
 }
 function closeOnEscape(event) {
   if (event.key !== 'Escape' || !opened.value) return
@@ -28,8 +28,8 @@ onBeforeUnmount(() => {
 
 <template>
   <header ref="header" class="topbar site-header">
-    <a class="brand" href="#/"><span class="brand-mark"><UiIcon name="car" :size="29" /></span><span>新能源汽车充电供需 <b>WebGIS展示</b></span></a>
-    <span class="brand-divider"></span><span class="brand-location">许昌市魏都区</span>
+    <a class="brand" href="#/"><span class="brand-mark"><UiIcon name="car" :size="29" /></span><span class="brand-title">新能源汽车充电供需 <b>WebGIS展示</b></span></a>
+    <a class="charging-entry" href="#/charging" aria-label="切换到用户端找充电站" title="切换到用户端找充电" @click="opened = ''"><UiIcon name="bolt" :size="18" /><span>用户端</span></a>
     <nav class="main-nav" aria-label="主导航">
       <a href="#/" :class="['nav-item', { active: route === '/' }]" :aria-current="route === '/' ? 'page' : undefined" @click="opened = ''"><UiIcon name="home" />首页</a>
       <div v-for="group in navigationGroups" :key="group.path" class="nav-group" @focusout="event => { if (!event.currentTarget.contains(event.relatedTarget)) opened = '' }">

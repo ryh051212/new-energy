@@ -35,9 +35,9 @@ class GridApiTests(unittest.TestCase):
     @patch.object(main, "get_db_connection")
     def test_normalization_is_returned(self, connect):
         connection = connect.return_value
-        cursor = connection.cursor.return_value.__enter__.return_value
-        cursor.fetchall.return_value = [(1, 2, 3, 4, 0.5, 0.4, 0.1,
-                                        "high-demand-high-supply", 0.6, 0.4,
+        cursor = connection.cursor.return_value
+        cursor.fetchall.return_value = [(1, 2, 3, 4, 0.6, 0.4, 0.5, 0.4, 0.1,
+                                        "high-demand-high-supply",
                                         '{"type":"Polygon","coordinates":[]}')]
         feature = main.get_hex_grid()["features"][0]
         self.assertEqual(feature["properties"]["residentialNorm"], 0.6)
@@ -47,7 +47,7 @@ class GridApiTests(unittest.TestCase):
     @patch.object(main, "get_db_connection")
     def test_query_failure_still_closes_connection(self, connect):
         connection = connect.return_value
-        cursor = connection.cursor.return_value.__enter__.return_value
+        cursor = connection.cursor.return_value
         cursor.execute.side_effect = RuntimeError("query failed")
         with self.assertRaises(RuntimeError):
             main.get_hex_grid()
