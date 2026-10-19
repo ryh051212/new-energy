@@ -54,6 +54,13 @@ class TripChargingTests(unittest.TestCase):
 
 
 class TripRecommendationApiTests(unittest.TestCase):
+    def test_explicit_current_mismatch_is_excluded_without_guessing_from_fast_charge(self):
+        station = {'properties': {'chargingCurrentTypes': ['AC']}}
+        self.assertEqual(rank_trip_stations([station], 'urgent', {'chargingRequirement': 'DC'}), [])
+        self.assertFalse(evaluate_trip_station({'properties': {'chargeType': 'fast'}}, 'urgent', {'chargingRequirement': 'AC'})['excluded'])
+        station['properties']['simulatedFields'] = ['chargingCurrentTypes']
+        self.assertFalse(evaluate_trip_station(station, 'urgent', {'chargingRequirement': 'DC'})['excluded'])
+
     @patch.dict('os.environ', {'AMAP_WEB_KEY': 'test-key'})
     @patch.object(main, 'get_amap_driving_info')
     @patch.object(main, 'get_db_connection')

@@ -21,7 +21,12 @@ def audit_database():
     with closing(get_db_connection()) as connection:
         connection.set_session(readonly=True)
         with connection.cursor() as cursor:
-            for table in TABLES:
+            tables = list(TABLES)
+            cursor.execute("SELECT to_regclass('public.facility_pois')")
+            has_facilities = cursor.fetchone()[0] is not None
+            if has_facilities:
+                tables.append("facility_pois")
+            for table in tables:
                 cursor.execute(sql.SQL("""
                     SELECT count(*), count(*) FILTER (WHERE geom IS NULL),
                         count(*) FILTER (WHERE NOT ST_IsValid(geom)),
@@ -48,7 +53,7 @@ def audit_database():
                     report["tables"][table]["invalid_source_backup"] = bad_raw
                     report["tables"][table]["main_candidate_mismatch"] = mismatch
             report["point_coverage"] = {}
-            for table in TABLES[:3]:
+            for table in [*TABLES[:3], *(["facility_pois"] if has_facilities else [])]:
                 cursor.execute(sql.SQL("""
                     SELECT count(*) FILTER (WHERE EXISTS (
                         SELECT 1 FROM weidu_boundary b WHERE ST_Covers(b.geom, p.geom))),

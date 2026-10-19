@@ -8,28 +8,32 @@ from fastapi import FastAPI, HTTPException,Query
 from fastapi.middleware.cors import CORSMiddleware
 
 if __package__:
+    from .auth import router as auth_router, ALLOWED_ORIGINS
+    from .facility_catalog import CATEGORIES, facilities_geojson, grid_factors, coverage_summary
     from .coordinate_transform import wgs84_to_gcj02
     from .database import get_db_connection
     from .station_catalog import station_properties
+    from .station_access import station_access_guide, route_destination
     from .recommendations import rank_recommendations
     from .route_planning import get_amap_routes
     from .trip_charging import DEFAULT_TRIP, normalize_trip_context, rank_trip_stations
 else:
+    from auth import router as auth_router, ALLOWED_ORIGINS
+    from facility_catalog import CATEGORIES, facilities_geojson, grid_factors, coverage_summary
     from coordinate_transform import wgs84_to_gcj02
     from database import get_db_connection
     from station_catalog import station_properties
+    from station_access import station_access_guide, route_destination
     from recommendations import rank_recommendations
     from route_planning import get_amap_routes
     from trip_charging import DEFAULT_TRIP, normalize_trip_context, rank_trip_stations
 
 app = FastAPI(title="新能源汽车充电 WebGIS API")
+app.include_router(auth_router)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=list(ALLOWED_ORIGINS),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -342,14 +346,14 @@ def get_recommended_stations(
 
     def enrich_candidate(candidate):
         station_lng, station_lat = candidate['geometry']['coordinates']
+        target = route_destination(candidate['properties'].get('accessGuide'), [station_lng, station_lat])
         straight_distance_meters = candidate['properties']['straightDistanceMeters']
 
         # 数据库中的站点是 WGS84，
         # 调高德前转换成 GCJ-02。
         station_gcj_lng, station_gcj_lat = (
             wgs84_to_gcj02(
-                station_lng,
-                station_lat
+                *target['coordinates']
             )
         )
 
@@ -384,6 +388,8 @@ def get_recommended_stations(
                 "isFallback": is_fallback,
                 "drivingDistanceMeters": None if is_fallback else route["distance"],
                 "drivingDurationSeconds": None if is_fallback else route["duration"],
+                "routeDestinationKind": target['kind'], "routeDestinationLabel": target['label'],
+                "routeDestinationCoordinates": target['coordinates'],
                 **({'drivingTollsYuan': route.get('tolls') if route else None,
                     'tripRoute': trip_route} if intent else {}),
             },
@@ -442,7 +448,8 @@ def get_station_routes(
     try:
         cur.execute("""
             SELECT s.name, ST_X(s.geom), ST_Y(s.geom),
-                ST_Distance(s.geom::geography, ST_SetSRID(ST_MakePoint(%s,%s),4326)::geography)
+                ST_Distance(s.geom::geography, ST_SetSRID(ST_MakePoint(%s,%s),4326)::geography),
+                to_jsonb(s) - ARRAY['geom','geom_wgs84','geom_gcj02','lng','lat'] AS record
             FROM stations s WHERE s.id=%s AND s.geom IS NOT NULL
                 AND (to_jsonb(s)->>'status') IS DISTINCT FROM 'retired'
         """, (lng, lat, station_id))
@@ -452,16 +459,27 @@ def get_station_routes(
         conn.close()
     if row is None:
         raise HTTPException(status_code=404, detail='站点不存在或已停用')
-    name, station_lng, station_lat, straight_distance = row
-    routes = get_amap_routes(*wgs84_to_gcj02(lng, lat), *wgs84_to_gcj02(station_lng, station_lat))
+    name, station_lng, station_lat, straight_distance, record = row
+    guide = station_access_guide(station_id, name, record.get('is_synthetic', False))
+    target = route_destination(guide, [station_lng, station_lat])
+    routes = get_amap_routes(*wgs84_to_gcj02(lng, lat), *wgs84_to_gcj02(*target['coordinates']))
     for route in routes:
-        route['properties'].update(stationId=station_id, straightDistanceMeters=float(straight_distance))
-    return {'type': 'FeatureCollection', 'features': routes, 'metadata': {
+        route['properties'].update(stationId=station_id, straightDistanceMeters=float(straight_distance),
+            routeDestinationKind=target['kind'], routeDestinationLabel=target['label'], routeDestinationCoordinates=target['coordinates'])
+    traffic = [dict(segment, properties={**segment['properties'], 'routeId': route['properties']['routeId'],
+               'fetchedAt': route['properties'].get('trafficFetchedAt')})
+        for route in routes for segment in route['properties'].get('trafficSegments', [])]
+    return {'type': 'FeatureCollection', 'features': routes,
+        'traffic': {'type': 'FeatureCollection', 'features': traffic}, 'metadata': {
         'coordSystem': 'WGS84', 'distanceUnit': 'meters', 'stationId': station_id, 'stationName': name,
-        'origin': [lng, lat], 'destination': [station_lng, station_lat], 'routeCount': len(routes),
+        'origin': [lng, lat], 'destination': target['coordinates'], 'stationCoordinates': [station_lng, station_lat], 'routeCount': len(routes),
+        'routeDestinationKind': target['kind'], 'routeDestinationLabel': target['label'],
         'straightDistanceMeters': float(straight_distance), 'isFallback': not routes,
         'distanceType': 'straight' if not routes else 'driving',
         'distanceSource': 'postgis_straight' if not routes else 'amap_driving',
+        'trafficScope': 'route_only', 'trafficSegmentCount': len(traffic),
+        'trafficAvailable': any(route['properties'].get('trafficAvailable', False) for route in routes),
+        'trafficNotice': '路况按本次路线请求获取，仅覆盖返回路线；获取时间不代表高德测量时间，未知路段不视为畅通。',
         'notice': '驾车路线暂不可用，仅提供直线距离估算，不绘制道路路线' if not routes else '最多展示三条高德驾车方案',
     }}
 
@@ -507,6 +525,7 @@ def get_hex_grid():
         """)
 
         rows = cur.fetchall()
+        facility_factors = grid_factors(cur)
 
 
         # -------------------------------------------------
@@ -567,6 +586,7 @@ def get_hex_grid():
                     "mismatchIndex": mismatch_index,
 
                     "supplyDemandType": supply_demand_type,
+                    **facility_factors.get(grid_id, {}),
                 },
 
                 "geometry": json.loads(
@@ -646,6 +666,46 @@ def get_boundary():
 
         cur.close()
         conn.close()
+@app.get("/api/facility-pois")
+def get_facility_pois(
+    category: str | None = None,
+    name: str = Query(default="", max_length=120),
+    limit: int = Query(default=10000, ge=1, le=10000),
+    offset: int = Query(default=0, ge=0),
+    lng: float | None = Query(default=None, ge=-180, le=180),
+    lat: float | None = Query(default=None, ge=-90, le=90),
+    radius: float = Query(default=500, ge=1, le=5000),
+):
+    if category is not None and category not in CATEGORIES:
+        raise HTTPException(status_code=422, detail="未知设施类别")
+    if (lng is None) != (lat is None):
+        raise HTTPException(status_code=422, detail="lng、lat 须同时提供，使用 WGS84 坐标")
+    conn = get_db_connection()
+    try:
+        return facilities_geojson(conn, category, name, limit, offset,
+                                 (lng, lat) if lng is not None else None, radius)
+    finally:
+        conn.close()
+
+
+@app.get("/api/facility-coverage")
+def get_facility_coverage(radius: float = Query(default=500, ge=1, le=5000)):
+    conn = get_db_connection()
+    try:
+        with conn.cursor() as cur:
+            cur.execute("SELECT to_regclass('public.facility_pois')")
+            if cur.fetchone()[0] is None:
+                raise HTTPException(status_code=503, detail="尚未导入设施目录")
+        return coverage_summary(conn, radius)
+    finally:
+        conn.close()
+
+
+@app.get("/api/facility-categories")
+def get_facility_categories():
+    return {"source": "AMap", "categories": list(CATEGORIES.values())}
+
+
 @app.get("/api/residential-pois")
 def get_residential_pois():
 

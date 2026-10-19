@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "guides": {
+    "B0FFJ5K41S": {
+      "stationName": "特斯拉超级充电站(许昌中原国际饭店)",
+      "location": "中原国际饭店地下停车场 B1（负一层）",
+      "entrance": "入口道路：建安大道",
+      "directions": "从建安大道进入饭店地下停车场后，按 B1 层及充电区标识寻找。",
+      "sourceLabel": "Tesla 官方站点页；与高德 POI 存档相互核对",
+      "sourceUrl": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN",
+      "amapUrl": "https://ditu.amap.com/place/B0FFJ5K41S",
+      "evidenceStatus": "public_source_checked",
+      "reviewedAt": "2026-10-09T22:06:46+08:00",
+      "notice": "仅核对公开资料，尚未现场核验；限高、车库内转向和具体车位未提供。",
+      "routingEntrance": null
+    },
+    "B0I1NS8N4O": {
+      "stationName": "特斯拉超级充电站(许昌大酒店)",
+      "location": "七一路 888 号许昌大酒店院内地面停车场",
+      "entrance": "入口道路：七一路",
+      "directions": "从七一路进入许昌大酒店院内，按地面停车场及充电区标识寻找。",
+      "sourceLabel": "Tesla 官方站点页；与高德 POI 存档相互核对",
+      "sourceUrl": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN",
+      "amapUrl": "https://ditu.amap.com/place/B0I1NS8N4O",
+      "evidenceStatus": "public_source_checked",
+      "reviewedAt": "2026-10-09T22:06:46+08:00",
+      "notice": "仅核对公开资料，尚未现场核验；具体车位和进场限制未提供。",
+      "routingEntrance": null
+    },
+    "B0M6M6U9DP": {
+      "stationName": "云快充目的地充电站(金石国际停车场公牛充电站)",
+      "location": "金石国际地下停车场负一层、负二层北侧 S 区",
+      "entrance": "具体车行入口未核验",
+      "directions": "存档地址位于建安大道与三里桥街交叉口西南角；入库后按负一层、负二层北侧 S 区标识查找。",
+      "sourceLabel": "高德 POI 存档地址（原采集时间未记录）",
+      "sourceUrl": "https://ditu.amap.com/place/B0M6M6U9DP",
+      "amapUrl": "https://ditu.amap.com/place/B0M6M6U9DP",
+      "evidenceStatus": "archived_poi",
+      "reviewedAt": "2026-10-09T22:06:46+08:00",
+      "notice": "存档资料，当前入口和楼层尚未现场核验；限高、车位和车库内转向未提供。",
+      "routingEntrance": null
+    },
+    "B0IAJL39JV": {
+      "stationName": "小鹏超级充电站(小鹏S4超快充许昌魏都万达广场站)",
+      "location": "许昌魏都万达广场；所在楼层未提供",
+      "entrance": "存档记载入口道路：魏文路",
+      "directions": "按魏文路一侧的万达车行入口指引进场，再按小鹏充电标识寻找；具体车库层和车位未知。",
+      "sourceLabel": "高德 POI 存档地址（原采集时间未记录）",
+      "sourceUrl": "https://ditu.amap.com/place/B0IAJL39JV",
+      "amapUrl": "https://ditu.amap.com/place/B0IAJL39JV",
+      "evidenceStatus": "archived_poi",
+      "reviewedAt": "2026-10-09T22:06:46+08:00",
+      "notice": "存档资料，当前入口尚未现场核验；不由商场名称推断地下楼层。",
+      "routingEntrance": null
+    },
+    "B0IR9LUG5D": {
+      "stationName": "开迈斯汽车充电站(许昌市万达广场地上站)",
+      "location": "万达地面停车场，存档标注 C219",
+      "entrance": "具体车行入口未核验",
+      "directions": "存档位置在许都路与魏文路交叉口的万达地面停车场；进场后查找 C219 标识，避免误入其他地下充电区。",
+      "sourceLabel": "高德 POI 存档地址（原采集时间未记录）",
+      "sourceUrl": "https://ditu.amap.com/place/B0IR9LUG5D",
+      "amapUrl": "https://ditu.amap.com/place/B0IR9LUG5D",
+      "evidenceStatus": "archived_poi",
+      "reviewedAt": "2026-10-09T22:06:46+08:00",
+      "notice": "存档资料，当前停车区和 C219 标识尚未现场核验；进场限制未知。",
+      "routingEntrance": null
+    },
+    "B0LRXKXWUQ": {
+      "stationName": "云快充超级充电站(橙南公牛超充站)",
+      "location": "许由西路与解放南路交叉口向西约 300 米，路北院内",
+      "entrance": "存档记载：睿蓝 4S 店东侧进院",
+      "directions": "沿许由西路寻找睿蓝 4S 店东侧的进院口，再按院内充电指引查找。",
+      "sourceLabel": "高德 POI 存档地址（原采集时间未记录）",
+      "sourceUrl": "https://ditu.amap.com/place/B0LRXKXWUQ",
+      "amapUrl": "https://ditu.amap.com/place/B0LRXKXWUQ",
+      "evidenceStatus": "archived_poi",
+      "reviewedAt": "2026-10-09T22:06:46+08:00",
+      "notice": "存档资料，当前进院口尚未现场核验；车位及进场限制未知。",
+      "routingEntrance": null
+    }
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "passed": true,
+  "total": 1817,
+  "categoryCounts": {
+    "company": 223,
+    "hospital": 136,
+    "industrial_park": 26,
+    "leisure": 198,
+    "mall": 17,
+    "office": 130,
+    "park": 25,
+    "parking": 225,
+    "residential": 224,
+    "restaurant": 200,
+    "school": 225,
+    "supermarket": 189
+  },
+  "coordinateRoundtripMaxErrorDegrees": 1.5378986972791608e-10,
+  "originalTableHashes": {
+    "stations": "f116612631d04d2fbe0b8dea145206f4",
+    "residential_pois": "9ecc00457131ec25bdb776703aadbae2",
+    "commercial_pois": "78d6941b79fee28f1a93e2f5a1139212",
+    "hex_grid": "b109dbfa15ce18fd740f6e8558e96725",
+    "weidu_boundary": "20c49d7f8d362c6995d6b430ab4a4fc3"
+  },
+  "unassignedGrid": [
+    {
+      "id": "B017601A6X",
+      "name": "许昌职业技术学院(新兴校区)",
+      "categories": [
+        "school"
+      ],
+      "nearestGridMeters": 85.23
+    },
+    {
+      "id": "B0FFHPZ8EW",
+      "name": "许昌职业技术学院医疗卫生学院",
+      "categories": [
+        "school"
+      ],
+      "nearestGridMeters": 214.03
+    },
+    {
+      "id": "B0FFHRRXA9",
+      "name": "许昌职业技术学院14号",
+      "categories": [
+        "school"
+      ],
+      "nearestGridMeters": 69.87
+    },
+    {
+      "id": "B0JG1C8RN4",
+      "name": "未来之光大象幼儿园",
+      "categories": [
+        "school"
+      ],
+      "nearestGridMeters": 107.79
+    },
+    {
+      "id": "B0LK0Y7JZX",
+      "name": "许昌职业技术学院停车场",
+      "categories": [
+        "parking"
+      ],
+      "nearestGridMeters": 12.27
+    },
+    {
+      "id": "B0LKHOS4OH",
+      "name": "许昌职业技术学院16号寝室楼",
+      "categories": [
+        "school"
+      ],
+      "nearestGridMeters": 220.24
+    }
+  ],
+  "coverage": {
+    "radiusMeters": 500.0,
+    "distanceMethod": "postgis_geography_straight",
+    "realStations": 52,
+    "excludedSyntheticStations": 120,
+    "allStations": 172,
+    "stationNeighbors": [
+      {
+        "id": "B0FFJ5K41S",
+        "name": "特斯拉超级充电站(许昌中原国际饭店)",
+        "nearestStationId": "B0MUUUXAGD",
+        "nearestStationName": "国网新能源汽车充电站(国网新能源九洲溪雅园快充站)(内部专用)",
+        "nearestMeters": 322.3
+      },
+      {
+        "id": "B0GK2CK5L3",
+        "name": "万里租车充电站",
+        "nearestStationId": "B0L1KZTQ4L",
+        "nearestStationName": "容新智充汽车充电站(金汇广场负二楼充电站胖东来门口)",
+        "nearestMeters": 1379.9
+      },
+      {
+        "id": "B0I1NS8N4O",
+        "name": "特斯拉超级充电站(许昌大酒店)",
+        "nearestStationId": "B0MBTCD0LN",
+        "nearestStationName": "玖行能源汽车充电站(何能超充)",
+        "nearestMeters": 237.3
+      },
+      {
+        "id": "B0IA6LE8RO",
+        "name": "蔚来能源汽车充电站(许昌许都大剧院)",
+        "nearestStationId": "B0L1GB8QU2",
+        "nearestStationName": "云快充汽车充电站(许都公园西侧停车场充电站)",
+        "nearestMeters": 185.7
+      },
+      {
+        "id": "B0IAFZ7NQR",
+        "name": "汽车充电站(小鹏超充许昌亨源通世纪广场站)",
+        "nearestStationId": "B0K13LUMOR",
+        "nearestStationName": "极氪能源超级充电站(许昌亨源通世纪广场极充站)",
+        "nearestMeters": 301.1
+      },
+      {
+        "id": "B0IAJL39JV",
+        "name": "小鹏超级充电站(小鹏S4超快充许昌魏都万达广场站)",
+        "nearestStationId": "B0IR9LUG5D",
+        "nearestStationName": "开迈斯汽车充电站(许昌市万达广场地上站)",
+        "nearestMeters": 42.9
+      },
+      {
+        "id": "B0IAM64GE0",
+        "name": "城发新能源青梅路南海街充电站",
+        "nearestStationId": "B0L0RM563D",
+        "nearestStationName": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+        "nearestMeters": 988.6
+      },
+      {
+        "id": "B0IAPCQBO7",
+        "name": "星星充电汽车充电站(城发新能源火车站充电站)",
+        "nearestStationId": "B0L3G5HIJA",
+        "nearestStationName": "特来电充电站(许昌市豪华汽车站)",
+        "nearestMeters": 69.4
+      },
+      {
+        "id": "B0IG9LCD8B",
+        "name": "云快充汽车充电站(悦洋新能源充电站)",
+        "nearestStationId": "B0MBTCD0LN",
+        "nearestStationName": "玖行能源汽车充电站(何能超充)",
+        "nearestMeters": 329.3
+      },
+      {
+        "id": "B0IKHSCAZG",
+        "name": "中国石化北俎庄充电站",
+        "nearestStationId": "B0L0TCAVRW",
+        "nearestStationName": "星星充电汽车充电站(城发新能源万通街充电站)",
+        "nearestMeters": 641.5
+      },
+      {
+        "id": "B0IR9LUG5D",
+        "name": "开迈斯汽车充电站(许昌市万达广场地上站)",
+        "nearestStationId": "B0IAJL39JV",
+        "nearestStationName": "小鹏超级充电站(小鹏S4超快充许昌魏都万达广场站)",
+        "nearestMeters": 42.9
+      },
+      {
+        "id": "B0IUM7AQ8S",
+        "name": "蔚来换电站(许昌万达广场)",
+        "nearestStationId": "B0J2XPOV8J",
+        "nearestStationName": "特来电充电站(许昌东城区万达充电站)",
+        "nearestMeters": 33.3
+      },
+      {
+        "id": "B0J2XPOV8J",
+        "name": "特来电充电站(许昌东城区万达充电站)",
+        "nearestStationId": "B0IUM7AQ8S",
+        "nearestStationName": "蔚来换电站(许昌万达广场)",
+        "nearestMeters": 33.3
+      },
+      {
+        "id": "B0K13LUMOR",
+        "name": "极氪能源超级充电站(许昌亨源通世纪广场极充站)",
+        "nearestStationId": "B0IAFZ7NQR",
+        "nearestStationName": "汽车充电站(小鹏超充许昌亨源通世纪广场站)",
+        "nearestMeters": 301.1
+      },
+      {
+        "id": "B0K1HZUFOQ",
+        "name": "科科魔方汽车充电站(许昌天悦广场)",
+        "nearestStationId": "B0IR9LUG5D",
+        "nearestStationName": "开迈斯汽车充电站(许昌市万达广场地上站)",
+        "nearestMeters": 352.3
+      },
+      {
+        "id": "B0K2H5EYKY",
+        "name": "星星充电汽车充电站(城发新能源金石国际充电站)",
+        "nearestStationId": "B0M6M6U9DP",
+        "nearestStationName": "云快充目的地充电站(金石国际停车场公牛充电站)",
+        "nearestMeters": 67.8
+      },
+      {
+        "id": "B0KG1A7376",
+        "name": "西环路充电站",
+        "nearestStationId": "B0L2LZPE68",
+        "nearestStationName": "新电途汽车充电站(曹魏欢乐城充电站)",
+        "nearestMeters": 2042.2
+      },
+      {
+        "id": "B0KG5BXSEW",
+        "name": "中国石化汽车充电站(春海医院站)",
+        "nearestStationId": "B0MUUUXAGD",
+        "nearestStationName": "国网新能源汽车充电站(国网新能源九洲溪雅园快充站)(内部专用)",
+        "nearestMeters": 714.3
+      },
+      {
+        "id": "B0KK97S804",
+        "name": "特来电汽车充电站(特来电许昌市投烈士陵园充电站)",
+        "nearestStationId": "B0IG9LCD8B",
+        "nearestStationName": "云快充汽车充电站(悦洋新能源充电站)",
+        "nearestMeters": 962.3
+      },
+      {
+        "id": "B0L0RM55XP",
+        "name": "特来电汽车充电站(特来电许昌市投鸿宝酒店充电站)",
+        "nearestStationId": "B0MA5ZNQ5P",
+        "nearestStationName": "启充云汽车充电站(火车站停车场充电桩项目)",
+        "nearestMeters": 121.3
+      },
+      {
+        "id": "B0L0RM563D",
+        "name": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+        "nearestStationId": "B0L3TX8A7D",
+        "nearestStationName": "平高智联汽车充电站(魏都区仁和骨科医院充电站)",
+        "nearestMeters": 620.8
+      },
+      {
+        "id": "B0L0RM5E41",
+        "name": "特来电汽车充电站(特来电许昌市投西湖公园充电站)",
+        "nearestStationId": "B0L0RM55XP",
+        "nearestStationName": "特来电汽车充电站(特来电许昌市投鸿宝酒店充电站)",
+        "nearestMeters": 695.9
+      },
+      {
+        "id": "B0L0TCAVRW",
+        "name": "星星充电汽车充电站(城发新能源万通街充电站)",
+        "nearestStationId": "B0IKHSCAZG",
+        "nearestStationName": "中国石化北俎庄充电站",
+        "nearestMeters": 641.5
+      },
+      {
+        "id": "B0L1GB8QU2",
+        "name": "云快充汽车充电站(许都公园西侧停车场充电站)",
+        "nearestStationId": "B0K2H5EYKY",
+        "nearestStationName": "星星充电汽车充电站(城发新能源金石国际充电站)",
+        "nearestMeters": 103.1
+      },
+      {
+        "id": "B0L1KZTQ4L",
+        "name": "容新智充汽车充电站(金汇广场负二楼充电站胖东来门口)",
+        "nearestStationId": "B0L3TX8A7D",
+        "nearestStationName": "平高智联汽车充电站(魏都区仁和骨科医院充电站)",
+        "nearestMeters": 528.0
+      },
+      {
+        "id": "B0L25SC56J",
+        "name": "特来电汽车充电站(特来电许昌市投百花北路充电站)",
+        "nearestStationId": "B0LRAM0O2V",
+        "nearestStationName": "汽车充电站(百花北路天使城停车场充电站)",
+        "nearestMeters": 44.4
+      },
+      {
+        "id": "B0L2LZPE68",
+        "name": "新电途汽车充电站(曹魏欢乐城充电站)",
+        "nearestStationId": "B0M6LA4LE1",
+        "nearestStationName": "特来电汽车充电站(特来电许昌中梁西都府超充站)",
+        "nearestMeters": 686.5
+      },
+      {
+        "id": "B0L2ZP2QOI",
+        "name": "国家电网汽车充电站(河南省许昌市东城区管委会税务执法局停车场)",
+        "nearestStationId": "B0MBZBBENU",
+        "nearestStationName": "中镉超充汽车充电站(许职体育馆充电站)",
+        "nearestMeters": 934.0
+      },
+      {
+        "id": "B0L3G5HIJA",
+        "name": "特来电充电站(许昌市豪华汽车站)",
+        "nearestStationId": "B0IAPCQBO7",
+        "nearestStationName": "星星充电汽车充电站(城发新能源火车站充电站)",
+        "nearestMeters": 69.4
+      },
+      {
+        "id": "B0L3TX8A7D",
+        "name": "平高智联汽车充电站(魏都区仁和骨科医院充电站)",
+        "nearestStationId": "B0L1KZTQ4L",
+        "nearestStationName": "容新智充汽车充电站(金汇广场负二楼充电站胖东来门口)",
+        "nearestMeters": 528.0
+      },
+      {
+        "id": "B0L6ZBYRH0",
+        "name": "许禹路充电站",
+        "nearestStationId": "B0MGABBJSF",
+        "nearestStationName": "腾付充汽车充电站(邦博重卡超充站)",
+        "nearestMeters": 1920.7
+      },
+      {
+        "id": "B0LDD5GJ5A",
+        "name": "豫来电-胖东来生活广场便民充电站",
+        "nearestStationId": "B0L3G5HIJA",
+        "nearestStationName": "特来电充电站(许昌市豪华汽车站)",
+        "nearestMeters": 234.9
+      },
+      {
+        "id": "B0LDY6EXQE",
+        "name": "海康威视汽车充电站(职业技术学院体育馆)",
+        "nearestStationId": "B0MBZBBENU",
+        "nearestStationName": "中镉超充汽车充电站(许职体育馆充电站)",
+        "nearestMeters": 5.1
+      },
+      {
+        "id": "B0LGHRTQM2",
+        "name": "新电途汽车充电站(能效充电桩旗舰店充电站)",
+        "nearestStationId": "B0LRJ4GMGV",
+        "nearestStationName": "京能汽车充电站(得瑞充电站)",
+        "nearestMeters": 465.7
+      },
+      {
+        "id": "B0LK7C3S0K",
+        "name": "特来电汽车充电站(特来电许昌市投名都新苑北侧充电站)",
+        "nearestStationId": "B0LRK7IIGU",
+        "nearestStationName": "特来电汽车充电站(特来电许昌市投文峰广场充电站)",
+        "nearestMeters": 1063.5
+      },
+      {
+        "id": "B0LRAM0O2V",
+        "name": "汽车充电站(百花北路天使城停车场充电站)",
+        "nearestStationId": "B0L25SC56J",
+        "nearestStationName": "特来电汽车充电站(特来电许昌市投百花北路充电站)",
+        "nearestMeters": 44.4
+      },
+      {
+        "id": "B0LRJ4GMGV",
+        "name": "京能汽车充电站(得瑞充电站)",
+        "nearestStationId": "B0LGHRTQM2",
+        "nearestStationName": "新电途汽车充电站(能效充电桩旗舰店充电站)",
+        "nearestMeters": 465.7
+      },
+      {
+        "id": "B0LRK7IIGU",
+        "name": "特来电汽车充电站(特来电许昌市投文峰广场充电站)",
+        "nearestStationId": "B0MBTCD0LN",
+        "nearestStationName": "玖行能源汽车充电站(何能超充)",
+        "nearestMeters": 670.4
+      },
+      {
+        "id": "B0LRXKXWUQ",
+        "name": "云快充超级充电站(橙南公牛超充站)",
+        "nearestStationId": "B0M6X7SML5",
+        "nearestStationName": "惠利充汽车充电站(物资局家属院)",
+        "nearestMeters": 984.8
+      },
+      {
+        "id": "B0M677YHEJ",
+        "name": "国家电网汽车充电站(河南省许昌市开发区市民之家停车场公共充电站)",
+        "nearestStationId": "B0M6LA4LE1",
+        "nearestStationName": "特来电汽车充电站(特来电许昌中梁西都府超充站)",
+        "nearestMeters": 1684.3
+      },
+      {
+        "id": "B0M6LA4LE1",
+        "name": "特来电汽车充电站(特来电许昌中梁西都府超充站)",
+        "nearestStationId": "B0L2LZPE68",
+        "nearestStationName": "新电途汽车充电站(曹魏欢乐城充电站)",
+        "nearestMeters": 686.5
+      },
+      {
+        "id": "B0M6M6U9DP",
+        "name": "云快充目的地充电站(金石国际停车场公牛充电站)",
+        "nearestStationId": "B0K2H5EYKY",
+        "nearestStationName": "星星充电汽车充电站(城发新能源金石国际充电站)",
+        "nearestMeters": 67.8
+      },
+      {
+        "id": "B0M6X7SML5",
+        "name": "惠利充汽车充电站(物资局家属院)",
+        "nearestStationId": "B0MA3BYFJI",
+        "nearestStationName": "中国石化汽车充电站(新兴西路充电站)",
+        "nearestMeters": 328.3
+      },
+      {
+        "id": "B0MA3BYFJI",
+        "name": "中国石化汽车充电站(新兴西路充电站)",
+        "nearestStationId": "B0M6X7SML5",
+        "nearestStationName": "惠利充汽车充电站(物资局家属院)",
+        "nearestMeters": 328.3
+      },
+      {
+        "id": "B0MA5ZNQ5P",
+        "name": "启充云汽车充电站(火车站停车场充电桩项目)",
+        "nearestStationId": "B0L0RM55XP",
+        "nearestStationName": "特来电汽车充电站(特来电许昌市投鸿宝酒店充电站)",
+        "nearestMeters": 121.3
+      },
+      {
+        "id": "B0MAH7LN18",
+        "name": "惠利充汽车充电站(假日宾馆充电站)",
+        "nearestStationId": "B0MA3BYFJI",
+        "nearestStationName": "中国石化汽车充电站(新兴西路充电站)",
+        "nearestMeters": 487.5
+      },
+      {
+        "id": "B0MBG73IE6",
+        "name": "充电桩",
+        "nearestStationId": "B0LGHRTQM2",
+        "nearestStationName": "新电途汽车充电站(能效充电桩旗舰店充电站)",
+        "nearestMeters": 1869.2
+      },
+      {
+        "id": "B0MBS6DMJ1",
+        "name": "云快充汽车充电站(橙西公牛超充站)",
+        "nearestStationId": "B0MAH7LN18",
+        "nearestStationName": "惠利充汽车充电站(假日宾馆充电站)",
+        "nearestMeters": 1424.5
+      },
+      {
+        "id": "B0MBTCD0LN",
+        "name": "玖行能源汽车充电站(何能超充)",
+        "nearestStationId": "B0I1NS8N4O",
+        "nearestStationName": "特斯拉超级充电站(许昌大酒店)",
+        "nearestMeters": 237.3
+      },
+      {
+        "id": "B0MBZBBENU",
+        "name": "中镉超充汽车充电站(许职体育馆充电站)",
+        "nearestStationId": "B0LDY6EXQE",
+        "nearestStationName": "海康威视汽车充电站(职业技术学院体育馆)",
+        "nearestMeters": 5.1
+      },
+      {
+        "id": "B0MGABBJSF",
+        "name": "腾付充汽车充电站(邦博重卡超充站)",
+        "nearestStationId": "B0L6ZBYRH0",
+        "nearestStationName": "许禹路充电站",
+        "nearestMeters": 1920.7
+      },
+      {
+        "id": "B0MUUUXAGD",
+        "name": "国网新能源汽车充电站(国网新能源九洲溪雅园快充站)(内部专用)",
+        "nearestStationId": "B0FFJ5K41S",
+        "nearestStationName": "特斯拉超级充电站(许昌中原国际饭店)",
+        "nearestMeters": 322.3
+      }
+    ],
+    "categories": {
+      "company": {
+        "count": 223,
+        "covered": 65,
+        "uncovered": 158,
+        "multipleStations": 23,
+        "meanNearestMeters": 801.1,
+        "maxNearestMeters": 2303.3
+      },
+      "hospital": {
+        "count": 136,
+        "covered": 57,
+        "uncovered": 79,
+        "multipleStations": 14,
+        "meanNearestMeters": 634.2,
+        "maxNearestMeters": 2434.2
+      },
+      "industrial_park": {
+        "count": 26,
+        "covered": 4,
+        "uncovered": 22,
+        "multipleStations": 3,
+        "meanNearestMeters": 947.0,
+        "maxNearestMeters": 2281.1
+      },
+      "leisure": {
+        "count": 198,
+        "covered": 122,
+        "uncovered": 76,
+        "multipleStations": 76,
+        "meanNearestMeters": 480.7,
+        "maxNearestMeters": 2432.7
+      },
+      "mall": {
+        "count": 17,
+        "covered": 14,
+        "uncovered": 3,
+        "multipleStations": 13,
+        "meanNearestMeters": 292.4,
+        "maxNearestMeters": 1110.8
+      },
+      "office": {
+        "count": 130,
+        "covered": 91,
+        "uncovered": 39,
+        "multipleStations": 58,
+        "meanNearestMeters": 385.6,
+        "maxNearestMeters": 1350.5
+      },
+      "park": {
+        "count": 25,
+        "covered": 12,
+        "uncovered": 13,
+        "multipleStations": 6,
+        "meanNearestMeters": 635.7,
+        "maxNearestMeters": 1740.8
+      },
+      "parking": {
+        "count": 225,
+        "covered": 164,
+        "uncovered": 61,
+        "multipleStations": 118,
+        "meanNearestMeters": 363.7,
+        "maxNearestMeters": 1593.9
+      },
+      "residential": {
+        "count": 224,
+        "covered": 102,
+        "uncovered": 122,
+        "multipleStations": 36,
+        "meanNearestMeters": 587.7,
+        "maxNearestMeters": 1650.1
+      },
+      "restaurant": {
+        "count": 200,
+        "covered": 87,
+        "uncovered": 113,
+        "multipleStations": 27,
+        "meanNearestMeters": 561.6,
+        "maxNearestMeters": 1529.0
+      },
+      "school": {
+        "count": 225,
+        "covered": 66,
+        "uncovered": 159,
+        "multipleStations": 24,
+        "meanNearestMeters": 667.8,
+        "maxNearestMeters": 1946.4
+      },
+      "supermarket": {
+        "count": 189,
+        "covered": 86,
+        "uncovered": 103,
+        "multipleStations": 30,
+        "meanNearestMeters": 600.9,
+        "maxNearestMeters": 1568.4
+      }
+    },
+    "notice": "半径为可调分析假设；直线范围不表示已验证步行可达，停车场仍须现场核查。"
+  },
+  "checks": [
+    "duplicate_import_rolled_back",
+    "original_tables_unchanged",
+    "coordinate_roundtrip",
+    "grid_assignment",
+    "all_categories",
+    "pagination",
+    "nearby_sorted_by_distance",
+    "parking_requires_field_check",
+    "synthetic_excluded_from_coverage",
+    "invalid_parameters"
+  ]
+}

@@ -4,7 +4,7 @@ import math
 DEFAULT_TRIP = dict(currentSoc=None, targetSoc=80, batteryKwh=None, consumptionKwh=None,
                     maxChargeKw=None, reserveSoc=10, queueMinutes=None, stayMinutes=60, shoppingMinutes=60,
                     maxWalkMeters=800, travelPricePerKwh=None, powerFactor=.8, efficiency=.9,
-                    destination=None, origin=None)
+                    destination=None, origin=None, chargingRequirement=None)
 
 
 def valid(value):
@@ -16,6 +16,9 @@ def normalize_trip_context(input_context=None):
     context = {**DEFAULT_TRIP, **raw, 'stayMinutes': raw.get('stayMinutes', raw.get('shoppingMinutes', 60))}
     for key in DEFAULT_TRIP:
         value = context[key]
+        if key == 'chargingRequirement':
+            context[key] = value if value in ('DC', 'AC', 'either') else None
+            continue
         if key in ('origin', 'destination'):
             context[key] = value if isinstance(value, list) and len(value) == 2 and all(
                 isinstance(x, (int, float)) and not isinstance(x, bool) and math.isfinite(x) and abs(x) <= bound
@@ -63,7 +66,7 @@ def geo_distance_meters(a, b):
 def evaluate_trip_station(feature, intent, input_context):
     c, p, missing = normalize_trip_context(input_context), feature.get('properties', {}), []
     destination_intent = intent in ('destination', 'shopping')
-    driving = p.get('distanceType') == 'driving' and p.get('isFallback') is False and valid(p.get('drivingDistanceMeters'))
+    driving = p.get('distanceType') == 'driving' and p.get('distanceSource') == 'amap_driving' and p.get('isFallback') is False and valid(p.get('drivingDistanceMeters'))
     meters = p.get('drivingDistanceMeters') if driving else p.get('straightDistanceMeters', p.get('distanceMeters'))
     vehicle_known = valid(c['currentSoc']) and bool(c['batteryKwh']) and bool(c['consumptionKwh']) and valid(c['reserveSoc'])
     used_energy = meters / 100000 * c['consumptionKwh'] if vehicle_known and valid(meters) else None
@@ -120,7 +123,11 @@ def evaluate_trip_station(feature, intent, input_context):
             missing.append('停车计费或停留时间')
     total_cost = complete_sum(charge_cost, parking, detour_cost)
     total_minutes = complete_sum(drive_minutes, parked) if destination_intent else complete_sum(drive_minutes, queue, charge_minutes)
-    operational = p.get('status') not in ('maintenance', 'offline', 'retired') and p.get('vehicleCompatible') is not False
+    simulated = p.get('simulatedFields') or []
+    types = p.get('chargingCurrentTypes')
+    types_known = isinstance(types, list) and bool(types) and all(kind in ('DC', 'AC') for kind in types) and not p.get('isSynthetic') and 'chargingCurrentTypes' not in simulated
+    mismatched = (p.get('vehicleCompatible') is False and not p.get('isSynthetic') and 'vehicleCompatible' not in simulated) or (types_known and p.get('chargingCurrentTypesComplete') is not False and c['chargingRequirement'] in ('DC', 'AC') and c['chargingRequirement'] not in types)
+    operational = p.get('status') not in ('maintenance', 'offline', 'retired') and not mismatched
     too_far = destination_intent and valid(walk) and valid(c['maxWalkMeters']) and walk > c['maxWalkMeters']
     excluded = unreachable or not operational or too_far or (valid(p.get('powerKw')) and p['powerKw'] == 0 and energy is not None and energy > 0)
     return dict(intent=intent, excluded=excluded, safety=safety, arrivalSoc=None if arrival is None else math.floor(arrival * 10 + .5) / 10,

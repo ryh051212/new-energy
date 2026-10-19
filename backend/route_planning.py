@@ -3,11 +3,54 @@
 import math
 import os
 import requests
+from datetime import datetime, timezone
 
 if __package__:
     from .coordinate_transform import gcj02_to_wgs84
 else:
     from coordinate_transform import gcj02_to_wgs84
+
+
+TRAFFIC_STATUSES = ('未知', '畅通', '缓行', '拥堵', '严重拥堵')
+
+
+def traffic_segments(steps):
+    """只保留高德提供且几何有效的 TMC 路段；缺失路况不猜测。"""
+    features = []
+    for step in steps:
+        if not isinstance(step, dict) or not isinstance(step.get('tmcs'), list):
+            continue
+        for tmc in step['tmcs']:
+            try:
+                if not isinstance(tmc, dict):
+                    continue
+                raw_distance = tmc['tmc_distance']
+                if isinstance(raw_distance, bool):
+                    continue
+                meters = float(raw_distance)
+                if not math.isfinite(meters) or meters < 0:
+                    continue
+                coordinates = []
+                for pair in tmc['tmc_polyline'].split(';'):
+                    position = tuple(float(value) for value in pair.split(','))
+                    if len(position) != 2 or not all(math.isfinite(value) and abs(value) <= bound
+                            for value, bound in zip(position, (180, 90))):
+                        raise ValueError('无效路况坐标')
+                    if not coordinates or position != coordinates[-1]:
+                        coordinates.append(position)
+                if len(coordinates) < 2:
+                    continue
+                status = tmc.get('tmc_status')
+                if status not in TRAFFIC_STATUSES:
+                    status = '未知'
+                features.append({'type': 'Feature', 'geometry': {'type': 'LineString',
+                    'coordinates': [list(gcj02_to_wgs84(*position)) for position in coordinates]},
+                    'properties': {'trafficStatus': status, 'distanceMeters': meters,
+                        'roadName': step.get('road_name') if isinstance(step.get('road_name'), str) else '',
+                        'coordSystem': 'WGS84', 'dataSource': 'amap_route_tmcs'}})
+            except (TypeError, ValueError, KeyError, AttributeError, OverflowError):
+                continue
+    return features
 
 
 def get_amap_routes(origin_lng, origin_lat, destination_lng, destination_lat):
@@ -30,12 +73,13 @@ def get_amap_routes(origin_lng, origin_lat, destination_lng, destination_lat):
         response = requests.get('https://restapi.amap.com/v5/direction/driving', params={
             'key': key, 'origin': f'{origin_lng:.6f},{origin_lat:.6f}',
             'destination': f'{destination_lng:.6f},{destination_lat:.6f}',
-            'strategy': 32, 'show_fields': 'cost,polyline',
+            'strategy': 32, 'show_fields': 'cost,polyline,tmcs',
         }, timeout=5)
         response.raise_for_status()
         data = response.json()
         if data.get('status') != '1':
             return []
+        fetched_at = datetime.now(timezone.utc).isoformat()
         routes, seen = [], set()
         for path in data.get('route', {}).get('paths', []):
             try:
@@ -65,6 +109,10 @@ def get_amap_routes(origin_lng, origin_lat, destination_lng, destination_lat):
                 except (TypeError, ValueError):
                     tolls = None
                 seen.add(fingerprint)
+                segments = traffic_segments(path['steps'])
+                known_traffic = any(segment['properties']['trafficStatus'] != '未知' for segment in segments)
+                summary = {status: sum(segment['properties']['distanceMeters'] for segment in segments
+                    if segment['properties']['trafficStatus'] == status) for status in TRAFFIC_STATUSES}
                 routes.append({'type': 'Feature', 'geometry': {'type': 'LineString',
                     'coordinates': [list(gcj02_to_wgs84(*point)) for point in coordinates]},
                     'properties': {'routeId': str(len(routes) + 1),
@@ -72,7 +120,12 @@ def get_amap_routes(origin_lng, origin_lat, destination_lng, destination_lat):
                         'distanceMeters': distance, 'drivingDistanceMeters': distance,
                         'durationSeconds': duration, 'drivingDurationSeconds': duration,
                         'tollsYuan': tolls, 'roads': roads[:3], 'distanceType': 'driving',
-                        'distanceSource': 'amap_driving', 'distanceLabel': '驾车距离', 'isFallback': False}})
+                        'distanceSource': 'amap_driving', 'distanceLabel': '驾车距离', 'isFallback': False,
+                        'trafficSegments': segments, 'trafficAvailable': known_traffic,
+                        'trafficStatus': 'available' if known_traffic else 'unknown' if segments else 'unavailable',
+                        'trafficSource': 'amap_route_tmcs' if segments else None,
+                        'trafficFetchedAt': fetched_at if segments else None,
+                        'trafficScope': 'route_only', 'trafficDistanceByStatus': summary if segments else None}})
                 if len(routes) == 3:
                     break
             except (TypeError, ValueError, KeyError, AttributeError):

@@ -4,6 +4,7 @@ import { CHARGING_SETTINGS_KEY, readChargingSettings, saveChargingSettings } fro
 import { destinationCategory, destinationCatalog, filterDestinations } from '../src/utils/destinations.js'
 const storage = () => { const values = new Map(); return { getItem: key => values.get(key) ?? null, setItem: (key, value) => values.set(key, value) } }
 const input = { intent: 'destination', profile: { currentSoc: 20, batteryKwh: 60, consumptionKwh: 15, maxChargeKw: 100,
+  chargingRequirement: 'DC',
   queueMinutes: 0, stayMinutes: 90, destination: [113.84, 34.04], origin: [113.82, 34.03] },
   destinationInfo: { id: 'custom', name: '图书馆', category: 'education' }, confirmSoc: true }
 
@@ -12,6 +13,7 @@ test('设置再次读取保持车辆、模式、目的地和活动安排；实�
   assert.equal(saveChargingSettings(input, store, new Date('2026-10-09T01:00:00Z')).ok, true)
   const read = readChargingSettings(store)
   assert.equal(read.profile.currentSoc, 20)
+  assert.equal(read.profile.chargingRequirement, 'DC')
   assert.equal(read.profile.queueMinutes, 0)
   assert.equal(read.profile.stayMinutes, 90)
   assert.equal(read.intent, 'destination')

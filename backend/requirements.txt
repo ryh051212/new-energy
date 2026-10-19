@@ -17,6 +17,7 @@ uvicorn[standard]==0.54.0
 # ---- 配置管理 ----
 python-dotenv==1.2.3
 psycopg2-binary==2.9.13
+requests==2.34.2
 # 用途：读取 .env / .env.local，管理高德 API Key、数据库连接串等敏感配置。
 
 # ---- GIS 空间计算 ----

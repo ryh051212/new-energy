@@ -1,29 +1,46 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { normalizeChargingPoint, selectChargingStations, stationDistance, stationMetric, chargingDistanceInfo, formatChargingDistance, rankChargingRecommendations, chargingStationFacts } from '../src/utils/charging.js'
+import { normalizeChargingPoint, selectChargingStations, stationDistance, stationMetric, chargingDistanceInfo, formatChargingDistance, rankChargingRecommendations, chargingStationFacts, hasUsableDrivingRoute } from '../src/utils/charging.js'
 import coordtransform from 'coordtransform'
 import { resolveRoute } from '../src/navigation.js'
 
 const features = [
   { geometry: { type: 'Point', coordinates: [113.85, 34.04] }, properties: { name: '城东站', address: '大学路', chargeType: 'fast', availableCount: 0 } },
-  { geometry: { type: 'Point', coordinates: [113.86, 34.04] }, properties: { name: '城西站', address: '大学路', chargeType: 'regular', availableCount: 4 } },
+  { geometry: { type: 'Point', coordinates: [113.86, 34.04] }, properties: { name: '城西站', address: '大学路', chargeType: 'regular', availableCount: 4, availabilityIsRealtime: true, availabilityUpdatedAt: new Date().toISOString() } },
   { geometry: { type: 'Point', coordinates: [113.9, 34.04] }, properties: { name: '未知站', chargeType: 'unknown' } },
 ]
 
+test('可用路线筛选与卡片一致，拒绝降级和不完整路线，真实零距离和时间有效', () => {
+  const driving = { distanceType: 'driving', distanceSource: 'amap_driving', isFallback: false,
+    drivingDistanceMeters: 1250, drivingDurationSeconds: 180 }
+  assert.equal(hasUsableDrivingRoute(driving), true)
+  assert.equal(hasUsableDrivingRoute({ ...driving, drivingDistanceMeters: 0, drivingDurationSeconds: 0 }), true)
+  const unavailable = [{}, { ...driving, isFallback: true }, { ...driving, distanceType: 'straight' },
+    { ...driving, distanceSource: 'postgis_straight' }]
+  for (const field of ['drivingDistanceMeters', 'drivingDurationSeconds']) {
+    for (const value of [undefined, null, '', '180', -1, NaN, Infinity, true]) unavailable.push({ ...driving, [field]: value })
+  }
+  for (const properties of unavailable) {
+    assert.equal(hasUsableDrivingRoute(properties), false)
+    assert.equal(chargingStationFacts(properties).routeSummary, '路线不可使用')
+  }
+})
+
 test('司机卡片区分到站与充电时间，价格未知不当免费，部分费用不冒充合计', () => {
   const unknown = chargingStationFacts({ distanceType: 'straight', distanceMeters: 0, drivingDurationSeconds: 300, pricePerKwh: null }, { knownCost: 0, totalCost: null })
-  assert.equal(unknown.distance, '约 0 m')
-  assert.equal(unknown.distanceLabel, '直线距离')
-  assert.equal(unknown.arrivalTime, '暂无')
-  assert.equal(unknown.price, '暂无')
+  assert.equal(unknown.distance, '路线不可使用')
+  assert.equal(unknown.straightDistance, '直线参考 约 0 m（非驾车距离）')
+  assert.equal(unknown.distanceLabel, '驾车距离')
+  assert.equal(unknown.arrivalTime, '驾车时间未知')
+  assert.equal(unknown.price, '暂无价格')
   assert.equal(unknown.cost, '')
-  const known = chargingStationFacts({ distanceType: 'driving', distanceMeters: 1250, drivingDurationSeconds: 180, pricePerKwh: 0, simulatedFields: ['servicePrice'] }, { chargeMinutes: 31.2, chargeCost: 40.33, totalCost: null })
+  const known = chargingStationFacts({ distanceType: 'driving', distanceSource: 'amap_driving', isFallback: false, drivingDistanceMeters: 1250, drivingDurationSeconds: 180, pricePerKwh: 1.2 }, { chargeMinutes: 31.2, chargeCost: 40.33, totalCost: null })
   assert.equal(known.arrivalTime, '约 3 分钟')
-  assert.equal(known.chargeTime, '充电约 32 分钟')
-  assert.equal(known.price, '0.00 元/度')
-  assert.equal(known.cost, '充电约 40.33 元')
-  assert.equal(known.demoPrice, true)
-  assert.equal(chargingStationFacts({}, { totalCost: 0, chargeCost: 10 }).cost, '合计约 0.00 元')
+  assert.equal(known.chargeTime, '预计充电 32 分钟')
+  assert.equal(known.price, '1.20 元/度')
+  assert.equal(known.cost, '充电估算 40.33 元（不含停车等费用）')
+  assert.equal(known.demoPrice, false)
+  assert.equal(chargingStationFacts({}, { totalCost: 0, chargeCost: 10 }).cost, '')
 })
 
 test('统一标记为 GCJ-02 的站点坐标，不修改原数据或重复转换 WGS84', () => {
@@ -60,10 +77,11 @@ test('详情保留零值且缺失字段不编造数据', () => {
   assert.equal(stationMetric(0, ' 个'), '0 个')
   for (const value of [null, undefined, '', NaN, -1]) assert.equal(stationMetric(value), '暂无数据')
 })
-test('旧找充电入口统一进入独立页面', () => {
-  for (const route of ['/charging', '/stations', '/charging/search', '/charging/details', '/charging/filter']) {
-    assert.equal(resolveRoute(route), '/charging')
+test('车主端下线后旧入口和收藏地址统一返回规划首页', () => {
+  for (const route of ['/charging', '/charing', '/stations', '/charging/search', '/charing/search', '/charging/details', '/charging/filter', '/charging/settings', '/charging/demo', '/charing/settings', '/navigation', '/recommendations']) {
+    assert.equal(resolveRoute(route), '/')
   }
+  for (const route of ['/', '/monitoring/demand', '/planning/problems']) assert.equal(resolveRoute(route), route)
 })
 
 test('驾车和直线距离保留各自数值和类型，降级时不使用驾车字段', () => {

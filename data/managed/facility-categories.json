@@ -1,0 +1,19 @@
+{
+  "source": "AMap",
+  "documentation": "https://lbs.amap.com/api/webservice/guide/api-advanced/search",
+  "region": "411002",
+  "categories": [
+    {"id": "parking", "name": "停车场", "types": "150900", "group": "parking"},
+    {"id": "office", "name": "写字楼", "types": "120200", "group": "work"},
+    {"id": "industrial_park", "name": "产业园", "types": "120100", "group": "work"},
+    {"id": "hospital", "name": "医院", "types": "090100", "group": "public_service"},
+    {"id": "school", "name": "学校", "types": "141200", "group": "public_service"},
+    {"id": "park", "name": "公园", "types": "110101", "group": "activity"},
+    {"id": "mall", "name": "商场", "types": "060100", "group": "shopping"},
+    {"id": "supermarket", "name": "超市", "types": "060400", "group": "shopping"},
+    {"id": "residential", "name": "住宅小区", "types": "120302", "group": "residential"},
+    {"id": "company", "name": "公司企业", "types": "170000", "group": "work"},
+    {"id": "leisure", "name": "体育休闲设施", "types": "080000", "group": "activity"},
+    {"id": "restaurant", "name": "餐饮", "types": "050000", "group": "activity"}
+  ]
+}

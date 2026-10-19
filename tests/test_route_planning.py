@@ -39,7 +39,45 @@ class AmapRoutesTests(unittest.TestCase):
         self.assertAlmostEqual(projected[0], 113.83, places=6)
         self.assertAlmostEqual(projected[1], 34.04, places=6)
         self.assertEqual(self.request.call_args.kwargs['params']['strategy'], 32)
-        self.assertEqual(self.request.call_args.kwargs['params']['show_fields'], 'cost,polyline')
+        self.assertEqual(self.request.call_args.kwargs['params']['show_fields'], 'cost,polyline,tmcs')
+
+    def test_tmc_geometry_is_converted_and_unknown_is_preserved(self):
+        route = path()
+        route['steps'][0]['tmcs'] = [
+            {'tmc_status': '畅通', 'tmc_distance': '500', 'tmc_polyline': '113.83,34.04;113.84,34.04'},
+            {'tmc_status': '未知', 'tmc_distance': '200', 'tmc_polyline': '113.84,34.04;113.85,34.05'},
+            {'tmc_status': '缓行', 'tmc_distance': '100', 'tmc_polyline': '113.85,34.05;113.86,34.05'},
+        ]
+        self.response.json.return_value = {'status': '1', 'route': {'paths': [route]}}
+        data = route_planning.get_amap_routes(*self.coordinates)[0]['properties']
+        self.assertEqual(len(data['trafficSegments']), 3)
+        self.assertTrue(data['trafficAvailable'])
+        self.assertEqual(data['trafficScope'], 'route_only')
+        self.assertEqual(data['trafficDistanceByStatus']['未知'], 200)
+        self.assertEqual(data['trafficDistanceByStatus']['畅通'], 500)
+        self.assertTrue(data['trafficFetchedAt'].endswith('+00:00'))
+        position = data['trafficSegments'][0]['geometry']['coordinates'][0]
+        self.assertAlmostEqual(wgs84_to_gcj02(*position)[0], 113.83, places=6)
+        self.assertEqual(data['trafficSegments'][1]['properties']['trafficStatus'], '未知')
+
+    def test_bad_or_missing_tmc_does_not_hide_valid_route(self):
+        for segments in (None, [], [{'tmc_distance': 'NaN', 'tmc_polyline': '113,34;114,34'}],
+                         [{'tmc_distance': 5, 'tmc_polyline': '181,34;113,34'}], [None]):
+            route = path()
+            route['steps'][0]['tmcs'] = segments
+            self.response.json.return_value = {'status': '1', 'route': {'paths': [route]}}
+            data = route_planning.get_amap_routes(*self.coordinates)[0]['properties']
+            self.assertEqual(data['trafficSegments'], [])
+            self.assertFalse(data['trafficAvailable'])
+            self.assertEqual(data['trafficStatus'], 'unavailable')
+            self.assertIsNone(data['trafficFetchedAt'])
+            self.assertIsNone(data['trafficDistanceByStatus'])
+        route = path()
+        route['steps'][0]['tmcs'] = [{'tmc_status': '未识别', 'tmc_distance': '5', 'tmc_polyline': '113,34;114,34'}]
+        self.response.json.return_value = {'status': '1', 'route': {'paths': [route]}}
+        data = route_planning.get_amap_routes(*self.coordinates)[0]['properties']
+        self.assertEqual(data['trafficStatus'], 'unknown')
+        self.assertFalse(data['trafficAvailable'])
 
     def test_bad_numbers_bad_geometry_and_duplicate_paths_do_not_create_fake_alternatives(self):
         for broken in [path(distance='NaN'), path(distance=-1), path(distance=True), path(cost={'duration': 'Infinity'}),
@@ -75,13 +113,14 @@ class StationRoutesApiTests(unittest.TestCase):
     @patch.object(main, 'get_db_connection')
     def test_postgis_distance_success_fallback_and_missing_station(self, connect, provider):
         cursor = connect.return_value.cursor.return_value
-        cursor.fetchone.return_value = ('大学路站', 113.85, 34.05, 600.5)
+        cursor.fetchone.return_value = ('大学路站', 113.85, 34.05, 600.5, {})
         route = {'type': 'Feature', 'geometry': {'type': 'LineString', 'coordinates': [[113.82, 34.03], [113.85, 34.05]]},
                  'properties': {'routeId': '1', 'distanceMeters': 1200, 'distanceSource': 'amap_driving', 'isFallback': False}}
         provider.return_value = [deepcopy(route)]
         result = main.get_station_routes('a', 113.82, 34.03)
         self.assertEqual(result['metadata']['coordSystem'], 'WGS84')
         self.assertEqual(result['metadata']['routeCount'], 1)
+        self.assertEqual(result['metadata']['routeDestinationKind'], 'station_location')
         self.assertFalse(result['metadata']['isFallback'])
         self.assertEqual(result['features'][0]['properties']['straightDistanceMeters'], 600.5)
         provider.assert_called_with(*wgs84_to_gcj02(113.82, 34.03), *wgs84_to_gcj02(113.85, 34.05))
@@ -94,6 +133,8 @@ class StationRoutesApiTests(unittest.TestCase):
         provider.return_value = []
         fallback = main.get_station_routes('a', 113.82, 34.03)
         self.assertEqual(fallback['features'], [])
+        self.assertEqual(fallback['traffic']['features'], [])
+        self.assertFalse(fallback['metadata']['trafficAvailable'])
         self.assertTrue(fallback['metadata']['isFallback'])
         self.assertEqual(fallback['metadata']['distanceSource'], 'postgis_straight')
         self.assertEqual(fallback['metadata']['straightDistanceMeters'], 600.5)
@@ -101,3 +142,17 @@ class StationRoutesApiTests(unittest.TestCase):
         with self.assertRaises(HTTPException) as raised:
             main.get_station_routes('missing', 113.82, 34.03)
         self.assertEqual(raised.exception.status_code, 404)
+
+    @patch.object(main, 'station_access_guide')
+    @patch.object(main, 'get_amap_routes')
+    @patch.object(main, 'get_db_connection')
+    def test_verified_vehicle_entrance_is_route_target_without_moving_station_geometry(self, connect, provider, guide):
+        connect.return_value.cursor.return_value.fetchone.return_value = ('地下车库站', 113.85, 34.05, 600.5, {})
+        guide.return_value = {'routingEntrance': {'kind': 'vehicle_entrance', 'coordinates': [113.849,34.05], 'coordSystem': 'WGS84',
+            'sourceUrl': 'https://ditu.amap.com/place/test', 'checkedAt': '2026-10-09T01:00:00+08:00'}}
+        provider.return_value = []
+        result = main.get_station_routes('test',113.82,34.03)
+        provider.assert_called_once_with(*wgs84_to_gcj02(113.82,34.03),*wgs84_to_gcj02(113.849,34.05))
+        self.assertEqual(result['metadata']['destination'],[113.849,34.05])
+        self.assertEqual(result['metadata']['stationCoordinates'],[113.85,34.05])
+        self.assertEqual(result['metadata']['routeDestinationKind'],'vehicle_entrance')

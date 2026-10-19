@@ -1,0 +1,1033 @@
+{
+  "status": "PASS",
+  "validatedAt": "2026-10-10T01:33:06.787Z",
+  "scope": "公开资料核对，未现场核验",
+  "reviewedStations": 6,
+  "publicSourceCheckedStations": 2,
+  "pendingStations": 4,
+  "datasetStations": 292,
+  "datasetRealStations": 52,
+  "notes": [
+    "已知只描述有资料支持的具体字段，不代表实时运营或整站现场核验",
+    "4 处存档站点的模拟开放时间、充电分类保留模拟；位置和入口仍待核验",
+    "6 处精确入口坐标及当前运营状态均未知"
+  ],
+  "sources": {
+    "tesla-8190": {
+      "label": "Tesla 中原国际饭店官方站点页",
+      "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "tesla-9638": {
+      "label": "Tesla 许昌大酒店官方站点页",
+      "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "tesla-dc": {
+      "label": "Tesla 中国超级充电服务说明（直流协议）",
+      "url": "https://www.tesla.cn/support/charging/supercharging-other-evs",
+      "method": "public_page",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0FFJ5K41S": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0FFJ5K41S",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0I1NS8N4O": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0I1NS8N4O",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0M6M6U9DP": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0M6M6U9DP",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0IAJL39JV": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0IAJL39JV",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0IR9LUG5D": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0IR9LUG5D",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0LRXKXWUQ": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0LRXKXWUQ",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    }
+  },
+  "attempts": [
+    {
+      "provider": "AMap v5 place detail",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "result": "CUQPS_HAS_EXCEEDED_THE_LIMIT",
+      "infocode": "10021",
+      "stationsQueried": [
+        "B0FFJ5K41S"
+      ],
+      "note": "首次请求失败后停止本批次接口查询，不伪称后续站点已获得详情。"
+    }
+  ],
+  "records": [
+    {
+      "id": "B0FFJ5K41S",
+      "name": "特斯拉超级充电站(许昌中原国际饭店)",
+      "fields": [
+        {
+          "key": "location",
+          "title": "位置",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 中原国际饭店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN"
+            }
+          ],
+          "note": "官方地址与项目 POI 文字位置相符；公开资料核对，尚未现场核验。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "中原国际饭店地下停车场 B1（负一层）",
+          "detail": "官方地址与项目 POI 文字位置相符；公开资料核对，尚未现场核验。"
+        },
+        {
+          "key": "opening",
+          "title": "开放情况",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 中原国际饭店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN"
+            },
+            {
+              "label": "Tesla 中国超级充电服务说明（直流协议）",
+              "url": "https://www.tesla.cn/support/charging/supercharging-other-evs"
+            }
+          ],
+          "note": "官方公布全天服务；不代表当前每个充电桩可用，亦不验证车库临时管制。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "00:00-24:00",
+          "detail": "官方公布全天服务；不代表当前每个充电桩可用，亦不验证车库临时管制。；官方标注向非 Tesla 车辆开放；实时运营状态未知"
+        },
+        {
+          "key": "entrance",
+          "title": "入口",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 中原国际饭店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN"
+            }
+          ],
+          "note": "官方页明确入口道路；具体车行入口经纬度、限高和库内路线未知。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "建安大道车行入口道路",
+          "detail": "官方页明确入口道路；具体车行入口经纬度、限高和库内路线未知。"
+        },
+        {
+          "key": "chargeType",
+          "title": "充电类型",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 中原国际饭店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN"
+            },
+            {
+              "label": "Tesla 中国超级充电服务说明（直流协议）",
+              "url": "https://www.tesla.cn/support/charging/supercharging-other-evs"
+            }
+          ],
+          "note": "官方页明确列为 Tesla 超级充电站，核对为快充。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "快充 · 直流 DC",
+          "detail": "官方页明确列为 Tesla 超级充电站，核对为快充。；已列电流类型经过资料交叉核对，其他类型未知"
+        }
+      ],
+      "coordinatesStatus": "unknown",
+      "routingEntranceStatus": "unknown",
+      "realtimeOperationStatus": "unknown",
+      "simulatedFields": [
+        "availableCount",
+        "electricityPrice",
+        "fastCount",
+        "observedAt",
+        "operator",
+        "parkingFee",
+        "powerKw",
+        "regularCount",
+        "servicePrice",
+        "siteType",
+        "totalCount"
+      ],
+      "vehicleAccessPolicy": "官方标注向非 Tesla 车辆开放"
+    },
+    {
+      "id": "B0I1NS8N4O",
+      "name": "特斯拉超级充电站(许昌大酒店)",
+      "fields": [
+        {
+          "key": "location",
+          "title": "位置",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 许昌大酒店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN"
+            }
+          ],
+          "note": "官方地址与项目 POI 文字位置相符；公开资料核对，尚未现场核验。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "七一路 888 号许昌大酒店院内地面停车场",
+          "detail": "官方地址与项目 POI 文字位置相符；公开资料核对，尚未现场核验。"
+        },
+        {
+          "key": "opening",
+          "title": "开放情况",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 许昌大酒店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN"
+            }
+          ],
+          "note": "官方公布全天服务；不代表当前每个充电桩可用，亦不验证车库临时管制。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "00:00-24:00",
+          "detail": "官方公布全天服务；不代表当前每个充电桩可用，亦不验证车库临时管制。；允许车辆及进场限制未知；实时运营状态未知"
+        },
+        {
+          "key": "entrance",
+          "title": "入口",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 许昌大酒店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN"
+            }
+          ],
+          "note": "官方页明确入口道路；具体车行入口经纬度、限高和库内路线未知。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "七一路车行入口道路",
+          "detail": "官方页明确入口道路；具体车行入口经纬度、限高和库内路线未知。"
+        },
+        {
+          "key": "chargeType",
+          "title": "充电类型",
+          "state": "known",
+          "label": "已知",
+          "sources": [
+            {
+              "label": "Tesla 许昌大酒店官方站点页（检索快照）",
+              "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN"
+            },
+            {
+              "label": "Tesla 中国超级充电服务说明（直流协议）",
+              "url": "https://www.tesla.cn/support/charging/supercharging-other-evs"
+            }
+          ],
+          "note": "官方页明确列为 Tesla 超级充电站，核对为快充。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "快充 · 直流 DC",
+          "detail": "官方页明确列为 Tesla 超级充电站，核对为快充。；已列电流类型经过资料交叉核对，其他类型未知"
+        }
+      ],
+      "coordinatesStatus": "unknown",
+      "routingEntranceStatus": "unknown",
+      "realtimeOperationStatus": "unknown",
+      "simulatedFields": [
+        "availableCount",
+        "electricityPrice",
+        "fastCount",
+        "observedAt",
+        "operator",
+        "parkingFee",
+        "powerKw",
+        "regularCount",
+        "servicePrice",
+        "siteType",
+        "totalCount"
+      ],
+      "vehicleAccessPolicy": "未知"
+    },
+    {
+      "id": "B0M6M6U9DP",
+      "name": "云快充目的地充电站(金石国际停车场公牛充电站)",
+      "fields": [
+        {
+          "key": "location",
+          "title": "位置",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0M6M6U9DP"
+            }
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "金石国际地下停车场负一层、负二层北侧 S 区",
+          "value": "存档位置：金石国际地下停车场负一层、负二层北侧 S 区",
+          "detail": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。"
+        },
+        {
+          "key": "opening",
+          "title": "开放情况",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0M6M6U9DP"
+            }
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "00:00-24:00（模拟）",
+          "detail": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。；允许车辆及进场限制未知；实时运营状态未知"
+        },
+        {
+          "key": "entrance",
+          "title": "入口",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0M6M6U9DP"
+            }
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "具体车行入口未核验",
+          "value": "存档：具体车行入口未核验",
+          "detail": "存档入口说明待复核；车行入口坐标未知。"
+        },
+        {
+          "key": "chargeType",
+          "title": "充电类型",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0M6M6U9DP"
+            }
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "快充（模拟） · 直流／交流未知",
+          "detail": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。；车辆接口适配需另行确认"
+        }
+      ],
+      "coordinatesStatus": "unknown",
+      "routingEntranceStatus": "unknown",
+      "realtimeOperationStatus": "unknown",
+      "simulatedFields": [
+        "availableCount",
+        "chargeType",
+        "electricityPrice",
+        "fastCount",
+        "observedAt",
+        "openingHours",
+        "operator",
+        "parkingFee",
+        "powerKw",
+        "regularCount",
+        "servicePrice",
+        "siteType",
+        "totalCount"
+      ],
+      "vehicleAccessPolicy": "未知"
+    },
+    {
+      "id": "B0IAJL39JV",
+      "name": "小鹏超级充电站(小鹏S4超快充许昌魏都万达广场站)",
+      "fields": [
+        {
+          "key": "location",
+          "title": "位置",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IAJL39JV"
+            }
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "许昌魏都万达广场；所在楼层未提供",
+          "value": "存档位置：许昌魏都万达广场；所在楼层未提供",
+          "detail": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。"
+        },
+        {
+          "key": "opening",
+          "title": "开放情况",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IAJL39JV"
+            }
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "00:00-24:00（模拟）",
+          "detail": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。；允许车辆及进场限制未知；实时运营状态未知"
+        },
+        {
+          "key": "entrance",
+          "title": "入口",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IAJL39JV"
+            }
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "存档记载入口道路：魏文路",
+          "value": "存档：存档记载入口道路：魏文路",
+          "detail": "存档入口说明待复核；车行入口坐标未知。"
+        },
+        {
+          "key": "chargeType",
+          "title": "充电类型",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IAJL39JV"
+            }
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "快充（模拟） · 直流／交流未知",
+          "detail": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。；车辆接口适配需另行确认"
+        }
+      ],
+      "coordinatesStatus": "unknown",
+      "routingEntranceStatus": "unknown",
+      "realtimeOperationStatus": "unknown",
+      "simulatedFields": [
+        "availableCount",
+        "chargeType",
+        "electricityPrice",
+        "fastCount",
+        "observedAt",
+        "openingHours",
+        "operator",
+        "parkingFee",
+        "powerKw",
+        "regularCount",
+        "servicePrice",
+        "siteType",
+        "totalCount"
+      ],
+      "vehicleAccessPolicy": "未知"
+    },
+    {
+      "id": "B0IR9LUG5D",
+      "name": "开迈斯汽车充电站(许昌市万达广场地上站)",
+      "fields": [
+        {
+          "key": "location",
+          "title": "位置",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IR9LUG5D"
+            }
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "万达地面停车场，存档标注 C219",
+          "value": "存档位置：万达地面停车场，存档标注 C219",
+          "detail": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。"
+        },
+        {
+          "key": "opening",
+          "title": "开放情况",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IR9LUG5D"
+            }
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "00:00-24:00（模拟）",
+          "detail": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。；允许车辆及进场限制未知；实时运营状态未知"
+        },
+        {
+          "key": "entrance",
+          "title": "入口",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IR9LUG5D"
+            }
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "具体车行入口未核验",
+          "value": "存档：具体车行入口未核验",
+          "detail": "存档入口说明待复核；车行入口坐标未知。"
+        },
+        {
+          "key": "chargeType",
+          "title": "充电类型",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0IR9LUG5D"
+            }
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "普通充电（模拟） · 直流／交流未知",
+          "detail": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。；车辆接口适配需另行确认"
+        }
+      ],
+      "coordinatesStatus": "unknown",
+      "routingEntranceStatus": "unknown",
+      "realtimeOperationStatus": "unknown",
+      "simulatedFields": [
+        "availableCount",
+        "chargeType",
+        "electricityPrice",
+        "fastCount",
+        "observedAt",
+        "openingHours",
+        "operator",
+        "parkingFee",
+        "powerKw",
+        "regularCount",
+        "servicePrice",
+        "siteType",
+        "totalCount"
+      ],
+      "vehicleAccessPolicy": "未知"
+    },
+    {
+      "id": "B0LRXKXWUQ",
+      "name": "云快充超级充电站(橙南公牛超充站)",
+      "fields": [
+        {
+          "key": "location",
+          "title": "位置",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0LRXKXWUQ"
+            }
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "许由西路与解放南路交叉口向西约 300 米，路北院内",
+          "value": "存档位置：许由西路与解放南路交叉口向西约 300 米，路北院内",
+          "detail": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。"
+        },
+        {
+          "key": "opening",
+          "title": "开放情况",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0LRXKXWUQ"
+            }
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "00:00-24:00（模拟）",
+          "detail": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。；允许车辆及进场限制未知；实时运营状态未知"
+        },
+        {
+          "key": "entrance",
+          "title": "入口",
+          "state": "unknown",
+          "label": "未知",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0LRXKXWUQ"
+            }
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "存档记载：睿蓝 4S 店东侧进院",
+          "value": "存档：存档记载：睿蓝 4S 店东侧进院",
+          "detail": "存档入口说明待复核；车行入口坐标未知。"
+        },
+        {
+          "key": "chargeType",
+          "title": "充电类型",
+          "state": "simulated",
+          "label": "模拟",
+          "sources": [
+            {
+              "label": "项目高德 POI 存档（原采集时间未知）",
+              "url": "https://ditu.amap.com/place/B0LRXKXWUQ"
+            }
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。",
+          "checkedTime": "2026/10/10 09:12",
+          "archivedValue": "",
+          "value": "快充（模拟） · 直流／交流未知",
+          "detail": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。；车辆接口适配需另行确认"
+        }
+      ],
+      "coordinatesStatus": "unknown",
+      "routingEntranceStatus": "unknown",
+      "realtimeOperationStatus": "unknown",
+      "simulatedFields": [
+        "availableCount",
+        "chargeType",
+        "electricityPrice",
+        "fastCount",
+        "observedAt",
+        "openingHours",
+        "operator",
+        "parkingFee",
+        "powerKw",
+        "regularCount",
+        "servicePrice",
+        "siteType",
+        "totalCount"
+      ],
+      "vehicleAccessPolicy": "未知"
+    }
+  ],
+  "validation": {
+    "build": "PASS",
+    "backendTests": 24,
+    "frontendTests": 67,
+    "browserChecks": [
+      {
+        "width": 1440,
+        "id": "B0FFJ5K41S",
+        "fields": [
+          {
+            "key": "location",
+            "state": "known",
+            "value": "中原国际饭店地下停车场 B1（负一层）"
+          },
+          {
+            "key": "opening",
+            "state": "known",
+            "value": "00:00-24:00"
+          },
+          {
+            "key": "entrance",
+            "state": "known",
+            "value": "建安大道车行入口道路"
+          },
+          {
+            "key": "chargeType",
+            "state": "known",
+            "value": "快充 · 直流 DC"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 1440,
+        "id": "B0I1NS8N4O",
+        "fields": [
+          {
+            "key": "location",
+            "state": "known",
+            "value": "七一路 888 号许昌大酒店院内地面停车场"
+          },
+          {
+            "key": "opening",
+            "state": "known",
+            "value": "00:00-24:00"
+          },
+          {
+            "key": "entrance",
+            "state": "known",
+            "value": "七一路车行入口道路"
+          },
+          {
+            "key": "chargeType",
+            "state": "known",
+            "value": "快充 · 直流 DC"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 1440,
+        "id": "B0M6M6U9DP",
+        "fields": [
+          {
+            "key": "location",
+            "state": "unknown",
+            "value": "存档位置：金石国际地下停车场负一层、负二层北侧 S 区"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "存档：具体车行入口未核验"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "快充（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 1440,
+        "id": "B0IAJL39JV",
+        "fields": [
+          {
+            "key": "location",
+            "state": "unknown",
+            "value": "存档位置：许昌魏都万达广场；所在楼层未提供"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "存档：存档记载入口道路：魏文路"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "快充（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 1440,
+        "id": "B0IR9LUG5D",
+        "fields": [
+          {
+            "key": "location",
+            "state": "unknown",
+            "value": "存档位置：万达地面停车场，存档标注 C219"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "存档：具体车行入口未核验"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "普通充电（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 1440,
+        "id": "B0LRXKXWUQ",
+        "fields": [
+          {
+            "key": "location",
+            "state": "unknown",
+            "value": "存档位置：许由西路与解放南路交叉口向西约 300 米，路北院内"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "存档：存档记载：睿蓝 4S 店东侧进院"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "快充（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 1440,
+        "id": "SIM-XC-0122",
+        "fields": [
+          {
+            "key": "location",
+            "state": "simulated",
+            "value": "许昌市城区北部（模拟分区）·模拟商圈停车场122号（非真实地址）（模拟）"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "车行入口未知"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "快充（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 1003,
+          "right": 1417,
+          "width": 1440,
+          "scrollWidth": 412,
+          "clientWidth": 412,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 390,
+        "id": "B0FFJ5K41S",
+        "fields": [
+          {
+            "key": "location",
+            "state": "known",
+            "value": "中原国际饭店地下停车场 B1（负一层）"
+          },
+          {
+            "key": "opening",
+            "state": "known",
+            "value": "00:00-24:00"
+          },
+          {
+            "key": "entrance",
+            "state": "known",
+            "value": "建安大道车行入口道路"
+          },
+          {
+            "key": "chargeType",
+            "state": "known",
+            "value": "快充 · 直流 DC"
+          }
+        ],
+        "measurement": {
+          "left": 15,
+          "right": 375,
+          "width": 390,
+          "scrollWidth": 358,
+          "clientWidth": 358,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 390,
+        "id": "B0IAJL39JV",
+        "fields": [
+          {
+            "key": "location",
+            "state": "unknown",
+            "value": "存档位置：许昌魏都万达广场；所在楼层未提供"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "存档：存档记载入口道路：魏文路"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "快充（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 15,
+          "right": 375,
+          "width": 390,
+          "scrollWidth": 358,
+          "clientWidth": 358,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 320,
+        "id": "B0FFJ5K41S",
+        "fields": [
+          {
+            "key": "location",
+            "state": "known",
+            "value": "中原国际饭店地下停车场 B1（负一层）"
+          },
+          {
+            "key": "opening",
+            "state": "known",
+            "value": "00:00-24:00"
+          },
+          {
+            "key": "entrance",
+            "state": "known",
+            "value": "建安大道车行入口道路"
+          },
+          {
+            "key": "chargeType",
+            "state": "known",
+            "value": "快充 · 直流 DC"
+          }
+        ],
+        "measurement": {
+          "left": 15,
+          "right": 305,
+          "width": 320,
+          "scrollWidth": 288,
+          "clientWidth": 288,
+          "pageOverflow": false
+        }
+      },
+      {
+        "width": 320,
+        "id": "B0IAJL39JV",
+        "fields": [
+          {
+            "key": "location",
+            "state": "unknown",
+            "value": "存档位置：许昌魏都万达广场；所在楼层未提供"
+          },
+          {
+            "key": "opening",
+            "state": "simulated",
+            "value": "00:00-24:00（模拟）"
+          },
+          {
+            "key": "entrance",
+            "state": "unknown",
+            "value": "存档：存档记载入口道路：魏文路"
+          },
+          {
+            "key": "chargeType",
+            "state": "simulated",
+            "value": "快充（模拟） · 直流／交流未知"
+          }
+        ],
+        "measurement": {
+          "left": 15,
+          "right": 305,
+          "width": 320,
+          "scrollWidth": 288,
+          "clientWidth": 288,
+          "pageOverflow": false
+        }
+      }
+    ],
+    "browserErrors": []
+  }
+}

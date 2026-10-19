@@ -8,7 +8,7 @@ import DestinationPicker from './DestinationPicker.vue'
 const props = defineProps({ context: Object, intent: String, places: Array, destinationInfo: Object })
 const emit = defineEmits(['save'])
 const draft = ref({ ...normalizeTripContext(props.context) })
-const vehicleInitiallyOpen = ['batteryKwh', 'consumptionKwh', 'maxChargeKw'].some(key => draft.value[key] == null)
+const vehicleInitiallyOpen = ['batteryKwh', 'consumptionKwh', 'maxChargeKw', 'chargingRequirement'].some(key => draft.value[key] == null)
 const category = ref('all')
 const query = ref('')
 const selectedDestination = ref(normalizeDestinationInfo(props.destinationInfo, draft.value.destination))
@@ -85,11 +85,13 @@ function save() {
     <details class="settings-card vehicle-settings" :open="vehicleInitiallyOpen">
       <summary class="settings-card-heading"><span><UiIcon name="bolt" :size="20" /></span><div><h2>我的车辆</h2><p>{{ vehicleInitiallyOpen ? '首次填写，之后自动沿用。' : `${draft.batteryKwh ?? '—'} kWh · ${draft.consumptionKwh ?? '—'} kWh/100km · ${draft.maxChargeKw ?? '—'} kW` }}</p></div><UiIcon name="chevron" :size="16" /></summary>
       <div class="settings-fields vehicle-fields">
+        <label class="settings-wide">本车本次充电需求<select v-model="draft.chargingRequirement" aria-label="本车充电需求"><option :value="null">未知／尚未确认</option><option value="DC">需要直流 DC</option><option value="AC">需要交流 AC</option><option value="either">直流、交流均可</option></select></label>
         <label>电池容量（kWh）<input v-model.number="draft.batteryKwh" aria-label="电池容量" type="number" min="1" max="300" step="any" placeholder="如 60" /></label>
         <label>百公里电耗（kWh）<input v-model.number="draft.consumptionKwh" aria-label="百公里电耗" type="number" min="1" max="100" step="any" placeholder="如 15" /></label>
         <label>最大充电功率（kW）<input v-model.number="draft.maxChargeKw" aria-label="车辆充电功率上限" type="number" min="1" max="1000" step="any" placeholder="如 100" /></label>
       </div>
       <p class="settings-help">填写一次，三种推荐方式自动沿用。不清楚的可以留空。</p>
+      <p class="settings-help">请根据车辆资料选择直流／交流需求。快充、普通充电分类不能确定电流类型，接口适配也需要单独核验。</p>
     </details>
 
 

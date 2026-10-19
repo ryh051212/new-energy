@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-10-16T11:27:41.906112+00:00",
+  "checks": [
+    {
+      "check": "traffic_rectangle",
+      "http": 200,
+      "status": "0",
+      "info": "UNKNOWN_ERROR",
+      "infocode": "20003",
+      "roadCount": 0,
+      "description": null
+    },
+    {
+      "check": "driving_tmcs",
+      "http": 200,
+      "status": "1",
+      "info": "OK",
+      "infocode": "10000",
+      "paths": 3,
+      "trafficSegments": 215,
+      "trafficStatuses": [
+        "未知",
+        "畅通"
+      ]
+    }
+  ],
+  "projectApi": {
+    "stationId": "B0KG5BXSEW",
+    "routeCount": 3,
+    "trafficSegmentCount": 214,
+    "trafficAvailable": true,
+    "trafficScope": "route_only",
+    "coordSystem": "WGS84",
+    "fetchedAt": "2026-10-16T11:27:46.010536+00:00",
+    "statuses": [
+      "未知",
+      "畅通",
+      "缓行"
+    ],
+    "sample": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              113.83000650403517,
+              34.02980428042181
+            ],
+            [
+              113.82973268521424,
+              34.029797767114076
+            ]
+          ]
+        },
+        "properties": {
+          "trafficStatus": "畅通",
+          "distanceMeters": 25.0,
+          "roadName": "东大街",
+          "coordSystem": "WGS84",
+          "dataSource": "amap_route_tmcs",
+          "routeId": "1",
+          "fetchedAt": "2026-10-16T11:27:46.010536+00:00"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              113.82973268521424,
+              34.029797767114076
+            ],
+            [
+              113.82897341181493,
+              34.02980633712451
+            ]
+          ]
+        },
+        "properties": {
+          "trafficStatus": "畅通",
+          "distanceMeters": 69.0,
+          "roadName": "东大街",
+          "coordSystem": "WGS84",
+          "dataSource": "amap_route_tmcs",
+          "routeId": "1",
+          "fetchedAt": "2026-10-16T11:27:46.010536+00:00"
+        }
+      }
+    ]
+  }
+}

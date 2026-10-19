@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-16",
+  "python_unit_tests": {"passed": 62, "failed": 0},
+  "planning_unit_tests": {"passed": 12, "failed": 0},
+  "production_build": "passed",
+  "database_and_http_checks": "docs/facility-verification.json",
+  "known_unrelated_failure": {
+    "file": "tests/mapView.test.mjs:846",
+    "expected": "居民需求分布图例",
+    "current": "每片区域的小区数量图例",
+    "note": "本次未改动 MapView.vue 或该测试；原图例文案断言与现有界面不一致。"
+  }
+}

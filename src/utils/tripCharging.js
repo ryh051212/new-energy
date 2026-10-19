@@ -1,4 +1,5 @@
 // 出行估算：未知值保持 null，直线距离不能用于确认可达，车辆参数由车主填写。
+import { chargingCompatibility } from './stationInformation.js'
 export const TRIP_INTENTS = [
   { value: 'urgent', label: '快速补能', description: '先评估到站电量，再比较行驶、等待与补电总时间' },
   { value: 'destination', label: '目的地补能', description: '围绕本次目的地，比较步行距离和活动期间能否补足目标电量' },
@@ -6,7 +7,7 @@ export const TRIP_INTENTS = [
 ]
 export const DEFAULT_TRIP = { currentSoc: null, targetSoc: 80, batteryKwh: null, consumptionKwh: null,
   maxChargeKw: null, reserveSoc: 10, queueMinutes: null, stayMinutes: 60, shoppingMinutes: 60, maxWalkMeters: 800,
-  travelPricePerKwh: null, powerFactor: 0.8, efficiency: 0.9, destination: null, origin: null }
+  travelPricePerKwh: null, powerFactor: 0.8, efficiency: 0.9, destination: null, origin: null, chargingRequirement: null }
 export const isDestinationIntent = intent => ['destination', 'shopping'].includes(intent)
 const valid = value => typeof value === 'number' && Number.isFinite(value) && value >= 0
 const number = value => !['number','string'].includes(typeof value) || (typeof value === 'string' && !value.trim())
@@ -16,7 +17,8 @@ const round = value => valid(value) ? Math.round(value * 100) / 100 : null
 export function normalizeTripContext(input = {}) {
   const trip = { ...DEFAULT_TRIP, ...input, stayMinutes: Object.hasOwn(input, 'stayMinutes') ? input.stayMinutes
     : Object.hasOwn(input, 'shoppingMinutes') ? input.shoppingMinutes : DEFAULT_TRIP.stayMinutes }
-  for (const key of Object.keys(DEFAULT_TRIP).filter(key => !['origin', 'destination'].includes(key))) trip[key] = number(trip[key])
+  for (const key of Object.keys(DEFAULT_TRIP).filter(key => !['origin', 'destination', 'chargingRequirement'].includes(key))) trip[key] = number(trip[key])
+  trip.chargingRequirement = ['DC', 'AC', 'either'].includes(trip.chargingRequirement) ? trip.chargingRequirement : null
   for (const key of ['currentSoc', 'targetSoc', 'reserveSoc']) if (trip[key] > 100) trip[key] = null
   for (const key of ['batteryKwh', 'consumptionKwh', 'maxChargeKw', 'efficiency', 'powerFactor']) if (!trip[key]) trip[key] = null
   for (const key of ['efficiency', 'powerFactor']) if (trip[key] > 1) trip[key] = null
@@ -43,7 +45,7 @@ export function geoDistanceMeters(a, b) {
 }
 export function evaluateTripStation(feature, intent, input) {
   const c = normalizeTripContext(input), p = feature.properties || {}, missing = []
-  const driving = p.distanceType === 'driving' && p.isFallback === false && valid(p.drivingDistanceMeters)
+  const driving = p.distanceType === 'driving' && p.distanceSource === 'amap_driving' && p.isFallback === false && valid(p.drivingDistanceMeters)
   const meters = driving ? p.drivingDistanceMeters : p.straightDistanceMeters ?? p.distanceMeters
   const vehicleKnown = valid(c.currentSoc) && c.batteryKwh > 0 && c.consumptionKwh > 0 && valid(c.reserveSoc)
   const usedEnergy = vehicleKnown && valid(meters) ? meters / 100000 * c.consumptionKwh : null
@@ -95,7 +97,7 @@ export function evaluateTripStation(feature, intent, input) {
   const totalCost = sum(chargeCost, parkingCost, detourCost)
   const totalMinutes = isDestinationIntent(intent) ? sum(driveMinutes, parkedMinutes) : sum(driveMinutes, queueMinutes, chargeMinutes)
   const knownMinutes = [driveMinutes, queueMinutes, chargeMinutes].filter(valid).reduce((a, b) => a + b, 0)
-  const operational = !['maintenance', 'offline', 'retired'].includes(p.status) && p.vehicleCompatible !== false
+  const operational = !['maintenance', 'offline', 'retired'].includes(p.status) && !chargingCompatibility(p, c).prohibited
   const walkTooFar = isDestinationIntent(intent) && valid(walkMeters) && valid(c.maxWalkMeters) && walkMeters > c.maxWalkMeters
   const excluded = unreachable || !operational || walkTooFar || (p.powerKw === 0 && energy > 0)
   return { intent, excluded, safety, arrivalSoc: arrivalSoc === null ? null : Math.round(arrivalSoc * 10) / 10,

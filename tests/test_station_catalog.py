@@ -66,6 +66,17 @@ class StationCatalogTests(unittest.TestCase):
         self.assertTrue(properties['isSynthetic'])
         self.assertIsNone(station_properties('id', 'name', '', {})['pricePerKwh'])
 
+    def test_owner_metadata_is_explicit_and_not_inferred_from_speed_or_import_time(self):
+        unknown = station_properties('id', 'name', '', {'charge_type': 'fast', 'updated_at': '2026-10-09T09:00:00+08:00'})
+        self.assertNotIn('chargingCurrentTypes', unknown)
+        self.assertNotIn('verifiedAt', unknown)
+        self.assertNotIn('availabilityUpdatedAt', unknown)
+        supplied = station_properties('id', 'name', '', {'charging_current_types': ['DC'], 'verified_at': '2026-10-09T09:00:00+08:00',
+            'availability_is_realtime': True, 'availability_updated_at': '2026-10-09T09:59:00+08:00'})
+        self.assertEqual(supplied['chargingCurrentTypes'], ['DC'])
+        self.assertTrue(supplied['availabilityIsRealtime'])
+        self.assertEqual(supplied['verifiedAt'], '2026-10-09T09:00:00+08:00')
+
     def test_only_two_types_and_simulated_provenance_are_supported(self):
         for charge_type in ('unknown', 'mixed', ''):
             with self.subTest(charge_type=charge_type), self.assertRaises(ValueError):

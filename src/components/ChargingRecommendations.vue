@@ -3,13 +3,15 @@ import { ref, computed, watch } from 'vue'
 import UiIcon from './UiIcon.vue'
 import StationQuickFacts from './StationQuickFacts.vue'
 import { TRIP_INTENTS } from '../utils/tripCharging.js'
-import { formatChargingDistance, stationMetric } from '../utils/charging.js'
+import { formatChargingDistance } from '../utils/charging.js'
+import { routeTollText } from '../utils/stationInformation.js'
 
 const props = defineProps({
   stations: { type: Array, default: () => [] }, status: { type: String, default: 'idle' },
   mode: { type: String, default: 'distance' }, weight: { type: Number, default: 50 },
   radius: { type: Number, default: 0 }, chargeType: { type: String, default: '' },
   availableOnly: Boolean, hasFast: Boolean, hasRegular: Boolean, hasAvailability: Boolean,
+  usableRoutesOnly: Boolean, filteredRouteCount: { type: Number, default: 0 },
   metadata: { type: Object, default: null },
   plans: { type: Object, default: () => new Map() },
   planningStation: { type: Object, default: null }, selectedRouteId: { type: String, default: '' },
@@ -17,13 +19,14 @@ const props = defineProps({
   intent: { type: String, default: '' }, tripContext: { type: Object, default: () => ({}) },
   destinationInfo: { type: Object, default: null }, socUpdatedAt: { type: String, default: null },
   settingsNotice: { type: String, default: '' }, hasLocation: { type: Boolean, default: true },
+  now: Number,
 })
-const emit = defineEmits(['mode', 'weight', 'type', 'available', 'select', 'close', 'retry', 'route', 'retry-route', 'back', 'intent', 'locate', 'update-trip'])
+const emit = defineEmits(['mode', 'weight', 'type', 'available', 'usable-routes', 'select', 'close', 'retry', 'route', 'retry-route', 'back', 'intent', 'locate', 'update-trip'])
 const editingSoc = ref(false)
 const currentSoc = ref(props.tripContext.currentSoc ?? '')
 const targetSoc = ref(props.tripContext.targetSoc ?? '')
 const socError = ref('')
-const filterSummary = computed(() => [props.chargeType === 'fast' ? '快充' : props.chargeType === 'regular' ? '普通充电' : '', props.availableOnly ? '仅空闲' : ''].filter(Boolean).join(' · '))
+const filterSummary = computed(() => [props.chargeType === 'fast' ? '快充' : props.chargeType === 'regular' ? '普通充电' : '', props.availableOnly ? '仅空闲' : '', props.usableRoutesOnly ? '可用路线' : ''].filter(Boolean).join(' · '))
 watch(() => [props.tripContext.currentSoc, props.tripContext.targetSoc], ([current, target]) => {
   currentSoc.value = current ?? ''; targetSoc.value = target ?? ''
 })
@@ -47,9 +50,6 @@ const draftWeight = ref(props.weight)
 watch(() => props.weight, value => { draftWeight.value = value })
 const modes = [{ value: 'distance', label: '距离优先' }, { value: 'economy', label: '经济优先' },
   { value: 'balanced', label: '综合推荐' }]
-function demoPrice(properties) {
-  return properties.isSynthetic || properties.simulatedFields?.some(field => ['electricityPrice', 'servicePrice', 'pricePerKwh'].includes(field))
-}
 </script>
 
 <template>
@@ -63,9 +63,8 @@ function demoPrice(properties) {
       <section v-if="focusedRoute" class="focused-route" aria-label="所选路线">
         <h3>{{ focusedRoute.properties.routeLabel }}</h3>
         <div class="focused-route-metrics"><strong>{{ formatChargingDistance(focusedRoute.properties.distanceMeters) }}</strong><strong>约 {{ Math.ceil(focusedRoute.properties.durationSeconds / 60) }} 分钟</strong></div>
-        <p>道路收费 {{ stationMetric(focusedRoute.properties.tollsYuan, ' 元') }}</p>
+        <p>{{ routeTollText(focusedRoute.properties.tollsYuan) }}</p>
         <p v-if="focusedRoute.properties.roads?.length">经 {{ focusedRoute.properties.roads.join(' · ') }}</p>
-        <p>充电价格 {{ stationMetric(planningStation.properties.pricePerKwh, ' 元/度') }}</p>
       </section>
       <section v-else class="station-route-plans" :aria-label="planningStation.properties.name + '路线方案'" :aria-busy="activePlan?.status === 'loading'">
         <h3>前往该站的路线</h3>
@@ -73,12 +72,12 @@ function demoPrice(properties) {
         <template v-else-if="activePlan?.features.length">
           <button v-for="route in activePlan.features" :key="route.properties.routeId" class="route-option" :class="{ selected: selectedRouteId === route.properties.routeId }" :aria-pressed="selectedRouteId === route.properties.routeId" @click="emit('route', { station: planningStation, route })">
             <span><b>{{ route.properties.routeLabel }}</b><small>{{ formatChargingDistance(route.properties.distanceMeters) }} · 约 {{ Math.ceil(route.properties.durationSeconds / 60) }} 分钟</small></span>
-            <span class="route-tolls">道路收费 {{ stationMetric(route.properties.tollsYuan, ' 元') }}</span>
+            <span class="route-tolls">{{ routeTollText(route.properties.tollsYuan) }}</span>
             <small v-if="route.properties.roads?.length" class="route-roads">经 {{ route.properties.roads.join(' · ') }}</small>
           </button>
           <p class="route-help">最多 3 条实际方案，点击查看单条路线。</p>
         </template>
-        <div v-else class="route-fallback" role="status"><b>暂时没有可用路线</b><p>直线距离 {{ formatChargingDistance(activePlan?.metadata?.straightDistanceMeters ?? planningStation.properties.straightDistanceMeters) }}，驾车时间暂无。</p><button @click="emit('retry-route', planningStation)">重新规划</button></div>
+        <div v-else class="route-fallback" role="status"><b>路线不可使用</b><p>没有可用驾车路线，驾车时间未知。</p><p v-if="activePlan?.metadata?.straightDistanceMeters != null || planningStation.properties.straightDistanceMeters != null">直线参考 {{ formatChargingDistance(activePlan?.metadata?.straightDistanceMeters ?? planningStation.properties.straightDistanceMeters) }}（非驾车距离）。</p><button @click="emit('retry-route', planningStation)">重新规划</button></div>
       </section>
       <footer>道路收费不含充电和停车费用。</footer>
     </template>
@@ -115,9 +114,13 @@ function demoPrice(properties) {
     <div class="recommendation-options" aria-label="可选推荐条件">
       <button :disabled="!hasFast" :class="{ active: chargeType === 'fast' }" :aria-pressed="chargeType === 'fast'" @click="emit('type', 'fast')">快充</button>
       <button :disabled="!hasRegular" :class="{ active: chargeType === 'regular' }" :aria-pressed="chargeType === 'regular'" @click="emit('type', 'regular')">普通充电</button>
-      <label><input type="checkbox" :checked="availableOnly" :disabled="!hasAvailability" @change="emit('available', $event.target.checked)" />仅空闲</label>
+      <label><input type="checkbox" :checked="availableOnly" :disabled="!hasAvailability && !availableOnly" @change="emit('available', $event.target.checked)" />仅空闲</label>
     </div>
     </details>
+    <div class="recommendation-route-filter">
+      <button type="button" :class="{ active: usableRoutesOnly }" :aria-pressed="usableRoutesOnly" @click="emit('usable-routes', !usableRoutesOnly)"><UiIcon name="compass" :size="14" /><span>过滤不可用路线</span><span class="route-filter-state">{{ usableRoutesOnly ? '已开启' : '未开启' }}</span></button>
+      <p v-if="usableRoutesOnly && hasLocation && status !== 'loading'" role="status">{{ filteredRouteCount ? `已过滤 ${filteredRouteCount} 个路线不可用的站点` : '仅显示有可用驾车路线的站点' }}</p>
+    </div>
     <p class="recommendation-scope"><span>{{ radius ? `直线 ${radius} km 范围` : '附近站点' }}</span><span>{{ stations.length }} 个推荐</span></p>
     <p v-if="status === 'loading' || status === 'error'" class="recommendation-status" :class="{ fallback: status === 'error' }" role="status">
       <template v-if="status === 'loading'">正在更新路线…</template>
@@ -127,13 +130,15 @@ function demoPrice(properties) {
       <li v-for="(station, index) in displayedStations" :key="station.properties.id">
         <button class="recommendation-card" :class="{ active: activeStationId === String(station.properties.id) }" :aria-pressed="activeStationId === String(station.properties.id)" @click="emit('select', station)">
           <div class="recommendation-title"><span class="recommendation-rank">{{ index < stations.length ? index + 1 : '选' }}</span><strong>{{ station.properties.name }}</strong><UiIcon name="pin" :size="16" /></div>
-          <StationQuickFacts :properties="station.properties" :fit="station.properties.tripFit" />
-          <div class="recommendation-tags"><span v-if="station.properties.chargeType">{{ station.properties.chargeType === 'fast' ? '快充' : '普通充电' }}</span><span v-if="station.properties.availableCount != null">空闲 {{ station.properties.availableCount }} 个</span></div>
+          <StationQuickFacts compact :properties="station.properties" :fit="station.properties.tripFit" :context="tripContext" :now="now" />
         </button>
 
       </li>
     </ol>
-    <p v-else class="recommendation-empty">{{ !hasLocation ? '定位后查看附近充电站。' : status === 'loading' ? '正在查找附近站点…' : '暂无合适站点，试试扩大范围或调整筛选。' }}</p>
+    <div v-else class="recommendation-empty" role="status">
+      <p>{{ !hasLocation ? '定位后查看附近充电站。' : status === 'loading' ? '正在查找附近站点…' : usableRoutesOnly ? '暂无可用驾车路线，试试重新获取路线或关闭过滤。' : '暂无合适站点，试试扩大范围或调整筛选。' }}</p>
+      <div v-if="usableRoutesOnly && hasLocation && status !== 'loading'" class="route-filter-actions"><button @click="emit('retry')">重新获取路线</button><button @click="emit('usable-routes', false)">显示全部推荐</button></div>
+    </div>
     </template>
   </aside>
 </template>
@@ -148,6 +153,7 @@ header{display:flex;align-items:center;gap:12px;margin-bottom:14px}header>div{fl
 .recommendation-filters{margin-top:8px}.recommendation-filters summary{display:flex;align-items:center;gap:6px;padding:7px 0;font-size:11px;color:var(--ink-500);cursor:pointer;list-style:none}.recommendation-filters summary::-webkit-details-marker{display:none}.recommendation-filters summary>span{flex:1}.recommendation-filters summary small{font-size:10px;color:var(--ink-400)}.recommendation-filters[open] summary>svg{transform:rotate(180deg)}.recommendation-options{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin:4px 0 8px;font-size:11px;color:var(--ink-500)}.recommendation-options button{padding:6px 8px;border:1px solid var(--line);border-radius:var(--r-xs);background:none;font-size:11px;color:var(--ink-600)}.recommendation-options button.active{background:var(--ok-50);color:var(--ok-600);border-color:#9fdcc0}.recommendation-options label{display:flex;align-items:center;gap:3px;margin-left:auto}.recommendation-options input{accent-color:var(--ok-500)}button:disabled{opacity:.4;cursor:not-allowed}
 .recommendation-weights{padding:12px 0 4px}.recommendation-weights label,.recommendation-weights>div{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--ink-500)}.recommendation-weights label span{color:var(--ok-600)}.recommendation-weights input{width:100%;accent-color:var(--ok-500);margin:10px 0}.recommendation-weights button{background:none;border:0;font-size:10px;color:var(--ink-500)}
 .recommendation-scope{display:flex;justify-content:space-between;gap:8px;font-size:11px;color:var(--ink-400);margin:8px 0}.recommendation-status{font-size:11px;line-height:1.6;color:var(--ink-500);margin:0 0 10px}.recommendation-status button{background:none;border:0;color:var(--ok-600);font-size:11px;padding-left:6px}
+.recommendation-route-filter{margin:6px 0 10px}.recommendation-route-filter>button{display:flex;align-items:center;gap:6px;width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--surface);font-size:11px;color:var(--ink-600);text-align:left}.recommendation-route-filter>button.active{background:var(--ok-50);color:var(--ok-600);border-color:#9fdcc0}.route-filter-state{margin-left:auto;font-size:10px;white-space:nowrap}.recommendation-route-filter p{margin:6px 0 0;font-size:11px;line-height:1.6;color:var(--ink-500)}.route-filter-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:10px}.route-filter-actions button{padding:7px 9px;border:1px solid var(--line);border-radius:var(--r-xs);background:var(--surface);color:var(--ok-600);font-size:11px}.recommendation-empty p{margin:0}
 .recommendation-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}.recommendation-card{display:block;text-align:left;width:100%;padding:14px 12px;border:1px solid var(--line);border-radius:var(--r-md);background:var(--surface);color:var(--ink-800)}.recommendation-card:hover{border-color:#9fdcc0;background:var(--ok-50)}.recommendation-card.active{border-color:var(--ok-500);background:var(--ok-50);box-shadow:inset 3px 0 var(--ok-500)}.recommendation-title{display:flex;gap:8px;align-items:center}.recommendation-title strong{flex:1;font-size:13px;line-height:1.6}.recommendation-title>svg{color:var(--ink-400);flex:none}.recommendation-rank{display:grid;place-items:center;width:20px;height:20px;flex:none;background:var(--ok-50);color:var(--ok-600);font-size:11px;font-weight:700;border-radius:5px}.recommendation-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;font-size:11px;color:var(--ink-500)}.recommendation-tags>span{padding:3px 6px;background:var(--surface-muted);border-radius:4px}.recommendation-empty{font-size:12px;color:var(--ink-500);padding:20px 6px;text-align:center;line-height:1.8}
 .route-back{display:flex;align-items:center;gap:3px;flex:none;border:1px solid var(--line);border-radius:var(--r-sm);padding:7px 9px;background:var(--surface);color:var(--ink-600);font-size:12px}.route-back svg{transform:rotate(90deg)}.route-destination{padding:12px 0;border-top:1px solid var(--line)}.route-destination small{font-size:10px;color:var(--ink-400)}.route-destination h3{font-size:14px;line-height:1.6;margin:4px 0}.route-destination p{font-size:11px;line-height:1.6;color:var(--ink-500);margin:0}
 .focused-route{padding:14px;background:var(--brand-50);border:1px solid var(--brand-200);border-radius:var(--r-md)}.focused-route h3{font-size:14px;margin:0 0 14px;color:var(--brand-600)}.focused-route-metrics{display:flex;justify-content:space-between;gap:10px;font-size:17px}.focused-route p{font-size:12px;line-height:1.8;color:var(--ink-600);margin-top:10px}.station-route-plans h3{font-size:13px;margin:8px 0}.station-route-plans p{font-size:11px;line-height:1.6;color:var(--ink-500)}

@@ -1,5 +1,6 @@
 import { distance } from '@turf/turf'
 import coordtransform from 'coordtransform'
+import { knownNumber, isDemoField, chargingCompatibility, stationAvailability, stationPrice, formatInformationTime, informationState, stationInformationStates } from './stationInformation.js'
 
 // 浏览器定位与数据库使用 WGS84；地点统一到 WGS84，底图坐标转换只在显示时进行。
 export function normalizeChargingPoint(feature) {
@@ -41,6 +42,8 @@ export function chargingDistanceInfo(feature, location, route = null, routeFaile
     distanceSource: driving ? 'amap_driving' : valid(route?.straightDistanceMeters) ? 'postgis_straight' : 'client_straight',
     distanceLabel: driving ? '驾车距离' : isFallback ? '直线距离（降级估算）' : '直线距离估算',
     isFallback,
+    routeDestinationKind: driving ? route.routeDestinationKind : null,
+    routeDestinationLabel: driving ? route.routeDestinationLabel : null,
   }
 }
 
@@ -49,18 +52,56 @@ export function formatChargingDistance(meters) {
   return meters < 1000 ? `约 ${Math.round(meters)} m` : `约 ${(meters / 1000).toFixed(1)} km`
 }
 
-export function chargingStationFacts(properties = {}, fit = null) {
-  const known = value => typeof value === 'number' && Number.isFinite(value) && value >= 0
-  const driving = properties.distanceType === 'driving' && !properties.isFallback
-  const cost = known(fit?.totalCost) ? fit.totalCost : fit?.chargeCost
+export function hasUsableDrivingRoute(properties = {}) {
+  return properties.distanceType === 'driving' && properties.isFallback === false
+    && properties.distanceSource === 'amap_driving' && knownNumber(properties.drivingDistanceMeters)
+    && knownNumber(properties.drivingDurationSeconds)
+}
+
+export function chargingStationFacts(properties = {}, fit = null, context = {}, now = Date.now()) {
+  const known = knownNumber
+  const driving = properties.distanceType === 'driving' && properties.isFallback === false
+    && properties.distanceSource === 'amap_driving' && known(properties.drivingDistanceMeters)
+  const routeUsable = hasUsableDrivingRoute(properties)
+  const straight = known(properties.straightDistanceMeters) ? properties.straightDistanceMeters
+    : properties.distanceType === 'straight' && known(properties.distanceMeters) ? properties.distanceMeters : null
+  const price = stationPrice(properties, 'pricePerKwh')
+  const electricity = stationPrice(properties, 'electricityPrice'), service = stationPrice(properties, 'servicePrice'), parking = stationPrice(properties, 'parkingFee')
+  const unitPrice = price ?? (electricity !== null && service !== null ? electricity + service : null)
+  const compatibility = chargingCompatibility(properties, context), availability = stationAvailability(properties, now)
+  const sourceLabels = { 'existing-poi': '原始 POI', synthetic: '虚拟演示数据' }
+  const source = properties.isSynthetic ? '虚拟演示数据' : typeof properties.dataSource === 'string' && properties.dataSource.trim()
+    && !isDemoField(properties, 'dataSource') && !['unknown', '未知', '暂无', '-'].includes(properties.dataSource.trim().toLowerCase()) ? sourceLabels[properties.dataSource] || properties.dataSource : '数据来源未知'
+  const verifiedAt = !isDemoField(properties, 'verifiedAt') && Date.parse(properties.verifiedAt) <= now ? formatInformationTime(properties.verifiedAt) : ''
+  const guide = !isDemoField(properties, 'accessGuide') && properties.accessGuide?.location ? properties.accessGuide : null
+  const sourceLink = value => typeof value === 'string' && /^https:\/\/(?:[a-z0-9-]+\.)*(?:amap\.com|tesla\.cn)(?:\/|$)/i.test(value) ? value : ''
+  const accessGuide = guide ? { ...guide, sourceUrl: sourceLink(guide.sourceUrl), amapUrl: sourceLink(guide.amapUrl),
+    reviewedTime: formatInformationTime(guide.reviewedAt), evidenceLabel: guide.evidenceStatus === 'public_source_checked' ? '已核对公开资料，尚未现场核验' : 'POI 存档资料，当前情况未核验' } : null
+  const amount = value => value < .01 ? '不足 0.01' : value.toFixed(2)
+  const chargeCostKnown = routeUsable && !compatibility.prohibited && unitPrice !== null && !fit?.hasDemoInputs
+    && known(fit?.chargeCost) && fit.chargeCost > 0
+  const totalCostKnown = chargeCostKnown && electricity !== null && service !== null && parking !== null && known(fit?.totalCost) && fit.totalCost > 0
   return {
-    distance: known(properties.distanceMeters) ? formatChargingDistance(properties.distanceMeters) : '定位后查看',
-    distanceLabel: driving ? '距离' : '直线距离',
-    arrivalTime: driving && known(properties.drivingDurationSeconds) ? `约 ${Math.ceil(properties.drivingDurationSeconds / 60)} 分钟` : '暂无',
-    price: known(properties.pricePerKwh) ? `${properties.pricePerKwh.toFixed(2)} 元/度` : '暂无',
-    demoPrice: !!properties.isSynthetic || (properties.simulatedFields || []).some(field => ['electricityPrice', 'servicePrice', 'pricePerKwh'].includes(field)),
-    chargeTime: known(fit?.chargeMinutes) ? `充电约 ${Math.ceil(fit.chargeMinutes)} 分钟` : '',
-    cost: known(cost) ? `${known(fit?.totalCost) ? '合计' : '充电'}约 ${cost.toFixed(2)} 元` : '',
+    informationStates: stationInformationStates(properties, now),
+    feeState: informationState(properties, 'pricePerKwh', unitPrice ?? properties.pricePerKwh, now, ['electricityPrice', 'servicePrice']),
+    availabilityState: isDemoField(properties, 'availableCount') && known(properties.availableCount) ? 'simulated' : availability.hasRealtime ? 'known' : 'unknown',
+    routeUsable, distance: driving ? formatChargingDistance(properties.drivingDistanceMeters) : '路线不可使用', distanceLabel: '驾车距离',
+    arrivalTime: routeUsable ? `约 ${Math.ceil(properties.drivingDurationSeconds / 60)} 分钟` : '驾车时间未知',
+    routeSummary: routeUsable ? `${formatChargingDistance(properties.drivingDistanceMeters)} · 约 ${Math.ceil(properties.drivingDurationSeconds / 60)} 分钟` : '路线不可使用',
+    routeNote: routeUsable ? properties.routeDestinationKind === 'vehicle_entrance' ? '驾车至车行入口；入库后按现场指引'
+      : guide ? '驾车至站点定位；入口坐标未核验，车库内路段未计入' : '从当前位置出发' : driving ? `驾车距离 ${formatChargingDistance(properties.drivingDistanceMeters)}，缺少驾车时间` : '未获取可用驾车路线',
+    straightDistance: straight !== null ? `直线参考 ${formatChargingDistance(straight)}（非驾车距离）` : '',
+    compatibility, price: unitPrice !== null ? `${amount(unitPrice)} 元/度` : '暂无价格',
+    electricityPrice: electricity !== null ? `${amount(electricity)} 元/度` : '暂无价格',
+    servicePrice: service !== null ? `${amount(service)} 元/度` : '暂无价格',
+    parkingFee: parking !== null ? `${amount(parking)} 元/小时` : '暂无价格',
+    demoPrice: isDemoField(properties, 'electricityPrice', 'servicePrice', 'pricePerKwh', 'parkingFee'),
+    chargeTime: routeUsable && !compatibility.prohibited && !fit?.hasDemoInputs && known(fit?.chargeMinutes) && fit.chargeMinutes > 0 ? `预计充电 ${Math.ceil(fit.chargeMinutes)} 分钟` : '',
+    cost: totalCostKnown ? `使用成本估算 ${amount(fit.totalCost)} 元（充电、停车及绕行）`
+      : chargeCostKnown ? `充电估算 ${amount(fit.chargeCost)} 元（不含停车等费用）` : '',
+    availability, source, verifiedAt: verifiedAt || '核验时间未知',
+    accessGuide,
+    dataNote: properties.isSynthetic ? '虚拟站点，仅供演示' : properties.hasSimulatedAttributes || properties.simulatedFields?.length ? '含演示补全属性，不能作为实测依据' : '',
   }
 }
 
@@ -95,13 +136,13 @@ export function rankChargingRecommendations(features, mode = 'distance', distanc
   return ranked.map(item => item.feature)
 }
 
-export function selectChargingStations(features, { keyword = '', type = '', available = false, radius = 0, location = null } = {}) {
+export function selectChargingStations(features, { keyword = '', type = '', available = false, radius = 0, location = null, now = Date.now() } = {}) {
   const query = keyword.trim().toLowerCase()
   return features.filter(feature => {
     const properties = feature.properties || {}
     const matches = `${properties.name || ''} ${properties.address || ''}`.toLowerCase().includes(query)
     return matches && (!type || properties.chargeType === type) &&
-      (!available || Number(properties.availableCount) > 0) &&
+      (!available || (stationAvailability(properties, now).hasRealtime && properties.availableCount > 0)) &&
       (!radius || !location || stationDistance(feature, location) <= radius)
   }).sort((a, b) => location ? stationDistance(a, location) - stationDistance(b, location) : 0)
 }

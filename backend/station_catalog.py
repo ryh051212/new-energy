@@ -11,10 +11,14 @@ from pathlib import Path
 from psycopg2.extras import Json
 
 if __package__:
+    from .station_access import station_access_guide
+    from .station_verification import apply_station_verification
     from .database import get_db_connection
     from .coordinate_transform import gcj02_to_wgs84, wgs84_to_gcj02
     from .spatial_migration import backup_database, recalculate_indicators
 else:
+    from station_access import station_access_guide
+    from station_verification import apply_station_verification
     from database import get_db_connection
     from coordinate_transform import gcj02_to_wgs84, wgs84_to_gcj02
     from spatial_migration import backup_database, recalculate_indicators
@@ -240,11 +244,21 @@ def station_properties(station_id, name, address, record):
     properties["hasSimulatedAttributes"] = bool(properties["simulatedFields"])
     properties["isSynthetic"] = bool(properties["isSynthetic"])
     properties["updatedAt"] = record.get("updated_at")
+    guide = station_access_guide(station_id, name, properties['isSynthetic'])
+    if guide:
+        properties['accessGuide'] = guide
     properties['estimatedWaitMinutes'] = record.get('estimated_wait_minutes')
     properties['vehicleCompatible'] = record.get('vehicle_compatible')
+    # 可选运营字段仅原样透传。缺失时保持未知，不由快充分类、采集或入库时间推断。
+    properties.update({field: record.get(column) for field, column in {
+        'chargingCurrentTypes': 'charging_current_types', 'verifiedAt': 'verified_at',
+        'chargingCurrentTypesComplete': 'charging_current_types_complete',
+        'availabilityIsRealtime': 'availability_is_realtime', 'availabilityUpdatedAt': 'availability_updated_at',
+        'availabilityExpiresAt': 'availability_expires_at',
+    }.items() if column in record})
     properties["pricePerKwh"] = (round(properties["electricityPrice"] + properties["servicePrice"], 2)
                                   if properties["electricityPrice"] is not None and properties["servicePrice"] is not None else None)
-    return properties
+    return apply_station_verification(properties)
 
 
 def export_catalog(connection, path, include_synthetic=True):

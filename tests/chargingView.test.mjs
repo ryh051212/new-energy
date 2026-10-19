@@ -5,8 +5,9 @@ import vm from 'node:vm'
 import { ref, computed, watch, nextTick, effectScope } from 'vue'
 import { circle, bbox } from '@turf/turf'
 import { filterStations } from '../src/utils/stations.js'
-import { normalizeChargingPoint, selectChargingStations, stationDistance, stationMetric, chargingDistanceInfo, formatChargingDistance, rankChargingRecommendations, chargingStationFacts } from '../src/utils/charging.js'
+import { normalizeChargingPoint, selectChargingStations, stationDistance, stationMetric, chargingDistanceInfo, formatChargingDistance, rankChargingRecommendations, chargingStationFacts, hasUsableDrivingRoute } from '../src/utils/charging.js'
 import { chargingMapIcon, chargingMapColor, registerChargingIcons } from '../src/utils/chargingIcons.js'
+import { chargingCompatibility, stationAvailability, isDemoField } from '../src/utils/stationInformation.js'
 import { DEFAULT_TRIP, TRIP_INTENTS, normalizeTripContext, rankTripStations, evaluateTripStation, tripInputIssues, isDestinationIntent } from '../src/utils/tripCharging.js'
 import { readChargingSettings, saveChargingSettings, normalizeIntent, CHARGING_SETTINGS_KEY } from '../src/utils/chargingSettings.js'
 import { AMAP_STANDARD_SOURCE, toMapCoordinate, toMapGeoJSON, fromMapCoordinate } from '../src/utils/basemaps.js'
@@ -40,7 +41,7 @@ async function mount({ secure = true, supported = true, throws = false, load = t
   const context = vm.createContext({
     ref, computed, watch, circle, bbox, normalizeChargingPoint, selectChargingStations, stationDistance, stationMetric, chargingDistanceInfo, formatChargingDistance, rankChargingRecommendations, filterStations, chargingMapIcon, chargingMapColor, registerChargingIcons, URLSearchParams,
     AMAP_STANDARD_SOURCE, toMapCoordinate, toMapGeoJSON, DEFAULT_TRIP, TRIP_INTENTS, normalizeTripContext, rankTripStations, evaluateTripStation, tripInputIssues, isDestinationIntent,
-    readChargingSettings, saveChargingSettings, normalizeIntent, CHARGING_SETTINGS_KEY,
+    readChargingSettings, saveChargingSettings, normalizeIntent, CHARGING_SETTINGS_KEY, chargingCompatibility, stationAvailability, isDemoField, hasUsableDrivingRoute,
     onMounted(callback) { start = callback }, onBeforeUnmount(callback) { cleanup = callback },
     maplibregl: { setWorkerUrl() {}, Map: function (options) {
       mapOptions = options
@@ -53,7 +54,7 @@ async function mount({ secure = true, supported = true, throws = false, load = t
       if (throws) throw Object.assign(new Error('denied'), { name: 'SecurityError' })
       requests.push({ success, failure, options })
     } } : undefined },
-    AbortController, setTimeout, clearTimeout, ResizeObserver: class { observe() {} disconnect() {} },
+    AbortController, setTimeout, clearTimeout, setInterval() { return 1 }, clearInterval() {}, ResizeObserver: class { observe() {} disconnect() {} },
     document: { createElement() { return {
       setAttribute() {}, append() {}, getContext() { return {
         beginPath() {}, moveTo() {}, lineTo() {}, closePath() {}, fill() {}, getImageData() { return {} },
@@ -166,6 +167,61 @@ const plansResult = (count = 3) => ({ type: 'FeatureCollection', metadata: { isF
       durationSeconds: 180 * (index + 1), drivingDurationSeconds: 180 * (index + 1), tollsYuan: 0, roads: ['大学路'] },
   })) })
 
+test('可用路线开关即时过滤推荐，筛选先于数量限制，关闭或返回后保留选择且不重复算路', async () => {
+  const app = await mount({ deferRoutes: true })
+  try {
+    const station = app.run('stations.value[0]')
+    const candidates = Array.from({ length: 7 }, (_, index) => ({ ...station,
+      properties: { ...station.properties, ...routeResult(station, index < 2).features[0].properties, id: String(index) } }))
+    app.run('locate(); usableRoutesOnly.value = true')
+    app.requests[0].success(position())
+    assert.equal(app.run('recommendedStations.value.length'), 0, '路线未返回时不把直线估算当作可用路线')
+    app.routeRequests[0].resolve({ ok: true, json: async () => ({ type: 'FeatureCollection', features: candidates }) })
+    await flushRoutes()
+    assert.deepEqual(Array.from(app.run('recommendedStations.value.map(s => s.properties.id)')), ['2', '3', '4', '5', '6'])
+    assert.equal(app.run('filteredRouteCount.value'), 2)
+    app.run('usableRoutesOnly.value = false')
+    assert.deepEqual(Array.from(app.run('recommendedStations.value.map(s => s.properties.id)')), ['0', '1', '2', '3', '4'])
+    app.run('usableRoutesOnly.value = true; showStations(); openRecommendations()')
+    await nextTick()
+    assert.equal(app.run('usableRoutesOnly.value'), true)
+    assert.equal(app.run('recommendedStations.value.length'), 5)
+    assert.equal(app.routeRequests.length, 1)
+  } finally { app.cleanup() }
+})
+
+test('单站路线规划失败后被过滤，重新规划成功恢复到推荐；接口失败只显示空状态', async () => {
+  const app = await mount({ deferRoutes: true, deferPlans: true })
+  try {
+    const station = app.run('stations.value[0]')
+    app.run('locate(); usableRoutesOnly.value = true')
+    app.requests[0].success(position())
+    app.routeRequests[0].resolve({ ok: true, json: async () => routeResult(station) })
+    await flushRoutes()
+    assert.equal(app.run('recommendedStations.value.length'), 1)
+    app.run('loadStationPlans(stations.value[0])')
+    app.planRequests[0].resolve({ ok: true, json: async () => ({ type: 'FeatureCollection', features: [], metadata: {} }) })
+    await flushRoutes()
+    app.run('returnFromRoutes()')
+    assert.equal(app.run('recommendedStations.value.length'), 0, '空路线方案覆盖旧的驾车摘要')
+    app.run('loadStationPlans(stations.value[0], true)')
+    app.planRequests[1].resolve({ ok: true, json: async () => plansResult(1) })
+    await flushRoutes()
+    app.run('returnFromRoutes()')
+    assert.equal(app.run('recommendedStations.value.length'), 1)
+    assert.equal(app.run('recommendedStations.value[0].properties.drivingDistanceMeters'), 1000)
+    app.run('loadRouteDistances(true)')
+    app.routeRequests[1].resolve({ ok: false })
+    await flushRoutes()
+    assert.equal(app.run('routeStatus.value'), 'error')
+    assert.equal(app.run('recommendedStations.value.length'), 1, '同一位置已规划成功的路线仍可使用')
+    app.run('clearPlanning(true)')
+    assert.equal(app.run('recommendedStations.value.length'), 0)
+    app.run('usableRoutesOnly.value = false')
+    assert.ok(app.run('recommendedStations.value.length') > 0)
+  } finally { app.cleanup() }
+})
+
 test('选站只定位，去这里才规划；单条路线与逐级返回、缓存和重新定位正确', async () => {
   const app = await mount({ deferPlans: true })
   app.run('locate()')
@@ -210,7 +266,7 @@ test('选站只定位，去这里才规划；单条路线与逐级返回、缓�
   assert.equal(app.planRequests[1].signal.aborted, true)
 })
 
-test('用户端点击空白只隐藏详情，推荐、筛选、范围及正在加载的路线保持', async () => {
+test('用户端点击空白收起筛选弹层和详情，推荐、筛选条件、范围及正在加载的路线保持', async () => {
   const app = await mount({ deferPlans: true })
   app.run('locate()')
   app.requests[0].success(position())
@@ -221,7 +277,7 @@ test('用户端点击空白只隐藏详情，推荐、筛选、范围及正在�
   app.run("dismissChargingWindows({ target: { closest: () => ({}) } })")
   assert.equal(app.run('filtersOpen.value'), true)
   app.run("dismissChargingWindows({ target: { closest: () => null } })")
-  assert.equal(app.run('filtersOpen.value'), true)
+  assert.equal(app.run('filtersOpen.value'), false)
   assert.equal(app.run('recommendationsOpen.value'), true)
   assert.equal(app.run('selected.value'), null)
   assert.equal(app.run('noticesVisible.value'), true)
@@ -337,7 +393,7 @@ test('推荐服务失败后仍按费用和直线距离推荐，筛选后重算�
     {type:'Feature',geometry:{type:'Point',coordinates:[113.83,34.04]},properties:{id:'near',name:'近站',chargeType:'regular',availableCount:0,pricePerKwh:3,_key:0}},
     {type:'Feature',geometry:{type:'Point',coordinates:[113.84,34.04]},properties:{id:'cheap',name:'便宜站',chargeType:'fast',availableCount:2,pricePerKwh:0.5,_key:1}},
     {type:'Feature',geometry:{type:'Point',coordinates:[113.831,34.04]},properties:{id:'missing',name:'未知费用',chargeType:'fast',availableCount:2,pricePerKwh:null,_key:2}}
-  ]; locate()`)
+  ]; stations.value.forEach(s => Object.assign(s.properties, {availabilityIsRealtime:true, availabilityUpdatedAt:new Date().toISOString()})); informationNow.value=Date.now(); locate()`)
   app.requests[0].success(position())
   await flushRoutes()
   assert.equal(app.run('recommendedStations.value[0].properties.id'), 'near')
@@ -412,11 +468,11 @@ test('真实定位后展示距离、到站时间与价格，直线结果不冒�
     assert.equal(mapStation.properties.drivingDistanceMeters, fallback ? null : 1250)
     assert.equal(station.properties.distanceType, undefined, '距离结果不修改原始站点数据')
     const facts = chargingStationFacts({ ...station.properties, ...info })
-    const html = await renderToString(Vue.createSSRApp({ render, setup: () => ({ facts }) }))
-    assert.match(html, fallback ? /<dt>直线距离<\/dt>/ : /<dt>距离<\/dt>/)
-    assert.match(html, /到站时间|充电价格/)
+    const html = await renderToString(Vue.createSSRApp({ render, setup: () => ({ facts, compact: false }) }))
+    assert.match(html, /<dt>驾车<\/dt>/)
+    assert.match(html, /充电单价/)
     assert.ok(html.includes(fallback ? '约 250 m' : '约 1.3 km'))
-    if (fallback) { assert.equal(facts.arrivalTime, '暂无'); assert.doesNotMatch(html, /预计 3 分钟/) }
+    if (fallback) { assert.equal(facts.arrivalTime, '驾车时间未知'); assert.doesNotMatch(html, /约 3 分钟/); assert.match(html, /路线不可使用|非驾车距离/) }
     else assert.equal(facts.arrivalTime, '约 3 分钟')
     app.cleanup()
   }
@@ -433,7 +489,7 @@ test('推荐接口错误或返回异常时标记本地直线降级，仍保留�
     assert.equal(app.run('selectedDistanceInfo.value.isFallback'), true)
     assert.equal(app.run('selectedDistanceInfo.value.distanceSource'), 'client_straight')
     assert.equal(app.run('formatChargingDistance(selectedDistanceInfo.value?.distanceMeters)'), '约 0 m')
-    assert.equal(chargingStationFacts(app.run('selectedDistanceInfo.value')).arrivalTime, '暂无')
+    assert.equal(chargingStationFacts(app.run('selectedDistanceInfo.value')).arrivalTime, '驾车时间未知')
     assert.equal(app.data('charging-radius').features.length, 1)
     assert.ok(app.data().features.length > 0)
     app.cleanup()
@@ -728,4 +784,215 @@ test('路线加载中返回推荐后取消请求，迟到结果不恢复路线�
   assert.equal(app.run('recommendationsOpen.value'), true)
   assert.equal(app.data('charging-routes').features.length, 0)
   app.cleanup()
+})
+
+function setPlaceFixture(app) {
+  app.run(`
+    places.value = [{ type: 'Feature', properties: { id: 'mall', name: '测试商场', address: '地物地址' }, geometry: { type: 'Point', coordinates: [113.87, 34.04] } }];
+    stations.value = [
+      { type: 'Feature', properties: { id: 'user-near', _key: 0, name: '当前位置站', chargeType: 'regular' }, geometry: { type: 'Point', coordinates: [113.8305, 34.04] } },
+      { type: 'Feature', properties: { id: 'place-near', _key: 1, name: '商场附近站', chargeType: 'fast', availableCount: 0 }, geometry: { type: 'Point', coordinates: [113.8705, 34.04] } },
+      { type: 'Feature', properties: { id: 'place-far', _key: 2, name: '商场外围站', chargeType: 'regular', availableCount: 2, availabilityIsRealtime:true, availabilityUpdatedAt:new Date().toISOString() }, geometry: { type: 'Point', coordinates: [113.891, 34.04] } }
+    ]; informationNow.value=Date.now();
+  `)
+}
+
+test('车主模式默认展示全部筛选站点；定位失败仍有列表，定位成功不切换为出行推荐', async () => {
+  const app = await mount()
+  try {
+    assert.equal(app.run('panelMode.value'), 'stations')
+    assert.equal(app.run('driverListOpen.value'), true)
+    assert.ok(app.run('driverStations.value.length') > 0)
+    app.requests[0].failure({ code: 1 })
+    assert.equal(app.run('driverListOpen.value'), true)
+    assert.equal(app.run('driverStations.value.length'), app.data().features.length)
+    app.run('locate()')
+    app.requests.at(-1).success(position())
+    await flushRoutes()
+    assert.equal(app.run('panelMode.value'), 'stations')
+    assert.equal(app.run('driverListOpen.value'), true)
+    assert.equal(app.run('driverStations.value.length'), app.run('visibleStations.value.length'))
+    assert.ok(app.run('driverStations.value.every(s => Number.isFinite(s.properties.distanceMeters))'))
+  } finally { app.cleanup() }
+})
+
+test('明确不匹配时禁止路线操作；缺少直流交流数据不擅自判断', async () => {
+  const app = await mount({ planData: plansResult(), intent: '' })
+  try {
+    app.run("stations.value=[{type:'Feature',geometry:{type:'Point',coordinates:[113.84,34.04]},properties:{id:'ac',chargingCurrentTypes:['AC']}}]; tripProfile.value={...DEFAULT_TRIP,chargingRequirement:'DC'}; chooseStation(stations.value[0]); goToStation(selected.value)")
+    assert.equal(app.run('selectedCompatibility.value.prohibited'), true)
+    assert.equal(app.run('pendingPlanningStation.value'), null)
+    assert.equal(app.planRequests.length, 0)
+    app.requests[0].success(position())
+    await flushRoutes()
+    app.run('goToStation(selected.value); loadStationPlans(selected.value, true)')
+    assert.equal(app.planRequests.length, 0)
+    app.run("stations.value[0].properties.chargingCurrentTypes=['DC']; goToStation(selected.value)")
+    await flushRoutes()
+    assert.equal(app.planRequests.length, 1)
+    app.run("clearPlanning(); stations.value[0].properties.chargingCurrentTypes=null")
+    assert.equal(app.run('selectedCompatibility.value.status'), '适配未知')
+  } finally { app.cleanup() }
+})
+
+test('实时空闲过期后筛选和地图同步去除', async () => {
+  const app = await mount()
+  try {
+    app.run("stations.value=[{type:'Feature',geometry:{type:'Point',coordinates:[113.84,34.04]},properties:{id:'live',availableCount:2,availabilityIsRealtime:true,availabilityUpdatedAt:new Date().toISOString()}}]; availableOnly.value=true")
+    await nextTick()
+    assert.equal(app.run('hasAvailability.value'), true)
+    assert.equal(app.data().features.length, 1)
+    app.run('informationNow.value += 6 * 60 * 1000')
+    await nextTick()
+    assert.equal(app.run('hasAvailability.value'), false)
+    assert.equal(app.data().features.length, 0)
+  } finally { app.cleanup() }
+})
+
+test('车主列表与地图双向选中并同步筛选；查看站点不擅自规划路线', async () => {
+  const app = await mount()
+  try {
+    setPlaceFixture(app)
+    app.run('chooseRecommendation(driverStations.value[1])')
+    await nextTick()
+    assert.equal(app.run('highlightedStation.value.properties.id'), 'place-near')
+    assert.equal(app.mapFilters['charging-selected'].at(-1), 1)
+    assert.deepEqual(app.flights.at(-1).center, toMapCoordinate([113.8705, 34.04]))
+    assert.equal(app.run('driverListOpen.value'), true)
+    app.handlers['click:charging-points']({ features: [{ properties: { _key: 2 } }] })
+    await nextTick()
+    assert.equal(app.run('highlightedStation.value.properties.id'), 'place-far')
+    assert.equal(app.run('selected.value.properties.id'), 'place-far')
+    app.run("toggleType('fast')")
+    await nextTick()
+    assert.deepEqual(Array.from(app.run('driverStations.value'), s => s.properties.id), ['place-near'])
+    assert.deepEqual(Array.from(app.data().features, s => s.properties.id), ['place-near'])
+    assert.equal(app.planRequests.length, 0)
+  } finally { app.cleanup() }
+})
+
+test('小屏车主列表选择详情后可恢复；推荐仅按需打开，关闭后回到找桩列表', async () => {
+  const app = await mount({ width: 390 })
+  try {
+    app.requests[0].failure({ code: 1 })
+    app.run('chooseRecommendation(driverStations.value[0])')
+    assert.equal(app.run('driverListOpen.value'), false)
+    app.run('dismissChargingWindows()')
+    assert.equal(app.run('driverListOpen.value'), true)
+    app.run('openRecommendations()')
+    assert.equal(app.run('panelMode.value'), 'recommendations')
+    assert.equal(app.run('recommendationsOpen.value'), true)
+    assert.equal(app.run('driverListOpen.value'), false)
+    app.run('showStations()')
+    assert.equal(app.run('panelMode.value'), 'stations')
+    assert.equal(app.run('driverListOpen.value'), true)
+    assert.equal(app.run('recommendationsOpen.value'), false)
+  } finally { app.cleanup() }
+})
+
+test('地点搜索展示候选，确认查找后以地点为中心，不把地点名称用于筛站', async () => {
+  const app = await mount()
+  try {
+    app.requests[0].success(position())
+    await flushRoutes()
+    setPlaceFixture(app)
+    app.run("input.value = '测试'; search()")
+    assert.equal(app.run('placeResults.value.length'), 1)
+    assert.equal(app.run('selectedPlace.value'), null, '搜索不能擅自选择同名地物')
+    app.run('choosePlace(placeResults.value[0])')
+    assert.equal(app.run('searchOpen.value'), false)
+    assert.equal(app.run('nearbyPlace.value'), null, '查看地点不自动筛选周边')
+    app.run('findNearby()')
+    await nextTick()
+    assert.deepEqual(Array.from(app.run('location.value')), [113.83, 34.04])
+    assert.deepEqual(Array.from(app.run('searchCenter.value')), [113.87, 34.04])
+    assert.equal(app.run('keyword.value'), '')
+    assert.equal(app.run('radius.value'), 1)
+    assert.deepEqual(Array.from(app.run('visibleStations.value.map(s => s.properties.id)')), ['place-near'])
+    assert.deepEqual(Array.from(app.data().features, s => s.properties.id), ['place-near'])
+    assert.equal(app.run('nearbyOpen.value'), true)
+    assert.equal(app.run('recommendationsOpen.value'), false)
+    assert.equal(app.planRequests.length, 0)
+    app.run('setRadius(3); availableOnly.value = true')
+    await nextTick()
+    assert.deepEqual(Array.from(app.run('visibleStations.value.map(s => s.properties.id)')), ['place-far'])
+    app.run("toggleType('fast')")
+    assert.equal(app.run('visibleStations.value.length'), 0)
+  } finally { app.cleanup() }
+})
+
+test('无定位也能查地点周围；迟到定位不覆盖中心，去这里使用实际坐标', async () => {
+  const app = await mount({ width: 390, deferPlans: true })
+  try {
+    setPlaceFixture(app)
+    app.run('choosePlace(places.value[0]); findNearby()')
+    assert.equal(app.run('location.value'), null)
+    assert.equal(app.requests.length, 1, '地点周围查找不再发起定位')
+    app.run('setRadius(0)')
+    app.requests[0].success(position())
+    await flushRoutes()
+    assert.equal(app.routeRequests.length, 0)
+    assert.equal(app.run('nearbyOpen.value'), true)
+    assert.equal(app.run('recommendationsOpen.value'), false)
+    assert.deepEqual(app.flights.at(-1).center, toMapCoordinate([113.87, 34.04]))
+    app.run("chooseStation(stations.value.find(s => s.properties.id === 'place-near')); goToStation(selected.value)")
+    assert.match(app.planRequests[0].url, /routes\?lng=113.83&lat=34.04/)
+    app.planRequests[0].resolve({ ok: true, json: async () => plansResult() })
+    await flushRoutes()
+    app.run('returnFromRoutes()')
+    assert.equal(app.run('nearbyOpen.value'), true)
+    assert.equal(app.run('recommendationsOpen.value'), false)
+    assert.equal(app.run('radius.value'), 0)
+  } finally { app.cleanup() }
+})
+
+test('周边查找取消旧推荐，迟到结果不写回；清空恢复原定位推荐并移除地点范围', async () => {
+  const app = await mount({ deferRoutes: true })
+  try {
+    app.requests[0].success(position())
+    await nextTick()
+    const old = app.routeRequests.at(-1)
+    setPlaceFixture(app)
+    app.run('choosePlace(places.value[0]); findNearby()')
+    assert.equal(old.signal.aborted, true)
+    old.resolve({ ok: true, json: async () => routeResult(app.run('stations.value[0]')) })
+    await flushRoutes()
+    assert.equal(app.run('routeDistances.value.size'), 0)
+    assert.equal(app.run('nearbyOpen.value'), true)
+    app.run('clearSearch()')
+    await nextTick()
+    assert.equal(app.run('nearbyPlace.value'), null)
+    assert.equal(app.run('radius.value'), 0)
+    assert.equal(app.data('charging-radius').features.length, 0)
+    assert.ok(app.markers.find(marker => marker.options.color)?.removed)
+    assert.equal(app.run('recommendationsOpen.value'), true)
+    const restored = new URL(app.routeRequests.at(-1).url)
+    assert.equal(restored.searchParams.get('lng'), '113.83')
+    assert.equal(restored.searchParams.get('lat'), '34.04')
+    assert.equal(restored.searchParams.get('radius_km'), '0')
+    assert.equal(restored.searchParams.get('name'), '')
+  } finally { app.cleanup() }
+})
+
+test('周边站详情关闭或地图空白时恢复小屏列表；启动定位尚未返回也能保留明确规划意图', async () => {
+  const app = await mount({ width: 390, deferPlans: true })
+  try {
+    setPlaceFixture(app)
+    app.run('choosePlace(places.value[0]); findNearby(); chooseStation(visibleStations.value[0])')
+    assert.equal(app.run('nearbyOpen.value'), false)
+    app.run('closeStationDetail()')
+    assert.equal(app.run('nearbyOpen.value'), true)
+    app.run('chooseStation(visibleStations.value[0]); dismissChargingWindows()')
+    assert.equal(app.run('selected.value'), null)
+    assert.equal(app.run('nearbyOpen.value'), true)
+    app.run('chooseStation(visibleStations.value[0]); goToStation(selected.value)')
+    assert.equal(app.planRequests.length, 0)
+    app.requests[0].success(position())
+    await nextTick()
+    assert.equal(app.planRequests.length, 1)
+    assert.match(app.planRequests[0].url, /routes\?lng=113.83&lat=34.04/)
+    app.planRequests[0].resolve({ ok: true, json: async () => plansResult() })
+    await flushRoutes()
+    assert.equal(app.run('planningStation.value.properties.id'), 'place-near')
+  } finally { app.cleanup() }
 })

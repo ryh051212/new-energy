@@ -3,7 +3,13 @@ import { computed } from 'vue'
 import { CHARGING_ICONS } from '../utils/chargingIcons.js'
 
 const props = defineProps({ name: { type: String, required: true }, size: { type: [Number, String], default: 20 } })
+// 统一 24 网格、线宽 1.8、圆头圆角；充电类型图标为实心字形，走 CHARGING_ICONS。
 const paths = {
+  lock: ['M6 10h12v11H6z', 'M8 10V6a4 4 0 0 1 8 0v4', 'M12 14v3'],
+  eye: ['M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z', 'M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0'],
+  'eye-off': ['m3 3 18 18', 'M10.6 5.1A12 12 0 0 1 12 5c6.5 0 10 7 10 7a19 19 0 0 1-3.1 4', 'M6.1 6.1A21 21 0 0 0 2 12s3.5 7 10 7a12 12 0 0 0 5.9-1.6', 'M10 10a3 3 0 0 0 4 4'],
+  'arrow-right': ['M5 12h14', 'm13 6 6 6-6 6'],
+  logout: ['M9 4H4v16h5', 'M10 12h11', 'm17 8 4 4-4 4'],
   home: ['m3 10 9-7 9 7', 'M5 9v12h14V9', 'M9 21v-7h6v7'],
   search: ['m21 21-4.3-4.3', 'M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16'],
   compass: ['m3 11 18-8-8 18-2-8-8-2Z'],
@@ -17,6 +23,7 @@ const paths = {
   bolt: ['m13 2-9 11h7l-1 9 10-12h-7V2Z'],
   pin: ['M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z', 'M12 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5'],
   layers: ['m12 2 9 5-9 5-9-5 9-5Z', 'm3 12 9 5 9-5', 'm3 17 9 5 9-5'],
+  menu: ['M4 6h16', 'M4 12h16', 'M4 18h16'],
   boundary: ['M8 3H3v5', 'M16 3h5v5', 'M21 16v5h-5', 'M8 21H3v-5', 'M11 3h2', 'M21 11v2', 'M11 21h2', 'M3 11v2'],
   chevron: ['m6 9 6 6 6-6'],
   plus: ['M12 5v14', 'M5 12h14'],
@@ -27,6 +34,8 @@ const paths = {
   alert: ['M12 2 2 21h20L12 2Z', 'M12 9v4', 'M12 17h.01'],
   close: ['M5 5l14 14', 'M19 5 5 19'],
   info: ['M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20', 'M12 11v6', 'M12 7h.01'],
+  // 双碳评估：叶片
+  leaf: ['M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z', 'M2 21c0-3 1.9-5.4 5.1-6C9.5 14.5 12 13 13 12'],
   // 测距用的直尺
   ruler: ['M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0l-4.6-4.6a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4Z', 'm7.5 10.5 2 2', 'm10.5 7.5 2 2', 'm13.5 4.5 2 2', 'm4.5 13.5 2 2'],
   // 进入全屏（四个角向外展开）
@@ -43,7 +52,18 @@ const chargingIcon = computed(() => CHARGING_ICONS[props.name])
 </script>
 
 <template>
-  <svg :width="size" :height="size" viewBox="0 0 24 24" :fill="chargingIcon ? 'currentColor' : 'none'" :stroke="chargingIcon ? 'none' : 'currentColor'" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-    <path v-for="(path, index) in (chargingIcon?.paths || iconPaths)" :key="index" :d="path" :fill-rule="chargingIcon ? 'evenodd' : undefined" />
+  <svg
+    :width="size"
+    :height="size"
+    viewBox="0 0 24 24"
+    :fill="chargingIcon ? 'currentColor' : 'none'"
+    :stroke="chargingIcon ? 'none' : 'currentColor'"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    :data-icon="name"
+    aria-hidden="true"
+  >
+    <path v-for="(path, index) in (chargingIcon?.paths || iconPaths)" :key="index" :d="path" :fill-rule="chargingIcon ? 'nonzero' : undefined" />
   </svg>
 </template>
