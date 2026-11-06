@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="publishid" content="1310703965.12.9527.0"/><meta name="pageid" content="11200.1176.0.0.1117575.0.0.0.0.0.114632.1310703965"/>
+<meta name="SiteName" content="国家能源局" />
+<meta name="SiteDomain" content="www.nea.gov.cn" />
+<meta name="SiteIDCode" content="bm62000002号" />
+<meta name="ArticleTitle" content="中国充电联盟联合能链智电发布《2022中国电动汽车用户充电行为白皮书》" />
+<meta name="PubDate" content="2023-03-20 09:38:00" />
+<meta name="ContentSource" content="新华网" />
+<meta name="description" content="国家能源网" />
+<meta name="keywords" content="国家能源网" />
+<script src="http://www.news.cn/global/js/pageCore.js"></script>
+<title>
+中国充电联盟联合能链智电发布《2022中国电动汽车用户充电行为白皮书》---国家能源局
+</title>
+<link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css" />
+<link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet" />
+<script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script language="javascript">
+$(document).ready(function(){　
+
+var lefttmp = new Image();
+lefttmp.src= "http://www.xinhuanet.com/photo/static/arr_left.cur";
+var righttmp = new Image();
+righttmp.src= "http://www.xinhuanet.com/photo/static/arr_right.cur";
+leng = $("a",$("#div_currpage")).length;
+	
+if(leng!=0)
+//curr里有a标签==稿件不止一页
+	{
+
+		//看一共有多少个a标签
+		leng = leng -1;
+		var nextLin  = $("a",$("#div_currpage"))[leng].href;//对于多页的情况，取得下一页的地址
+		var oneword = location.href+"#";
+		if(nextLin==oneword)
+		{
+		leng = leng -1;
+		nextLin  = $("a",$("#div_currpage"))[leng].href;
+		}
+		var currurl = location.href;//当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+				
+		var underpd = currurl.substring(currurl.indexOf("c_")+2,currurl.indexOf(".htm"));	
+		if (underpd.indexOf("_")==-1)
+			{
+
+			prevLink = location.href;//如果是文章首页，则左键仍是替换到本页面
+			nextLink = $("a",$("#div_currpage"))[0].href;      //下一页的赋值
+			setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+		}
+
+	else
+		//是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+		{
+			//当前页分页号判断
+			var currnum = currurl.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlineindex = currurl.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			//下一页的分页号
+			var nextnum = nextLin.indexOf(".htm");//链接中第一次出现.htm的位置
+			var underlinenext = nextLin.lastIndexOf("_")+1; //下划线甄别标识，第一页则不是下划线
+			var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length-1;
+			
+			var temp = currurl.substring(underlineindex,currnum);//当前页的分页号
+			var nexttemp = 	nextLin.substring(underlinenext,nextnum);//最后a标签的分页号
+			var boolx = parseInt(temp,10)>parseInt(nexttemp,10);
+			
+			if((boolx)||(undernum==1))//末页
+
+					{
+					
+						if($("img",$("a",$("#content"))).length==0)//没有带链接的图片
+			
+							{
+								prevLink = nextLin;
+									if(undernum==1)
+									{
+										nextLink = nextLin;
+									}
+									else
+									{
+										nextLink = prevLink.substr(0,(prevLink.lastIndexOf("_")))+".htm";
+									}
+								setTimeout("window.opener=null;window.location.href='"+nextLink+"'",60000);//30秒跳转到下一页
+							}
+			
+						else//末页正文图片有链接
+							{
+								prevLink = nextLin;
+								nextLink = $("a",$("#content"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							}
+
+					}
+
+				else//不是末页
+					{
+
+							prevLink = $("a",$("#div_currpage"))[0].href;//把正文第一个带链接的链接地址赋给下一页
+							nextLink = nextLin;//把正文最后一个带链接的链接地址赋给下一页
+					}
+
+		}
+	}
+else
+//只有一页
+	{
+		prevLink = location.href;
+		nextLink = location.href;
+	}
+
+document.onkeydown = pageEvent;
+  function pageEvent(evt) {
+    evt = evt || window.event;
+    var key = evt.which || evt.keyCode;
+    if (key == 37) location = prevLink;
+    if (key == 39) location = nextLink;
+  };
+		
+		var lefturl		= prevLink;
+		var righturl	= nextLink;
+		var imgurl		= righturl;
+
+			$("#content img").each(function(){ 
+				var width = $(this).width();
+				var thisImage=$(this); 
+				//alert("01");
+				$(thisImage)[0].onmousemove=function(){
+					
+					if(event.offsetX<width/2){
+					
+						this.style.cursor	= 'url('+lefttmp.src+'),auto';
+						imgurl				= lefturl;
+					}
+					
+					else{
+					
+						this.style.cursor	= 'url('+righttmp.src+'),auto';
+						imgurl				= righturl;
+					}
+					
+	                                                }
+	               
+				$(thisImage)[0].onmouseup=function(){
+					top.location=imgurl;
+	
+				}   
+             });
+　　　　
+　　	});
+</script>
+</head>
+<body>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script>
+<div class="main-colum">
+<div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> > 正文</div>
+<div class="channel-page">
+<div class="article-title">
+<div class="hr_10"></div>
+<div class="titles">
+中国充电联盟联合能链智电发布《2022中国电动汽车用户充电行为白皮书》
+</div>
+<div class="hr_10"></div>
+<span class="times">
+发布时间：2023-03-20
+</span>
+<span class="author">
+来源：新华网
+</span>
+<span class="switchsize"><b class="bigger">大</b><b class="medium">中</b><b class="smaller">小</b></span>
+<div class="arrow"></div>
+</div>
+<div class="article-box">
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="article-content">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td align="left" valign="top">
+<p>　　电动汽车满地跑的当下，车主充电还焦虑吗？喜欢什么时候充电?喜欢去什么样的充电场站？私家车主和商用车车主充电有什么不同？</p>
+<p></p>
+<p>　　3月7日，中国电动汽车充电基础设施促进联盟（简称“中国充电联盟”）联合能链智电（NASDAQ：NAAS）发布《2022中国电动汽车用户充电行为白皮书》。</p>
+<p></p>
+<p>　　《白皮书》依托能链智电大数据，通过定性、定量分析，客观呈现、洞察研判我国电动汽车用户充电行为特征与变化趋势。值得一提的是，《白皮书》首次增加典型城市及高速服务区、社区等典型场景和热点问题的分析，更加全面、客观。据了解，能链智电是中国充电服务第一股，已服务1282家充电运营商，连接超4.5万个充电站、超43.4万把充电枪。</p>
+<p></p>
+<p>　<strong><font color="navy">　</font><font color="black">72%用户更偏爱120kw及以上大功率充电桩</font></strong></p>
+<p></p>
+<p>　　《白皮书》重点剖析了9项用户公用充电行为，包含充电时段特征、单次充电特征、快慢充使用特征、充电设施功率使用特征、充电场所选择特征、跨运营商充电特征、跨场站充电特征、跨城市充电特征、充电前后车辆SOC情况。</p>
+<p></p>
+<p>　　《白皮书》研究发现，电动汽车用户单日充电高峰集中在三个时段，分别为：早上5：00-7：00，下午12：00-16：00，夜间23：00-1：00。对比上年同期，下午时段充电占比降低，夜间和早上的充电占比提高。整体来看，用户平均单次充电量25.6度，平均单次充电时长49.3分钟，平均单次充电金额25元，日充电1.4次。</p>
+<p></p>
+<p>　　从快、慢充使用特征分析，大部分用户对充电时间较为敏感。快充桩由于充电效率高，成为96%用户的首选。用户使用直流快充桩平均单次充电时长48.7分钟，周充电频次高达4.51次。同时，用户更偏好使用大功率充电设施，选择120kw及以上功率充电设施的用户占比到达72%。</p>
+<p></p>
+<p>　　在充电场站选择方面，拥有一定规模、具备配套服务设施的充电场站成为用户首选,选择率为66.85%。75%以上的用户选择20把以上充电枪的场站。在兼顾场站效益与建设成本的前提下，11-20把充电枪的场站建设占比42%，比去年25.7%有了显著提升，反映出目前场站规模呈现中型化的趋势。同时，66.8%用户选择有配套设施的充电场站，这一比例相比去年大幅提升23个百分点，超过43%用户会倾向选择有餐饮、便利店、休息室等服务设施的充电场站。</p>
+<p></p>
+<p><strong><font color="navy">　　</font><font color="black">高速路充电难、油车占位等成主要痛点</font></strong></p>
+<p></p>
+<p>　　虽然充电基础设施建设已取得较大进展，但用户在充电过程中，依然存在明显痛点，充电体验有待进一步改善。《白皮书》围绕用户充电体验，开展满意度调研，包含充电App信息展示清晰准确性、充电安全与稳定性、充电网络建设完善性、充电场站管理情况、充电费用（及服务费）合理性等五个方面。</p>
+<p></p>
+<p>　　整体看，超过50%以上的电动汽车用户对充电过程较为满意。在高速公路充电方面，仅50.2%用户持满意态度。高速公路充电发展相对较晚，建设和配套设施还不够完善，70.5%的用户认为高速服务区充电排队时间过长，约47%用户认为高速服务区充电功率小、快充桩少。</p>
+<p></p>
+<p>　　另外，油车和充满电占位、充电网络覆盖度低、充电桩缺少维护、充电车位环境脏乱差、缺少配套设施等问题，也是充电设施建设急需解决的问题。64.36%用户对油车和充满电占位现象表示不满；63.37%用户认为充电网络覆盖度低； 59.80%用户认为充电设备缺乏日常维护，时常遇到设备磨损、老旧等问题。</p>
+<p></p>
+<p>　　在典型充电场景方面，64.8%用户对市区内公共场所充电表示认可，用户不满意的原因集中在充电桩位置不便利、充电场站缺乏管理等方面，在公共充电桩建设位置方面，76.98%的充电用户希望建设在社区附近，37.9%的用户选择在办公区（写字楼、商务园区等）附近，29.9%的用户则希望在商场等购物中心附近能建设更多的充电桩。</p>
+<p></p>
+<p>　<strong><font color="navy">　</font><font color="black">五大方向助力充电桩新基建发展</font></strong></p>
+<p></p>
+<p>　　基于对用户充电行为研究和满意度调研，《白皮书》从五个方向对充电桩新基建的发展提出了建议，包括：持续推进充电网络建设，优化重要场景服务保障能力；加强运营能力建设，推动充电场站等级评估；丰富充电服务生态，提升用户充电体验；发挥产业链协同效应，助力行业高质量发展；推进光储充一体化，布局虚拟电厂业务，助力碳中和。</p>
+<p></p>
+<p>　　公共充电网络建设环节，《白皮书》指出，要进一步提升公共充电网络建设数量与质量，化解建设布局结构不平衡、地域不平衡等问题，通过新建、改建、扩容等方式，调整快、慢充比例。同时，重点加强高速服务区、居民社区等“痛点”场景的充电桩建设密度。</p>
+<p></p>
+<p>　　加强运营能力建设方面，《白皮书》建议推动充电场站服务等级认证，提升公共充电网络服务质量，并通过制定规范充电场站建设、运营标准，培育孵化专业第三方服务商，助力充电场站高标准建设。</p>
+<p></p>
+<p>　　围绕充电服务生态，《白皮书》针对用户充电等待期间的服务需求，建议增设上线游戏、资讯、车主服务等多元服务；聚合相关服务商向用户提供购物、餐饮、洗车、休憩等非电服务，一站式满足用户多元需求。</p>
+<p></p>
+<p>　　对于如何发挥产业链协同效应，《白皮书》建议应加强电力企业、充电桩制造商、运营商、车企及相关支持企业的协同，提高与第三方服务商的互联互通水平，进一步扩充充电网络，提高用户充电的便利性、安全性。</p>
+<p></p>
+<p>　　在推进碳中和方面，《白皮书》提出，充电场站推进光储充一体化，布局虚拟电厂业务。鼓励充电运营商、负荷集成商等各类第三方市场主体，通过商业模式创新聚合电动汽车参与储能服务，并在未来积极参与电力交易，响应电网削峰填谷，充分利用清洁能源，助推能源结构转型。</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="back-top"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+</div>
+<div class="article-other">
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+
+<div class="clear"></div>
+</div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+<div class="hr_10"></div>
+</div>
+</div>
+<script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script>
+<script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script>
+<div style="display:none"><div id="fwl">010090050000000000000000011100001310703965</div><script type="text/javascript" src="//webd.home.news.cn/webdig.js?z=1"></script><script type="text/javascript">wd_paramtracker("_wdxid=010090050000000000000000011100001310703965")</script><noscript><img src="//webd.home.news.cn/1.gif?z=1&_wdxid=010090050000000000000000011100001310703965" border="0" /></noscript></div>   </body>
+</html>

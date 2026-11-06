@@ -14,6 +14,7 @@
     {"id": "residential", "name": "住宅小区", "types": "120302", "group": "residential"},
     {"id": "company", "name": "公司企业", "types": "170000", "group": "work"},
     {"id": "leisure", "name": "体育休闲设施", "types": "080000", "group": "activity"},
-    {"id": "restaurant", "name": "餐饮", "types": "050000", "group": "activity"}
+    {"id": "restaurant", "name": "餐饮", "types": "050000", "group": "shopping"},
+    {"id": "government_transport", "name": "政务与交通", "types": "130000|150000", "group": "public_service"}
   ]
 }

@@ -1,0 +1,38 @@
+{
+  "worldpop_2025": {
+    "url": "https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2025/CHN/v1/100m/constrained/chn_pop_2025_CN_100m_R2025A_v1.tif",
+    "status": 200,
+    "content_range": null,
+    "accept_ranges": "bytes",
+    "content_length": "922251437",
+    "last_modified": "Fri, 18 Jul 2025 08:24:36 GMT",
+    "sample_bytes": 65536,
+    "tiff_signature": "49492b00"
+  },
+  "worldpop_2026": {
+    "url": "https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2026/CHN/v1/100m/constrained/chn_pop_2026_CN_100m_R2025A_v1.tif",
+    "status": 200,
+    "content_range": null,
+    "accept_ranges": "bytes",
+    "content_length": "920795037",
+    "last_modified": "Fri, 18 Jul 2025 16:16:43 GMT",
+    "sample_bytes": 65536,
+    "tiff_signature": "49492b00"
+  },
+  "worldpop_catalog": {
+    "url": "https://stac.worldpop.org/collections/CHN/items/chn_pop_2025_CN_100m_R2025A_v1",
+    "status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "length": 1057
+  },
+  "overpass_status": {
+    "url": "https://overpass-api.de/api/status",
+    "error": "ReadTimeout"
+  },
+  "government_area": {
+    "url": "https://www.weidu.gov.cn/zjwd/walkIntoWD.html",
+    "status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "length": 25492
+  }
+}

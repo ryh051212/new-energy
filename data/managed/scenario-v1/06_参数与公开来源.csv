@@ -1,0 +1,27 @@
+﻿dataset,field,category,low,base,high,unit,method,source_ids,data_nature,simulation_version
+全部,随机性,所有记录,-,固定种子,-,-,SHA-256稳定映射；同一输入重复运行结果一致,S01-S11,情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+全部,空间均衡,规模/功率等级,低,中,高,等级,约0.8km网格四色分层；高等级每格最多1条且不在正交相邻网格连续出现,方法设定,情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,单枪直流功率,居住,40,60,80,kW,设施场景档位,"S01,S10",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,单枪直流功率,商业/医院/公共,60,120,160,kW,设施场景档位,"S01,S09,S10",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,单枪直流功率,高速/营运车辆,120,180,240,kW,设施场景档位,"S01,S10",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,交流功率,全部,7,7,11,kW,本地原始记录主要档位,S01,情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,同时系数,全部,0.48,0.6,0.72,比例,避免把铭牌容量直接等同站级峰值,S10,情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,服务费,全部,0.35,0.55,0.75,元/kWh,价格敏感性情景，电费另列,"S04,S11",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+充电站,电能价格,谷/平/峰,0.42,0.72,1.05,元/kWh,分时情景值，不是许昌站点实际结算价,"S04,S11",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+商业POI,营业面积,超市,500,1800,5000,m²,业态分类与本地名称分层,"S02,S07",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+商业POI,营业面积,购物中心/商场,10000,35000,85000,m²,大型零售设施情景,"S02,S07",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+商业POI,营业面积,便利店,40,110,280,m²,社区零售情景,"S02,S07",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+停车,收费,医院,0,1,1,元/小时,2小时免费后按小时计，日封顶13元,S06,情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+停车,泊位数,各类型,15,140,900,个,设施类型、规模等级与空间均衡模拟,"S02,S06",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+道路,情景运行速度,高速/主干/次干/支路,基准×0.58~0.70,80/40/35/20,基准×1.08~1.20,km/h,OSM限速优先；其余按道路等级情景,"S03,S08",情景参数/方法说明,weidu-simulated-scenario-v1.0-20261028
+来源,S01,本地输入,,魏都区充电站最终整合版,,,站点名称、地址、坐标、原始状态及设备提示；原字段保留；模拟字段另列,本地CSV,本地采集,weidu-simulated-scenario-v1.0-20261028
+来源,S02,本地输入,,魏都区五类功能POI,,,POI名称、类别、地址、坐标及周边活动环境；名称与坐标不改；规模和活动量模拟,AMap公开检索结果的本地整理快照,本地采集,weidu-simulated-scenario-v1.0-20261028
+来源,S03,本地输入,,OpenStreetMap魏都区及周边道路快照,,,道路几何、等级、方向、通行和限速标签；原标签保留；缺失速度用情景值,https://www.openstreetmap.org/copyright,公开地理数据,weidu-simulated-scenario-v1.0-20261028
+来源,S04,政策,,国家发展改革委关于电动汽车用电价格政策有关问题的通知,,,电费与服务费分列、峰谷电价情景；只约束价格结构，不当作许昌实际价格,https://zfxxgk.ndrc.gov.cn/upload/images/202210/20221041741876.pdf,国家政策,weidu-simulated-scenario-v1.0-20261028
+来源,S05,政策,,国务院办公厅关于进一步构建高质量充电基础设施体系的指导意见,,,公共充电、峰谷充电和设施体系情景；定性约束,https://app.www.gov.cn/govdata/gov/202306/19/504387/article.html,国家政策,weidu-simulated-scenario-v1.0-20261028
+来源,S06,本地政策,,许昌市中心医院停车收费标准公开征求意见,,,医院停车免费时长、小时费和日封顶情景锚点；仅医院类型直接参照，其余类型扩展为情景,https://sfgw.xuchang.gov.cn/fzgg/076013/20250508/1bbc07d7-1f38-41ed-831c-06390fb50ab1.html,许昌市公开资料,weidu-simulated-scenario-v1.0-20261028
+来源,S07,标准,,GB/T 18106-2021 零售业态分类,,,超市、商场、便利店等业态区分；用于类别与规模区间设计，不把模拟面积称为标准面积,https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=6F1B1AF0FFE8A15119525CCC0E5E3F7F,国家标准,weidu-simulated-scenario-v1.0-20261028
+来源,S08,标准,,城市道路工程设计规范CJJ37-2012（2016年版）速度表公开引用,,,快速路、主干路、次干路和支路设计速度边界；设计速度只作上限参考，运行速度采用更低情景值,https://www.mee.gov.cn/xxgk2018/xxgk/xxgk06/202203/W020220316605451312591.pdf,行业标准公开引用,weidu-simulated-scenario-v1.0-20261028
+来源,S09,论文,,Unraveling influencing factors of public charging station utilization,,,站点利用率受设施属性和建成环境影响、空间异质性；只用于方法约束，不移植论文统计值,https://doi.org/10.1016/j.trd.2024.104506,实证论文,weidu-simulated-scenario-v1.0-20261028
+来源,S10,论文,,Future Ultrafast Charging Stations for Electric Vehicles in China,,,快充功率提升与站级峰值不等同的讨论；功率档位和同时系数采用情景范围,https://doi.org/10.1016/j.eng.2025.01.015,研究论文,weidu-simulated-scenario-v1.0-20261028
+来源,S11,省级资料,,河南省调整工商业分时电价,,,河南峰平谷时段和错峰充电背景；不直接替代具体充电站账单电价,https://www.henan.gov.cn/2024/06-02/3001969.html,河南省公开资料,weidu-simulated-scenario-v1.0-20261028

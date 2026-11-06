@@ -1,0 +1,81 @@
+{
+  "archived_demo_rows": 240,
+  "grid_indicators": {
+    "stations": 201,
+    "residential_pois": 224,
+    "commercial_pois": 406,
+    "classifications": {
+      "high-demand-high-supply": 38,
+      "high-demand-low-supply": 26,
+      "low-demand-high-supply": 9,
+      "low-demand-low-supply": 97
+    },
+    "edge_tolerance_metres": 5,
+    "edge_assignments": [
+      {
+        "table": "residential_pois",
+        "point_id": "B0FFL4CBQ0",
+        "grid_id": 167,
+        "distance_metres": 3.98541459,
+        "reason": "inside_boundary_but_grid_edge_gap"
+      }
+    ]
+  },
+  "stations": 487,
+  "facility_pois": 1993,
+  "residential_pois": 224,
+  "commercial_pois": 406,
+  "planning_population_grid": 170,
+  "active_real_stations_inside": 201,
+  "applied": true,
+  "backup": "D:\\jstrae\\项目学习\\weidu-ev-webgis\\backend\\backups\\planning_baseline_20261027_201405",
+  "population": {
+    "source": "GHS-POP R2023A",
+    "source_url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2025_GLOBE_R2023A_4326_3ss/V1-0/tiles/GHS_POP_E2025_GLOBE_R2023A_4326_3ss_V1_0_R6_C30.zip",
+    "metadata_url": "https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php",
+    "reference_year": 2025,
+    "release": "R2023A V1-0",
+    "is_projection": true,
+    "units": "estimated persons per pixel; not persons/km2",
+    "crs": "EPSG:4326",
+    "resolution_degrees": [
+      0.0008333333300326924,
+      0.000833333329979504
+    ],
+    "resolution_m_at_study_centre": [
+      76.9533525364096,
+      92.43589419372974
+    ],
+    "dimensions": [
+      177,
+      137
+    ],
+    "nodata": -200.0,
+    "source_nodata": null,
+    "pixel_centres_inside": 12668,
+    "valid_cells": 12668,
+    "nodata_inside": 0,
+    "estimated_population_sum": 892502.8432060895,
+    "min": 0.0,
+    "max": 1558.4812215169272,
+    "negative_valid_values": 0,
+    "source_tile_bounds": [
+      109.99208292007663,
+      29.099583419121316,
+      119.99208288046893,
+      39.099583378875366
+    ],
+    "processed_at": "2026-10-27T11:36:30.788234+00:00",
+    "clip_method": "No resampling; pixel-centre mask. Border cells not area-weighted. Modelled total is not district census.",
+    "worldpop_attempt": "Official 2025 922251437-byte raster download interrupted after ~25 MiB; HTTP Range returned 200, not 206. Partial .part file is not a valid raster and is excluded.",
+    "validation_warning": "Government introduction reports about 500000/525000 people with mixed dates and scopes, while the cropped GHSL sum is about 892503. Review model/vintage/boundary mismatch before absolute demand scaling; do not call this the official district population.",
+    "coordSystem": "WGS84",
+    "isProjection": true,
+    "calibrated": false,
+    "assignedPopulation": 891919.9218297093,
+    "unassignedPopulation": 582.921376379982,
+    "unassignedPixels": 197,
+    "gridAssignment": "pixel centre; shared boundaries use smallest grid ID; edge tolerance 5m",
+    "notice": "2025模型人口，未经统计人口校准；仅作空间分布参考，不能当作真实充电需求。"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:180];(way[\"highway\"][\"area\"!=\"yes\"](33.8951039,113.6268913,34.1885019,113.9896348);relation[\"type\"=\"restriction\"](33.8951039,113.6268913,34.1885019,113.9896348);node[\"barrier\"](33.8951039,113.6268913,34.1885019,113.9896348););out meta geom;",
+  "fetched_at": "2026-10-27T11:14:50.038947+00:00",
+  "osm_base_timestamp": "2026-10-27T11:13:23Z",
+  "elements": 3009
+}

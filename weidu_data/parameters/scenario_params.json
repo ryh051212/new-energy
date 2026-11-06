@@ -1,0 +1,83 @@
+{
+  "version": "weidu-acquisition-v1",
+  "created_at": "2026-10-27T11:25:37.517324+00:00",
+  "status": "scenario_definitions_only_not_calibrated",
+  "model_enabled": false,
+  "private_vehicle_scope": "ordinary private passenger EVs; exclude taxis, buses, freight and two-wheelers",
+  "local_absolute_scaling": {
+    "weidu_private_ev_count": null,
+    "private_cars_per_person": null,
+    "ev_share_of_private_cars": null,
+    "home_charging_available_share": null,
+    "public_charging_dependence_share": null,
+    "daily_public_charge_probability": null,
+    "charging_energy_per_event_kwh": null,
+    "note": "Missing local calibration; do not silently substitute population count, POI count, national shares or commercial-fleet statistics."
+  },
+  "optional_public_dependence_sensitivity": {
+    "values": [
+      0.2,
+      0.5,
+      0.8
+    ],
+    "basis": "author_scenario_assumption",
+    "default": null,
+    "unit": "share_of_estimated_charging_events",
+    "not_a_local_observation": true
+  },
+  "time_profile_observed_external": "time_profiles.csv",
+  "landuse_activity_scenarios": "time_activity_assumptions.csv",
+  "spatial_allocation": {
+    "method": "not_implemented",
+    "population_input": "../population/population.tif",
+    "population_is_modelled_residential_count": true,
+    "poi_count_is_population": false,
+    "requires_population_preserving_allocation": true,
+    "avoid_double_counting": "Do not separately add the same residential population to every nearby POI; allocate fixed totals before temporal weighting."
+  },
+  "road_accessibility": {
+    "threshold_minutes": 10,
+    "speed_kph_by_highway": {
+      "motorway": 80,
+      "motorway_link": 30,
+      "trunk": 60,
+      "trunk_link": 30,
+      "primary": 40,
+      "primary_link": 25,
+      "secondary": 35,
+      "secondary_link": 25,
+      "tertiary": 30,
+      "tertiary_link": 20,
+      "unclassified": 25,
+      "residential": 20,
+      "living_street": 10,
+      "service": 15,
+      "road": 20,
+      "track": 10
+    },
+    "speed_basis": "author_scenario_assumption_not_real_time",
+    "sensitivity_factors": [
+      0.75,
+      1,
+      1.25
+    ],
+    "apply_verified_maxspeed_cap": true,
+    "node_snap_max_m": 300,
+    "node_snap_is_verified_entrance": false,
+    "respect_oneway": true,
+    "access_unspecified_policy": "allow_in_optimistic_scenario_only",
+    "exclude_private_or_prohibited": true,
+    "turn_restrictions": "retained_not_yet_applied",
+    "barriers": "retained_not_yet_validated",
+    "network_buffer_km": 10,
+    "halo_caveat": "At 80 km/h, 10 minutes spans up to 13.3 km. Extend halo or quantify edge sensitivity before claiming exhaustive accessibility."
+  },
+  "existing_supply": {
+    "observed_locations_file": "../charging/charging_stations.geojson",
+    "public_access_unknown_policy": "separate optimistic and documented-public scenarios",
+    "unknown_guns_or_power": null,
+    "uniform_capacity_assumptions_must_be_separate": true,
+    "unknown_field_is_zero": false
+  },
+  "demand_output_unit": "relative potential index until local calibration; not observed orders, kWh or peak kW"
+}

@@ -1,0 +1,4367 @@
+[
+  {
+    "first_id": "amap:B0JA99LV7R",
+    "second_id": "amap:B0JA99GA7F",
+    "first_name": "许昌胖东来天使城停车场",
+    "second_name": "许昌胖东来天使城地下停车场(出入口)",
+    "distance_m": 6.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H6BSF3Y6",
+    "second_id": "amap:B0H6BSFQGM",
+    "first_name": "胖东来停车场",
+    "second_name": "胖东来停车场(出入口)",
+    "distance_m": 9.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GK1SY42N",
+    "second_id": "amap:B0I13OZ9UJ",
+    "first_name": "胖东来时代广场许昌七一路店地下停车场",
+    "second_name": "东来茶叶超市(胖东来时代广场店)",
+    "distance_m": 29.34,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GK1SY42N",
+    "second_id": "amap:B01760MSB0",
+    "first_name": "胖东来时代广场许昌七一路店地下停车场",
+    "second_name": "胖东来时代广场",
+    "distance_m": 21.88,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GK1SY42N",
+    "second_id": "amap:B0FFIC100B",
+    "first_name": "胖东来时代广场许昌七一路店地下停车场",
+    "second_name": "时代广场超市(胖东来时代广场店)",
+    "distance_m": 21.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVY1JG",
+    "second_id": "amap:B0FFGAQMZ1",
+    "first_name": "曹丞相府停车场",
+    "second_name": "曹丞相府-魏武帝广场停车场",
+    "distance_m": 10.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IA3R1LBW",
+    "second_id": "amap:B0FFF57FB2",
+    "first_name": "许都大剧院地面停车场",
+    "second_name": "康佰嘉健身(许都店)",
+    "distance_m": 29.59,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KB9Z85WX",
+    "second_id": "amap:B0K1URGBW0",
+    "first_name": "曹魏不夜城地面停车场",
+    "second_name": "曹魏不夜城地面停车场(出入口)",
+    "distance_m": 28.2,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKJAVWK4",
+    "second_id": "amap:B0KRMA30GP",
+    "first_name": "新田360广场许昌亨源通店停车场",
+    "second_name": "鼎冠台球俱乐部",
+    "distance_m": 23.07,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFL9RDE6",
+    "second_id": "amap:B0HRCZLW8X",
+    "first_name": "曹魏古城地下停车场",
+    "second_name": "南城门中德跨境购物中心停车场",
+    "distance_m": 27.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600QO8",
+    "second_id": "amap:B0MR57HCF4",
+    "first_name": "居然之家许昌魏都店停车场",
+    "second_name": "食汇生活超市",
+    "distance_m": 18.07,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMSTPGE",
+    "second_id": "amap:B0HUMSTJ00",
+    "first_name": "绿洲·梦想广场地下停车场",
+    "second_name": "绿洲·梦想广场地下停车场(入口)",
+    "distance_m": 11.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMSTPGE",
+    "second_id": "amap:B0HK0HGJ1W",
+    "first_name": "绿洲·梦想广场地下停车场",
+    "second_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点",
+    "distance_m": 11.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMSTPGE",
+    "second_id": "amap:B0HK0HGYKM",
+    "first_name": "绿洲·梦想广场地下停车场",
+    "second_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点(入口)",
+    "distance_m": 11.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMSTPGE",
+    "second_id": "amap:B0IRUU6FVX",
+    "first_name": "绿洲·梦想广场地下停车场",
+    "second_name": "绿洲梦想广场A座",
+    "distance_m": 17.71,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HB21",
+    "second_id": "amap:B0FFFZTXQR",
+    "first_name": "停车场",
+    "second_name": "停车场",
+    "distance_m": 20.5,
+    "same_name": true,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HB21",
+    "second_id": "amap:B0L3TX90XA",
+    "first_name": "停车场",
+    "second_name": "文博图书城停车场",
+    "distance_m": 5.09,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE5YRU",
+    "second_id": "amap:B0MRMASMDK",
+    "first_name": "DL胖东来(许昌大众服饰店)地面停车场",
+    "second_name": "车站路-路侧停车场",
+    "distance_m": 21.16,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HKVZ9PQY",
+    "second_id": "amap:B0HKVZ8N57",
+    "first_name": "三国大酒店(七一路店)停车场",
+    "second_name": "三国大酒店(七一路店)停车场(出入口)",
+    "distance_m": 6.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HK0HDRFB",
+    "second_id": "amap:B0FFHWA34H",
+    "first_name": "许昌海龙大酒店(许昌胖东来生活广场店)停车场",
+    "second_name": "海龙大酒店中餐厅(颖昌路店)",
+    "distance_m": 18.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRKAYAHF",
+    "second_id": "amap:B0KROATLQE",
+    "first_name": "胖东来大众服饰地面停车场",
+    "second_name": "胖东来大众服饰地面停车场(出入口)",
+    "distance_m": 11.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRKAYAHF",
+    "second_id": "amap:B0MR1HD0PN",
+    "first_name": "胖东来大众服饰地面停车场",
+    "second_name": "南关街道服饰大楼",
+    "distance_m": 18.86,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRKAYAHF",
+    "second_id": "amap:B0LUMM6G1N",
+    "first_name": "胖东来大众服饰地面停车场",
+    "second_name": "胖东来服饰鞋业大楼",
+    "distance_m": 29.58,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LK7M2WG1",
+    "second_id": "amap:B0M6CUUY4F",
+    "first_name": "吾悦广场停车场",
+    "second_name": "中影云幕影城(魏悦城店)",
+    "distance_m": 28.2,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HBRW",
+    "second_id": "amap:B0K0Y5NDBF",
+    "first_name": "许昌口腔医院七一路总院地面停车场",
+    "second_name": "许昌口腔医院七一路总院地面停车场(出入口)",
+    "distance_m": 23.68,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HBRW",
+    "second_id": "amap:B0FFFQ4LJC",
+    "first_name": "许昌口腔医院七一路总院地面停车场",
+    "second_name": "停车场",
+    "distance_m": 26.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HBRW",
+    "second_id": "amap:B0176019CT",
+    "first_name": "许昌口腔医院七一路总院地面停车场",
+    "second_name": "魏都区南关西社区卫生服务中心",
+    "distance_m": 24.25,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HCM5",
+    "second_id": "amap:B0H0UDJGEB",
+    "first_name": "地面停车场",
+    "second_name": "花漾木成家居广场停车场",
+    "distance_m": 26.22,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GK1SWW9T",
+    "second_id": "amap:B0GK1SVX7I",
+    "first_name": "胖东来时代广场许昌七一路店地下停车场(入口)",
+    "second_name": "胖东来时代广场许昌七一路店地面停车场(入口)",
+    "distance_m": 20.85,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KDVRQ7N1",
+    "second_id": "amap:B0H1P5QO7F",
+    "first_name": "汉庭酒店(许昌胖东来生活广场店)停车场",
+    "second_name": "山峰·财富广场停车场",
+    "distance_m": 7.32,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HAPST3B3",
+    "second_id": "amap:B0FFJCYYL2",
+    "first_name": "亨源通地下停车场",
+    "second_name": "龙猫主题影院(亨源通·世纪广场1号楼店)",
+    "distance_m": 22.97,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HAPST3B3",
+    "second_id": "amap:B0FFHC1GUW",
+    "first_name": "亨源通地下停车场",
+    "second_name": "亨源通超市(许昌新田360广场店)",
+    "distance_m": 25.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3PJD",
+    "second_id": "amap:B0L2LBOOGP",
+    "first_name": "魏风酒店停车场-入口",
+    "second_name": "恒达魏源广场东侧停车场",
+    "distance_m": 16.34,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3PJD",
+    "second_id": "amap:B0L1CL65S9",
+    "first_name": "魏风酒店停车场-入口",
+    "second_name": "悦畅·KTV(曹魏古城店)",
+    "distance_m": 16.67,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HKOUK7S8",
+    "second_id": "amap:B0MURCDZCP",
+    "first_name": "三鼎华悦大酒店停车场",
+    "second_name": "鼎鑫鑫悦广场写字楼",
+    "distance_m": 9.27,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JDT76IMK",
+    "second_id": "amap:B0MB1OWX3Q",
+    "first_name": "八龙桥游园地面停车场",
+    "second_name": "清潩河千亩游园西侧地上停车场",
+    "distance_m": 18.25,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFZTXQR",
+    "second_id": "amap:B0L3TX90XA",
+    "first_name": "停车场",
+    "second_name": "文博图书城停车场",
+    "distance_m": 22.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRCSMB3N",
+    "second_id": "amap:B0I6G5I799",
+    "first_name": "新大新·幸福时代广场地下停车场",
+    "second_name": "H酒店(360万达广场店)地下停车场(入口)",
+    "distance_m": 2.27,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRCSMB3N",
+    "second_id": "amap:B0K1TAOIXG",
+    "first_name": "新大新·幸福时代广场地下停车场",
+    "second_name": "慕枫酒店停车场",
+    "distance_m": 5.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRCSMB3N",
+    "second_id": "amap:B0I6G5HRQB",
+    "first_name": "新大新·幸福时代广场地下停车场",
+    "second_name": "H酒店东区店停车场",
+    "distance_m": 3.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HAYH03FO",
+    "second_id": "amap:B0HAYH0Y0O",
+    "first_name": "中原云鼎广场地下停车场",
+    "second_name": "中原云鼎广场地下停车场(入口)",
+    "distance_m": 16.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H31H0FMT",
+    "second_id": "amap:B0176019OY",
+    "first_name": "许昌春海医院停车场",
+    "second_name": "许昌春海医院",
+    "distance_m": 22.34,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HK0HGJ1W",
+    "second_id": "amap:B0HUMSTJ00",
+    "first_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点",
+    "second_name": "绿洲·梦想广场地下停车场(入口)",
+    "distance_m": 0.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HK0HGJ1W",
+    "second_id": "amap:B0HK0HGYKM",
+    "first_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点",
+    "second_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点(入口)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HK0HGJ1W",
+    "second_id": "amap:B0IRUU6FVX",
+    "first_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点",
+    "second_name": "绿洲梦想广场A座",
+    "distance_m": 29.08,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L2LBOOGP",
+    "second_id": "amap:B0L1CL65S9",
+    "first_name": "恒达魏源广场东侧停车场",
+    "second_name": "悦畅·KTV(曹魏古城店)",
+    "distance_m": 12.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVWW9E",
+    "second_id": "amap:B0FFFZTK6E",
+    "first_name": "鼎鑫·鑫悦广场停车场",
+    "second_name": "鼎鑫鑫悦广场",
+    "distance_m": 25.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H1KS06VZ",
+    "second_id": "amap:B0176002C5",
+    "first_name": "许昌市中心医院停车场",
+    "second_name": "许昌市中心医院",
+    "distance_m": 19.63,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H1KS06VZ",
+    "second_id": "amap:B01760N9E0",
+    "first_name": "许昌市中心医院停车场",
+    "second_name": "许昌市中心医院-急诊放射科",
+    "distance_m": 23.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H15ASWA2",
+    "second_id": "amap:B01760N9KS",
+    "first_name": "许昌中医院停车场",
+    "second_name": "许昌中医院住院部",
+    "distance_m": 27.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H15ASWA2",
+    "second_id": "amap:B0176005CC",
+    "first_name": "许昌中医院停车场",
+    "second_name": "许昌中医院",
+    "distance_m": 18.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I6G5HRQB",
+    "second_id": "amap:B0I6G5I799",
+    "first_name": "H酒店东区店停车场",
+    "second_name": "H酒店(360万达广场店)地下停车场(入口)",
+    "distance_m": 2.03,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I6G5HRQB",
+    "second_id": "amap:B0K1TAOIXG",
+    "first_name": "H酒店东区店停车场",
+    "second_name": "慕枫酒店停车场",
+    "distance_m": 3.71,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HA1S",
+    "second_id": "amap:B0JUDMZ8X4",
+    "first_name": "万象时代广场停车场",
+    "second_name": "许昌禾勤税务代理有限公司",
+    "distance_m": 9.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HA1S",
+    "second_id": "amap:B01760MYQI",
+    "first_name": "万象时代广场停车场",
+    "second_name": "万象时代广场",
+    "distance_m": 9.77,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HA1S",
+    "second_id": "amap:B0IA3AQ188",
+    "first_name": "万象时代广场停车场",
+    "second_name": "龙猫私影·switch(七一路时代店)",
+    "distance_m": 9.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H0UHMFH9",
+    "second_id": "amap:B017600PBR",
+    "first_name": "福港大酒店停车场",
+    "second_name": "福港大酒店",
+    "distance_m": 27.42,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7H945",
+    "second_id": "amap:B0FFJ8X0QR",
+    "first_name": "汉庭酒店停车场",
+    "second_name": "汉庭酒店许昌文峰广场店停车场(出入口)",
+    "distance_m": 12.27,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGAQMZ1",
+    "second_id": "amap:B0LG21721U",
+    "first_name": "曹丞相府-魏武帝广场停车场",
+    "second_name": "前门涮锅烧烤(曹魏古城店)",
+    "distance_m": 28.63,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7H9A3",
+    "second_id": "amap:B0MR0UI7AS",
+    "first_name": "停车场(鼎鑫商务广场B座南)",
+    "second_name": "群艺馆综合楼",
+    "distance_m": 10.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMSTJ00",
+    "second_id": "amap:B0HK0HGYKM",
+    "first_name": "绿洲·梦想广场地下停车场(入口)",
+    "second_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点(入口)",
+    "distance_m": 0.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMSTJ00",
+    "second_id": "amap:B0IRUU6FVX",
+    "first_name": "绿洲·梦想广场地下停车场(入口)",
+    "second_name": "绿洲梦想广场A座",
+    "distance_m": 28.7,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBPUF07C",
+    "second_id": "amap:B0H0UDJGEB",
+    "first_name": "如家商旅酒店停车场",
+    "second_name": "花漾木成家居广场停车场",
+    "distance_m": 26.85,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBPUF07C",
+    "second_id": "amap:B0MR966W12",
+    "first_name": "如家商旅酒店停车场",
+    "second_name": "张三丰烧烤&炒鸡-门前停车场",
+    "distance_m": 14.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJRX3KN",
+    "second_id": "amap:B0H26U0LME",
+    "first_name": "钻石悦K-停车场",
+    "second_name": "PARTY KTV(湖滨路店)",
+    "distance_m": 25.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJRX3KN",
+    "second_id": "amap:BV10966948",
+    "first_name": "钻石悦K-停车场",
+    "second_name": "湖滨路西大街口(公交站)",
+    "distance_m": 25.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVYLFF",
+    "second_id": "amap:B0FFHWGYVQ",
+    "first_name": "玉龙湾停车场",
+    "second_name": "玉龙湾停车场(入口)",
+    "distance_m": 1.22,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFQ4LJC",
+    "second_id": "amap:B0176019CT",
+    "first_name": "停车场",
+    "second_name": "魏都区南关西社区卫生服务中心",
+    "distance_m": 27.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HE5P",
+    "second_id": "amap:B0MR966W12",
+    "first_name": "停车场(察院西街)",
+    "second_name": "张三丰烧烤&炒鸡-门前停车场",
+    "distance_m": 28.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRLNMSKA",
+    "second_id": "amap:B0FFHVWN5Q",
+    "first_name": "许昌电气职业学院停车场",
+    "second_name": "许昌技师学院",
+    "distance_m": 13.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRLNMSKA",
+    "second_id": "amap:B0L0RO8235",
+    "first_name": "许昌电气职业学院停车场",
+    "second_name": "许昌电气职业学院E栋",
+    "distance_m": 21.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRLNMSKA",
+    "second_id": "amap:B0MAOXJZ44",
+    "first_name": "许昌电气职业学院停车场",
+    "second_name": "许昌电气职业学院H栋",
+    "distance_m": 13.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRLNMSKA",
+    "second_id": "amap:B0M6UHPOZL",
+    "first_name": "许昌电气职业学院停车场",
+    "second_name": "许昌电气职业学院F楼",
+    "distance_m": 6.77,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HK0HGYKM",
+    "second_id": "amap:B0IRUU6FVX",
+    "first_name": "许昌海龙大酒店(许昌胖东来生活广场店)地下停车点(入口)",
+    "second_name": "绿洲梦想广场A座",
+    "distance_m": 29.08,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J0CMDI7S",
+    "second_id": "amap:B0J3TCJ91W",
+    "first_name": "春秋广场地下停车场(出入口)",
+    "second_name": "朝阳台球旗舰店",
+    "distance_m": 23.32,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J0CMDI7S",
+    "second_id": "amap:BV10755874",
+    "first_name": "春秋广场地下停车场(出入口)",
+    "second_name": "春秋楼春秋广场(公交站)",
+    "distance_m": 29.5,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGAQNG7",
+    "second_id": "amap:B0FFGAQN7L",
+    "first_name": "停车场(许昌市中心医院南院西)",
+    "second_name": "停车场(七一路)",
+    "distance_m": 26.69,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGAQNG7",
+    "second_id": "amap:B0MGAHDZGE",
+    "first_name": "停车场(许昌市中心医院南院西)",
+    "second_name": "津门羊大爷·铜锅涮肉·烧烤(曹魏古城店)停车场",
+    "distance_m": 28.4,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRFU39K3",
+    "second_id": "amap:B0FFHLLEA9",
+    "first_name": "中央金座汇通商务苑地下停车场",
+    "second_name": "中央金座G座",
+    "distance_m": 19.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRFU39K3",
+    "second_id": "amap:B0J2VUFP1C",
+    "first_name": "中央金座汇通商务苑地下停车场",
+    "second_name": "许昌水木装饰工程有限公司",
+    "distance_m": 17.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRFU39K3",
+    "second_id": "amap:B0FFKUM6OX",
+    "first_name": "中央金座汇通商务苑地下停车场",
+    "second_name": "中央金座F6座",
+    "distance_m": 29.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KDJUR3UY",
+    "second_id": "amap:B0L35ND1XX",
+    "first_name": "星程酒店(许昌胖东来天使城酒店)停车场",
+    "second_name": "许昌蝶梦传媒",
+    "distance_m": 24.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H0UALYTV",
+    "second_id": "amap:B0HU44HAS9",
+    "first_name": "鸿宝大酒店停车场",
+    "second_name": "鸿宝商场",
+    "distance_m": 26.23,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HA5CONIO",
+    "second_id": "amap:B0FFFE51GV",
+    "first_name": "银都国际大厦停车场",
+    "second_name": "银都国际大厦",
+    "distance_m": 28.74,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HA5CONIO",
+    "second_id": "amap:B0G3D717SP",
+    "first_name": "银都国际大厦停车场",
+    "second_name": "恰同学成长中心",
+    "distance_m": 29.12,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHWC6XH",
+    "second_id": "amap:B0FFHXF92Z",
+    "first_name": "六合花园内部地下停车场",
+    "second_name": "六合花园内部地下停车场(出入口)",
+    "distance_m": 20.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HR3ABF68",
+    "second_id": "amap:B0FFFE2U01",
+    "first_name": "旭龙大厦停车场",
+    "second_name": "旭龙大厦",
+    "distance_m": 20.86,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HR3ABF68",
+    "second_id": "amap:B0M12L8Z1B",
+    "first_name": "旭龙大厦停车场",
+    "second_name": "旭龙大厦1栋",
+    "distance_m": 24.47,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H0UDJGEB",
+    "second_id": "amap:B0MR966W12",
+    "first_name": "花漾木成家居广场停车场",
+    "second_name": "张三丰烧烤&炒鸡-门前停车场",
+    "distance_m": 23.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFIS8G8G",
+    "second_id": "amap:B0M6JUENYB",
+    "first_name": "恒大绿洲停车场(内部专用)",
+    "second_name": "恒大绿洲地下停车场",
+    "distance_m": 3.11,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L05NRYRY",
+    "second_id": "amap:B0FFK3HQST",
+    "first_name": "许昌万荣心脑血管病医院地上停车场",
+    "second_name": "万荣医院失眠抑郁科",
+    "distance_m": 11.81,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JAB7SU5H",
+    "second_id": "amap:B0H657OD0L",
+    "first_name": "许昌德医堂皮肤科停车场",
+    "second_name": "许昌阔达装饰整装旗舰店",
+    "distance_m": 10.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7IPF2",
+    "second_id": "amap:BV10755874",
+    "first_name": "停车场(学巷街)",
+    "second_name": "春秋楼春秋广场(公交站)",
+    "distance_m": 16.66,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HRL71NR0",
+    "second_id": "amap:B0LBDCY53U",
+    "first_name": "IFC信通国际金融中心东停车场",
+    "second_name": "征途财税公司注册代理记账(河南分公司)",
+    "distance_m": 25.07,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKDMFAY",
+    "second_id": "amap:B0FFFZTQ18",
+    "first_name": "高庄幸福家园停车场",
+    "second_name": "高庄家园",
+    "distance_m": 14.12,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7HA4L",
+    "second_id": "amap:B0FFG7HGRU",
+    "first_name": "停车场(步行街)",
+    "second_name": "停车场",
+    "distance_m": 23.78,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I6G5I799",
+    "second_id": "amap:B0K1TAOIXG",
+    "first_name": "H酒店(360万达广场店)地下停车场(入口)",
+    "second_name": "慕枫酒店停车场",
+    "distance_m": 3.4,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUJZ0DYD",
+    "second_id": "amap:B0FFKFFX2U",
+    "first_name": "鑫悦大厦停车场",
+    "second_name": "鑫悦大厦",
+    "distance_m": 22.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMUSXJ6",
+    "second_id": "amap:B0FFLFJQFG",
+    "first_name": "清艳教育办公楼",
+    "second_name": "神舟电竞(鑫悦广场店)",
+    "distance_m": 27.81,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUMUSXJ6",
+    "second_id": "amap:B0FFLJ4TE2",
+    "first_name": "清艳教育办公楼",
+    "second_name": "鼎鑫鑫悦广场D座",
+    "distance_m": 3.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LUMM6G1N",
+    "second_id": "amap:B0MR1HD0PN",
+    "first_name": "胖东来服饰鞋业大楼",
+    "second_name": "南关街道服饰大楼",
+    "distance_m": 13.09,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFIAAPRN",
+    "second_id": "amap:B0KRR4NQAP",
+    "first_name": "建安文化广场(胖东来天使城店)",
+    "second_name": "胖东来天使城影城",
+    "distance_m": 16.13,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFIAAPRN",
+    "second_id": "amap:B0J6YS04RS",
+    "first_name": "建安文化广场(胖东来天使城店)",
+    "second_name": "DL胖东来(许昌天使城店)",
+    "distance_m": 0.6,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFIAAPRN",
+    "second_id": "amap:B0JKSD42Y4",
+    "first_name": "建安文化广场(胖东来天使城店)",
+    "second_name": "娃娃优格糖自制玩偶(许昌胖东来天使城店)",
+    "distance_m": 13.82,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE51GV",
+    "second_id": "amap:B0G3D717SP",
+    "first_name": "银都国际大厦",
+    "second_name": "恰同学成长中心",
+    "distance_m": 0.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MYQI",
+    "second_id": "amap:B0JUDMZ8X4",
+    "first_name": "万象时代广场",
+    "second_name": "许昌禾勤税务代理有限公司",
+    "distance_m": 0.29,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MYQI",
+    "second_id": "amap:B0IA3AQ188",
+    "first_name": "万象时代广场",
+    "second_name": "龙猫私影·switch(七一路时代店)",
+    "distance_m": 5.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBS5NMHI",
+    "second_id": "amap:B0KRJCCFY8",
+    "first_name": "恒达中心写字楼",
+    "second_name": "中影MAX国际影城(金汇广场店)",
+    "distance_m": 21.21,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBS5NMHI",
+    "second_id": "amap:B0KD1SJXRO",
+    "first_name": "恒达中心写字楼",
+    "second_name": "许昌盈客科技有限公司",
+    "distance_m": 11.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBS5NMHI",
+    "second_id": "amap:B0L32H34O3",
+    "first_name": "恒达中心写字楼",
+    "second_name": "许昌恒少代理记账有限公司",
+    "distance_m": 24.71,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IRUU6FVX",
+    "second_id": "amap:B017601213",
+    "first_name": "绿洲梦想广场A座",
+    "second_name": "绿洲奥斯卡影城(绿洲梦想广场店)",
+    "distance_m": 28.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKBBCCB1",
+    "second_id": "amap:B0H64MI4HC",
+    "first_name": "魏投大厦",
+    "second_name": "魏都区人社服务大厅(魏都市民之家)",
+    "distance_m": 11.42,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKBBCCB1",
+    "second_id": "amap:B0I1OCBQ5L",
+    "first_name": "魏投大厦",
+    "second_name": "许昌市魏都区税务局办税服务厅",
+    "distance_m": 10.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKBBCCB1",
+    "second_id": "amap:B0FFKGS5UV",
+    "first_name": "魏投大厦",
+    "second_name": "魏都市民之家",
+    "distance_m": 12.71,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKBBCCB1",
+    "second_id": "amap:B0J6B70KHM",
+    "first_name": "魏投大厦",
+    "second_name": "出入境签证",
+    "distance_m": 14.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKBBCCB1",
+    "second_id": "amap:B0GKKLZ408",
+    "first_name": "魏投大厦",
+    "second_name": "魏都区行政服务中心",
+    "distance_m": 14.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKBBCCB1",
+    "second_id": "amap:B0FFK4LKR1",
+    "first_name": "魏投大厦",
+    "second_name": "许昌市魏都区民政局婚姻登记处",
+    "distance_m": 24.18,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFMEHMGO",
+    "second_id": "amap:B0FFM1DZE3",
+    "first_name": "汇通·商务苑",
+    "second_name": "大正中央金座D座",
+    "distance_m": 6.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFMEHMGO",
+    "second_id": "amap:B0L0L9AXTX",
+    "first_name": "汇通·商务苑",
+    "second_name": "九龙门电竞台球(天使城店)",
+    "distance_m": 21.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFMEHMGO",
+    "second_id": "amap:B0LR0ONK20",
+    "first_name": "汇通·商务苑",
+    "second_name": "汇通商务苑D栋",
+    "distance_m": 21.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFM1DZE3",
+    "second_id": "amap:B0L0L9AXTX",
+    "first_name": "大正中央金座D座",
+    "second_name": "九龙门电竞台球(天使城店)",
+    "distance_m": 15.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFM1DZE3",
+    "second_id": "amap:B0LR0ONK20",
+    "first_name": "大正中央金座D座",
+    "second_name": "汇通商务苑D栋",
+    "distance_m": 16.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFLJ4TE2",
+    "second_id": "amap:B0FFLFJQFG",
+    "first_name": "鼎鑫鑫悦广场D座",
+    "second_name": "神舟电竞(鑫悦广场店)",
+    "distance_m": 26.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFL98Y2X",
+    "second_id": "amap:B0L067NZ1A",
+    "first_name": "新田360广场6号楼",
+    "second_name": "中意人寿大厦",
+    "distance_m": 5.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFL8FAYA",
+    "second_id": "amap:B0FFJCYYL2",
+    "first_name": "亨源通·世纪广场1号楼",
+    "second_name": "龙猫主题影院(亨源通·世纪广场1号楼店)",
+    "distance_m": 26.05,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFL8FAYA",
+    "second_id": "amap:B0FFHDT010",
+    "first_name": "亨源通·世纪广场1号楼",
+    "second_name": "阿泽西炸鸡(360广场店)",
+    "distance_m": 5.19,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKYS5RH",
+    "second_id": "amap:B0MUD9KYMN",
+    "first_name": "鼎鑫·鑫悦广场C座",
+    "second_name": "鑫悦广场G座",
+    "distance_m": 18.4,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKYS5RH",
+    "second_id": "amap:B0H1DZMG3X",
+    "first_name": "鼎鑫·鑫悦广场C座",
+    "second_name": "许昌紫萄财税·工商注册·代办执照·代理记账",
+    "distance_m": 2.25,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKYS5RH",
+    "second_id": "amap:B0FFLFJQFG",
+    "first_name": "鼎鑫·鑫悦广场C座",
+    "second_name": "神舟电竞(鑫悦广场店)",
+    "distance_m": 29.32,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKUM6OX",
+    "second_id": "amap:B0LR01OWEO",
+    "first_name": "中央金座F6座",
+    "second_name": "中央金座C座",
+    "distance_m": 27.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKUM6OX",
+    "second_id": "amap:B01760NDI6",
+    "first_name": "中央金座F6座",
+    "second_name": "中央金座",
+    "distance_m": 29.07,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKJBIV2",
+    "second_id": "amap:B0I1MABEZ9",
+    "first_name": "文和楼",
+    "second_name": "智游联盟(古城店)",
+    "distance_m": 19.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKEGUWV",
+    "second_id": "amap:B0FFHJGJHW",
+    "first_name": "新越大厦",
+    "second_name": "励学国际大厦",
+    "distance_m": 6.59,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK8DOY8",
+    "second_id": "amap:B0IRD7NJ1A",
+    "first_name": "天河大厦",
+    "second_name": "体言健身工作室",
+    "distance_m": 21.11,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK8DOY8",
+    "second_id": "amap:B0GDOZPDX3",
+    "first_name": "天河大厦",
+    "second_name": "北斗电竞-麦迪店",
+    "distance_m": 19.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK7WPCR",
+    "second_id": "amap:B0LKGR2N3Z",
+    "first_name": "许昌市创业服务中心D座",
+    "second_name": "市民之家D座",
+    "distance_m": 16.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK7WPCR",
+    "second_id": "amap:B0L0FD2OO8",
+    "first_name": "许昌市创业服务中心D座",
+    "second_name": "魏文路IFC",
+    "distance_m": 21.08,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK7WPCR",
+    "second_id": "amap:B0LBDCY53U",
+    "first_name": "许昌市创业服务中心D座",
+    "second_name": "征途财税公司注册代理记账(河南分公司)",
+    "distance_m": 26.85,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJRW3KV",
+    "second_id": "amap:B0FFHW4HPS",
+    "first_name": "投资大厦A座",
+    "second_name": "投资大厦",
+    "distance_m": 16.77,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ8X1HO",
+    "second_id": "amap:B0M6HRBQUA",
+    "first_name": "绿洲·梦想广场B座",
+    "second_name": "潮玩自助KTV(绿洲梦想广场店)",
+    "distance_m": 27.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ8X1HO",
+    "second_id": "amap:B0FFHR9UVX",
+    "first_name": "绿洲·梦想广场B座",
+    "second_name": "绿洲·海龙国际梦想广场",
+    "distance_m": 22.15,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ8X1HO",
+    "second_id": "amap:B0MR57HCF4",
+    "first_name": "绿洲·梦想广场B座",
+    "second_name": "食汇生活超市",
+    "distance_m": 16.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFICV2I6",
+    "second_id": "amap:B0MRL54OUZ",
+    "first_name": "莲城大厦",
+    "second_name": "莲城大厦1幢",
+    "distance_m": 23.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFICV2I6",
+    "second_id": "amap:B0L6RC2ZKK",
+    "first_name": "莲城大厦",
+    "second_name": "雀空间自助棋牌(万达广场店)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFICV2I6",
+    "second_id": "amap:B0K67A3524",
+    "first_name": "莲城大厦",
+    "second_name": "许昌数谷直播电商产业园",
+    "distance_m": 15.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFICV2I6",
+    "second_id": "amap:B0L1YYDEI8",
+    "first_name": "莲城大厦",
+    "second_name": "莲城大厦主楼",
+    "distance_m": 15.65,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHWPSZB",
+    "second_id": "amap:B0M1015K8M",
+    "first_name": "亨源通·世纪广场",
+    "second_name": "许昌亨源通写字楼",
+    "distance_m": 15.96,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHWPSZB",
+    "second_id": "amap:B0FFGER3FB",
+    "first_name": "亨源通·世纪广场",
+    "second_name": "新田360广场(许昌亨源通店)",
+    "distance_m": 0.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHWPSZB",
+    "second_id": "amap:B0KRMM1T6V",
+    "first_name": "亨源通·世纪广场",
+    "second_name": "哈彼王国梦幻乐园",
+    "distance_m": 19.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHWPSZB",
+    "second_id": "amap:B0FFIGCUBH",
+    "first_name": "亨源通·世纪广场",
+    "second_name": "新田360超市(新田360广场店)",
+    "distance_m": 27.59,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHWC7DQ",
+    "second_id": "amap:B0JD3U7E1Q",
+    "first_name": "博林大厦",
+    "second_name": "许昌市东城区铜雀台娱乐休闲中心",
+    "distance_m": 10.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHUWL26",
+    "second_id": "amap:B0MABCTF1B",
+    "first_name": "三鼎大厦",
+    "second_name": "金鼎大厦",
+    "distance_m": 8.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHR9UVX",
+    "second_id": "amap:B0M6HRBQUA",
+    "first_name": "绿洲·海龙国际梦想广场",
+    "second_name": "潮玩自助KTV(绿洲梦想广场店)",
+    "distance_m": 5.75,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHLLEA9",
+    "second_id": "amap:B0J2VUFP1C",
+    "first_name": "中央金座G座",
+    "second_name": "许昌水木装饰工程有限公司",
+    "distance_m": 5.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHJGJHW",
+    "second_id": "amap:B0M12H8LU1",
+    "first_name": "励学国际大厦",
+    "second_name": "源通大厦",
+    "distance_m": 27.74,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFH26QXA",
+    "second_id": "amap:B0L1FX1EOO",
+    "first_name": "万里大厦",
+    "second_name": "万里大厦15A",
+    "distance_m": 0.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGYOP2M",
+    "second_id": "amap:B0LR01NHH9",
+    "first_name": "永乐国际广场",
+    "second_name": "永乐国际广场3号楼",
+    "distance_m": 0.93,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGA5NN5",
+    "second_id": "amap:B0LK41Y4O3",
+    "first_name": "中银大厦",
+    "second_name": "中国银行股份有限公司许昌分行大楼",
+    "distance_m": 2.65,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE54RG",
+    "second_id": "amap:B0M1S1PPM0",
+    "first_name": "扬子大厦",
+    "second_name": "扬子大厦1栋",
+    "distance_m": 9.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3N63",
+    "second_id": "amap:B0LR0OPIWV",
+    "first_name": "鼎鑫商务广场B座",
+    "second_name": "大商新玛特B栋",
+    "distance_m": 3.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE2U01",
+    "second_id": "amap:B0M12L8Z1B",
+    "first_name": "旭龙大厦",
+    "second_name": "旭龙大厦1栋",
+    "distance_m": 3.67,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NDI6",
+    "second_id": "amap:B0LR01OWEO",
+    "first_name": "中央金座",
+    "second_name": "中央金座C座",
+    "distance_m": 2.85,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NDI6",
+    "second_id": "amap:B0LR3UCQNR",
+    "first_name": "中央金座",
+    "second_name": "大正中央金座E5座",
+    "distance_m": 8.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MYQK",
+    "second_id": "amap:B0LR0XPOM5",
+    "first_name": "鼎鑫商务广场A座",
+    "second_name": "大商新玛特A座",
+    "distance_m": 6.77,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MYQK",
+    "second_id": "amap:B0MUDLKLAZ",
+    "first_name": "鼎鑫商务广场A座",
+    "second_name": "鼎鑫商务广场",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MYQK",
+    "second_id": "amap:B0G3OOCCVH",
+    "first_name": "鼎鑫商务广场A座",
+    "second_name": "云栖私影·switch(生活广场店)",
+    "distance_m": 7.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MXHY",
+    "second_id": "amap:B0K1VMONXK",
+    "first_name": "东泰大厦",
+    "second_name": "川潮奉·地道川菜(兴业路店)",
+    "distance_m": 3.79,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600OSB",
+    "second_id": "amap:B0M1MZDI8Y",
+    "first_name": "许昌医药大厦",
+    "second_name": "许昌医药大厦4号楼",
+    "distance_m": 4.19,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600227",
+    "second_id": "amap:B0G23ZAPMC",
+    "first_name": "中房大厦(建设路)",
+    "second_name": "许昌市市场监督管理局魏都区分局",
+    "distance_m": 10.1,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MULRVOAJ",
+    "second_id": "amap:B0FFHVL5R8",
+    "first_name": "许昌市创业服务中心E座",
+    "second_name": "许昌市创业服务中心",
+    "distance_m": 14.67,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MUDLKLAZ",
+    "second_id": "amap:B0LR0XPOM5",
+    "first_name": "鼎鑫商务广场",
+    "second_name": "大商新玛特A座",
+    "distance_m": 6.77,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MUDLKLAZ",
+    "second_id": "amap:B0G3OOCCVH",
+    "first_name": "鼎鑫商务广场",
+    "second_name": "云栖私影·switch(生活广场店)",
+    "distance_m": 7.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MUD9KYMN",
+    "second_id": "amap:B0H1DZMG3X",
+    "first_name": "鑫悦广场G座",
+    "second_name": "许昌紫萄财税·工商注册·代办执照·代理记账",
+    "distance_m": 20.51,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRXLMAIV",
+    "second_id": "amap:B0HGJ1K3SL",
+    "first_name": "许昌吾悦广场A座",
+    "second_name": "魏悦城",
+    "distance_m": 2.49,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRXLMAIV",
+    "second_id": "amap:B0M6PALNHT",
+    "first_name": "许昌吾悦广场A座",
+    "second_name": "北斗电竞(魏悦城店)",
+    "distance_m": 2.74,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRXLMAIV",
+    "second_id": "amap:B0K0THXH0C",
+    "first_name": "许昌吾悦广场A座",
+    "second_name": "盛美来超市(魏悦城店)",
+    "distance_m": 24.8,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRL54OUZ",
+    "second_id": "amap:B0L6RC2ZKK",
+    "first_name": "莲城大厦1幢",
+    "second_name": "雀空间自助棋牌(万达广场店)",
+    "distance_m": 23.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRL54OUZ",
+    "second_id": "amap:B0JD6RR7GC",
+    "first_name": "莲城大厦1幢",
+    "second_name": "雀发潮24h自助棋牌(魏都万达店)",
+    "distance_m": 17.21,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRL54OUZ",
+    "second_id": "amap:B0K67A3524",
+    "first_name": "莲城大厦1幢",
+    "second_name": "许昌数谷直播电商产业园",
+    "distance_m": 29.13,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRL54OUZ",
+    "second_id": "amap:B0L1YYDEI8",
+    "first_name": "莲城大厦1幢",
+    "second_name": "莲城大厦主楼",
+    "distance_m": 28.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRFNRI84",
+    "second_id": "amap:B0KRLD6I8M",
+    "first_name": "滨河名郡物业楼",
+    "second_name": "光猪圈健身(莲韵雅苑店)",
+    "distance_m": 12.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MR0UI7AS",
+    "second_id": "amap:B0FFFSVNOT",
+    "first_name": "群艺馆综合楼",
+    "second_name": "自由人电竞(南关大街店)",
+    "distance_m": 25.8,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MGVLFOTO",
+    "second_id": "amap:B0FFFQ8T4B",
+    "first_name": "绿洲ABC座",
+    "second_name": "绿洲·梦想广场",
+    "distance_m": 20.71,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MGVLFOTO",
+    "second_id": "amap:B017601213",
+    "first_name": "绿洲ABC座",
+    "second_name": "绿洲奥斯卡影城(绿洲梦想广场店)",
+    "distance_m": 26.19,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MD1UTQMX",
+    "second_id": "amap:B0LR01O3QK",
+    "first_name": "大正壹品蓝湾写字楼A座",
+    "second_name": "金蓝湾写字楼",
+    "distance_m": 27.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MD1UTQMX",
+    "second_id": "amap:B0FFGYTUBH",
+    "first_name": "大正壹品蓝湾写字楼A座",
+    "second_name": "许昌龙祁电子商务有限公司",
+    "distance_m": 7.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M3SUCI61",
+    "second_id": "amap:B0176001E6",
+    "first_name": "聚鑫大厦",
+    "second_name": "西大派出所",
+    "distance_m": 7.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M2CKGJ2M",
+    "second_id": "amap:B0FFLQAD1F",
+    "first_name": "城标尚郡B座",
+    "second_name": "湾湾川超市(学院北路店)",
+    "distance_m": 26.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M2CKGJ2M",
+    "second_id": "amap:B0MAP1XDUZ",
+    "first_name": "城标尚郡B座",
+    "second_name": "向阳生活超市",
+    "distance_m": 7.24,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M11U272B",
+    "second_id": "amap:B0GU4AST3B",
+    "first_name": "新田360广场1号楼",
+    "second_name": "火烧夹又夹(许昌总店)",
+    "distance_m": 13.62,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M1015K8M",
+    "second_id": "amap:B0FFK29M7L",
+    "first_name": "许昌亨源通写字楼",
+    "second_name": "保税国际进口商品直购中心",
+    "distance_m": 29.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M1015K8M",
+    "second_id": "amap:B0FFHRA3NH",
+    "first_name": "许昌亨源通写字楼",
+    "second_name": "百润物业服务中心",
+    "distance_m": 16.01,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M1015K8M",
+    "second_id": "amap:B0FFGER3FB",
+    "first_name": "许昌亨源通写字楼",
+    "second_name": "新田360广场(许昌亨源通店)",
+    "distance_m": 16.3,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR3UCQNR",
+    "second_id": "amap:B0LR01OWEO",
+    "first_name": "大正中央金座E5座",
+    "second_name": "中央金座C座",
+    "distance_m": 9.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR0XQH6X",
+    "second_id": "amap:B017601CM2",
+    "first_name": "半截河街道骏景尚都A座",
+    "second_name": "骏景尚都",
+    "distance_m": 1.11,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR0XPOM5",
+    "second_id": "amap:B0G3OOCCVH",
+    "first_name": "大商新玛特A座",
+    "second_name": "云栖私影·switch(生活广场店)",
+    "distance_m": 14.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR0ONK20",
+    "second_id": "amap:B0L0L9AXTX",
+    "first_name": "汇通商务苑D栋",
+    "second_name": "九龙门电竞台球(天使城店)",
+    "distance_m": 4.82,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR01O457",
+    "second_id": "amap:B0IRFU8F4G",
+    "first_name": "中奥鑫天-西楼",
+    "second_name": "许昌市农村产权交易中心",
+    "distance_m": 21.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR01O3QK",
+    "second_id": "amap:B0FFGYTUBH",
+    "first_name": "金蓝湾写字楼",
+    "second_name": "许昌龙祁电子商务有限公司",
+    "distance_m": 22.19,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LKGR2N3Z",
+    "second_id": "amap:B0L0FD2OO8",
+    "first_name": "市民之家D座",
+    "second_name": "魏文路IFC",
+    "distance_m": 26.2,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LG7U43GO",
+    "second_id": "amap:B0L6VZONZ7",
+    "first_name": "西电子大楼",
+    "second_name": "许继软件技术有限公司",
+    "distance_m": 26.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L2MGWKDV",
+    "second_id": "amap:B0HUHULFIN",
+    "first_name": "万盛许都中心",
+    "second_name": "乐享24H健身(魏源店)",
+    "distance_m": 20.78,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1YYDEI8",
+    "second_id": "amap:B0L6RC2ZKK",
+    "first_name": "莲城大厦主楼",
+    "second_name": "雀空间自助棋牌(万达广场店)",
+    "distance_m": 15.65,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1YYDEI8",
+    "second_id": "amap:B0K67A3524",
+    "first_name": "莲城大厦主楼",
+    "second_name": "许昌数谷直播电商产业园",
+    "distance_m": 1.03,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1HRYRKJ",
+    "second_id": "amap:B0JD6RR7GC",
+    "first_name": "莲城大厦北楼",
+    "second_name": "雀发潮24h自助棋牌(魏都万达店)",
+    "distance_m": 26.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1H7Y6VG",
+    "second_id": "amap:B0LR6LGR27",
+    "first_name": "汇通商务苑B座",
+    "second_name": "新东方素质成长中心(360智慧大道校区)",
+    "distance_m": 13.63,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0ZKDHCW",
+    "second_id": "amap:B0JANCOK7B",
+    "first_name": "金鼎商厦3号楼",
+    "second_name": "魏都区南堰口社区卫生服务站",
+    "distance_m": 19.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0FD2OO8",
+    "second_id": "amap:B0LBDCY53U",
+    "first_name": "魏文路IFC",
+    "second_name": "征途财税公司注册代理记账(河南分公司)",
+    "distance_m": 11.09,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L067OAZQ",
+    "second_id": "amap:B017601BAS",
+    "first_name": "调干楼",
+    "second_name": "许昌迎宾馆",
+    "distance_m": 2.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L067NZ1A",
+    "second_id": "amap:B0FFK29M7L",
+    "first_name": "中意人寿大厦",
+    "second_name": "保税国际进口商品直购中心",
+    "distance_m": 29.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKLHOMW",
+    "second_id": "amap:B0FFJBBKTJ",
+    "first_name": "魏都高新技术产业园",
+    "second_name": "许昌魏都高新技术产业园有限公司",
+    "distance_m": 0.8,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I17SORAH",
+    "second_id": "amap:B0FFIIQWZ8",
+    "first_name": "许昌魏都区先进制造业开发区",
+    "second_name": "创新创业孵化园",
+    "distance_m": 21.14,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0K67A3524",
+    "second_id": "amap:B0L6RC2ZKK",
+    "first_name": "许昌数谷直播电商产业园",
+    "second_name": "雀空间自助棋牌(万达广场店)",
+    "distance_m": 15.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0KRR0CR",
+    "second_id": "amap:B0JB1RFXFC",
+    "first_name": "五洲数字经济产业园",
+    "second_name": "小洁直播总仓",
+    "distance_m": 28.73,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0MRA56C",
+    "second_id": "amap:B0JB6SG5NN",
+    "first_name": "奥丝电商运营中心40栋",
+    "second_name": "奥丝电商运营中心",
+    "distance_m": 4.37,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR0XQ1MG",
+    "second_id": "amap:B0FFHVWOPW",
+    "first_name": "双拥设备苑2区6栋",
+    "second_name": "杨根思双拥社区居委会",
+    "distance_m": 17.37,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR0XQ1MG",
+    "second_id": "amap:B0IU7RNLWG",
+    "first_name": "双拥设备苑2区6栋",
+    "second_name": "杨根思双拥社区退役军人服务站",
+    "distance_m": 3.11,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176002C5",
+    "second_id": "amap:B01760N9E0",
+    "first_name": "许昌市中心医院",
+    "second_name": "许昌市中心医院-急诊放射科",
+    "distance_m": 19.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600532",
+    "second_id": "amap:B0FFF32QUX",
+    "first_name": "许昌市人民医院",
+    "second_name": "许昌市人民医院住院部",
+    "distance_m": 24.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176005CC",
+    "second_id": "amap:B01760N9KS",
+    "first_name": "许昌中医院",
+    "second_name": "许昌中医院住院部",
+    "distance_m": 16.78,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600295",
+    "second_id": "amap:B0FFGLNF39",
+    "first_name": "许昌交通骨科医院",
+    "second_name": "许昌市交通医院门诊楼",
+    "distance_m": 26.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176003BD",
+    "second_id": "amap:B0JB31IFMG",
+    "first_name": "许昌老年医院",
+    "second_name": "许昌市第二人民医院-办公楼",
+    "distance_m": 20.3,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFH98M1Y",
+    "second_id": "amap:B0FFILE4XJ",
+    "first_name": "许昌博爱医院",
+    "second_name": "有色生活超市(健康路店)",
+    "distance_m": 10.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFF06S99",
+    "second_id": "amap:B0FFHVY1NV",
+    "first_name": "东方医院(智慧大道)",
+    "second_name": "半截河社区卫生服务中心",
+    "distance_m": 17.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGLB8W9",
+    "second_id": "amap:B01760N17Z",
+    "first_name": "许昌市中心医院康复医院",
+    "second_name": "南关东社区卫生服务中心",
+    "distance_m": 17.66,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGLB8W9",
+    "second_id": "amap:B0FFGLIKB3",
+    "first_name": "许昌市中心医院康复医院",
+    "second_name": "许昌市中心医院南区医院门诊",
+    "distance_m": 11.65,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600PHP",
+    "second_id": "amap:B017600PHO",
+    "first_name": "魏都区公疗医院",
+    "second_name": "魏都区西大社区卫生服务中心",
+    "distance_m": 17.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ0ANCO",
+    "second_id": "amap:B0HGVDPZ2V",
+    "first_name": "许昌市人民医院-体检",
+    "second_name": "建安司法鉴定所",
+    "distance_m": 16.47,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ0ANCO",
+    "second_id": "amap:B01760N1A6",
+    "first_name": "许昌市人民医院-体检",
+    "second_name": "许昌市人民医院门诊部",
+    "distance_m": 20.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ0ANCO",
+    "second_id": "amap:B01760NLI0",
+    "first_name": "许昌市人民医院-体检",
+    "second_name": "许昌市人民医院急诊",
+    "distance_m": 6.97,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ0ANCO",
+    "second_id": "amap:B0JB31CUK1",
+    "first_name": "许昌市人民医院-体检",
+    "second_name": "许昌市人民医院健康管理科",
+    "distance_m": 6.05,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ0ANCO",
+    "second_id": "amap:B0FFJN3N1P",
+    "first_name": "许昌市人民医院-体检",
+    "second_name": "许昌市人民医院卒中中心",
+    "distance_m": 19.14,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ0ANCO",
+    "second_id": "amap:B0G0A5V058",
+    "first_name": "许昌市人民医院-体检",
+    "second_name": "许昌市人民医院胸痛中心",
+    "distance_m": 18.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NLF4",
+    "second_id": "amap:B0FFG7535T",
+    "first_name": "魏都区高桥营社区卫生服务中心",
+    "second_name": "许昌市高桥营社区卫生服务中心预防接种门诊",
+    "distance_m": 14.3,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFI8F9SG",
+    "second_id": "amap:B0I3D515EH",
+    "first_name": "南海街社区卫生服务站",
+    "second_name": "神舟电竞(漫时空店)",
+    "distance_m": 6.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHUWL6J",
+    "second_id": "amap:B0FFLJOU9M",
+    "first_name": "许昌市按摩医院",
+    "second_name": "诚实生活超市(许继大道店)",
+    "distance_m": 7.73,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N17Z",
+    "second_id": "amap:B0FFGLIKB3",
+    "first_name": "南关东社区卫生服务中心",
+    "second_name": "许昌市中心医院南区医院门诊",
+    "distance_m": 6.54,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGME7UO",
+    "second_id": "amap:B0JUUDOYP4",
+    "first_name": "许昌市兴业社区卫生服务站",
+    "second_name": "派特超市",
+    "distance_m": 11.28,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHJ9KKB",
+    "second_id": "amap:B0MRZO51PA",
+    "first_name": "魏都区德科苑社区卫生服务站",
+    "second_name": "鲜青牧社区生鲜古槐街店",
+    "distance_m": 17.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHJ9KKB",
+    "second_id": "amap:B01760N760",
+    "first_name": "魏都区德科苑社区卫生服务站",
+    "second_name": "吃吃看笼碗(古槐街店)",
+    "distance_m": 29.47,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NLI0",
+    "second_id": "amap:B0HGVDPZ2V",
+    "first_name": "许昌市人民医院急诊",
+    "second_name": "建安司法鉴定所",
+    "distance_m": 12.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NLI0",
+    "second_id": "amap:B01760N1A6",
+    "first_name": "许昌市人民医院急诊",
+    "second_name": "许昌市人民医院门诊部",
+    "distance_m": 25.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NLI0",
+    "second_id": "amap:B0JB31CUK1",
+    "first_name": "许昌市人民医院急诊",
+    "second_name": "许昌市人民医院健康管理科",
+    "distance_m": 5.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NLI0",
+    "second_id": "amap:B0FFJN3N1P",
+    "first_name": "许昌市人民医院急诊",
+    "second_name": "许昌市人民医院卒中中心",
+    "distance_m": 21.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NLI0",
+    "second_id": "amap:B0G0A5V058",
+    "first_name": "许昌市人民医院急诊",
+    "second_name": "许昌市人民医院胸痛中心",
+    "distance_m": 22.42,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JK2AU0Y7",
+    "second_id": "amap:B01760MXKY",
+    "first_name": "许昌九紫医院",
+    "second_name": "上海长海医院技术合作医院",
+    "distance_m": 22.36,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHW17Y6",
+    "second_id": "amap:B0FFL4UL3E",
+    "first_name": "东城区天明城社区卫生服务站",
+    "second_name": "悦阳生活超市(天明城店)",
+    "distance_m": 14.21,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MDYSTKPU",
+    "second_id": "amap:B01760N18D",
+    "first_name": "豫来电-文慧社区卫生服务站便民站点",
+    "second_name": "魏都区文惠社区卫生服务站",
+    "distance_m": 16.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFFSQF6",
+    "second_id": "amap:B0LR1LUOK3",
+    "first_name": "魏都区南环社区卫生服务站",
+    "second_name": "康冠生活超市",
+    "distance_m": 4.05,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKG0OEF",
+    "second_id": "amap:B0J06UQ0KU",
+    "first_name": "魏都区凭心社区卫生服务站",
+    "second_name": "向日葵有机生活超市(万里清华苑店)",
+    "distance_m": 17.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKG0OEF",
+    "second_id": "amap:B0LG7SUHVG",
+    "first_name": "魏都区凭心社区卫生服务站",
+    "second_name": "左撇子十年炒饭·炒河粉·炒面(许昌店)",
+    "distance_m": 22.68,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3KIG",
+    "second_id": "amap:B0K31ULN8F",
+    "first_name": "魏都区府后社区卫生服务站",
+    "second_name": "宇航生活超市",
+    "distance_m": 25.97,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK3H04C",
+    "second_id": "amap:B0FFG139KQ",
+    "first_name": "豫园社区卫生服务站",
+    "second_name": "豫园社区停车场",
+    "distance_m": 25.5,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFLJUMJO",
+    "second_id": "amap:B0FFMCRPFZ",
+    "first_name": "兴天下社区卫生服务站",
+    "second_name": "新东方药业有限公司(南海街店)",
+    "distance_m": 4.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G2RGGX6B",
+    "second_id": "amap:B0FFFXUURG",
+    "first_name": "魏都区祥泰社区卫生服务站",
+    "second_name": "雅静电竞馆(御翠店)",
+    "distance_m": 27.9,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N077",
+    "second_id": "amap:B0FFG7TCB1",
+    "first_name": "帝豪花园社区卫生服务站",
+    "second_name": "特惠购物超市",
+    "distance_m": 19.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N077",
+    "second_id": "amap:B0FFJF3PPU",
+    "first_name": "帝豪花园社区卫生服务站",
+    "second_name": "廖记文杰火烧",
+    "distance_m": 13.01,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBO6Y1RM",
+    "second_id": "amap:BV10697327",
+    "first_name": "王月桥社区卫生服务站-发热门诊",
+    "second_name": "王月桥社区(公交站)",
+    "distance_m": 26.09,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LKXUO34Z",
+    "second_id": "amap:B0176019VH",
+    "first_name": "魏都区杨根思社区卫生服务站",
+    "second_name": "苗寨铁锅焖鸭(文化路店)",
+    "distance_m": 14.08,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJN3N1P",
+    "second_id": "amap:B0JB31CUK1",
+    "first_name": "许昌市人民医院卒中中心",
+    "second_name": "许昌市人民医院健康管理科",
+    "distance_m": 15.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJN3N1P",
+    "second_id": "amap:B0G0A5V058",
+    "first_name": "许昌市人民医院卒中中心",
+    "second_name": "许昌市人民医院胸痛中心",
+    "distance_m": 3.71,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHU5SOF",
+    "second_id": "amap:B0FFLIU3V3",
+    "first_name": "魏都区魏武社区卫生服务站",
+    "second_name": "梦工厂电竞(曹魏古城店)",
+    "distance_m": 19.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G0A5V058",
+    "second_id": "amap:B0JB31CUK1",
+    "first_name": "许昌市人民医院胸痛中心",
+    "second_name": "许昌市人民医院健康管理科",
+    "distance_m": 16.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGA0ZRW",
+    "second_id": "amap:B0K3SANTR1",
+    "first_name": "健发御园社区卫生服务站",
+    "second_name": "響 Xiang",
+    "distance_m": 25.3,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N1A6",
+    "second_id": "amap:B0HGVDPZ2V",
+    "first_name": "许昌市人民医院门诊部",
+    "second_name": "建安司法鉴定所",
+    "distance_m": 27.12,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N1A6",
+    "second_id": "amap:B0JB31CUK1",
+    "first_name": "许昌市人民医院门诊部",
+    "second_name": "许昌市人民医院健康管理科",
+    "distance_m": 26.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JB31CUK1",
+    "second_id": "amap:B0HGVDPZ2V",
+    "first_name": "许昌市人民医院健康管理科",
+    "second_name": "建安司法鉴定所",
+    "distance_m": 17.82,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600OZ2",
+    "second_id": "amap:B0L0C104NA",
+    "first_name": "许昌市第三高级中学",
+    "second_name": "许昌市第三高级中学停车场",
+    "distance_m": 6.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHRXNTP",
+    "second_id": "amap:B0HUMAUHH0",
+    "first_name": "许昌市新东街学校",
+    "second_name": "许昌市新东街中学",
+    "distance_m": 0.28,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019DM",
+    "second_id": "amap:B0FFGLVHTA",
+    "first_name": "许昌市学府街小学(学府街校区)",
+    "second_name": "许昌市东城区学府街幼儿园",
+    "distance_m": 1.62,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3666",
+    "second_id": "amap:B0176019C0",
+    "first_name": "许昌学院信息工程学院",
+    "second_name": "许昌学院软件职业技术学院",
+    "distance_m": 25.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3670",
+    "second_id": "amap:B0176019CH",
+    "first_name": "许昌学院机电工程学院",
+    "second_name": "许昌学院电气工程学院",
+    "distance_m": 8.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3670",
+    "second_id": "amap:B0FFFE3DNU",
+    "first_name": "许昌学院机电工程学院",
+    "second_name": "许昌学院地理与空间信息学院",
+    "distance_m": 22.86,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L6RA2JUQ",
+    "second_id": "amap:B0I0XRET8A",
+    "first_name": "优路教育(许昌公司)",
+    "second_name": "智游联盟(360店)",
+    "distance_m": 3.81,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHRPHU1",
+    "second_id": "amap:B0LBMLXH0O",
+    "first_name": "徐湾小学",
+    "second_name": "摇篮幼儿园",
+    "distance_m": 28.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHRPHU1",
+    "second_id": "amap:B0FFKQ7NU0",
+    "first_name": "徐湾小学",
+    "second_name": "徐湾小学-徐湾礼仪幼儿园",
+    "distance_m": 25.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHJ8BKH",
+    "second_id": "amap:B0FFK21AL6",
+    "first_name": "许昌学院创新创业学院",
+    "second_name": "许昌市欢欢图文广告设计中心",
+    "distance_m": 19.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JD5NC3FN",
+    "second_id": "amap:B017600PBU",
+    "first_name": "许昌市东城区英才幼儿园",
+    "second_name": "东城区实验幼儿园",
+    "distance_m": 5.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFI9KMFR",
+    "second_id": "amap:B0FFFSXGVN",
+    "first_name": "许昌学院许昌智慧交通研发中心",
+    "second_name": "许昌学院(东校区)-文学院",
+    "distance_m": 25.27,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JBX7T7XN",
+    "second_id": "amap:B0JBX7T7XO",
+    "first_name": "许昌学院商学院",
+    "second_name": "许昌学院继续教育学院",
+    "distance_m": 9.01,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JBX7T7XN",
+    "second_id": "amap:B0FFGAP8PC",
+    "first_name": "许昌学院商学院",
+    "second_name": "许昌学院法政学院",
+    "distance_m": 22.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LU7ZXCF1",
+    "second_id": "amap:B0H3A5C4ZZ",
+    "first_name": "贝思儿原版",
+    "second_name": "京东超市(恒大绿洲店)",
+    "distance_m": 26.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M6UHPOZL",
+    "second_id": "amap:B0FFHVWN5Q",
+    "first_name": "许昌电气职业学院F楼",
+    "second_name": "许昌技师学院",
+    "distance_m": 12.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M6UHPOZL",
+    "second_id": "amap:B0L0RO8235",
+    "first_name": "许昌电气职业学院F楼",
+    "second_name": "许昌电气职业学院E栋",
+    "distance_m": 14.97,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M6UHPOZL",
+    "second_id": "amap:B0MAOXJZ44",
+    "first_name": "许昌电气职业学院F楼",
+    "second_name": "许昌电气职业学院H栋",
+    "distance_m": 7.23,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019C4",
+    "second_id": "amap:B0FFHPSTNX",
+    "first_name": "许昌学院音乐舞蹈学院",
+    "second_name": "许昌学院设计艺术学院",
+    "distance_m": 9.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019C4",
+    "second_id": "amap:B0176019C3",
+    "first_name": "许昌学院音乐舞蹈学院",
+    "second_name": "许昌学院美术学院",
+    "distance_m": 19.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVWN5Q",
+    "second_id": "amap:B0L0RO8235",
+    "first_name": "许昌技师学院",
+    "second_name": "许昌电气职业学院E栋",
+    "distance_m": 22.67,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVWN5Q",
+    "second_id": "amap:B0MAOXJZ44",
+    "first_name": "许昌技师学院",
+    "second_name": "许昌电气职业学院H栋",
+    "distance_m": 13.65,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L27SK1KT",
+    "second_id": "amap:B0FFIETA5Y",
+    "first_name": "聋哑学校",
+    "second_name": "豆腐宴老店(议台路店)",
+    "distance_m": 15.34,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0RO8235",
+    "second_id": "amap:B0MAOXJZ44",
+    "first_name": "许昌电气职业学院E栋",
+    "second_name": "许昌电气职业学院H栋",
+    "distance_m": 9.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGAP8PC",
+    "second_id": "amap:B0JBX7T7XO",
+    "first_name": "许昌学院法政学院",
+    "second_name": "许昌学院继续教育学院",
+    "distance_m": 13.62,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGAP8PC",
+    "second_id": "amap:B0FFI9LQB1",
+    "first_name": "许昌学院法政学院",
+    "second_name": "许昌学院文学与传媒学院",
+    "distance_m": 28.07,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFI06DV6",
+    "second_id": "amap:B017600PA4",
+    "first_name": "新太阳儿童之家(毓秀路店)",
+    "second_name": "许昌实验学前教育集团文峰园",
+    "distance_m": 22.36,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019C3",
+    "second_id": "amap:B0FFHPSTNX",
+    "first_name": "许昌学院美术学院",
+    "second_name": "许昌学院设计艺术学院",
+    "distance_m": 16.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJK77OL",
+    "second_id": "amap:B0JBP9AO1U",
+    "first_name": "行知贝尔幼儿园",
+    "second_name": "大象幼儿园",
+    "distance_m": 7.85,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LR6DEQFT",
+    "second_id": "amap:B0FFFVAN9A",
+    "first_name": "童心画室",
+    "second_name": "王洛红烧猪蹄砂锅豆面(许昌分店)",
+    "distance_m": 19.68,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I1JZD3I6",
+    "second_id": "amap:B0J0RSKHMC",
+    "first_name": "米罗童画(天悦广场店)",
+    "second_name": "GameDash电玩·桌游(天悦广场店)",
+    "distance_m": 17.6,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LBMLXH0O",
+    "second_id": "amap:B0FFKQ7NU0",
+    "first_name": "摇篮幼儿园",
+    "second_name": "徐湾小学-徐湾礼仪幼儿园",
+    "distance_m": 10.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IGXZJWW3",
+    "second_id": "amap:B0G23ZAPMC",
+    "first_name": "许昌市魏都区建设路幼儿园",
+    "second_name": "许昌市市场监督管理局魏都区分局",
+    "distance_m": 26.12,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0MN97XF",
+    "second_id": "amap:B0FFGHLVQR",
+    "first_name": "陕西旅游烹饪职业学院",
+    "second_name": "方记杂炣(机房街店)",
+    "distance_m": 29.27,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KUBLSGF9",
+    "second_id": "amap:B0G211BDYF",
+    "first_name": "阅读公园",
+    "second_name": "新大新生活超市(新大新·幸福时代广场店)",
+    "distance_m": 17.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KUBLSGF9",
+    "second_id": "amap:B0LK6MJVG9",
+    "first_name": "阅读公园",
+    "second_name": "奥斯卡头等舱影城(新大新幸福时代广场店)",
+    "distance_m": 16.59,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KUBLSGF9",
+    "second_id": "amap:B0GK193A4S",
+    "first_name": "阅读公园",
+    "second_name": "新大新·幸福时代广场",
+    "distance_m": 12.69,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKS8IFG",
+    "second_id": "amap:B0FFHOTQ8E",
+    "first_name": "樊文花(万达广场店)",
+    "second_name": "万达广场",
+    "distance_m": 3.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK29M7L",
+    "second_id": "amap:B0FFHRA3NH",
+    "first_name": "保税国际进口商品直购中心",
+    "second_name": "百润物业服务中心",
+    "distance_m": 14.47,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J6YS04RS",
+    "second_id": "amap:B0KRR4NQAP",
+    "first_name": "DL胖东来(许昌天使城店)",
+    "second_name": "胖东来天使城影城",
+    "distance_m": 15.7,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J6YS04RS",
+    "second_id": "amap:B0JKSD42Y4",
+    "first_name": "DL胖东来(许昌天使城店)",
+    "second_name": "娃娃优格糖自制玩偶(许昌胖东来天使城店)",
+    "distance_m": 14.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GK193A4S",
+    "second_id": "amap:B0G211BDYF",
+    "first_name": "新大新·幸福时代广场",
+    "second_name": "新大新生活超市(新大新·幸福时代广场店)",
+    "distance_m": 7.7,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GK193A4S",
+    "second_id": "amap:B0LK6MJVG9",
+    "first_name": "新大新·幸福时代广场",
+    "second_name": "奥斯卡头等舱影城(新大新幸福时代广场店)",
+    "distance_m": 3.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFM5PDIR",
+    "second_id": "amap:B0FFG1WWSM",
+    "first_name": "胖东来美食城",
+    "second_name": "胖东来生活广场",
+    "distance_m": 28.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HGJ1K3SL",
+    "second_id": "amap:B0M6PALNHT",
+    "first_name": "魏悦城",
+    "second_name": "北斗电竞(魏悦城店)",
+    "distance_m": 0.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HGJ1K3SL",
+    "second_id": "amap:B0K0THXH0C",
+    "first_name": "魏悦城",
+    "second_name": "盛美来超市(魏悦城店)",
+    "distance_m": 22.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFQ8T4B",
+    "second_id": "amap:B017601213",
+    "first_name": "绿洲·梦想广场",
+    "second_name": "绿洲奥斯卡影城(绿洲梦想广场店)",
+    "distance_m": 5.8,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MSB0",
+    "second_id": "amap:B0IRK7WE1A",
+    "first_name": "胖东来时代广场",
+    "second_name": "胖东来影城(时代广场店)",
+    "distance_m": 28.69,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MSB0",
+    "second_id": "amap:B0I13OZ9UJ",
+    "first_name": "胖东来时代广场",
+    "second_name": "东来茶叶超市(胖东来时代广场店)",
+    "distance_m": 8.36,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK3536F",
+    "second_id": "amap:B0FFH2RCDU",
+    "first_name": "六一商城",
+    "second_name": "福建千里香馄饨王(六一路店)",
+    "distance_m": 8.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGER3FB",
+    "second_id": "amap:B0KRMM1T6V",
+    "first_name": "新田360广场(许昌亨源通店)",
+    "second_name": "哈彼王国梦幻乐园",
+    "distance_m": 19.52,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGER3FB",
+    "second_id": "amap:B0FFIGCUBH",
+    "first_name": "新田360广场(许昌亨源通店)",
+    "second_name": "新田360超市(新田360广场店)",
+    "distance_m": 27.42,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG1WWSM",
+    "second_id": "amap:B0H2JAUJ9F",
+    "first_name": "胖东来生活广场",
+    "second_name": "DL超市(胖东来生活广场店)",
+    "distance_m": 7.02,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJVJ683",
+    "second_id": "amap:BV10549331",
+    "first_name": "DL胖东来超市(许昌人民店)",
+    "second_name": "劳动路人民路口(公交站)",
+    "distance_m": 24.5,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760119Y",
+    "second_id": "amap:B0FFIA6WZQ",
+    "first_name": "DL胖东来超市(许昌劳动店)",
+    "second_name": "北京果木烤鸭(劳动店)",
+    "distance_m": 28.13,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G211BDYF",
+    "second_id": "amap:B0LK6MJVG9",
+    "first_name": "新大新生活超市(新大新·幸福时代广场店)",
+    "second_name": "奥斯卡头等舱影城(新大新幸福时代广场店)",
+    "distance_m": 6.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I13OZ9UJ",
+    "second_id": "amap:B0IRK7WE1A",
+    "first_name": "东来茶叶超市(胖东来时代广场店)",
+    "second_name": "胖东来影城(时代广场店)",
+    "distance_m": 20.76,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFIGCUBH",
+    "second_id": "amap:B0KRMM1T6V",
+    "first_name": "新田360超市(新田360广场店)",
+    "second_name": "哈彼王国梦幻乐园",
+    "distance_m": 23.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJYKKAP",
+    "second_id": "amap:B0FFL7DUF9",
+    "first_name": "9盛祥生活超市(城标·尚郡店)",
+    "second_name": "蚂蚁健身(前进路店)",
+    "distance_m": 15.22,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJYKKAP",
+    "second_id": "amap:B0KRJL3K1U",
+    "first_name": "9盛祥生活超市(城标·尚郡店)",
+    "second_name": "旺角台球俱乐部旗舰店",
+    "distance_m": 10.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MUGSJP02",
+    "second_id": "amap:B0FFHEQQ8P",
+    "first_name": "FLY福来鲜生超市",
+    "second_name": "胖子店(南海街店)",
+    "distance_m": 5.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J0VZWF7T",
+    "second_id": "amap:B0LKBXVN4N",
+    "first_name": "盛翔购物广场(华佗路店)",
+    "second_name": "鑫翔购物中心超市",
+    "distance_m": 9.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRD7OY3C",
+    "second_id": "amap:B0I0JC7ZJD",
+    "first_name": "鼓楼悦尚超市(许昌万达广场店)",
+    "second_name": "霸王茶姬(许昌魏都万达Tea Bar店)",
+    "distance_m": 12.33,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0K0THXH0C",
+    "second_id": "amap:B0M6PALNHT",
+    "first_name": "盛美来超市(魏悦城店)",
+    "second_name": "北斗电竞(魏悦城店)",
+    "distance_m": 22.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JBZUMQSM",
+    "second_id": "amap:B0KB6N9NDD",
+    "first_name": "喜悦生活超市(湖畔名居店)",
+    "second_name": "青云电竞",
+    "distance_m": 25.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019TK",
+    "second_id": "amap:B0FFFZTW0J",
+    "first_name": "金三角购物中心",
+    "second_name": "马记酱牛肉羊杂老店",
+    "distance_m": 14.49,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L6TLEFC7",
+    "second_id": "amap:B0FFFE584N",
+    "first_name": "盈合购物广场许扶店",
+    "second_name": "幸福万家(许扶店)",
+    "distance_m": 15.4,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JGBC5R89",
+    "second_id": "amap:B0IR6ZQOPC",
+    "first_name": "喜悦生活超市(翡翠华庭店)",
+    "second_name": "大汉口热干面(南海街店)",
+    "distance_m": 17.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JRCH2A13",
+    "second_id": "amap:B0JK3U8Q7M",
+    "first_name": "屈臣氏(万达广场店)",
+    "second_name": "赛博方块·悦动格子(许昌万达广场店)",
+    "distance_m": 15.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JRCH2A13",
+    "second_id": "amap:B0L3ASSUCA",
+    "first_name": "屈臣氏(万达广场店)",
+    "second_name": "潮玩天地(许昌万达广场店)",
+    "distance_m": 10.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JRCH2A13",
+    "second_id": "amap:B0JRV9NJS5",
+    "first_name": "屈臣氏(万达广场店)",
+    "second_name": "云鲸游泳俱乐部(万达广场店)",
+    "distance_m": 18.93,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVX1W7",
+    "second_id": "amap:B0FFFZTK6E",
+    "first_name": "鑫悦超市(鼎鑫鑫悦广场店)",
+    "second_name": "鼎鑫鑫悦广场",
+    "distance_m": 16.6,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017601AKT",
+    "second_id": "amap:B0FFFSOA8C",
+    "first_name": "政实达超市",
+    "second_name": "胖强凉菜(望田路店)",
+    "distance_m": 18.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MAP1XDUZ",
+    "second_id": "amap:B0FFLQAD1F",
+    "first_name": "向阳生活超市",
+    "second_name": "湾湾川超市(学院北路店)",
+    "distance_m": 28.89,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFST7I4",
+    "second_id": "amap:B017601AZO",
+    "first_name": "福牛超市",
+    "second_name": "一点通网吧(莲城大道店)",
+    "distance_m": 11.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK0MV3R",
+    "second_id": "amap:B0IB3M8WBK",
+    "first_name": "润福超市(九洲溪雅苑店)",
+    "second_name": "许昌市东城区多多影咖馆",
+    "distance_m": 22.24,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3CPI",
+    "second_id": "amap:B0JU3S0YD3",
+    "first_name": "胖来红超市",
+    "second_name": "云栖私影·switch(七一路时代店)",
+    "distance_m": 4.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE3CSI",
+    "second_id": "amap:B0FFF5RW53",
+    "first_name": "百家全超市(健康店)",
+    "second_name": "老余脆皮炸鸡",
+    "distance_m": 17.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE34RM",
+    "second_id": "amap:B0LU3R8NSX",
+    "first_name": "金帝超市(七一路店)",
+    "second_name": "摩顶云熙电竞酒店(曹魏古城胖东来时代广场店)",
+    "distance_m": 7.84,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LUTR3M95",
+    "second_id": "amap:B0JK27VD0K",
+    "first_name": "全好佳超市(西大街店)",
+    "second_name": "惠生活(榆柳街店)",
+    "distance_m": 26.37,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LUTR3M95",
+    "second_id": "amap:B0FFGYK51W",
+    "first_name": "全好佳超市(西大街店)",
+    "second_name": "好先生烤肉饭(七彩城8号院店)",
+    "distance_m": 17.51,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7TCB1",
+    "second_id": "amap:B0FFJF3PPU",
+    "first_name": "特惠购物超市",
+    "second_name": "廖记文杰火烧",
+    "distance_m": 6.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFH3GULT",
+    "second_id": "amap:B0KDZ1TLLW",
+    "first_name": "仟家汇生活超市(安和店)",
+    "second_name": "S-pizza披萨速递(许昌万达店)",
+    "distance_m": 23.96,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M69LD5GB",
+    "second_id": "amap:B0I06LT4AO",
+    "first_name": "润家生活超市",
+    "second_name": "筋面郎饸饹面(豫中桂园店)",
+    "distance_m": 22.73,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1OZNCA3",
+    "second_id": "amap:B0FFHCD75N",
+    "first_name": "正旺鲜生活超市五一路店",
+    "second_name": "汉魏柴火味道(五一路店)",
+    "distance_m": 20.49,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFT48VC",
+    "second_id": "amap:B0FFLJLQ5I",
+    "first_name": "诚信烟酒超市(五一路店)",
+    "second_name": "许昌市市场监督管理局魏都区分局五一路办公区",
+    "distance_m": 25.21,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFT48VC",
+    "second_id": "amap:B0L1GZA90D",
+    "first_name": "诚信烟酒超市(五一路店)",
+    "second_name": "许昌市市场监督管理局魏都区分局丁庄市场监督管理所",
+    "distance_m": 8.2,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LDPR30KP",
+    "second_id": "amap:B0FFHVX525",
+    "first_name": "拾惠客24H超市(许昌天使城店)",
+    "second_name": "赵湾小区2期",
+    "distance_m": 9.32,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LDPR30KP",
+    "second_id": "amap:B0FFH2HNGS",
+    "first_name": "拾惠客24H超市(许昌天使城店)",
+    "second_name": "赵湾小区",
+    "distance_m": 2.52,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRZO51PA",
+    "second_id": "amap:B0FFH5W4WD",
+    "first_name": "鲜青牧社区生鲜古槐街店",
+    "second_name": "孙记老式砂锅",
+    "distance_m": 18.25,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MRZO51PA",
+    "second_id": "amap:B01760N760",
+    "first_name": "鲜青牧社区生鲜古槐街店",
+    "second_name": "吃吃看笼碗(古槐街店)",
+    "distance_m": 24.2,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L3X92CZ2",
+    "second_id": "amap:B0J2C63FI4",
+    "first_name": "聚源生活超市",
+    "second_name": "大参林新特药房(鹿鸣湖壹号首府店)",
+    "distance_m": 8.09,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H33MTTI4",
+    "second_id": "amap:B0FFFZTQ18",
+    "first_name": "高庄幸福超市(高庄家园店)",
+    "second_name": "高庄家园",
+    "distance_m": 17.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IA3BG446",
+    "second_id": "amap:B0FFGQQV5W",
+    "first_name": "恒达相府商业街",
+    "second_name": "恒达相府商业街",
+    "distance_m": 2.24,
+    "same_name": true,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MU9UZANN",
+    "second_id": "amap:B0HDSR6DDR",
+    "first_name": "爱购熊超市(翡翠店)",
+    "second_name": "北斗电竞(万达店)",
+    "distance_m": 29.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J06UQ0KU",
+    "second_id": "amap:B0LG7SUHVG",
+    "first_name": "向日葵有机生活超市(万里清华苑店)",
+    "second_name": "左撇子十年炒饭·炒河粉·炒面(许昌店)",
+    "distance_m": 6.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKV8MZP",
+    "second_id": "amap:B0L6DM4YZ8",
+    "first_name": "天悦广场",
+    "second_name": "象Bar",
+    "distance_m": 27.5,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKS7I86",
+    "second_id": "amap:B0K17AN9IZ",
+    "first_name": "一峰国际都汇",
+    "second_name": "安靖·Weeks点播影院(天悦广场店)",
+    "distance_m": 0.29,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJLZ8XZ",
+    "second_id": "amap:B0KUZCNE7Q",
+    "first_name": "丽晶天城",
+    "second_name": "吴庄新城",
+    "distance_m": 1.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFSRMTE",
+    "second_id": "amap:B0FFGG1RZ6",
+    "first_name": "南苑小区(新兴西路)",
+    "second_name": "小海肥牛(南苑小区店)",
+    "distance_m": 24.55,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFH2HNGS",
+    "second_id": "amap:B0FFHVX525",
+    "first_name": "赵湾小区",
+    "second_name": "赵湾小区2期",
+    "distance_m": 10.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MSFA",
+    "second_id": "amap:B0FFFRJRUN",
+    "first_name": "福居苑(北关大街)",
+    "second_name": "川香瓦罐(八一店)",
+    "distance_m": 28.3,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0K667VQQC",
+    "second_id": "amap:B0J3DHJZDC",
+    "first_name": "许昌晟隆实业有限公司",
+    "second_name": "许昌市泓方包装印刷有限公司",
+    "distance_m": 17.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KG1C7N22",
+    "second_id": "amap:B0J3T7EAYT",
+    "first_name": "许昌盛业电器印制板有限公司",
+    "second_name": "河南乐盈机电设备科技有限公司",
+    "distance_m": 4.78,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFLPWNDC",
+    "second_id": "amap:B0JDPZQU8U",
+    "first_name": "许昌京益求精科技有限公司",
+    "second_name": "许昌麦迪科技有限公司",
+    "distance_m": 20.74,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JR6YGGAU",
+    "second_id": "amap:BV10981463",
+    "first_name": "许昌嘉信汽车销售服务有限公司",
+    "second_name": "延安路陈庄街口(公交站)",
+    "distance_m": 24.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760NOBU",
+    "second_id": "amap:B0LR57B44R",
+    "first_name": "许昌宏伟热力有限公司",
+    "second_name": "许昌驰泽工艺品有限公司",
+    "distance_m": 24.76,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600Z32",
+    "second_id": "amap:B0L6VZONZ7",
+    "first_name": "许继电气科学技术研究院",
+    "second_name": "许继软件技术有限公司",
+    "distance_m": 4.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JB1RFXFC",
+    "second_id": "amap:B0L3FH5V8N",
+    "first_name": "小洁直播总仓",
+    "second_name": "千万间装饰",
+    "distance_m": 24.76,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G3LDFN8O",
+    "second_id": "amap:BV10932566",
+    "first_name": "河南中烟许昌卷烟厂",
+    "second_name": "帝豪广场(公交站)",
+    "distance_m": 25.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFGC5S15",
+    "second_id": "amap:B0FFGC6290",
+    "first_name": "五里岗国库",
+    "second_name": "实佳面粉有限公司",
+    "distance_m": 10.09,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H1DZMG3X",
+    "second_id": "amap:B0FFLFJQFG",
+    "first_name": "许昌紫萄财税·工商注册·代办执照·代理记账",
+    "second_name": "神舟电竞(鑫悦广场店)",
+    "distance_m": 27.07,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J11S8W2E",
+    "second_id": "amap:B0KRFHPCG8",
+    "first_name": "许昌市众安消防科技有限公司",
+    "second_name": "羽爱运动俱乐部",
+    "distance_m": 24.2,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019R0",
+    "second_id": "amap:B0K1BHU8I1",
+    "first_name": "许昌恒生药业公司",
+    "second_name": "河南玖顺药业有限公司",
+    "distance_m": 3.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KD1SJXRO",
+    "second_id": "amap:B0KRJCCFY8",
+    "first_name": "许昌盈客科技有限公司",
+    "second_name": "中影MAX国际影城(金汇广场店)",
+    "distance_m": 27.52,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KD1SJXRO",
+    "second_id": "amap:B0L32H34O3",
+    "first_name": "许昌盈客科技有限公司",
+    "second_name": "许昌恒少代理记账有限公司",
+    "distance_m": 24.88,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHSVSVE",
+    "second_id": "amap:B0FFHW2AAM",
+    "first_name": "丽敏工程图文广告",
+    "second_name": "雪聪酱牛肉(帝豪花园店)",
+    "distance_m": 13.49,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G3ZZR0F6",
+    "second_id": "amap:B0JGJ95TFM",
+    "first_name": "天悦广场营销中心",
+    "second_name": "添悦·国际娱乐",
+    "distance_m": 28.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H34H3V89",
+    "second_id": "amap:BV10431035",
+    "first_name": "千图广告",
+    "second_name": "西湖公园南门(公交站)",
+    "distance_m": 21.18,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JUDMZ8X4",
+    "second_id": "amap:B0IA3AQ188",
+    "first_name": "许昌禾勤税务代理有限公司",
+    "second_name": "龙猫私影·switch(七一路时代店)",
+    "distance_m": 5.21,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LB9SU948",
+    "second_id": "amap:B0LA55RHD4",
+    "first_name": "忻派美至家装饰",
+    "second_name": "四个朋友24h自助棋牌室",
+    "distance_m": 13.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRMU30XZ",
+    "second_id": "amap:B0I3MZMSW6",
+    "first_name": "许昌管安家装饰有限公司",
+    "second_name": "非凡体育篮球馆",
+    "distance_m": 28.22,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0K3GX8PHO",
+    "second_id": "amap:B0L1Z5MHPX",
+    "first_name": "悦都汇商务国际",
+    "second_name": "星野电竞(星游网吧)",
+    "distance_m": 3.01,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0K3GX8PHO",
+    "second_id": "amap:B0L35ZELW1",
+    "first_name": "悦都汇商务国际",
+    "second_name": "自律侠24H共享健身(许昌学院店)",
+    "distance_m": 25.5,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJI241O",
+    "second_id": "amap:B0FFJY7LHO",
+    "first_name": "万达影城(许昌万达广场店)",
+    "second_name": "星巴克(许昌万达广场店)",
+    "distance_m": 11.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJI241O",
+    "second_id": "amap:B0JR2KFGPV",
+    "first_name": "万达影城(许昌万达广场店)",
+    "second_name": "Z先生超级密室(万达广场店)",
+    "distance_m": 13.63,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GDOZPDX3",
+    "second_id": "amap:B0IRD7NJ1A",
+    "first_name": "北斗电竞-麦迪店",
+    "second_name": "体言健身工作室",
+    "distance_m": 12.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KDLML86G",
+    "second_id": "amap:B0KUN9UYDK",
+    "first_name": "北斗电竞馆(鹿鸣湖店)",
+    "second_name": "乔氏台球俱乐部",
+    "distance_m": 6.89,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GDOSQF26",
+    "second_id": "amap:B0IAY5X2LB",
+    "first_name": "北斗电竞(麦田店)",
+    "second_name": "北斗·乔氏台球俱乐部(胖东来生活广场店)(装修中)",
+    "distance_m": 17.58,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J065HQE8",
+    "second_id": "amap:B0FFJKUIB0",
+    "first_name": "唱吧麦颂KTV(新田360广场店)",
+    "second_name": "华谊兄弟影院(许昌亨源通新田360广场店)",
+    "distance_m": 20.18,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HB459PEG",
+    "second_id": "amap:B0LKF6RTCA",
+    "first_name": "奥斯卡影城(云鼎广场店)",
+    "second_name": "唱吧麦颂KTV(中原云鼎广场店)",
+    "distance_m": 22.52,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJKUIB0",
+    "second_id": "amap:B0KRMM1T6V",
+    "first_name": "华谊兄弟影院(许昌亨源通新田360广场店)",
+    "second_name": "哈彼王国梦幻乐园",
+    "distance_m": 29.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRR4NQAP",
+    "second_id": "amap:B0JKSD42Y4",
+    "first_name": "胖东来天使城影城",
+    "second_name": "娃娃优格糖自制玩偶(许昌胖东来天使城店)",
+    "distance_m": 29.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H26U0LME",
+    "second_id": "amap:B0FFFA3LF4",
+    "first_name": "PARTY KTV(湖滨路店)",
+    "second_name": "乐游熊江南电竞",
+    "distance_m": 20.13,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H26U0LME",
+    "second_id": "amap:BV10966948",
+    "first_name": "PARTY KTV(湖滨路店)",
+    "second_name": "湖滨路西大街口(公交站)",
+    "distance_m": 22.23,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JDZ7JY59",
+    "second_id": "amap:B0KRUZZ92Q",
+    "first_name": "北斗电竞闽豫(云天)店",
+    "second_name": "北斗·乔氏台球俱乐部(文峰路店)",
+    "distance_m": 29.67,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRFC80QJ",
+    "second_id": "amap:B0FFJJ08DP",
+    "first_name": "悦秀ktv(金汇广场店)",
+    "second_name": "阿明煲仔饭(金汇广场店)",
+    "distance_m": 23.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017601213",
+    "second_id": "amap:B0M6HRBQUA",
+    "first_name": "绿洲奥斯卡影城(绿洲梦想广场店)",
+    "second_name": "潮玩自助KTV(绿洲梦想广场店)",
+    "distance_m": 28.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1Z5MHPX",
+    "second_id": "amap:B0L35ZELW1",
+    "first_name": "星野电竞(星游网吧)",
+    "second_name": "自律侠24H共享健身(许昌学院店)",
+    "distance_m": 22.7,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRJL3K1U",
+    "second_id": "amap:B0FFL7DUF9",
+    "first_name": "旺角台球俱乐部旗舰店",
+    "second_name": "蚂蚁健身(前进路店)",
+    "distance_m": 17.05,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRUZZ92Q",
+    "second_id": "amap:B0FFFE3R1P",
+    "first_name": "北斗·乔氏台球俱乐部(文峰路店)",
+    "second_name": "永乐门量贩式KTV(八一路店)",
+    "distance_m": 5.19,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKSQ8E1",
+    "second_id": "amap:B0FFFZTW0J",
+    "first_name": "战狼电竞(国通店)",
+    "second_name": "马记酱牛肉羊杂老店",
+    "distance_m": 20.36,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJCYYL2",
+    "second_id": "amap:B0FFHDT010",
+    "first_name": "龙猫主题影院(亨源通·世纪广场1号楼店)",
+    "second_name": "阿泽西炸鸡(360广场店)",
+    "distance_m": 21.83,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JK3U8Q7M",
+    "second_id": "amap:B0L3ASSUCA",
+    "first_name": "赛博方块·悦动格子(许昌万达广场店)",
+    "second_name": "潮玩天地(许昌万达广场店)",
+    "distance_m": 15.56,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KAH11RJZ",
+    "second_id": "amap:B0MAPUWUUV",
+    "first_name": "行·健身",
+    "second_name": "汉江里炸鸡",
+    "distance_m": 16.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L625RFQH",
+    "second_id": "amap:B0J21LDS9O",
+    "first_name": "雀掌柜24小时自助棋牌(天悦广场店)",
+    "second_name": "RelishGrocery福里商店·酒吧(天悦广场店)",
+    "distance_m": 18.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L625RFQH",
+    "second_id": "amap:B0LRSU49PO",
+    "first_name": "雀掌柜24小时自助棋牌(天悦广场店)",
+    "second_name": "三旬酒馆(天悦广场店)",
+    "distance_m": 15.63,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L625RFQH",
+    "second_id": "amap:B0J23C96KV",
+    "first_name": "雀掌柜24小时自助棋牌(天悦广场店)",
+    "second_name": "雀空间24小时自助棋牌(天悦广场店)",
+    "distance_m": 6.08,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L625RFQH",
+    "second_id": "amap:B0MAAZ9ARC",
+    "first_name": "雀掌柜24小时自助棋牌(天悦广场店)",
+    "second_name": "民谣遇烧烤酒馆(天悦广场店)",
+    "distance_m": 28.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KR7AL2AE",
+    "second_id": "amap:B0MBD5G98R",
+    "first_name": "汉唐KTV",
+    "second_name": "嗨客KTV",
+    "distance_m": 13.32,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MAAZ9ARC",
+    "second_id": "amap:B0J23C96KV",
+    "first_name": "民谣遇烧烤酒馆(天悦广场店)",
+    "second_name": "雀空间24小时自助棋牌(天悦广场店)",
+    "distance_m": 26.16,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KGS9IQ8H",
+    "second_id": "amap:B0K21U03G1",
+    "first_name": "拿铁健身(东区店)",
+    "second_name": "悦来城台球棋牌(旗舰店)",
+    "distance_m": 17.15,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KD07UX5S",
+    "second_id": "amap:B0JUDN14TU",
+    "first_name": "蚂蚁体育游泳馆(恒大绿洲店)(暂停营业)",
+    "second_name": "优腾体育小飞人篮球运动中心",
+    "distance_m": 7.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KKMUEMK8",
+    "second_id": "amap:B0MAMA5IDA",
+    "first_name": "坤亚电竞馆(许昌学院店)",
+    "second_name": "川奇麻辣香锅(许昌学院店)",
+    "distance_m": 3.79,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L3ASSUCA",
+    "second_id": "amap:B0JRV9NJS5",
+    "first_name": "潮玩天地(许昌万达广场店)",
+    "second_name": "云鲸游泳俱乐部(万达广场店)",
+    "distance_m": 18.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J21LDS9O",
+    "second_id": "amap:B0LRSU49PO",
+    "first_name": "RelishGrocery福里商店·酒吧(天悦广场店)",
+    "second_name": "三旬酒馆(天悦广场店)",
+    "distance_m": 7.62,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J21LDS9O",
+    "second_id": "amap:B0J23C96KV",
+    "first_name": "RelishGrocery福里商店·酒吧(天悦广场店)",
+    "second_name": "雀空间24小时自助棋牌(天悦广场店)",
+    "distance_m": 21.4,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JKC9L2SQ",
+    "second_id": "amap:B0FFJJ08DP",
+    "first_name": "KK·party(金汇广场店)",
+    "second_name": "阿明煲仔饭(金汇广场店)",
+    "distance_m": 19.16,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JR2KFGPV",
+    "second_id": "amap:B0FFJY7LHO",
+    "first_name": "Z先生超级密室(万达广场店)",
+    "second_name": "星巴克(许昌万达广场店)",
+    "distance_m": 2.58,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRSU49PO",
+    "second_id": "amap:B0J23C96KV",
+    "first_name": "三旬酒馆(天悦广场店)",
+    "second_name": "雀空间24小时自助棋牌(天悦广场店)",
+    "distance_m": 16.65,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G2C7AZ9V",
+    "second_id": "amap:B017600XF2",
+    "first_name": "三鼎·铂悦汇商务会所",
+    "second_name": "三鼎华悦大酒店",
+    "distance_m": 3.64,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G2C7AZ9V",
+    "second_id": "amap:B0I1NRDLOM",
+    "first_name": "三鼎·铂悦汇商务会所",
+    "second_name": "三鼎华悦大酒店蓝湾康体中心",
+    "distance_m": 10.11,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KDP5ZRZ2",
+    "second_id": "amap:BV10549331",
+    "first_name": "优尚台球俱乐部(魏源广场店)",
+    "second_name": "劳动路人民路口(公交站)",
+    "distance_m": 25.76,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JUMUEE86",
+    "second_id": "amap:B0I0XRELHG",
+    "first_name": "深呼吸健身会所(金汇广场店)",
+    "second_name": "优戏沉浸式实景密室剧场(许昌胖东来金汇广场天使城店)",
+    "distance_m": 24.94,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KRMM1T6V",
+    "second_id": "amap:B0GU4AST3B",
+    "first_name": "哈彼王国梦幻乐园",
+    "second_name": "火烧夹又夹(许昌总店)",
+    "distance_m": 24.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I1NRDLOM",
+    "second_id": "amap:B017600XF2",
+    "first_name": "三鼎华悦大酒店蓝湾康体中心",
+    "second_name": "三鼎华悦大酒店",
+    "distance_m": 8.25,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N370",
+    "second_id": "amap:B0FFFRJBXY",
+    "first_name": "吉利笼碗(八一路店)",
+    "second_name": "李家羊肉馆(仪表厂家属院店)",
+    "distance_m": 13.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760N370",
+    "second_id": "amap:B017600VW0",
+    "first_name": "吉利笼碗(八一路店)",
+    "second_name": "化记农家烩菜(仪表厂家属院店)",
+    "distance_m": 5.99,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFW837H",
+    "second_id": "amap:B0FFFZU0CQ",
+    "first_name": "启点火锅",
+    "second_name": "又一香手工烩面(向阳路店)",
+    "distance_m": 22.5,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600VW0",
+    "second_id": "amap:B0FFFRJBXY",
+    "first_name": "化记农家烩菜(仪表厂家属院店)",
+    "second_name": "李家羊肉馆(仪表厂家属院店)",
+    "distance_m": 19.87,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHVDOBN",
+    "second_id": "amap:B0FFHVX6CE",
+    "first_name": "老店包子铺(恒大绿洲店)",
+    "second_name": "广涛焖面(南海街店)",
+    "distance_m": 9.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M1YDBGCN",
+    "second_id": "amap:B0FFFOIF4P",
+    "first_name": "筋面郎饸饹面(许由路分店)",
+    "second_name": "筋麦穗饸饹面",
+    "distance_m": 18.08,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0G3ZYO1YD",
+    "second_id": "amap:B0G2RYGI1I",
+    "first_name": "原谷原麦(文化路店)",
+    "second_name": "北舞渡胡辣汤(许昌学院西家属院店)",
+    "distance_m": 23.84,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG11QMM",
+    "second_id": "amap:B0FFKT3ZQ0",
+    "first_name": "汉中面皮店(兴华路店)",
+    "second_name": "原谷原麦(兴华路店)",
+    "distance_m": 24.66,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HD79QV26",
+    "second_id": "amap:B0GU4AST3B",
+    "first_name": "炉小二酱酱鸡烧饼(许昌亨源通店)",
+    "second_name": "火烧夹又夹(许昌总店)",
+    "distance_m": 28.23,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHK671X",
+    "second_id": "amap:B0FFFE58JP",
+    "first_name": "赵记蒸碗豆腐脑",
+    "second_name": "许昌市房产交易中心",
+    "distance_m": 16.34,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600P4L",
+    "second_id": "amap:B017600P4T",
+    "first_name": "老北京涮羊肉(延中社区卫生服务站东)",
+    "second_name": "吴庄驴肉老店(许昌总店)",
+    "distance_m": 15.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B01760MX6Y",
+    "second_id": "amap:B0FFFV8431",
+    "first_name": "惠香羊肉馆",
+    "second_name": "黄记热干面(引龙街店)",
+    "distance_m": 15.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017601ACN",
+    "second_id": "amap:BV11527248",
+    "first_name": "台湾茗顺阁(金质西湖花园店)",
+    "second_name": "清虚街南口曹丞相府(公交站)",
+    "distance_m": 7.42,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFRJP6K",
+    "second_id": "amap:BV11288979",
+    "first_name": "薛记川菜馆(食品安全示范街店)",
+    "second_name": "八一路劳动路西口(公交站)",
+    "distance_m": 25.46,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFJ8X0IE",
+    "second_id": "amap:B0LRLNMQ44",
+    "first_name": "莲城国际雅荷苑停车场(出入口)",
+    "second_name": "雅荷苑小区院委会",
+    "distance_m": 26.26,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFHUD37B",
+    "second_id": "amap:B01760045E",
+    "first_name": "许昌市水务中心",
+    "second_name": "许昌市魏都区水利局",
+    "distance_m": 26.66,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KA5Z74FR",
+    "second_id": "amap:B0FFI2VY0B",
+    "first_name": "魏都区劳动监察大队",
+    "second_name": "魏都区劳动人事争议仲裁院",
+    "distance_m": 22.06,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:BV10422116",
+    "second_id": "amap:BV11101256",
+    "first_name": "八一路劳动路口(公交站)",
+    "second_name": "八一路劳动路口(东)(公交站)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KD3UHKI2",
+    "second_id": "amap:B0FFJVBC06",
+    "first_name": "北大街街道办事处",
+    "second_name": "许昌市曹魏古城指挥部",
+    "distance_m": 19.29,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L1GZA90D",
+    "second_id": "amap:B0FFLJLQ5I",
+    "first_name": "许昌市市场监督管理局魏都区分局丁庄市场监督管理所",
+    "second_name": "许昌市市场监督管理局魏都区分局五一路办公区",
+    "distance_m": 18.66,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IU7RNLWG",
+    "second_id": "amap:B0FFHVWOPW",
+    "first_name": "杨根思双拥社区退役军人服务站",
+    "second_name": "杨根思双拥社区居委会",
+    "distance_m": 16.58,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019A5",
+    "second_id": "amap:B0FFHJAH2T",
+    "first_name": "魏都区丁庄办事处后刘社区居务监督委员会",
+    "second_name": "魏都区丁庄街道后刘社区综治中心",
+    "distance_m": 3.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0HUAD2LXR",
+    "second_id": "amap:B0IU9DX2BX",
+    "first_name": "丁庄派出所",
+    "second_name": "丁庄派出所户证办理大厅",
+    "distance_m": 7.13,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0176019AP",
+    "second_id": "amap:B0M6DZ5VBU",
+    "first_name": "许昌市儿童福利院",
+    "second_name": "许昌市救助站",
+    "distance_m": 11.22,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0F76WJV",
+    "second_id": "amap:B0L395RZU3",
+    "first_name": "许昌衍德机动车登记服务站",
+    "second_name": "许昌路顺机动车检测技术有限公司",
+    "distance_m": 16.32,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFE58JP",
+    "second_id": "amap:B0FFFE58JU",
+    "first_name": "许昌市房产交易中心",
+    "second_name": "许昌市房产交易租赁管理处",
+    "distance_m": 24.38,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFH2HWM6",
+    "second_id": "amap:B0FFG913FI",
+    "first_name": "许昌市魏都区民政局",
+    "second_name": "魏都区人力资源和社会保障局",
+    "distance_m": 27.52,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:BV11282153",
+    "second_id": "amap:BV09395189",
+    "first_name": "许昌医院(公交站)",
+    "second_name": "许昌医院中立交院区(公交站)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:BV11640858",
+    "second_id": "amap:B0FFK0KDR9",
+    "first_name": "延安路华佗路口(公交站)",
+    "second_name": "五郎庙社区党群服务中心",
+    "distance_m": 26.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B017600QHI",
+    "second_id": "amap:B0MUDLKCC4",
+    "first_name": "中共许昌市魏都区纪律检查委员会",
+    "second_name": "许昌市魏都区纪委",
+    "distance_m": 2.72,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFROHDI",
+    "second_id": "amap:B0FFG7UAR3",
+    "first_name": "魏都区人民政府信访局",
+    "second_name": "魏都区矛盾纠纷调处化解中心",
+    "distance_m": 9.68,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFFROHDI",
+    "second_id": "amap:B0FFKYGKA5",
+    "first_name": "魏都区人民政府信访局",
+    "second_name": "许昌市魏都区综治中心",
+    "distance_m": 4.86,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKGS5UV",
+    "second_id": "amap:B0H64MI4HC",
+    "first_name": "魏都市民之家",
+    "second_name": "魏都区人社服务大厅(魏都市民之家)",
+    "distance_m": 1.49,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKGS5UV",
+    "second_id": "amap:B0I1OCBQ5L",
+    "first_name": "魏都市民之家",
+    "second_name": "许昌市魏都区税务局办税服务厅",
+    "distance_m": 3.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKGS5UV",
+    "second_id": "amap:B0J6B70KHM",
+    "first_name": "魏都市民之家",
+    "second_name": "出入境签证",
+    "distance_m": 4.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKGS5UV",
+    "second_id": "amap:B0GKKLZ408",
+    "first_name": "魏都市民之家",
+    "second_name": "魏都区行政服务中心",
+    "distance_m": 9.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFKGS5UV",
+    "second_id": "amap:B0FFK4LKR1",
+    "first_name": "魏都市民之家",
+    "second_name": "许昌市魏都区民政局婚姻登记处",
+    "distance_m": 13.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:BV09357895",
+    "second_id": "amap:BV09430645",
+    "first_name": "许昌医院(许继大道)(公交站)",
+    "second_name": "许昌医院中立交院区(许继大道)(公交站)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFG7UAR3",
+    "second_id": "amap:B0FFKYGKA5",
+    "first_name": "魏都区矛盾纠纷调处化解中心",
+    "second_name": "许昌市魏都区综治中心",
+    "distance_m": 8.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H64MI4HC",
+    "second_id": "amap:B0I1OCBQ5L",
+    "first_name": "魏都区人社服务大厅(魏都市民之家)",
+    "second_name": "许昌市魏都区税务局办税服务厅",
+    "distance_m": 2.78,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H64MI4HC",
+    "second_id": "amap:B0J6B70KHM",
+    "first_name": "魏都区人社服务大厅(魏都市民之家)",
+    "second_name": "出入境签证",
+    "distance_m": 5.61,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H64MI4HC",
+    "second_id": "amap:B0GKKLZ408",
+    "first_name": "魏都区人社服务大厅(魏都市民之家)",
+    "second_name": "魏都区行政服务中心",
+    "distance_m": 10.51,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0H64MI4HC",
+    "second_id": "amap:B0FFK4LKR1",
+    "first_name": "魏都区人社服务大厅(魏都市民之家)",
+    "second_name": "许昌市魏都区民政局婚姻登记处",
+    "distance_m": 13.95,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK4LKR1",
+    "second_id": "amap:B0I1OCBQ5L",
+    "first_name": "许昌市魏都区民政局婚姻登记处",
+    "second_name": "许昌市魏都区税务局办税服务厅",
+    "distance_m": 16.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK4LKR1",
+    "second_id": "amap:B0J6B70KHM",
+    "first_name": "许昌市魏都区民政局婚姻登记处",
+    "second_name": "出入境签证",
+    "distance_m": 15.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFK4LKR1",
+    "second_id": "amap:B0GKKLZ408",
+    "first_name": "许昌市魏都区民政局婚姻登记处",
+    "second_name": "魏都区行政服务中心",
+    "distance_m": 22.44,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I1OCBQ5L",
+    "second_id": "amap:B0J6B70KHM",
+    "first_name": "许昌市魏都区税务局办税服务厅",
+    "second_name": "出入境签证",
+    "distance_m": 4.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0I1OCBQ5L",
+    "second_id": "amap:B0GKKLZ408",
+    "first_name": "许昌市魏都区税务局办税服务厅",
+    "second_name": "魏都区行政服务中心",
+    "distance_m": 7.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0GKKLZ408",
+    "second_id": "amap:B0J6B70KHM",
+    "first_name": "魏都区行政服务中心",
+    "second_name": "出入境签证",
+    "distance_m": 6.53,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:BV09075235",
+    "second_id": "amap:BV11237249",
+    "first_name": "华佗路延安路口(公交站)",
+    "second_name": "西站(公交站)",
+    "distance_m": 7.76,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:BV10095870",
+    "second_id": "amap:BV09444141",
+    "first_name": "胖东来大众服饰(公交站)",
+    "second_name": "胖东来大众服饰(北)(公交站)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IKSAXT0J",
+    "second_id": "amap:B0IKSC35EY",
+    "first_name": "河南省许昌市天平公证处",
+    "second_name": "许昌仲裁委员会",
+    "distance_m": 4.8,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  }
+]

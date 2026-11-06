@@ -1,0 +1,637 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-10T09:12:05+08:00",
+  "sources": {
+    "tesla-8190": {
+      "label": "Tesla 中原国际饭店官方站点页",
+      "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "tesla-9638": {
+      "label": "Tesla 许昌大酒店官方站点页",
+      "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "tesla-dc": {
+      "label": "Tesla 中国超级充电服务说明（直流协议）",
+      "url": "https://www.tesla.cn/support/charging/supercharging-other-evs",
+      "method": "public_page",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0FFJ5K41S": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0FFJ5K41S",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0I1NS8N4O": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0I1NS8N4O",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0M6M6U9DP": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0M6M6U9DP",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0IAJL39JV": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0IAJL39JV",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0IR9LUG5D": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0IR9LUG5D",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    },
+    "amap-B0LRXKXWUQ": {
+      "label": "项目高德 POI 存档（原采集时间未知）",
+      "url": "https://ditu.amap.com/place/B0LRXKXWUQ",
+      "method": "archived_poi",
+      "checkedAt": "2026-10-10T09:12:05+08:00"
+    }
+  },
+  "stations": {
+    "B0FFJ5K41S": {
+      "stationName": "特斯拉超级充电站(许昌中原国际饭店)",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "scope": "public_sources_only",
+      "fields": {
+        "locationDescription": {
+          "state": "known",
+          "value": "中原国际饭店地下停车场 B1（负一层）",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "官方地址与项目 POI 文字位置相符；公开资料核对，尚未现场核验。"
+        },
+        "openingHours": {
+          "state": "known",
+          "value": "00:00-24:00",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "官方公布全天服务；不代表当前每个充电桩可用，亦不验证车库临时管制。"
+        },
+        "entranceDescription": {
+          "state": "known",
+          "value": "建安大道车行入口道路",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "官方页明确入口道路；具体车行入口经纬度、限高和库内路线未知。"
+        },
+        "chargeType": {
+          "state": "known",
+          "value": "fast",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "官方页明确列为 Tesla 超级充电站，核对为快充。"
+        },
+        "chargingCurrentTypes": {
+          "state": "known",
+          "value": [
+            "DC"
+          ],
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190",
+            "tesla-dc"
+          ],
+          "note": "官方站点分类与 Tesla 中国直流协议说明交叉核对；没有由功率或模拟分类推断。未核实是否另有 AC，不能据此断言不支持 AC。"
+        },
+        "operationalStatus": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "没有运营方实时状态；数据库 active 是管理标记，不能证明当前可充电。"
+        },
+        "accessPolicy": {
+          "state": "known",
+          "value": "官方标注向非 Tesla 车辆开放",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190",
+            "tesla-dc"
+          ],
+          "note": "设备协议、车型和线缆适配仍需在运营方应用中确认；并非所有车辆均可充电。"
+        },
+        "routingEntrance": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "官方仅给出入口道路，未公布可独立核对的车行入口坐标；保留站点定位终点。"
+        },
+        "coordinates": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190"
+          ],
+          "note": "保留数据库 WGS84 点位；未获得独立控制点，不声称坐标准确性已核验。"
+        },
+        "chargingCurrentTypesComplete": {
+          "state": "known",
+          "value": false,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-8190",
+            "tesla-dc"
+          ],
+          "note": "仅核对所列超级充电设备的 DC 类型，站内其他类型未知。"
+        }
+      }
+    },
+    "B0I1NS8N4O": {
+      "stationName": "特斯拉超级充电站(许昌大酒店)",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "scope": "public_sources_only",
+      "fields": {
+        "locationDescription": {
+          "state": "known",
+          "value": "七一路 888 号许昌大酒店院内地面停车场",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "官方地址与项目 POI 文字位置相符；公开资料核对，尚未现场核验。"
+        },
+        "openingHours": {
+          "state": "known",
+          "value": "00:00-24:00",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "官方公布全天服务；不代表当前每个充电桩可用，亦不验证车库临时管制。"
+        },
+        "entranceDescription": {
+          "state": "known",
+          "value": "七一路车行入口道路",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "官方页明确入口道路；具体车行入口经纬度、限高和库内路线未知。"
+        },
+        "chargeType": {
+          "state": "known",
+          "value": "fast",
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "官方页明确列为 Tesla 超级充电站，核对为快充。"
+        },
+        "chargingCurrentTypes": {
+          "state": "known",
+          "value": [
+            "DC"
+          ],
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638",
+            "tesla-dc"
+          ],
+          "note": "官方站点分类与 Tesla 中国直流协议说明交叉核对；没有由功率或模拟分类推断。未核实是否另有 AC，不能据此断言不支持 AC。"
+        },
+        "operationalStatus": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "没有运营方实时状态；数据库 active 是管理标记，不能证明当前可充电。"
+        },
+        "accessPolicy": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "本站页面没有取得明确的非 Tesla 车辆开放标记；不能由其他站开放或全天服务推断。"
+        },
+        "routingEntrance": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "官方仅给出入口道路，未公布可独立核对的车行入口坐标；保留站点定位终点。"
+        },
+        "coordinates": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638"
+          ],
+          "note": "保留数据库 WGS84 点位；未获得独立控制点，不声称坐标准确性已核验。"
+        },
+        "chargingCurrentTypesComplete": {
+          "state": "known",
+          "value": false,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "tesla-9638",
+            "tesla-dc"
+          ],
+          "note": "仅核对所列超级充电设备的 DC 类型，站内其他类型未知。"
+        }
+      }
+    },
+    "B0M6M6U9DP": {
+      "stationName": "云快充目的地充电站(金石国际停车场公牛充电站)",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "scope": "public_sources_only",
+      "fields": {
+        "locationDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "archivedValue": "金石国际地下停车场负一层、负二层北侧 S 区"
+        },
+        "openingHours": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。"
+        },
+        "entranceDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "archivedValue": "具体车行入口未核验"
+        },
+        "chargeType": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。"
+        },
+        "chargingCurrentTypes": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "未取得明确 DC／AC 站点资料，保留未知。"
+        },
+        "operationalStatus": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "没有运营方实时状态；数据库 active 是管理标记，不能证明当前可充电。"
+        },
+        "accessPolicy": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "允许车辆范围、进场限制及公众开放条件未知。"
+        },
+        "routingEntrance": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "高德详情接口返回 10021 限额，本次没有取得可靠车行入口经纬度；不由道路文字推算坐标。"
+        },
+        "coordinates": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0M6M6U9DP"
+          ],
+          "note": "保留数据库 WGS84 点位；未获得独立控制点，不声称坐标准确性已核验。"
+        }
+      }
+    },
+    "B0IAJL39JV": {
+      "stationName": "小鹏超级充电站(小鹏S4超快充许昌魏都万达广场站)",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "scope": "public_sources_only",
+      "fields": {
+        "locationDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "archivedValue": "许昌魏都万达广场；所在楼层未提供"
+        },
+        "openingHours": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。"
+        },
+        "entranceDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "archivedValue": "存档记载入口道路：魏文路"
+        },
+        "chargeType": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。"
+        },
+        "chargingCurrentTypes": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "未取得明确 DC／AC 站点资料，保留未知。"
+        },
+        "operationalStatus": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "没有运营方实时状态；数据库 active 是管理标记，不能证明当前可充电。"
+        },
+        "accessPolicy": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "允许车辆范围、进场限制及公众开放条件未知。"
+        },
+        "routingEntrance": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "高德详情接口返回 10021 限额，本次没有取得可靠车行入口经纬度；不由道路文字推算坐标。"
+        },
+        "coordinates": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IAJL39JV"
+          ],
+          "note": "保留数据库 WGS84 点位；未获得独立控制点，不声称坐标准确性已核验。"
+        }
+      }
+    },
+    "B0IR9LUG5D": {
+      "stationName": "开迈斯汽车充电站(许昌市万达广场地上站)",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "scope": "public_sources_only",
+      "fields": {
+        "locationDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "archivedValue": "万达地面停车场，存档标注 C219"
+        },
+        "openingHours": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。"
+        },
+        "entranceDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "archivedValue": "具体车行入口未核验"
+        },
+        "chargeType": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。"
+        },
+        "chargingCurrentTypes": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "未取得明确 DC／AC 站点资料，保留未知。"
+        },
+        "operationalStatus": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "没有运营方实时状态；数据库 active 是管理标记，不能证明当前可充电。"
+        },
+        "accessPolicy": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "允许车辆范围、进场限制及公众开放条件未知。"
+        },
+        "routingEntrance": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "高德详情接口返回 10021 限额，本次没有取得可靠车行入口经纬度；不由道路文字推算坐标。"
+        },
+        "coordinates": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0IR9LUG5D"
+          ],
+          "note": "保留数据库 WGS84 点位；未获得独立控制点，不声称坐标准确性已核验。"
+        }
+      }
+    },
+    "B0LRXKXWUQ": {
+      "stationName": "云快充超级充电站(橙南公牛超充站)",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "scope": "public_sources_only",
+      "fields": {
+        "locationDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "存档保留原地点说明；本次未核实当前站点位置，未改地图坐标。",
+          "archivedValue": "许由西路与解放南路交叉口向西约 300 米，路北院内"
+        },
+        "openingHours": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "未找到可核对的当前开放时间；原演示时间不能当作真实营业时间。"
+        },
+        "entranceDescription": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "存档入口说明待复核；车行入口坐标未知。",
+          "archivedValue": "存档记载：睿蓝 4S 店东侧进院"
+        },
+        "chargeType": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "站名中的超充或目的地字样不能独立证明当前充电设备类型；原分类仍属模拟。"
+        },
+        "chargingCurrentTypes": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "未取得明确 DC／AC 站点资料，保留未知。"
+        },
+        "operationalStatus": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "没有运营方实时状态；数据库 active 是管理标记，不能证明当前可充电。"
+        },
+        "accessPolicy": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "允许车辆范围、进场限制及公众开放条件未知。"
+        },
+        "routingEntrance": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "高德详情接口返回 10021 限额，本次没有取得可靠车行入口经纬度；不由道路文字推算坐标。"
+        },
+        "coordinates": {
+          "state": "unknown",
+          "value": null,
+          "checkedAt": "2026-10-10T09:12:05+08:00",
+          "sources": [
+            "amap-B0LRXKXWUQ"
+          ],
+          "note": "保留数据库 WGS84 点位；未获得独立控制点，不声称坐标准确性已核验。"
+        }
+      }
+    }
+  },
+  "attempts": [
+    {
+      "provider": "AMap v5 place detail",
+      "checkedAt": "2026-10-10T09:12:05+08:00",
+      "result": "CUQPS_HAS_EXCEEDED_THE_LIMIT",
+      "infocode": "10021",
+      "stationsQueried": [
+        "B0FFJ5K41S"
+      ],
+      "note": "首次请求失败后停止本批次接口查询，不伪称后续站点已获得详情。"
+    }
+  ]
+}

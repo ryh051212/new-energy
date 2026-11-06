@@ -1,0 +1,212 @@
+{
+  "date": "2026-10-23",
+  "baseCommit": "c978f4db8c021235a9ed89e65c33d36880cb50ab",
+  "workingTree": "Contains pre-existing uncommitted modifications; hashes identify inspected source contents",
+  "checks": {
+    "frontend": {
+      "command": "npm test",
+      "passed": 253,
+      "failed": 0
+    },
+    "backend": {
+      "command": "npm run test:backend",
+      "passed": 94,
+      "failed": 0
+    },
+    "structure": {
+      "command": "npm run check:structure",
+      "references": 309,
+      "result": "passed"
+    },
+    "build": {
+      "command": "npm run build",
+      "result": "passed",
+      "warning": "MapLibre chunk 556.60 kB exceeds configured 550 kB warning limit"
+    },
+    "liveBusinessBrowserFlow": "not rerun in this documentation task"
+  },
+  "data": {
+    "date": "2026-10-23",
+    "database": {
+      "checked": false,
+      "errorType": "OperationalError"
+    },
+    "snapshots": {
+      "weidu": 1,
+      "stations": 52,
+      "residential-pois": 225,
+      "commercial-pois": 200,
+      "hex-grid": 170
+    }
+  },
+  "document": {
+    "chapters": 18,
+    "exerciseCount": 12,
+    "sourceCharacterCount": 43075,
+    "sourceSha256": "9a249ff3c39338c1f9a62a80eae912d5a42ffcb632a4ef00ad6b52bd7ab5cf20",
+    "validatedLocalLinks": 53
+  },
+  "sourceHashes": {
+    "package.json": "b04df6ba2432ba53b856a85019cbe6ef19b8e794142db90f5a249a862021f36a",
+    "backend/requirements.txt": "1853ac6c4c052db60542404ec204cf61d16f952dd99820fdb4590f32bc2d0738",
+    "vite.config.js": "d1b5f7487347b9e8d5d7917d1bc10848bc213ab6a2052b6e2c02f7755fd62287",
+    "src/features/stations/models/stationInformation.js": "5b380518eeed89bffba39ac39e23df7614183c38ba39c3fe16153de11f0c19aa",
+    "src/features/stations/models/stationEquipment.js": "2d24743a8757dcb9b1a34989d6b31d1f89696c82a27f7c137cad9f8d16de5b94",
+    "backend/station_equipment.py": "3eb8bf5161e2aac644cf141f2992f6151303e4729a2a896068575b1ae8a68e17",
+    "src/features/planning/models/facilityDemand.js": "4fd6c8563bac70c9c65ee72cd4bccb29f3b1639eb9cdcf2d21dde56a5c84fa13",
+    "backend/coordinate_transform.py": "48e215e3db8570127b6ffaeabd716ba933f0357de677df81047c954ab6a27990",
+    "backend/spatial_migration.py": "dd1452624d1073740d57b2694a29b38c08268b59df227fbe15a2b66bff05f834",
+    "src/features/map/config/basemaps.js": "a20b76216b9214e5769d15e4ca21cf8c66770e466e221884e1908092f06fb4e1",
+    "src/features/carbon/composables/useChargingCarbon.js": "2b57aedac1750686b803ce35e04f65e763f37da02075c70576f87aa277de0305",
+    "src/App.vue": "a70c9a00b48c62b8f9fa21a02e5d3f39fd88fa18df83710d4745820eac0770ca",
+    "src/features/auth/models/auth.js": "9f10b6ad49a3494f90c5ee13ddd7c05deeb8981210c34d4d00e787e93de07b25",
+    "src/features/auth/models/authSession.js": "416f8a52c2408d333ad9451d440af315410d99ec08b5803688faf73667c5b11a",
+    "backend/auth.py": "e91da7a333b613031443969add324a622cb2b3c202aedb9b74a883792e0cf74d",
+    "backend/security.py": "0255503ae87ac53d9ea3d25be590de3923448253b8cb2a7a5fefb05f6e68c440",
+    "src/features/map/composables/useStationSearch.js": "060e2f10cb8c7629eb865c153b83a370222f5fd2a0eed03296aa5a09b6d19a91",
+    "src/features/map/api/poiSearch.js": "c5c943e9a0ce236a82070e22c6b03702a7597595d5d713814a1896eaceb9d1f0",
+    "backend/poi_search.py": "ca183a6ba0e8aaa5fb9ac95295f723cad59958284e4f28c4000eeeb49158da24",
+    "src/features/map/config/mapLayers.js": "629e4f42362bd4aff9b9953b38fb42b2f2c21e6612b8b459e1fb9d92c62709da",
+    "src/features/map/config/facilityMapLayers.js": "78f3827ed9ed1e35ca573aab0a2086cd452c709c55a8b19e248472ce8f691038",
+    "src/features/map/config/mapStyle.js": "a48949d68d07a9b4f20430e661ba51f41fcccf78ef110f581764f95be2d29a8f",
+    "src/features/map/api/mapData.js": "558f4bf24b490d8f589ac3cb5cd31f20fdaf65fb064f7bf7c0ab5ab238041e9d",
+    "src/features/map/MapView.vue": "cdff708442cee8f5ce3ec445ca8dd968bf3162c93868935a409ee811cd6e8b5d",
+    "src/features/map/composables/useMapLocation.js": "453e6aed1cd2d27e7f3034768e55ca32e5cd84a7487df0f283a7baeea2c7decc",
+    "src/features/map/composables/useMapMeasure.js": "6239bbe98e0f931b2b42701aff969c5975a9a6ca0abfdb6364c010f4b35671c1",
+    "scripts/data/buildHexGrid.mjs": "2a03380f06ddfd2a4b1e5a3a5a8905c995946376ca25cfb42e0ded4925b073e3",
+    "src/features/planning/components/PlannerOverview.vue": "cceed0b42b62296ad325ad05da04c611ee6fe0c4d67ce77f4688eb3ecfa8822d",
+    "src/features/planning/models/plannerOverview.js": "345fd749611c2ac840bbc2aa65e05cf0cfa01ba565b6a00633eb9cf83a63d662",
+    "src/features/planning/models/facilityLayout.js": "89bbc6b6239e884489e9d89a929d71e340331b1dc239ca2c7682b96209dadb06",
+    "src/features/planning/models/functionalZones.js": "d206af11fb628aa5d9f5635c41ce998248ee182c24b1d9d02fbfe03856bbf0d4",
+    "src/features/planning/models/plannerPss.js": "e677e30cc38d6dc433a222ddbdc19f559e980fe3a4fe71b7582517cc37e1191c",
+    "src/features/planning/models/stationPlanImpact.js": "b1f8b99607d2fe93ca6e0901bff4bc8bb008d8fc505816de15bcc66675103b66",
+    "src/features/planning/components/PlannerSiting.vue": "c354cc1a1aa2856e37ed2655878044158552403bb98737e7c661bd87910253c7",
+    "src/features/planning/composables/useFacilitySandbox.js": "0a35cf4372bd5e2f94b8915add1605141256de802bc3417e01801ec0604d930b",
+    "src/features/planning/models/facilitySandbox.js": "db4d52adb297748cba5018279bd9a48b2f69e3002a87eace53984469ac2ba3d4",
+    "src/features/planning/models/combinedFacilitySimulation.js": "f25dd8b1d01893dd69f21b86d5c992a75d1e88884ea7c74a6a5843edd8ba3def",
+    "src/features/planning/components/FacilitySuggestions.vue": "2bb6316eb180e978115f736d109c7fc6f09e69df421a0e6022607cffa7d4449a",
+    "src/features/planning/models/facilityDiagnostics.js": "4bb95e11a0dbfa8b593a5ec08d05b89ba14d39bb5a90a2d3f84c761af66d003c",
+    "src/features/planning/components/PlannerGridCapacity.vue": "df23cf4f2566ac3dd1dac34a0446e372dd5ee068d8653b99856ab987b4888fb8",
+    "src/features/planning/components/PlannerScenarioAssessment.vue": "6376d69e7399ce69e6b896826631dbfb81d0ca8037a97354c68515f0578fcfb4",
+    "src/features/carbon/models/chargingCarbon.js": "285389386b19ddc525e5a5800affc627e84f3cc1f82ba6c53020c04c992c62e2",
+    "src/features/carbon/components/PlannerChargingCarbon.vue": "ae3dde4e72c0584865e39a98a2510e59225b5c5a9e6e18822aa411236c750a12",
+    "src/shared/layout/FloatingWorkspace.vue": "a80e98ac7e96b6dbcd5a3aa87afc100d5e4eeb2e52212fdc25eb8c34a8d01502",
+    "src/shared/layout/workspaceLayout.js": "4d447ef3805f8c2eb0c25a67efd2331200acf81a4dcbf6eb0ca42605baa4e0e3",
+    "src/shared/layout/MovablePanel.vue": "5a5c64d63ec3582b6d9c165f4c33fdd8433571d37bc67bdc26f2ab8812d1f725",
+    "backend/database.py": "0d05f318c7a962cda4c5041bdb198fec6354fa9056674fdbd4d2b0f6070bdbf8",
+    "docs/reports/demand-scenarios-verification.json": "fc87ee167932d9c88f6cd7fb446675f8402e0150c49aefc8187acfd1f40d59cf",
+    "docs/reports/实验5-POI搜索与定位验收报告.md": "1fdf9f1125d1097bdd77f9022ec3e1ffe51d7ebba36435f8340a8c9ad9d5b070",
+    "src/shared/content/analysisTerms.js": "eb93200103a2124398be1661806126f5354c72bc2e4213b13ec348d271497649",
+    "backend/facility_catalog.py": "ffbb1b9d69b0358e802d2fe0a5b8b9e3b465d0da69a6e9871c079aeb8474e94e",
+    "scripts/checks/test-backend.mjs": "17f42f621bed03f7d337bc4d75d3ef153d1f6383a410d64e70e81aadb7255b85",
+    "docs/architecture/代码目录导览.md": "4a7299e9610e0835c90b34d8890537dc9886b43edb6d2f6b38823925e51766be"
+  },
+  "workedExamples": {
+    "distanceWeight500": 0.7013665732390044,
+    "score": 66.66666666666666,
+    "carbon": {
+      "distanceKm": 144.00000000000003,
+      "gasolineCO2Kg": 23.987437200000006,
+      "electricityCO2Kg": 14.1528,
+      "avoidedCO2Kg": 9.834637200000007
+    },
+    "economics": {
+      "capexWan": 26,
+      "dailyKwh": 576,
+      "dailySessions": 24,
+      "annualNetWan": 4.3072,
+      "paybackYears": 6.036404160475483
+    },
+    "service": {
+      "before": 50,
+      "fillGap": 100,
+      "stacked": 50,
+      "weakBefore": 50,
+      "weakAfter": 0,
+      "giniBefore": 0.5,
+      "giniAfter": 0
+    },
+    "diversion": {
+      "diversionShare": 100,
+      "newCatchmentWeight": 4.999999999999228,
+      "totalDemandWeight": 10
+    },
+    "battery": {
+      "energyMin": 0,
+      "energyMax": 200,
+      "dischargedBefore11": 0
+    }
+  },
+  "readingEditionVerification": {
+    "shape": {
+      "chapters": 18,
+      "checkboxes": [
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        },
+        {
+          "enabled": true,
+          "checked": false
+        }
+      ],
+      "overflow": false,
+      "sectionOverflow": []
+    },
+    "search": {
+      "shown": 6,
+      "marks": 8,
+      "status": "匹配 6 / 18 章"
+    },
+    "mobile": {
+      "overflow": false,
+      "contentWidth": 390,
+      "chapterAnchorTop": 94.46875
+    },
+    "print": {
+      "hiddenChapters": 0,
+      "sidebar": "none"
+    },
+    "pageErrors": []
+  }
+}

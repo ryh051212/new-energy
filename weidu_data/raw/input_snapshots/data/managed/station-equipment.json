@@ -1,0 +1,288 @@
+{
+  "version": 1,
+  "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+  "sources": {
+    "tesla-8190": {
+      "label": "Tesla 中原国际饭店官方站点页",
+      "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": null
+    },
+    "tesla-9638": {
+      "label": "Tesla 许昌大酒店官方站点页",
+      "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": null
+    },
+    "city-2023": {
+      "label": "许昌市投资集团 2023 年融资券募集说明书公开检索存档",
+      "url": "https://np-snotice.eastmoney.com/pdf/H2_AN202307041592032277_1.pdf",
+      "method": "search_snapshot",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2023-07"
+    },
+    "xj-2024": {
+      "label": "中国电气装备集团／许继电气场站设备说明",
+      "url": "https://www.cee-group.cn/info/1245/5072.htm",
+      "method": "manufacturer_release",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2024-03-06"
+    },
+    "cww-2024": {
+      "label": "通信世界网保利堂悦现场采访（与厂商设备数量口径不同）",
+      "url": "https://www.cww.net.cn/article?id=589723",
+      "method": "media_report",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2024-05"
+    },
+    "beizuzhuang-2023": {
+      "label": "北俎庄光储充设备建设报道（搜狐转载）",
+      "url": "https://www.sohu.com/a/659868206_121123682",
+      "method": "media_report",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2023-03-27"
+    },
+    "fgw-2024": {
+      "label": "许昌市发改委提案答复（仅交叉核对场站、车位与位置）",
+      "url": "https://sfgw.xuchang.gov.cn/ztzl/079004/20241015/aedd6247-2372-436e-9802-663a32bfe930.html",
+      "method": "government_release",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2024-08-08"
+    },
+    "directory": {
+      "label": "无敌电动网魏都站点目录（桩／枪口径未说明）",
+      "url": "https://www.modiauto.com.cn/cdz/c1940.html",
+      "method": "public_directory",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2026-10-11"
+    }
+  },
+  "stations": {
+    "B0FFJ5K41S": {
+      "stationName": "特斯拉超级充电站(许昌中原国际饭店)",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": null,
+      "basis": "public_source",
+      "sources": [
+        "tesla-8190"
+      ],
+      "complete": true,
+      "maxGunPowerKw": 119,
+      "groups": [
+        {
+          "label": "超级充电终端",
+          "unitCount": 6,
+          "gunsPerUnit": null,
+          "unitPowerKw": null,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "官方列出 6 个超级充电桩；未公布逐枪编号、枪数及逐枪功率清单。"
+        }
+      ],
+      "note": "官方公布的是站内最高单枪功率；不表示每把枪都能同时达到该值。全站共享输出和配变容量未知。"
+    },
+    "B0I1NS8N4O": {
+      "stationName": "特斯拉超级充电站(许昌大酒店)",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": null,
+      "basis": "public_source",
+      "sources": [
+        "tesla-9638"
+      ],
+      "complete": true,
+      "maxGunPowerKw": 250,
+      "groups": [
+        {
+          "label": "超级充电终端",
+          "unitCount": 6,
+          "gunsPerUnit": null,
+          "unitPowerKw": null,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "官方列出 6 个超级充电桩；未公布逐枪编号、枪数及逐枪功率清单。"
+        }
+      ],
+      "note": "官方公布的是站内最高单枪功率；不表示每把枪都能同时达到该值。全站共享输出和配变容量未知。"
+    },
+    "B0IAM64GE0": {
+      "stationName": "城发新能源青梅路南海街充电站",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2023-07",
+      "basis": "unconfirmed_archive",
+      "sources": [
+        "city-2023"
+      ],
+      "complete": false,
+      "maxGunPowerKw": null,
+      "groups": [
+        {
+          "label": "检索存档：120 kW 双枪直流设备",
+          "unitCount": 14,
+          "gunsPerUnit": 2,
+          "unitPowerKw": 120,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "仅为待原文复核的历史线索；120 kW 是每台设备配置，两枪功率分配未知。"
+        }
+      ],
+      "note": "2023 年检索存档给出一期配置，但下载的原始 PDF 未定位到相同段落，不能视为已完成原文复核；仅展示线索，不填入正式桩数、枪数和总容量。火车站目录另有分站，未合并或替代当前配置。"
+    },
+    "B0IAPCQBO7": {
+      "stationName": "星星充电汽车充电站(城发新能源火车站充电站)",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2023-07",
+      "basis": "unconfirmed_archive",
+      "sources": [
+        "city-2023"
+      ],
+      "complete": false,
+      "maxGunPowerKw": null,
+      "groups": [
+        {
+          "label": "检索存档：120 kW 双枪直流设备",
+          "unitCount": 8,
+          "gunsPerUnit": 2,
+          "unitPowerKw": 120,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "仅为待原文复核的历史线索；120 kW 是每台设备配置，两枪功率分配未知。"
+        }
+      ],
+      "note": "2023 年检索存档给出一期配置，但下载的原始 PDF 未定位到相同段落，不能视为已完成原文复核；仅展示线索，不填入正式桩数、枪数和总容量。火车站目录另有分站，未合并或替代当前配置。"
+    },
+    "B0L0RM563D": {
+      "stationName": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2024-03 / 2024-05",
+      "basis": "conflicting_reports",
+      "sources": [
+        "xj-2024",
+        "cww-2024",
+        "fgw-2024"
+      ],
+      "complete": false,
+      "maxGunPowerKw": 600,
+      "groups": [
+        {
+          "label": "全液冷超充终端",
+          "unitCount": 4,
+          "gunsPerUnit": null,
+          "unitPowerKw": null,
+          "gunPowerKw": null,
+          "ratedCurrentA": 600,
+          "note": ""
+        },
+        {
+          "label": "自冷快充设备",
+          "unitCount": 6,
+          "gunsPerUnit": null,
+          "unitPowerKw": null,
+          "gunPowerKw": null,
+          "ratedCurrentA": 250,
+          "note": ""
+        }
+      ],
+      "note": "厂商记载 4 台 600 A 及 6 台 250 A，媒体另述 4 台 600 kW 与 12 台 250 kW；设备、终端及枪的口径未统一，因此全站桩数、枪数及分组功率保留未知。600 A 不能直接换成 600 kW。仅站内单枪最高 600 kW 有厂商依据；16 个车位不替代枪数。"
+    },
+    "B0IKHSCAZG": {
+      "stationName": "中国石化北俎庄充电站",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2023-03-27",
+      "basis": "historical_media_report",
+      "sources": [
+        "beizuzhuang-2023",
+        "fgw-2024"
+      ],
+      "complete": true,
+      "maxGunPowerKw": null,
+      "groups": [
+        {
+          "label": "前油后电单枪直流终端",
+          "unitCount": 8,
+          "gunsPerUnit": 1,
+          "unitPowerKw": 40,
+          "gunPowerKw": 40,
+          "ratedCurrentA": null,
+          "note": ""
+        },
+        {
+          "label": "中油侧电单枪直流终端",
+          "unitCount": 4,
+          "gunsPerUnit": 1,
+          "unitPowerKw": 60,
+          "gunPowerKw": 60,
+          "ratedCurrentA": null,
+          "note": ""
+        },
+        {
+          "label": "撤气增电双枪直流终端",
+          "unitCount": 6,
+          "gunsPerUnit": 2,
+          "unitPowerKw": 120,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "由 2 台 360 kW 充电堆供给；120 kW 是双枪终端配置，未公布每枪分配方式。"
+        },
+        {
+          "label": "单枪交流终端",
+          "unitCount": 2,
+          "gunsPerUnit": 1,
+          "unitPowerKw": 7,
+          "gunPowerKw": 7,
+          "ratedCurrentA": null,
+          "note": ""
+        }
+      ],
+      "note": "设备明细来自 2023 年媒体转载报道，需运营方复核；政府资料仅印证场站与 26 个车位，不独立证明枪数和功率。合计 20 个终端、26 把枪、1294 kW 设备额定输出；4 台上游直流充电堆不重复计入终端数量或功率。无现场枪编号及最新扩建资料。"
+    },
+    "B0IA6LE8RO": {
+      "stationName": "蔚来能源汽车充电站(许昌许都大剧院)",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2026-10-11",
+      "basis": "directory_only",
+      "sources": [
+        "directory"
+      ],
+      "complete": false,
+      "maxGunPowerKw": null,
+      "groups": [
+        {
+          "label": "目录标注的直流电桩",
+          "unitCount": 5,
+          "gunsPerUnit": null,
+          "unitPowerKw": null,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "目录未解释“电桩”是物理设备、终端还是枪，不能直接转换为枪数。"
+        }
+      ],
+      "note": "公开目录标注 5 个直流电桩，但桩／枪口径及分组功率未说明；仅展示原始记录，不填充正式桩数、枪数或总功率。"
+    },
+    "B0J2XPOV8J": {
+      "stationName": "特来电充电站(许昌东城区万达充电站)",
+      "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+      "sourceDate": "2026-10-11",
+      "basis": "directory_only",
+      "sources": [
+        "directory"
+      ],
+      "complete": false,
+      "maxGunPowerKw": null,
+      "groups": [
+        {
+          "label": "目录标注的直流电桩",
+          "unitCount": 16,
+          "gunsPerUnit": null,
+          "unitPowerKw": null,
+          "gunPowerKw": null,
+          "ratedCurrentA": null,
+          "note": "目录未解释“电桩”是物理设备、终端还是枪，不能直接转换为枪数。"
+        }
+      ],
+      "note": "公开目录标注 16 个直流电桩，但桩／枪口径及分组功率未说明；仅展示原始记录，不填充正式桩数、枪数或总功率。"
+    }
+  },
+  "notice": "公开资料不等于现场核验或实时运营；未找到的数值保持未知，不能将品牌通用功率套用到具体站点。"
+}

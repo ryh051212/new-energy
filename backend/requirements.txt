@@ -22,6 +22,8 @@ requests==2.34.2
 
 # ---- GIS 空间计算 ----
 shapely==2.1.2
+rasterio==1.5.2
+pyproj==3.8.0
 # 用途：点面判断（站点是否落在魏都区边界内）、缓冲区、距离计算。
 # 它是 GEOS 的 Python 绑定，Windows 有官方预编译 wheel。
 # 刻意不引入 geopandas：它在 Windows 上依赖 GDAL，编译安装麻烦，

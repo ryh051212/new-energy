@@ -1,0 +1,571 @@
+{
+  "datasetId": "weidu-observed-20261027",
+  "integration": {
+    "archived_demo_rows": 240,
+    "grid_indicators": {
+      "stations": 201,
+      "residential_pois": 224,
+      "commercial_pois": 406,
+      "classifications": {
+        "high-demand-high-supply": 38,
+        "high-demand-low-supply": 26,
+        "low-demand-high-supply": 9,
+        "low-demand-low-supply": 97
+      },
+      "edge_tolerance_metres": 5,
+      "edge_assignments": [
+        {
+          "table": "residential_pois",
+          "point_id": "B0FFL4CBQ0",
+          "grid_id": 167,
+          "distance_metres": 3.98541459,
+          "reason": "inside_boundary_but_grid_edge_gap"
+        }
+      ]
+    },
+    "stations": 487,
+    "facility_pois": 1993,
+    "residential_pois": 224,
+    "commercial_pois": 406,
+    "planning_population_grid": 170,
+    "active_real_stations_inside": 201,
+    "applied": true,
+    "backup": "D:\\jstrae\\项目学习\\weidu-ev-webgis\\backend\\backups\\planning_baseline_20261027_201405",
+    "population": {
+      "source": "GHS-POP R2023A",
+      "source_url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2025_GLOBE_R2023A_4326_3ss/V1-0/tiles/GHS_POP_E2025_GLOBE_R2023A_4326_3ss_V1_0_R6_C30.zip",
+      "metadata_url": "https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php",
+      "reference_year": 2025,
+      "release": "R2023A V1-0",
+      "is_projection": true,
+      "units": "estimated persons per pixel; not persons/km2",
+      "crs": "EPSG:4326",
+      "resolution_degrees": [
+        0.0008333333300326924,
+        0.000833333329979504
+      ],
+      "resolution_m_at_study_centre": [
+        76.9533525364096,
+        92.43589419372974
+      ],
+      "dimensions": [
+        177,
+        137
+      ],
+      "nodata": -200.0,
+      "source_nodata": null,
+      "pixel_centres_inside": 12668,
+      "valid_cells": 12668,
+      "nodata_inside": 0,
+      "estimated_population_sum": 892502.8432060895,
+      "min": 0.0,
+      "max": 1558.4812215169272,
+      "negative_valid_values": 0,
+      "source_tile_bounds": [
+        109.99208292007663,
+        29.099583419121316,
+        119.99208288046893,
+        39.099583378875366
+      ],
+      "processed_at": "2026-10-27T11:36:30.788234+00:00",
+      "clip_method": "No resampling; pixel-centre mask. Border cells not area-weighted. Modelled total is not district census.",
+      "worldpop_attempt": "Official 2025 922251437-byte raster download interrupted after ~25 MiB; HTTP Range returned 200, not 206. Partial .part file is not a valid raster and is excluded.",
+      "validation_warning": "Government introduction reports about 500000/525000 people with mixed dates and scopes, while the cropped GHSL sum is about 892503. Review model/vintage/boundary mismatch before absolute demand scaling; do not call this the official district population.",
+      "coordSystem": "WGS84",
+      "isProjection": true,
+      "calibrated": false,
+      "assignedPopulation": 891919.9218297093,
+      "unassignedPopulation": 582.921376379982,
+      "unassignedPixels": 197,
+      "gridAssignment": "pixel centre; shared boundaries use smallest grid ID; edge tolerance 5m",
+      "notice": "2025模型人口，未经统计人口校准；仅作空间分布参考，不能当作真实充电需求。"
+    }
+  },
+  "liveApi": {
+    "/api/stations": {
+      "status": 200,
+      "count": 247
+    },
+    "/api/stations?scope=weidu": {
+      "status": 200,
+      "count": 201
+    },
+    "/api/facility-pois": {
+      "status": 200,
+      "count": 1993
+    },
+    "/api/hex-grid": {
+      "status": 200,
+      "count": 170
+    },
+    "/api/osm-roads/metadata": {
+      "status": 200,
+      "count": 0
+    },
+    "/api/planning-data/metadata": {
+      "status": 200,
+      "count": 0
+    },
+    "/api/planning-data/population": {
+      "status": 200,
+      "count": 170
+    },
+    "/api/planning-data/time-profiles": {
+      "status": 200,
+      "count": 192
+    },
+    "/api/planning-data/parameters": {
+      "status": 200,
+      "count": 0
+    },
+    "/api/planning/analyze": {
+      "status": 200,
+      "quality": {
+        "profile": "urban-scenario-v1",
+        "speedKmh": {
+          "motorway": 80,
+          "trunk": 60,
+          "primary": 40,
+          "secondary": 35,
+          "tertiary": 30,
+          "residential": 20,
+          "living_street": 10,
+          "service": 10,
+          "road": 20,
+          "unclassified": 20
+        },
+        "signalDelaySeconds": 20,
+        "inputEdges": 28705,
+        "routableEdges": 27995,
+        "excludedEdges": {
+          "accessOrRoadType": 686,
+          "barrier": 24
+        },
+        "turnRestrictionCount": 2,
+        "unsupportedTurnRestrictions": 0,
+        "maxSnapMeters": 200,
+        "accessUnspecifiedEdges": 27995,
+        "sourceMetadata": {
+          "fetchedAt": "2026-10-27T11:14:51.330371+00:00",
+          "endpoint": "https://overpass-api.de/api/interpreter",
+          "bboxSouthWestNorthEast": [
+            33.89510394490118,
+            113.62689134887603,
+            34.18850192219665,
+            113.98963476517238
+          ],
+          "contextMarginKm": 10,
+          "query": "[out:json][timeout:180];(way[\"highway\"][\"area\"!=\"yes\"](33.8951039,113.6268913,34.1885019,113.9896348);relation[\"type\"=\"restriction\"](33.8951039,113.6268913,34.1885019,113.9896348);node[\"barrier\"](33.8951039,113.6268913,34.1885019,113.9896348););out meta geom;",
+          "coordSystem": "WGS84",
+          "source": "OpenStreetMap",
+          "license": "ODbL-1.0",
+          "attribution": "© OpenStreetMap contributors",
+          "licenseUrl": "https://www.openstreetmap.org/copyright",
+          "osmBaseTimestamp": "2026-10-27T11:13:23Z",
+          "roadCount": 2987,
+          "nodeCount": 16804,
+          "directedEdgeCount": 28705,
+          "restrictionCount": 2,
+          "skippedWayCount": 0,
+          "roadTypes": {
+            "motorway": 348,
+            "primary": 229,
+            "unclassified": 465,
+            "residential": 374,
+            "primary_link": 31,
+            "motorway_link": 117,
+            "trunk_link": 69,
+            "trunk": 196,
+            "tertiary": 609,
+            "secondary": 301,
+            "tertiary_link": 11,
+            "service": 162,
+            "footway": 41,
+            "path": 3,
+            "secondary_link": 6,
+            "cycleway": 13,
+            "track": 1,
+            "construction": 2,
+            "steps": 2,
+            "services": 4,
+            "living_street": 3
+          },
+          "lengthKm": 3147.173,
+          "topology": "shared OSM node IDs; geometry crossings are not merged",
+          "turnRestrictionsApplied": false,
+          "routingReady": false
+        },
+        "timeBasis": "osm-scenario-driving",
+        "unconnectedDemandPoints": 59,
+        "boundaryContextStations": 42,
+        "supplyAccessBasis": "recorded_locations_public_access_not_verified",
+        "unconnectedStations": 3,
+        "demandWeight": 16.625177228786253,
+        "fallbackDemandPoints": 0,
+        "unknownDemandGrids": 0
+      },
+      "before": {
+        "coveragePercent": 95.55877523604703,
+        "averageMinutes": 1.8731504431351804,
+        "allDemandAverageMinutes": null,
+        "reachableAverageMinutes": 1.8731504431351804,
+        "unreachableDemandPercent": 4.441224763952973,
+        "capacityIndex": 100.0,
+        "weakest20Index": 37.2174320562311,
+        "gini": 0.22554803437010595,
+        "stationCount": 239,
+        "scenarioPowerKw": 14340.0,
+        "highDemandGapGrids": 20
+      }
+    }
+  },
+  "baselineBrowser": {
+    "checks": [
+      {
+        "label": "1440 population",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1440 weekday",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1440 weekend",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1440 sources",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1366 population",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1366 weekday",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1366 weekend",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "1366 sources",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "390 population",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "390 weekday",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "390 weekend",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "390 sources",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "320 population",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "320 weekday",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "320 weekend",
+        "scrollbars": [],
+        "clipped": []
+      },
+      {
+        "label": "320 sources",
+        "scrollbars": [],
+        "clipped": []
+      }
+    ],
+    "errors": []
+  },
+  "overviewBrowser": {
+    "report": [
+      {
+        "label": "1440: distribution",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1440: 供需分区",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1440: 优先关注",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1440: 数据说明",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1440: 数据说明 next",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1440: reference",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1440: roads",
+        "panel": {
+          "width": 380,
+          "height": 760
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: distribution",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: 供需分区",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: 优先关注",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: 数据说明",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: 数据说明 next",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: reference",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "1366: roads",
+        "panel": {
+          "width": 360.140625,
+          "height": 628
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: distribution",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: 供需分区",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: 优先关注",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: 优先关注 next",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: 数据说明",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: reference",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "390: roads",
+        "panel": {
+          "width": 374,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: distribution",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: 供需分区",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: 优先关注",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: 优先关注 next",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: 数据说明",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: reference",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      },
+      {
+        "label": "320: roads",
+        "panel": {
+          "width": 304,
+          "height": 400
+        },
+        "overflow": [],
+        "clipped": []
+      }
+    ],
+    "errors": []
+  },
+  "checks": {
+    "frontendSuitePassed": 278,
+    "backendBaselinePassed": 3,
+    "structureReferencesPassed": 374,
+    "productionBuild": "passed",
+    "legacyBackendSuite": "Historical tests still import pre-reorganization backend module paths; full backend suite not passed."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query": "[out:json][timeout:180];(nwr[\"building\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"landuse\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"amenity\"=\"parking\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"amenity\"=\"charging_station\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"office\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"shop\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"leisure\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"public_transport\"](33.9852102,113.7350207,34.0984399,113.8815505););out meta geom;",
+  "attempted_at": "2026-10-27T11:14:54.371065+00:00",
+  "error_kind": "HTTPError",
+  "status": "not_acquired; no substitute geometry generated"
+}

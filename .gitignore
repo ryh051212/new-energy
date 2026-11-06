@@ -1,4 +1,14 @@
-# Logs
+# 本机配置与密钥；保留协作所需的无密钥模板
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# 运行日志
 logs
 *.log
 npm-debug.log*
@@ -22,15 +32,57 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.env.local
 
 # Python
 .venv/
+.venv-*/
 venv/
+venv[0-9]*/
 __pycache__/
 *.py[cod]
 .pytest_cache/
-backend/backups/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 数据库备份可能包含账号与业务数据；保留建表和迁移 SQL
+backups/
+*.dump
+*.sql.gz
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.sqlite3-journal
 
 # Local backup before flattening the project
 .flatten-backup/
+
+# 自动代码检查的本地报告和快照
+.code-quality/
+
+# 临时工作文件与本机工具状态；共享的 .codex/hooks.json 继续保留
+/.tmp/
+/tmp/
+/.claude/settings.local.json
+/.codex/*.local.json
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.temp
+*.bak
+*.part
+*.crdownload
+
+# 生成的成果与重复交付包；正式源码、研究区数据和来源记录继续共享
+/outputs/
+/weidu_data_delivery/
+/weidu_data_delivery.zip
+
+# 可重新下载的 GHSL 大范围原始瓦片；保留裁剪后的 population.tif
+/weidu_data/raw/GHS_POP_*.tif
+/weidu_data/raw/GHS_POP_*.zip
+
+# 误生成的终端输出文件
+/et --hard git reset --hard

@@ -1,0 +1,36 @@
+[
+  {
+    "project_source": "backend/data/coordinate_transform.py",
+    "sha256": "646e6afa8a98f89329d404faf55e0b37ddf2f10d11c4faee2985fdcfc6051063",
+    "exported_symbols": [
+      "A",
+      "EE",
+      "PI",
+      "gcj02_to_wgs84",
+      "out_of_china",
+      "transform_lat",
+      "transform_lng",
+      "wgs84_to_gcj02"
+    ]
+  },
+  {
+    "project_source": "backend/data/osm_roads.py",
+    "sha256": "c0e82853645be4274b09687f7f1d59807587f8591771d21194e57cf6665ae584",
+    "exported_symbols": [
+      "ATTRIBUTION",
+      "LICENSE_URL",
+      "MOTOR_ROADS",
+      "length_m",
+      "motor_access",
+      "normalize_roads",
+      "road_direction"
+    ]
+  },
+  {
+    "project_source": "backend/core/siting_context.py",
+    "sha256": "001b01b8a2bb1c58e19298d710252ebeaa32031bd5ac9692ab12ea9e15334251",
+    "exported_symbols": [
+      "element_geometry"
+    ]
+  }
+]

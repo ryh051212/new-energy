@@ -1,0 +1,12 @@
+{
+  "charging": {
+    "status": "complete",
+    "records": 190,
+    "page_count": 9
+  },
+  "government_transport": {
+    "status": "complete",
+    "records": 225,
+    "page_count": 10
+  }
+}

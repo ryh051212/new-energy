@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-22T09:46:43.833Z",
+  "baselineCommit": "c978f4d",
+  "source": "Real FastAPI and PostGIS; only external basemap tiles replaced by transparent PNGs",
+  "checks": [
+    "Existing administrator login and HttpOnly session remain functional",
+    "Typing triggers one debounced suggestion request; suggestions alone do not select or fly",
+    "Selecting a non-station POI flies to converted display coordinates and shows popup/success; station data unchanged",
+    "Unknown keyword produces explicit empty-state message",
+    "Clear cancels suggestions; 390/320 pixel layouts show suggestions without document overflow",
+    "Real HTTP API rejects writes and overlong/oversized search requests"
+  ],
+  "requests": [
+    "图书",
+    "不存在的实验五地点_20261022",
+    "体育",
+    "体育"
+  ],
+  "errors": [],
+  "location": {
+    "name": "文博图书城停车场",
+    "wgs84": [
+      113.83185100563965,
+      34.02003799822663
+    ],
+    "mapCenter": [
+      113.83778100015206,
+      34.018513000090294
+    ],
+    "expectedDisplay": [
+      113.83778100015203,
+      34.01851300009032
+    ]
+  }
+}

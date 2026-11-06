@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Fig2a.Daily usage patterns of EVs across different vehicle types and days.csv",
+    "url": "https://zenodo.org/api/records/13852045/files/Fig2a.Daily%20usage%20patterns%20of%20EVs%20across%20different%20vehicle%20types%20and%20days.csv/content",
+    "bytes": 69488,
+    "sha256": "034d4647fef7d429e9b001fae585d408c97e82b14541e39e33dac492fa0ba5b1",
+    "archive_checksum": "md5:badb7f20660efcb04fb87b02b05a5d88",
+    "doi": "10.5281/zenodo.13852045",
+    "license": "CC-BY-4.0",
+    "observation_period": "2020-11 to 2021-10",
+    "geography": "Seven major Chinese cities; NOT Xuchang or Weidu",
+    "kind": "empirical aggregate figure data, not individual trajectories"
+  },
+  {
+    "name": "Fig3-2.Daily charging load from electric vehicles across different vehicle types and power level.csv",
+    "url": "https://zenodo.org/api/records/13852045/files/Fig3-2.Daily%20charging%20load%20from%20electric%20vehicles%20across%20different%20vehicle%20types%20and%20power%20level.csv/content",
+    "bytes": 193321,
+    "sha256": "f2267edd010ca54a2683c3955860b4df82de1b180c805a45d0af0bc8c25ee52d",
+    "archive_checksum": "md5:a1730abf8d5b01ce8ca4f0360844f005",
+    "doi": "10.5281/zenodo.13852045",
+    "license": "CC-BY-4.0",
+    "observation_period": "2020-11 to 2021-10",
+    "geography": "Seven major Chinese cities; NOT Xuchang or Weidu",
+    "kind": "empirical aggregate figure data, not individual trajectories"
+  },
+  {
+    "name": "Fig1e.Daily driving distance of different vehicle types.csv",
+    "url": "https://zenodo.org/api/records/13852045/files/Fig1e.Daily%20driving%20distance%20of%20different%20vehicle%20types.csv/content",
+    "bytes": 4616,
+    "sha256": "29c99684e665d0f8139a02bcc10751575d550680b903e26013590f82fac2a05f",
+    "archive_checksum": "md5:17a1dc8d71af0b3767987eab294c0bc6",
+    "doi": "10.5281/zenodo.13852045",
+    "license": "CC-BY-4.0",
+    "observation_period": "2020-11 to 2021-10",
+    "geography": "Seven major Chinese cities; NOT Xuchang or Weidu",
+    "kind": "empirical aggregate figure data, not individual trajectories"
+  },
+  {
+    "name": "Fig3-1.Number of vehicles being charged by level by time of day.csv",
+    "url": "https://zenodo.org/api/records/13852045/files/Fig3-1.Number%20of%20vehicles%20being%20charged%20by%20level%20by%20time%20of%20day.csv/content",
+    "bytes": 39951,
+    "sha256": "ae8a6983a529007c24eac9c029bb32f7c0575d70756618a5f3aa5a927bbf9ede",
+    "archive_checksum": "md5:02ce072b6053df43b734b615ef156721",
+    "doi": "10.5281/zenodo.13852045",
+    "license": "CC-BY-4.0",
+    "observation_period": "2020-11 to 2021-10",
+    "geography": "Seven major Chinese cities; NOT Xuchang or Weidu",
+    "kind": "empirical aggregate figure data, not individual trajectories"
+  },
+  {
+    "name": "Fig1f-2.The number of charging events per day.csv",
+    "url": "https://zenodo.org/api/records/13852045/files/Fig1f-2.The%20number%20of%20charging%20events%20per%20day.csv/content",
+    "bytes": 594,
+    "sha256": "d4a81797618f7db0d51aeed5fffc5452c3d86a9592ac6ce1253ba119f80a09c7",
+    "archive_checksum": "md5:72ceba2b2a25f969f742175a32b16eec",
+    "doi": "10.5281/zenodo.13852045",
+    "license": "CC-BY-4.0",
+    "observation_period": "2020-11 to 2021-10",
+    "geography": "Seven major Chinese cities; NOT Xuchang or Weidu",
+    "kind": "empirical aggregate figure data, not individual trajectories"
+  }
+]

@@ -1,0 +1,1540 @@
+{
+  "checkedAt": "2026-10-20T11:11:57.537961+00:00",
+  "realStationCount": 52,
+  "stationsWithSources": 8,
+  "stationsPending": 44,
+  "pileCountKnown": 3,
+  "gunCountKnown": 1,
+  "installedPowerKnown": 1,
+  "maxGunPowerKnown": 3,
+  "scope": "公开资料与历史配置；并非已收齐全部站点的最新逐枪台账，未现场核验。",
+  "notes": [
+    "北俎庄枪数来自历史媒体报道，当前扩建及每枪实时状态未知。",
+    "设备数、枪数及每枪功率不互相代填；120 kW 双枪设备的输出仅计一次。",
+    "蔚来换电站与同址超充站未强行匹配；不同运营方及不明口径数量不合并。",
+    "2023 年城发数字仅作为检索存档，原始 PDF 下载版未定位到相同段落，不能作为新近实测或完整原文复核。"
+  ],
+  "records": [
+    {
+      "id": "B0IAM64GE0",
+      "name": "城发新能源青梅路南海街充电站",
+      "address": "半截河街道青梅路中央公园内(南侧)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842257442,
+          34.053321386
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "检索存档：120 kW 双枪直流设备",
+            "unitCount": 14,
+            "gunsPerUnit": 2,
+            "unitPowerKw": 120,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "仅为待原文复核的历史线索；120 kW 是每台设备配置，两枪功率分配未知。",
+            "gunCount": 28
+          }
+        ],
+        "sources": [
+          {
+            "label": "许昌市投资集团 2023 年融资券募集说明书公开检索存档",
+            "url": "https://np-snotice.eastmoney.com/pdf/H2_AN202307041592032277_1.pdf",
+            "method": "search_snapshot",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2023-07"
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": "2023-07",
+        "complete": false,
+        "note": "2023 年检索存档给出一期配置，但下载的原始 PDF 未定位到相同段落，不能视为已完成原文复核；仅展示线索，不填入正式桩数、枪数和总容量。火车站目录另有分站，未合并或替代当前配置。",
+        "basis": "unconfirmed_archive"
+      }
+    },
+    {
+      "id": "B0MBG73IE6",
+      "name": "充电桩",
+      "address": "劳动北路4590号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.811590689,
+          34.064521912
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L2ZP2QOI",
+      "name": "国家电网汽车充电站(河南省许昌市东城区管委会税务执法局停车场)",
+      "address": "半截河市场监督管理所院内停车场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.864748621,
+          34.017048195
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0M677YHEJ",
+      "name": "国家电网汽车充电站(河南省许昌市开发区市民之家停车场公共充电站)",
+      "address": "屯田路许昌经济开发区高创科技孵化器",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.786679208,
+          33.991632307
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MUUUXAGD",
+      "name": "国网新能源汽车充电站(国网新能源九洲溪雅园快充站)(内部专用)",
+      "address": "建安大道九洲溪雅园西门",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.859170541,
+          34.039235033
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LDY6EXQE",
+      "name": "海康威视汽车充电站(职业技术学院体育馆)",
+      "address": "新兴东路4336号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.873576044,
+          34.021241135
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MAH7LN18",
+      "name": "惠利充汽车充电站(假日宾馆充电站)",
+      "address": "五一路街道许昌市阳光天使心理咨询中心假日宾馆",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.793432101,
+          34.018392384
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0M6X7SML5",
+      "name": "惠利充汽车充电站(物资局家属院)",
+      "address": "新兴路物资局家属院7号楼旁停车场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.798685828,
+          34.012530575
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0K13LUMOR",
+      "name": "极氪能源超级充电站(许昌亨源通世纪广场极充站)",
+      "address": "赵湾路新田360广场(许昌亨源通店)(南侧)亨源通世纪广地面停车位",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.84621546,
+          34.027359566
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LRJ4GMGV",
+      "name": "京能汽车充电站(得瑞充电站)",
+      "address": "京能汽车充电",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.791923932,
+          34.053184082
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MBTCD0LN",
+      "name": "玖行能源汽车充电站(何能超充)",
+      "address": "三国大酒店(胖东来时代广场曹魏古城店)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.82442762,
+          34.021896619
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IR9LUG5D",
+      "name": "开迈斯汽车充电站(许昌市万达广场地上站)",
+      "address": "许都路魏文路交叉口万达地面停车场C219",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.852990038,
+          34.030639312
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0K1HZUFOQ",
+      "name": "科科魔方汽车充电站(许昌天悦广场)",
+      "address": "许都路万达广场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.856344888,
+          34.032151346
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L3TX8A7D",
+      "name": "平高智联汽车充电站(魏都区仁和骨科医院充电站)",
+      "address": "九弟万丰购物广场(东门)以北",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.830924841,
+          34.043787719
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MA5ZNQ5P",
+      "name": "启充云汽车充电站(火车站停车场充电桩项目)",
+      "address": "河南省许昌市魏都区颖昌街道颖昌社区居委会七一路与颖昌路交叉口",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815242389,
+          34.023264296
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LRAM0O2V",
+      "name": "汽车充电站(百花北路天使城停车场充电站)",
+      "address": "建安大道1502号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.837206268,
+          34.036757103
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IAFZ7NQR",
+      "name": "汽车充电站(小鹏超充许昌亨源通世纪广场站)",
+      "address": "半截河街道亨源通世纪广场(入口赵湾路)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.847842845,
+          34.029711853
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L1KZTQ4L",
+      "name": "容新智充汽车充电站(金汇广场负二楼充电站胖东来门口)",
+      "address": "北大街道八一西路恒达金汇广场商业街6号楼1层116号库迪咖啡",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.826160851,
+          34.041155385
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L0RM563D",
+      "name": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+      "address": "天宝路街道天宝东路保利堂悦",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83278486,
+          34.049165923
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": 600,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "全液冷超充终端",
+            "unitCount": 4,
+            "gunsPerUnit": null,
+            "unitPowerKw": null,
+            "gunPowerKw": null,
+            "ratedCurrentA": 600,
+            "note": "",
+            "gunCount": null
+          },
+          {
+            "label": "自冷快充设备",
+            "unitCount": 6,
+            "gunsPerUnit": null,
+            "unitPowerKw": null,
+            "gunPowerKw": null,
+            "ratedCurrentA": 250,
+            "note": "",
+            "gunCount": null
+          }
+        ],
+        "sources": [
+          {
+            "label": "中国电气装备集团／许继电气场站设备说明",
+            "url": "https://www.cee-group.cn/info/1245/5072.htm",
+            "method": "manufacturer_release",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2024-03-06"
+          },
+          {
+            "label": "通信世界网保利堂悦现场采访（与厂商设备数量口径不同）",
+            "url": "https://www.cww.net.cn/article?id=589723",
+            "method": "media_report",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2024-05"
+          },
+          {
+            "label": "许昌市发改委提案答复（仅交叉核对场站、车位与位置）",
+            "url": "https://sfgw.xuchang.gov.cn/ztzl/079004/20241015/aedd6247-2372-436e-9802-663a32bfe930.html",
+            "method": "government_release",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2024-08-08"
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": "2024-03 / 2024-05",
+        "complete": false,
+        "note": "厂商记载 4 台 600 A 及 6 台 250 A，媒体另述 4 台 600 kW 与 12 台 250 kW；设备、终端及枪的口径未统一，因此全站桩数、枪数及分组功率保留未知。600 A 不能直接换成 600 kW。仅站内单枪最高 600 kW 有厂商依据；16 个车位不替代枪数。",
+        "basis": "conflicting_reports"
+      }
+    },
+    {
+      "id": "B0J2XPOV8J",
+      "name": "特来电充电站(许昌东城区万达充电站)",
+      "address": "地面停车场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853384168,
+          34.030059092
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "目录标注的直流电桩",
+            "unitCount": 16,
+            "gunsPerUnit": null,
+            "unitPowerKw": null,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "目录未解释“电桩”是物理设备、终端还是枪，不能直接转换为枪数。",
+            "gunCount": null
+          }
+        ],
+        "sources": [
+          {
+            "label": "无敌电动网魏都站点目录（桩／枪口径未说明）",
+            "url": "https://www.modiauto.com.cn/cdz/c1940.html",
+            "method": "public_directory",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2026-10-11"
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": "2026-10-11",
+        "complete": false,
+        "note": "公开目录标注 16 个直流电桩，但桩／枪口径及分组功率未说明；仅展示原始记录，不填充正式桩数、枪数或总功率。",
+        "basis": "directory_only"
+      }
+    },
+    {
+      "id": "B0L3G5HIJA",
+      "name": "特来电充电站(许昌市豪华汽车站)",
+      "address": "颍昌路与七一路交叉口南100米地面停车场101",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.816170339,
+          34.020788554
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L25SC56J",
+      "name": "特来电汽车充电站(特来电许昌市投百花北路充电站)",
+      "address": "百花北路与建安大道北10米停车场内",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.836941449,
+          34.037091535
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L0RM55XP",
+      "name": "特来电汽车充电站(特来电许昌市投鸿宝酒店充电站)",
+      "address": "南关街道颍昌路565号鸿宝大酒店",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.816493999,
+          34.023595501
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0KK97S804",
+      "name": "特来电汽车充电站(特来电许昌市投烈士陵园充电站)",
+      "address": "文峰街道许都路许昌革命烈士纪念馆(长青街)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.833895262,
+          34.028446887
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LK7C3S0K",
+      "name": "特来电汽车充电站(特来电许昌市投名都新苑北侧充电站)",
+      "address": "文峰中路364号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.829088708,
+          34.010463987
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LRK7IIGU",
+      "name": "特来电汽车充电站(特来电许昌市投文峰广场充电站)",
+      "address": "前进路西段(塔东路与文峰路)文峰广场停车场西侧",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.831269283,
+          34.019877943
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L0RM5E41",
+      "name": "特来电汽车充电站(特来电许昌市投西湖公园充电站)",
+      "address": "西大街道西大街591号西湖公园内(南侧)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815289865,
+          34.029788873
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0M6LA4LE1",
+      "name": "特来电汽车充电站(特来电许昌中梁西都府超充站)",
+      "address": "灞陵路许昌中梁西都府超充站",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.785475038,
+          34.006783435
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0I1NS8N4O",
+      "name": "特斯拉超级充电站(许昌大酒店)",
+      "address": "七一路888号许昌大酒店院内地面停车场/入口七一路",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.821871033,
+          34.021684883
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": 6,
+        "gunCount": null,
+        "maxGunPowerKw": 250,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "超级充电终端",
+            "unitCount": 6,
+            "gunsPerUnit": null,
+            "unitPowerKw": null,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "官方列出 6 个超级充电桩；未公布逐枪编号、枪数及逐枪功率清单。",
+            "gunCount": null
+          }
+        ],
+        "sources": [
+          {
+            "label": "Tesla 许昌大酒店官方站点页",
+            "url": "https://www.tesla.cn/findus/location/supercharger/cnsc9638?region=CN",
+            "method": "search_snapshot",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": null
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": null,
+        "complete": true,
+        "note": "官方公布的是站内最高单枪功率；不表示每把枪都能同时达到该值。全站共享输出和配变容量未知。",
+        "basis": "public_source"
+      }
+    },
+    {
+      "id": "B0FFJ5K41S",
+      "name": "特斯拉超级充电站(许昌中原国际饭店)",
+      "address": "建安大道与学院北路交叉口向东300米中原国际饭店地下一层",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.860950316,
+          34.036735265
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": 6,
+        "gunCount": null,
+        "maxGunPowerKw": 119,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "超级充电终端",
+            "unitCount": 6,
+            "gunsPerUnit": null,
+            "unitPowerKw": null,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "官方列出 6 个超级充电桩；未公布逐枪编号、枪数及逐枪功率清单。",
+            "gunCount": null
+          }
+        ],
+        "sources": [
+          {
+            "label": "Tesla 中原国际饭店官方站点页",
+            "url": "https://www.tesla.cn/findus/location/supercharger/cnsc8190?region=CN",
+            "method": "search_snapshot",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": null
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": null,
+        "complete": true,
+        "note": "官方公布的是站内最高单枪功率；不表示每把枪都能同时达到该值。全站共享输出和配变容量未知。",
+        "basis": "public_source"
+      }
+    },
+    {
+      "id": "B0MGABBJSF",
+      "name": "腾付充汽车充电站(邦博重卡超充站)",
+      "address": "颖昌街道",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.746838935,
+          34.04256013
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0GK2CK5L3",
+      "name": "万里租车充电站",
+      "address": "天宝路劳动路交叉口向西10米路南万里租车院内",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.812520204,
+          34.046236007
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IUM7AQ8S",
+      "name": "蔚来换电站(许昌万达广场)",
+      "address": "兴业路118号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.853064285,
+          34.030197537
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IA6LE8RO",
+      "name": "蔚来能源汽车充电站(许昌许都大剧院)",
+      "address": "许都路与三里桥街交叉路口往东北约200米地面停车场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.843692524,
+          34.034228502
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "目录标注的直流电桩",
+            "unitCount": 5,
+            "gunsPerUnit": null,
+            "unitPowerKw": null,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "目录未解释“电桩”是物理设备、终端还是枪，不能直接转换为枪数。",
+            "gunCount": null
+          }
+        ],
+        "sources": [
+          {
+            "label": "无敌电动网魏都站点目录（桩／枪口径未说明）",
+            "url": "https://www.modiauto.com.cn/cdz/c1940.html",
+            "method": "public_directory",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2026-10-11"
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": "2026-10-11",
+        "complete": false,
+        "note": "公开目录标注 5 个直流电桩，但桩／枪口径及分组功率未说明；仅展示原始记录，不填充正式桩数、枪数或总功率。",
+        "basis": "directory_only"
+      }
+    },
+    {
+      "id": "B0KG1A7376",
+      "name": "西环路充电站",
+      "address": "新兴西路1号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.762551399,
+          34.012453616
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IAJL39JV",
+      "name": "小鹏超级充电站(小鹏S4超快充许昌魏都万达广场站)",
+      "address": "半截河街道魏都万达广场(入口魏文路)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.85258291,
+          34.0308256
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L2LZPE68",
+      "name": "新电途汽车充电站(曹魏欢乐城充电站)",
+      "address": "灞陵路168号(曹魏欢乐城东门南170米)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.784652647,
+          34.012934052
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LGHRTQM2",
+      "name": "新电途汽车充电站(能效充电桩旗舰店充电站)",
+      "address": "丁庄街道毅辰汽车照明",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.793347936,
+          34.057212118
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IAPCQBO7",
+      "name": "星星充电汽车充电站(城发新能源火车站充电站)",
+      "address": "南关街道车站路10号许昌站",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.815453233,
+          34.020974205
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [
+          {
+            "label": "检索存档：120 kW 双枪直流设备",
+            "unitCount": 8,
+            "gunsPerUnit": 2,
+            "unitPowerKw": 120,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "仅为待原文复核的历史线索；120 kW 是每台设备配置，两枪功率分配未知。",
+            "gunCount": 16
+          }
+        ],
+        "sources": [
+          {
+            "label": "许昌市投资集团 2023 年融资券募集说明书公开检索存档",
+            "url": "https://np-snotice.eastmoney.com/pdf/H2_AN202307041592032277_1.pdf",
+            "method": "search_snapshot",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2023-07"
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": "2023-07",
+        "complete": false,
+        "note": "2023 年检索存档给出一期配置，但下载的原始 PDF 未定位到相同段落，不能视为已完成原文复核；仅展示线索，不填入正式桩数、枪数和总容量。火车站目录另有分站，未合并或替代当前配置。",
+        "basis": "unconfirmed_archive"
+      }
+    },
+    {
+      "id": "B0K2H5EYKY",
+      "name": "星星充电汽车充电站(城发新能源金石国际充电站)",
+      "address": "金石许都府东门西北50米",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841820897,
+          34.036147689
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L0TCAVRW",
+      "name": "星星充电汽车充电站(城发新能源万通街充电站)",
+      "address": "中央公园内(南侧)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841429175,
+          34.071733358
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L6ZBYRH0",
+      "name": "许禹路充电站",
+      "address": "许禹路与西环交汇处西北角",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.766359871,
+          34.036581046
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LDD5GJ5A",
+      "name": "豫来电-胖东来生活广场便民充电站",
+      "address": "颍昌路201号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.817870471,
+          34.019213032
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0LRXKXWUQ",
+      "name": "云快充超级充电站(橙南公牛超充站)",
+      "address": "许由西路与解放南路交叉口向西300米路北(睿蓝4S店东侧进院)",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.806382986,
+          34.006387514
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0M6M6U9DP",
+      "name": "云快充目的地充电站(金石国际停车场公牛充电站)",
+      "address": "建安大道与三里桥街交叉口西南角金石国际地下停车场负一层和负二层北侧s区",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.841401724,
+          34.035646048
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MBS6DMJ1",
+      "name": "云快充汽车充电站(橙西公牛超充站)",
+      "address": "华佗路与向阳路交叉口西60米西关里文创社区停车场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.797058809,
+          34.030874861
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0L1GB8QU2",
+      "name": "云快充汽车充电站(许都公园西侧停车场充电站)",
+      "address": "建安大道1527号许都公园西侧停车场",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.842823856,
+          34.035738592
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IG9LCD8B",
+      "name": "云快充汽车充电站(悦洋新能源充电站)",
+      "address": "地面停车场16",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.824405254,
+          34.024864894
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MBZBBENU",
+      "name": "中镉超充汽车充电站(许职体育馆充电站)",
+      "address": "前进路辅路",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.87352093,
+          34.021237076
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0IKHSCAZG",
+      "name": "中国石化北俎庄充电站",
+      "address": "许昌市魏都区北环路与文峰路交叉口东南角",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.83582499,
+          34.068313918
+        ]
+      },
+      "equipment": {
+        "state": "sourced",
+        "pileCount": 20,
+        "gunCount": 26,
+        "maxGunPowerKw": null,
+        "installedPowerKw": 1294,
+        "groups": [
+          {
+            "label": "前油后电单枪直流终端",
+            "unitCount": 8,
+            "gunsPerUnit": 1,
+            "unitPowerKw": 40,
+            "gunPowerKw": 40,
+            "ratedCurrentA": null,
+            "note": "",
+            "gunCount": 8
+          },
+          {
+            "label": "中油侧电单枪直流终端",
+            "unitCount": 4,
+            "gunsPerUnit": 1,
+            "unitPowerKw": 60,
+            "gunPowerKw": 60,
+            "ratedCurrentA": null,
+            "note": "",
+            "gunCount": 4
+          },
+          {
+            "label": "撤气增电双枪直流终端",
+            "unitCount": 6,
+            "gunsPerUnit": 2,
+            "unitPowerKw": 120,
+            "gunPowerKw": null,
+            "ratedCurrentA": null,
+            "note": "由 2 台 360 kW 充电堆供给；120 kW 是双枪终端配置，未公布每枪分配方式。",
+            "gunCount": 12
+          },
+          {
+            "label": "单枪交流终端",
+            "unitCount": 2,
+            "gunsPerUnit": 1,
+            "unitPowerKw": 7,
+            "gunPowerKw": 7,
+            "ratedCurrentA": null,
+            "note": "",
+            "gunCount": 2
+          }
+        ],
+        "sources": [
+          {
+            "label": "北俎庄光储充设备建设报道（搜狐转载）",
+            "url": "https://www.sohu.com/a/659868206_121123682",
+            "method": "media_report",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2023-03-27"
+          },
+          {
+            "label": "许昌市发改委提案答复（仅交叉核对场站、车位与位置）",
+            "url": "https://sfgw.xuchang.gov.cn/ztzl/079004/20241015/aedd6247-2372-436e-9802-663a32bfe930.html",
+            "method": "government_release",
+            "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+            "sourceDate": "2024-08-08"
+          }
+        ],
+        "checkedAt": "2026-10-20T11:11:57.431849+00:00",
+        "sourceDate": "2023-03-27",
+        "complete": true,
+        "note": "设备明细来自 2023 年媒体转载报道，需运营方复核；政府资料仅印证场站与 26 个车位，不独立证明枪数和功率。合计 20 个终端、26 把枪、1294 kW 设备额定输出；4 台上游直流充电堆不重复计入终端数量或功率。无现场枪编号及最新扩建资料。",
+        "basis": "historical_media_report"
+      }
+    },
+    {
+      "id": "B0KG5BXSEW",
+      "name": "中国石化汽车充电站(春海医院站)",
+      "address": "德星路与学府街交叉口西南角春海医院停车场内",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.854831619,
+          34.044566019
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    },
+    {
+      "id": "B0MA3BYFJI",
+      "name": "中国石化汽车充电站(新兴西路充电站)",
+      "address": "新兴路35号",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.796941118,
+          34.01510931
+        ]
+      },
+      "equipment": {
+        "state": "unknown",
+        "pileCount": null,
+        "gunCount": null,
+        "maxGunPowerKw": null,
+        "installedPowerKw": null,
+        "groups": [],
+        "sources": [],
+        "checkedAt": null,
+        "sourceDate": null,
+        "complete": false,
+        "note": "尚无可对应此站的设备配置资料；枪数和功率未知。"
+      }
+    }
+  ]
+}

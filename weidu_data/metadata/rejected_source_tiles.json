@@ -1,0 +1,5 @@
+{
+  "filename": "GHS_POP_E2025_GLOBE_R2023A_4326_3ss_V1_0_R5_C29.tif",
+  "status": "rejected_not_used_or_packaged",
+  "reason": "Actual bounds 99.992,39.100,109.992,49.100 do not cover Weidu; geographic tile indices differ from Mollweide indices. Correct geographic tile R6_C30 was subsequently acquired and validated."
+}

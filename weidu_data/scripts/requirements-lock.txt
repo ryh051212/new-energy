@@ -1,0 +1,8 @@
+requests==2.34.2
+python-dotenv==1.2.3
+numpy==2.5.3
+shapely==2.1.2
+pyproj==3.8.0
+rasterio==1.5.2
+networkx==3.7
+psycopg2-binary==2.9.13

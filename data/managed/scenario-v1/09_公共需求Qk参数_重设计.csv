@@ -1,0 +1,16 @@
+﻿scenario_id,scenario_label,scene_id,scene_label,weight_wk,redesigned_qk,public_demand_multiplier,public_charging_dependence_share,design_logic,parameter_nature,simulation_version
+low_public_demand,低公共充电需求,population,人口（替代原居住POI）,0.2,0.55,0.72,0.22,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+low_public_demand,低公共充电需求,work,工作,0.2,0.7,0.72,0.22,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+low_public_demand,低公共充电需求,shopping,商业,0.2,0.8,0.72,0.22,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+low_public_demand,低公共充电需求,leisure,休闲,0.2,0.72,0.72,0.22,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+low_public_demand,低公共充电需求,public_service_transport,公共服务/交通,0.2,0.78,0.72,0.22,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+base,中等公共充电需求,population,人口（替代原居住POI）,0.2,0.8,1,0.42,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+base,中等公共充电需求,work,工作,0.2,0.95,1,0.42,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+base,中等公共充电需求,shopping,商业,0.2,1.1,1,0.42,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+base,中等公共充电需求,leisure,休闲,0.2,0.9,1,0.42,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+base,中等公共充电需求,public_service_transport,公共服务/交通,0.2,1,1,0.42,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+high_public_demand,高公共充电需求,population,人口（替代原居住POI）,0.2,1.2,1.32,0.65,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+high_public_demand,高公共充电需求,work,工作,0.2,1.25,1.32,0.65,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+high_public_demand,高公共充电需求,shopping,商业,0.2,1.45,1.32,0.65,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+high_public_demand,高公共充电需求,leisure,休闲,0.2,1.2,1.32,0.65,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028
+high_public_demand,高公共充电需求,public_service_transport,公共服务/交通,0.2,1.3,1.32,0.65,Q_k随公共充电依赖增强而提高；商业场景保留较高的目的地充电倾向，人口项替代原居住POI计数。,探索性相对系数，不是实际充电概率,weidu-private-charging-scenario-v1.0-20261028

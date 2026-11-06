@@ -1,0 +1,101 @@
+{
+    "checkedAt":  "2026-10-21T19:09:38.3807640+08:00",
+    "experiment":  "功能区与时间需求情景联动",
+    "dataSource":  "2026-10-20 PostGIS API 导出样本；登录接口使用隔离验收桩；底图瓦片替换为透明图片",
+    "gridCount":  170,
+    "defaultCandidateCount":  54,
+    "checks":  [
+                   "功能区在时间切换前后保持一致",
+                   "需求、评分与地图同步更新",
+                   "功能区筛选和 CSV 导出",
+                   "保留新增草稿并使旧分析失效",
+                   "重新分析采用当前场景",
+                   "工作台内部跳转同步路由且可返回选址",
+                   "390/320 像素页面无水平溢出",
+                   "无页面异常或 Vue 警告"
+               ],
+    "automatedTests":  {
+                           "command":  "node --test tests/*.test.mjs",
+                           "failed":  0,
+                           "passed":  246
+                       },
+    "build":  {
+                  "command":  "npm.cmd run build",
+                  "notice":  "保留现有大体积 chunk 提示",
+                  "passed":  true
+              },
+    "scenes":  {
+                   "day":  [
+                               {
+                                   "id":  "8",
+                                   "score":  22.755664466526486,
+                                   "zone":  "工作",
+                                   "demand":  0.059266227657572904
+                               },
+                               {
+                                   "id":  "1",
+                                   "score":  28.04500070441418,
+                                   "zone":  "休闲",
+                                   "demand":  0.0048100126794551916
+                               },
+                               {
+                                   "id":  "2",
+                                   "score":  18.472569004982066,
+                                   "zone":  "工作",
+                                   "demand":  0.01975540921919097
+                               }
+                           ],
+                   "night":  [
+                                 {
+                                     "id":  "1",
+                                     "score":  28.38857303866098,
+                                     "zone":  "休闲",
+                                     "demand":  0.010994314695897582
+                                 },
+                                 {
+                                     "id":  "8",
+                                     "score":  19.956981493807767,
+                                     "zone":  "工作",
+                                     "demand":  0.008889934148635936
+                                 },
+                                 {
+                                     "id":  "2",
+                                     "score":  17.539674680742493,
+                                     "zone":  "工作",
+                                     "demand":  0.002963311382878645
+                                 }
+                             ],
+                   "weekend":  [
+                                   {
+                                       "id":  "8",
+                                       "score":  20.286238314127615,
+                                       "zone":  "工作",
+                                       "demand":  0.014816556914393226
+                                   },
+                                   {
+                                       "id":  "1",
+                                       "score":  28.541271853881778,
+                                       "zone":  "休闲",
+                                       "demand":  0.013742893369871978
+                                   },
+                                   {
+                                       "id":  "2",
+                                       "score":  17.64942695418244,
+                                       "zone":  "工作",
+                                       "demand":  0.004938852304797742
+                                   }
+                               ]
+               },
+    "errors":  [
+
+               ],
+    "warnings":  [
+
+                 ],
+    "artifacts":  [
+                      ".tmp/demand-scenarios-desktop.png",
+                      ".tmp/demand-scenarios-390.png",
+                      ".tmp/demand-scenarios-320.png",
+                      ".tmp/demand-scenarios.csv"
+                  ]
+}

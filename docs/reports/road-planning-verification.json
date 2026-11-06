@@ -1,0 +1,185 @@
+{
+  "checks": [
+    "authenticated overview loads the live road baseline with recorded stations",
+    "MCLP result replaces the editable draft without moving coordinates; manual reanalysis agrees",
+    "all three methods use the same candidate pool; CSV downloads successfully",
+    "complete JSON includes baseline stations and versions, and can be revalidated and recalculated",
+    "390/320 layouts have no page overflow; no browser runtime errors"
+  ],
+  "data": "Live PostGIS + local OSM graph; basemap pixels isolated",
+  "optimized": {
+    "before": {
+      "coveragePercent": 95.04235481945919,
+      "averageMinutes": null,
+      "reachableAverageMinutes": 2.6840569307351942,
+      "unreachableDemandPercent": 4.957645180540815,
+      "capacityIndex": 100,
+      "weakest20Index": 31.94419258036043,
+      "gini": 0.23916285475437757,
+      "stationCount": 52,
+      "scenarioPowerKw": 3120,
+      "highDemandGapGrids": 21
+    },
+    "after": {
+      "coveragePercent": 95.75537282316378,
+      "averageMinutes": null,
+      "reachableAverageMinutes": 2.4773396573149333,
+      "unreachableDemandPercent": 4.244627176836222,
+      "capacityIndex": 109.80392156862746,
+      "weakest20Index": 44.43865420715342,
+      "gini": 0.2381591144242709,
+      "stationCount": 57,
+      "scenarioPowerKw": 3420,
+      "highDemandGapGrids": 21
+    },
+    "selection": {
+      "method": "mclp",
+      "requestedCount": 5,
+      "selectedCount": 5,
+      "comparableCount": true,
+      "stopReason": "requested-count",
+      "steps": [
+        {
+          "rank": 1,
+          "candidateId": "site-catalog:B0LRLNMSKA",
+          "newlyCoveredWeight": 0.15804327375352772,
+          "coverageGainPoints": 0.7130180037045933,
+          "weightedSavedSeconds": 0
+        },
+        {
+          "rank": 2,
+          "candidateId": "site-catalog:B0HRNAVRJ0",
+          "newlyCoveredWeight": 0,
+          "coverageGainPoints": 0,
+          "weightedSavedSeconds": 91.44911002530078
+        },
+        {
+          "rank": 3,
+          "candidateId": "site-catalog:B0I6BSHJGY",
+          "newlyCoveredWeight": 0,
+          "coverageGainPoints": 0,
+          "weightedSavedSeconds": 68.90307706779417
+        },
+        {
+          "rank": 4,
+          "candidateId": "site-catalog:B0LU1SFIYE",
+          "newlyCoveredWeight": 0,
+          "coverageGainPoints": 0,
+          "weightedSavedSeconds": 55.081421244178564
+        },
+        {
+          "rank": 5,
+          "candidateId": "site-catalog:B0L1TC4DUB",
+          "newlyCoveredWeight": 0,
+          "coverageGainPoints": 0,
+          "weightedSavedSeconds": 46.67757517246207
+        }
+      ],
+      "demandCenters": {
+        "type": "FeatureCollection",
+        "features": [
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                113.86292088454422,
+                34.02548732626407
+              ]
+            },
+            "properties": {
+              "name": "需求核心 1",
+              "buildable": false
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                113.76379362871454,
+                34.04015325032137
+              ]
+            },
+            "properties": {
+              "name": "需求核心 2",
+              "buildable": false
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                113.80800553670856,
+                34.07357300160411
+              ]
+            },
+            "properties": {
+              "name": "需求核心 3",
+              "buildable": false
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                113.80255566288812,
+                34.02635737560074
+              ]
+            },
+            "properties": {
+              "name": "需求核心 4",
+              "buildable": false
+            }
+          },
+          {
+            "type": "Feature",
+            "geometry": {
+              "type": "Point",
+              "coordinates": [
+                113.84480724652727,
+                34.06236933570945
+              ]
+            },
+            "properties": {
+              "name": "需求核心 5",
+              "buildable": false
+            }
+          }
+        ]
+      }
+    },
+    "quality": {
+      "unconnected": 57,
+      "candidates": 229
+    }
+  },
+  "experiments": [
+    {
+      "label": "demand",
+      "count": 5,
+      "coverage": 95.04235481945919,
+      "comparable": true
+    },
+    {
+      "label": "kmeans",
+      "count": 5,
+      "coverage": 95.04235481945919,
+      "comparable": true
+    },
+    {
+      "label": "mclp",
+      "count": 5,
+      "coverage": 95.75537282316378,
+      "comparable": true
+    }
+  ],
+  "verifiedDate": "2026-10-24",
+  "regression": {
+    "backendPassed": 109,
+    "frontendPassed": 271,
+    "productionBuild": "passed"
+  }
+}

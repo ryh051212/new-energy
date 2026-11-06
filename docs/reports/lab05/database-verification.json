@@ -1,0 +1,579 @@
+{
+  "baselineCommit": "c978f4d",
+  "databaseWrites": false,
+  "tables": {
+    "stations": {
+      "count": 292,
+      "srids": [
+        4326
+      ],
+      "geometryTypes": [
+        "POINT"
+      ],
+      "indexes": [
+        {
+          "name": "stations_pkey",
+          "definition": "CREATE UNIQUE INDEX stations_pkey ON public.stations USING btree (id)"
+        },
+        {
+          "name": "idx_stations_geom_gist",
+          "definition": "CREATE INDEX idx_stations_geom_gist ON public.stations USING gist (geom)"
+        },
+        {
+          "name": "idx_stations_gcj02_gist",
+          "definition": "CREATE INDEX idx_stations_gcj02_gist ON public.stations USING gist (geom_gcj02)"
+        },
+        {
+          "name": "idx_stations_dataset",
+          "definition": "CREATE INDEX idx_stations_dataset ON public.stations USING btree (dataset_id, is_synthetic)"
+        }
+      ]
+    },
+    "residential_pois": {
+      "count": 225,
+      "srids": [
+        4326
+      ],
+      "geometryTypes": [
+        "POINT"
+      ],
+      "indexes": [
+        {
+          "name": "residential_pois_pkey",
+          "definition": "CREATE UNIQUE INDEX residential_pois_pkey ON public.residential_pois USING btree (id)"
+        },
+        {
+          "name": "idx_residential_pois_geom_gist",
+          "definition": "CREATE INDEX idx_residential_pois_geom_gist ON public.residential_pois USING gist (geom)"
+        },
+        {
+          "name": "idx_residential_pois_gcj02_gist",
+          "definition": "CREATE INDEX idx_residential_pois_gcj02_gist ON public.residential_pois USING gist (geom_gcj02)"
+        }
+      ]
+    },
+    "commercial_pois": {
+      "count": 200,
+      "srids": [
+        4326
+      ],
+      "geometryTypes": [
+        "POINT"
+      ],
+      "indexes": [
+        {
+          "name": "commercial_pois_pkey",
+          "definition": "CREATE UNIQUE INDEX commercial_pois_pkey ON public.commercial_pois USING btree (id)"
+        },
+        {
+          "name": "idx_commercial_pois_geom_gist",
+          "definition": "CREATE INDEX idx_commercial_pois_geom_gist ON public.commercial_pois USING gist (geom)"
+        },
+        {
+          "name": "idx_commercial_pois_gcj02_gist",
+          "definition": "CREATE INDEX idx_commercial_pois_gcj02_gist ON public.commercial_pois USING gist (geom_gcj02)"
+        }
+      ]
+    },
+    "facility_pois": {
+      "count": 1817,
+      "srids": [
+        4326
+      ],
+      "geometryTypes": [
+        "POINT"
+      ],
+      "indexes": [
+        {
+          "name": "facility_pois_pkey",
+          "definition": "CREATE UNIQUE INDEX facility_pois_pkey ON public.facility_pois USING btree (id)"
+        },
+        {
+          "name": "idx_facility_pois_geom_gist",
+          "definition": "CREATE INDEX idx_facility_pois_geom_gist ON public.facility_pois USING gist (geom)"
+        },
+        {
+          "name": "idx_facility_pois_geography",
+          "definition": "CREATE INDEX idx_facility_pois_geography ON public.facility_pois USING gist (((geom)::geography))"
+        },
+        {
+          "name": "idx_facility_pois_categories",
+          "definition": "CREATE INDEX idx_facility_pois_categories ON public.facility_pois USING gin (categories)"
+        }
+      ]
+    }
+  },
+  "searches": {
+    "图书": [
+      {
+        "id": "facility_pois:B0L3TX90XA",
+        "sourceId": "B0L3TX90XA",
+        "name": "文博图书城停车场",
+        "coordinates": [
+          113.83185100563965,
+          34.02003799822663
+        ],
+        "address": "文博图书城",
+        "category": "parking",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      }
+    ],
+    "体育": [
+      {
+        "id": "facility_pois:B0I3MZMSW6",
+        "sourceId": "B0I3MZMSW6",
+        "name": "非凡体育篮球馆",
+        "coordinates": [
+          113.83528738700524,
+          34.058438352208555
+        ],
+        "address": "文峰中路5155号",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0LDY6EXQE",
+        "sourceId": "B0LDY6EXQE",
+        "name": "海康威视汽车充电站(职业技术学院体育馆)",
+        "coordinates": [
+          113.87357604425894,
+          34.02124113549806
+        ],
+        "address": "新兴东路4336号",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B0KD07UX5S",
+        "sourceId": "B0KD07UX5S",
+        "name": "蚂蚁体育游泳馆(恒大绿洲店)(暂停营业)",
+        "coordinates": [
+          113.8608535545632,
+          34.05192050775906
+        ],
+        "address": "学院路与南海街交叉路口恒大绿洲院内",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B0KAFZI504",
+        "sourceId": "B0KAFZI504",
+        "name": "锐进体育馆",
+        "coordinates": [
+          113.77776257325411,
+          34.02562662459705
+        ],
+        "address": "许继大道灞陵桥西河堤北100米",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B0FFG8BOB4",
+        "sourceId": "B0FFG8BOB4",
+        "name": "停车场(许昌市体育局东南)",
+        "coordinates": [
+          113.82103299960875,
+          34.01721434466546
+        ],
+        "address": "仓库路与三八路交叉口北120米",
+        "category": "parking",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B017600644",
+        "sourceId": "B017600644",
+        "name": "许昌市体育场",
+        "coordinates": [
+          113.81398776308961,
+          34.033057753535765
+        ],
+        "address": "劳动路800号",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B017601BTQ",
+        "sourceId": "B017601BTQ",
+        "name": "许昌市体育馆",
+        "coordinates": [
+          113.82091356357337,
+          34.0180279365823
+        ],
+        "address": "仓库路35号",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B0176019C2",
+        "sourceId": "B0176019C2",
+        "name": "许昌学院体育学院",
+        "coordinates": [
+          113.86716072576434,
+          34.04300436450945
+        ],
+        "address": "八一路88号许昌学院",
+        "category": "school",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B01760MZAW",
+        "sourceId": "B01760MZAW",
+        "name": "许昌职业技术学院体育馆",
+        "coordinates": [
+          113.87339375607247,
+          34.02030914863096
+        ],
+        "address": "新兴路4336号许昌职业技术学院西北角",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B0FFKNG6V2",
+        "sourceId": "B0FFKNG6V2",
+        "name": "许昌职业技术学院体育馆停车场",
+        "coordinates": [
+          113.87271629356688,
+          34.02066731124159
+        ],
+        "address": "魏武大道中段许昌职业技术学院",
+        "category": "parking",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "facility_pois:B0JUDN14TU",
+        "sourceId": "B0JUDN14TU",
+        "name": "优腾体育小飞人篮球运动中心",
+        "coordinates": [
+          113.86082749538431,
+          34.051855485241724
+        ],
+        "address": "恒大绿洲院内综合楼1楼",
+        "category": "leisure",
+        "source": "facility_pois",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0MBZBBENU",
+        "sourceId": "B0MBZBBENU",
+        "name": "中镉超充汽车充电站(许职体育馆充电站)",
+        "coordinates": [
+          113.87352092962632,
+          34.021237075872556
+        ],
+        "address": "前进路辅路",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      }
+    ],
+    "充电": [
+      {
+        "id": "stations:B0IAM64GE0",
+        "sourceId": "B0IAM64GE0",
+        "name": "城发新能源青梅路南海街充电站",
+        "coordinates": [
+          113.84225744214743,
+          34.0533213856137
+        ],
+        "address": "半截河街道青梅路中央公园内(南侧)",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0MBG73IE6",
+        "sourceId": "B0MBG73IE6",
+        "name": "充电桩",
+        "coordinates": [
+          113.81159068935882,
+          34.06452191198113
+        ],
+        "address": "劳动北路4590号",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0L2ZP2QOI",
+        "sourceId": "B0L2ZP2QOI",
+        "name": "国家电网汽车充电站(河南省许昌市东城区管委会税务执法局停车场)",
+        "coordinates": [
+          113.86474862097663,
+          34.017048194605465
+        ],
+        "address": "半截河市场监督管理所院内停车场",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0M677YHEJ",
+        "sourceId": "B0M677YHEJ",
+        "name": "国家电网汽车充电站(河南省许昌市开发区市民之家停车场公共充电站)",
+        "coordinates": [
+          113.78667920801198,
+          33.9916323066356
+        ],
+        "address": "屯田路许昌经济开发区高创科技孵化器",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0MUUUXAGD",
+        "sourceId": "B0MUUUXAGD",
+        "name": "国网新能源汽车充电站(国网新能源九洲溪雅园快充站)(内部专用)",
+        "coordinates": [
+          113.85917054117905,
+          34.03923503278832
+        ],
+        "address": "建安大道九洲溪雅园西门",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0LDY6EXQE",
+        "sourceId": "B0LDY6EXQE",
+        "name": "海康威视汽车充电站(职业技术学院体育馆)",
+        "coordinates": [
+          113.87357604425894,
+          34.02124113549806
+        ],
+        "address": "新兴东路4336号",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0MAH7LN18",
+        "sourceId": "B0MAH7LN18",
+        "name": "惠利充汽车充电站(假日宾馆充电站)",
+        "coordinates": [
+          113.79343210141528,
+          34.01839238357509
+        ],
+        "address": "五一路街道许昌市阳光天使心理咨询中心假日宾馆",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0M6X7SML5",
+        "sourceId": "B0M6X7SML5",
+        "name": "惠利充汽车充电站(物资局家属院)",
+        "coordinates": [
+          113.79868582822975,
+          34.012530574713345
+        ],
+        "address": "新兴路物资局家属院7号楼旁停车场",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0K13LUMOR",
+        "sourceId": "B0K13LUMOR",
+        "name": "极氪能源超级充电站(许昌亨源通世纪广场极充站)",
+        "coordinates": [
+          113.84621546017118,
+          34.02735956551656
+        ],
+        "address": "赵湾路新田360广场(许昌亨源通店)(南侧)亨源通世纪广地面停车位",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0LRJ4GMGV",
+        "sourceId": "B0LRJ4GMGV",
+        "name": "京能汽车充电站(得瑞充电站)",
+        "coordinates": [
+          113.79192393158446,
+          34.05318408184066
+        ],
+        "address": "京能汽车充电",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0MBTCD0LN",
+        "sourceId": "B0MBTCD0LN",
+        "name": "玖行能源汽车充电站(何能超充)",
+        "coordinates": [
+          113.82442762033966,
+          34.02189661915108
+        ],
+        "address": "三国大酒店(胖东来时代广场曹魏古城店)",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0IR9LUG5D",
+        "sourceId": "B0IR9LUG5D",
+        "name": "开迈斯汽车充电站(许昌市万达广场地上站)",
+        "coordinates": [
+          113.85299003845729,
+          34.03063931231284
+        ],
+        "address": "许都路魏文路交叉口万达地面停车场C219",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0K1HZUFOQ",
+        "sourceId": "B0K1HZUFOQ",
+        "name": "科科魔方汽车充电站(许昌天悦广场)",
+        "coordinates": [
+          113.85634488773785,
+          34.03215134632003
+        ],
+        "address": "许都路万达广场",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0L3TX8A7D",
+        "sourceId": "B0L3TX8A7D",
+        "name": "平高智联汽车充电站(魏都区仁和骨科医院充电站)",
+        "coordinates": [
+          113.83092484145499,
+          34.043787719340365
+        ],
+        "address": "九弟万丰购物广场(东门)以北",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0MA5ZNQ5P",
+        "sourceId": "B0MA5ZNQ5P",
+        "name": "启充云汽车充电站(火车站停车场充电桩项目)",
+        "coordinates": [
+          113.81524238854539,
+          34.02326429550261
+        ],
+        "address": "河南省许昌市魏都区颖昌街道颖昌社区居委会七一路与颖昌路交叉口",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0LRAM0O2V",
+        "sourceId": "B0LRAM0O2V",
+        "name": "汽车充电站(百花北路天使城停车场充电站)",
+        "coordinates": [
+          113.83720626751817,
+          34.03675710319334
+        ],
+        "address": "建安大道1502号",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0IAFZ7NQR",
+        "sourceId": "B0IAFZ7NQR",
+        "name": "汽车充电站(小鹏超充许昌亨源通世纪广场站)",
+        "coordinates": [
+          113.84784284478675,
+          34.02971185252252
+        ],
+        "address": "半截河街道亨源通世纪广场(入口赵湾路)",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0L1KZTQ4L",
+        "sourceId": "B0L1KZTQ4L",
+        "name": "容新智充汽车充电站(金汇广场负二楼充电站胖东来门口)",
+        "coordinates": [
+          113.82616085083936,
+          34.04115538503796
+        ],
+        "address": "北大街道八一西路恒达金汇广场商业街6号楼1层116号库迪咖啡",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0L0RM563D",
+        "sourceId": "B0L0RM563D",
+        "name": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+        "coordinates": [
+          113.83278485996134,
+          34.04916592345659
+        ],
+        "address": "天宝路街道天宝东路保利堂悦",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      },
+      {
+        "id": "stations:B0J2XPOV8J",
+        "sourceId": "B0J2XPOV8J",
+        "name": "特来电充电站(许昌东城区万达充电站)",
+        "coordinates": [
+          113.85338416760598,
+          34.03005909186117
+        ],
+        "address": "地面停车场",
+        "category": "station",
+        "source": "stations",
+        "coordSystem": "WGS84",
+        "isSynthetic": false
+      }
+    ],
+    "不存在的实验五地点_20261022": [],
+    "%": [],
+    "_": []
+  }
+}

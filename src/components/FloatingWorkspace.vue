@@ -1,7 +1,7 @@
 <script setup>
 import { computed, nextTick, onBeforeUnmount, onMounted, provide, reactive, ref, watch } from 'vue'
-import UiIcon from './UiIcon.vue'
-import { WORKSPACE_LAYOUT_KEY, workspaceContextKey, clampPanelRect, coupledPanelRects, defaultPanelRect, normalizePanelRect, readWorkspaceLayouts, resizePanelRect, restorePanelRect, workspaceDockTarget } from '../utils/workspaceLayout.js'
+import UiIcon from '../shared/components/UiIcon.vue'
+import { WORKSPACE_LAYOUT_KEY, workspaceContextKey, clampPanelRect, coupledPanelRects, defaultPanelRect, normalizePanelRect, readWorkspaceLayouts, resizePanelRect, restorePanelRect, workspaceDockTarget } from '../shared/layout/workspaceLayout.js'
 
 const props = defineProps({view:{type:String,default:'overview'},fullscreen:Boolean})
 const emit = defineEmits(['panel-resize'])
@@ -147,8 +147,7 @@ onBeforeUnmount(()=>{cancel();observer?.disconnect();cancelAnimationFrame(resize
 <template>
   <main class="workspace map-workspace floating-workspace" :class="{'workspace-interacting':interaction}">
     <div class="workspace-layout-toolbar">
-      <span class="workspace-layout-label"><UiIcon name="layers" :size="15" />联动布局</span>
-      <span class="workspace-layout-help">拖分隔线调整比例 · 拖标题栏调整分区，地图自动填满剩余空间</span>
+      <span class="workspace-layout-label"><UiIcon name="layers" :size="15" />
       <div class="workspace-panel-menu">
         <button aria-label="管理工作台面板" :aria-expanded="menuOpen" @click.stop="menuOpen=!menuOpen"><UiIcon name="menu" :size="14" />面板 <UiIcon name="chevron" :size="12" /></button>
         <div v-if="menuOpen" class="workspace-panel-list" aria-label="工作台面板列表">

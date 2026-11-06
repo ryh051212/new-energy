@@ -1,0 +1,8 @@
+{
+  "endpoint": "https://overpass.kumi.systems/api/interpreter",
+  "query": "[out:json][timeout:120];(way[\"building\"](33.9852102,113.7350207,34.0984399,113.8815505);way[\"landuse\"](33.9852102,113.7350207,34.0984399,113.8815505);nwr[\"amenity\"=\"parking\"](33.9852102,113.7350207,34.0984399,113.8815505););out meta geom;",
+  "attempted_at": "2026-10-27T11:24:29.169230+00:00",
+  "error_kind": "ProxyError",
+  "http_status": null,
+  "status": "not_acquired; no substitute geometry generated"
+}

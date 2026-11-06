@@ -1,8 +1,114 @@
 # 魏都区充电设施 WebGIS
 
-规划端提供“空间供需／约束选址／方案推演／车网协同”四个联动工作台。空间供需查看已有分布、供需专题与四象限统计；约束选址筛选并排序候选；方案推演调整全区站点，或在地图选定位评价周边；车网协同比较同一方案的逐时负荷与光储调节。
+## 协作成员首次启动（Windows）
 
-界面参考 `weidu_ev_webgis_planner_pss.html`，采用蓝白配色、紧凑顶栏、左侧地图与右侧分析面板。小屏改为上方地图、下方独立滚动面板。车主端已从应用入口和导航移除，旧 `/charging`、`/charing` 及其子路径统一返回规划首页；相关历史组件和后端接口保留但不再作为前端页面加载。参考 HTML 的演示模型与固定数值未引入正式计算。
+协作统一使用 GitHub 仓库 [ryh051212/new-energy](https://github.com/ryh051212/new-energy)。先安装 Git，在准备保存项目的位置打开 PowerShell：
+
+```powershell
+git clone https://github.com/ryh051212/new-energy.git
+Set-Location new-energy
+```
+
+克隆后，按下面步骤安装一次即可。网站需要前端、Python 后端和 PostGIS 数据库一起运行，不能双击 `index.html` 打开。请先安装 Node.js 22（至少 22.12）、Python 3.12、PostgreSQL 17，以及对应版本的 PostGIS；PostgreSQL 安装时记下 `postgres` 密码与数据库端口。安装 PostgreSQL 时将其 `bin` 目录加入 PATH，确保 PowerShell 能运行 `createdb` 和 `psql`。
+
+```text
+① 安装依赖 → 复制配置模板，填写自己的数据库密码与网站登录密码
+↓
+② 创建新的协作数据库 → 启用 PostGIS → 导入随源码提供的研究区数据
+↓
+③ npm run dev:all → 后端启动并检查研究区边界
+   ├─ 失败：终端显示原因，检查数据库服务、端口、密码与初始化步骤
+   └─ 成功：启动前端并自动打开 http://127.0.0.1:5173
+↓
+④ 用自己配置的管理员账号登录 → 浏览地图与规划页面
+↓
+⑤ 在启动终端按 Ctrl+C → 同时停止前后端
+```
+
+**1. 在项目根目录打开 PowerShell，安装依赖并复制配置。** 如果已有 `.env.local`，请保留自己的配置，不要重复覆盖。
+
+```powershell
+npm ci
+py -3.12 -m venv backend/.venv
+.\backend\.venv\Scripts\python.exe -m pip install -r backend/requirements.txt
+Copy-Item .env.example .env.local
+Copy-Item backend/.env.example backend/.env.local
+```
+
+用编辑器打开 `backend/.env.local`：填写本机 PostgreSQL 的 `DB_PASSWORD`，确认 `DB_PORT` 与安装时一致，`DB_NAME` 保持 `weidu_ev_team`。`ADMIN_USERNAME` 只允许 1～8 个英文字母；`ADMIN_PASSWORD` 自行设置至少 8 位、同时包含英文字母与数字的密码。网站账号和 PostgreSQL 账号是两套配置。配置文件已忽略，不要发到仓库。
+
+**2. 初始化一个全新的数据库。** 以下命令中的 `5432` 是 PostgreSQL 常见端口；如果安装时选择了其他端口，请同时修改三条命令和 `backend/.env.local` 中的 `DB_PORT`。命令提示输入密码时，填写本机 PostgreSQL 的 `postgres` 密码。
+
+```powershell
+createdb -h localhost -p 5432 -U postgres -E UTF8 -T template0 weidu_ev_team
+psql -h localhost -p 5432 -U postgres -d weidu_ev_team -v ON_ERROR_STOP=1 -c "CREATE EXTENSION IF NOT EXISTS postgis;"
+psql -h localhost -p 5432 -U postgres -d weidu_ev_team -v ON_ERROR_STOP=1 --single-transaction -f backend/sql/collaboration-seed.sql
+```
+
+每条命令成功后再执行下一条。如果提示数据库已存在，先确认是不是上次已初始化的协作数据库；已初始化时直接启动，首次导入失败时检查报错后重试。不要向自己的已有业务数据库导入此文件。初始化 SQL 只含网站所需的 8 张空间业务表、网格统计视图和关联序列，不含数据库角色、登录密码、会话或导入日志；模拟、未知值和来源标记保持原样。
+
+**3. 启动并打开网站。** 每次开发时，在项目根目录执行：
+
+```powershell
+npm run dev:all
+```
+
+浏览器会自动打开 [本机网站](http://127.0.0.1:5173)。终端需保持运行，按 `Ctrl+C` 同时关闭前后端。统一启动使用固定的 8000、5173 端口；端口被占用时先关闭旧服务。此入口的后端没有开启热重载，修改 Python 后重新启动；前端保留 Vite 热更新。
+
+单独开发时，也可用两个终端分别运行 `.\backend\.venv\Scripts\python.exe backend/run.py` 与 `npm run dev`。普通浏览和本地道路规划不要求高德 Web 服务密钥，在线 POI 搜索等功能需要自行在后端本机配置中填写 `AMAP_WEB_KEY`；在线底图与在线搜索需要联网。
+
+`package-lock.json`、Python 依赖清单、配置模板、正式 GeoJSON、裁剪后人口栅格和初始化 SQL 均随源码保留。`node_modules/`、虚拟环境、数据库备份、临时成果、重复交付包和可重新下载的大范围人口瓦片已忽略。无需运行历史数据导入、空间迁移或重新采集命令即可使用此初始化数据。
+
+## GitHub 日常协作
+
+仓库管理员先在 GitHub 的 Settings → Collaborators 中邀请队友，队友接受邀请后才能向此仓库推送分支。每人使用自己的本机配置、数据库和网站登录密码，不提交 `.env.local` 或数据库备份。
+
+开始一项新任务前，先确保当前改动已经提交，再从最新主分支创建自己的功能分支。以下以修改地图为例，分支名按任务更换：
+
+```powershell
+git switch main
+git pull --ff-only origin main
+git switch -c feature/map-update
+```
+
+完成修改后检查提交清单，运行检查，再推送自己的分支：
+
+```powershell
+git status
+npm run quality
+git add .
+git diff --cached --stat
+git commit -m "完善地图交互"
+git push -u origin feature/map-update
+```
+
+检查失败时先定位原因，不要把失败当作通过。当前历史测试中仍有旧后端模块导入路径需要修正；网站实际启动入口是 `backend.api.main:app`。推送后在 GitHub 发起 Pull Request，由另一位成员检查并合并到 `main`。后续更新仍需在各自电脑启动前后端，GitHub 仓库本身不会运行 Python 和 PostGIS 服务。
+
+新增[魏都区地价分区与变电站参考图](construction-reference.html)：黑色行政边界、红色商业用地草案级别与7条蓝色变电站记录，可点击查看参考值与来源。图层管理中提供入口。红线采用2024年征求意见稿近似配准，价格采用正式参考表，实际场租及可接入余量待核实；详见[资料口径与精度](docs/architecture/construction-reference-map.md)。
+
+代码维护遵循根目录 `AGENTS.md` 的可读性规范。运行 `npm run quality` 可统一验证结构、前端、构建、后端与 Hook 流程；Codex 完成每轮代码修改后由项目 Stop hook 自动检查并更新本地报告。首次使用需在 Codex 中信任项目 hook，详见[代码可读性与自动收尾检查](docs/architecture/code-quality-hook.md)。
+
+空间供需默认进入「时段需求」：全局日期、小时与公共充电倾向控制同步需求地图和网格曲线，点击网格可查看五类活动的 24 小时组成、当前贡献占比、低中高情景比较与计算依据。显示采用完整研究区全部时段和情景共同峰值＝100 的固定尺度，原始指数保留在详情；100 不是满足率。工作日／周末目前只改变日内分布，公共倾向系数不是概率或站点公共开放属性。已知全零活动按零计算，资料缺失保持未知；基础供需统计和道路规划仍使用各自已说明的模型口径。
+
+2026-10-27 已启用采集基础数据库：247 个真实充电地点（区内 201、周边 46）、1,993 个五类功能 POI、2,987 条 OSM 道路；新增 GHSL 2025 模型人口栅格与 170 个网格汇总、192 条外部研究分时状态比例。原 240 个虚拟点已归档，原有地点的演示补全属性已清除。人口与外部分时资料目前用于参考展示，现有需求模型继续使用明确标注的 POI 活动情景。进入「空间供需 → 分析面板 → 基础数据」查看；详见[规划基础数据接入说明](docs/reports/规划基础数据接入说明.md)。
+
+项目接手与后续检验见[项目企划书与接手指南](docs/project-plan/项目企划书与接手指南.md)，也可打开带目录、检索和学习勾选的[阅读版](docs/project-plan/项目企划书与接手指南.html)。内容覆盖功能流程、算法手算、工具与数据、验收清单和参与练习。
+
+代码入口见[代码目录导览](docs/architecture/代码目录导览.md)，实验 5 的逐项核对见[POI 搜索与定位验收报告](docs/reports/实验5-POI搜索与定位验收报告.md)。前端按 `src/features/` 业务模块组织，共用界面放在 `src/shared/`，下线功能保存在 `src/legacy/`。
+
+新增道路规划主线见[新增充电站优化清单](docs/project-plan/新增充电站优化清单.md)：空间供需诊断 → 手工或自动选址 → 道路覆盖与容量评价 → 方法和敏感性实验 → JSON 复算。默认使用已记录站点、工作日白天、10 分钟、最多新增 5 站；统一容量情景为每站 1 桩 × 60 kW。验收记录见 [道路规划网页验证](docs/reports/road-planning-verification.json)。旧直线模型作为辅助参考保留。
+
+最近站按所有道路可达站点的最短时间比较，不受 10 分钟等覆盖阈值限制。网格弹窗展示格内需求地点中最快可达的站名与道路时间，平均到站时间按可达地点的需求加权，不可达需求占比单独列出；无估计需求或无可达路线时保留未知，不补直线行驶时间。
+
+规划端提供“空间供需／布局规划／车网协同／双碳评估”四个联动工作台。约束选址与方案推演已合并为布局规划：默认在地图点击的原坐标新增站点，直接配置、核查并比较同一份方案；不自动创建缓冲区或另找位置。区域候选筛选、算法与评价口径收在设置中，只有明确选择参考范围后才显示候选。旧 `/planning/candidates` 和 `/planning/problems` 统一进入 `/planning/suggestions`，不再保留独立选址工作台。
+
+已接入魏都区及周边 OSM 道路：地图「图层管理 → 分析参考 → OSM 道路」按需加载 2,987 条道路（2026-10-27 更新，含周边 10 km 网络衔接范围）。原始响应、WGS84 道路线与共享节点拓扑保存在 `data/raw/` 和 `data/processed/`，可通过 `/api/osm-roads`、`/api/osm-roads/metadata`、`/api/osm-roads/network` 获取。详见 [OSM 道路数据、更新与分析边界](docs/architecture/osm-roads.md)。道路研究接口使用有向网络与速度情景估算到站时间；旧辅助模块继续明确标注直线距离。
+
+布局规划已接入公开选址参考：172 个用地映射、39 个水域要素、199 条停车设施记录、34 条入口记录、10 处电力设施和 6 个风险／障碍记录，共 460 条。停车记录来自高德与 OSM，可能对应同一场地，不能将记录数当作独立停车场总数。图层默认关闭，可在「图层管理 → 分析参考」分别叠加；新增点位的「位置参考」按原始 WGS84 坐标显示最近道路线、停车入口、停车设施和电力设施，点名称可定位，来源链接可查看原记录。它们不会自动移动点位或写入建设合格字段。
+
+春秋广场地下停车场按高德 ID 与完整名称匹配 2021 年公开的 524 个设计车位，明确区分历史总泊位、实时空位和可增设充电桩泊位。两张 2022 年停车规划公示 JPG 保存在 `data/reference/`，可在布局规划设置中打开原图；没有将未配准的公示图当成 GIS 矢量叠加。公开参考由 `/api/siting-context` 返回，文件为 `data/processed/weidu-siting-context.geojson`；修改本地原始资料后运行 `python -m backend.import_siting_context` 可重新生成（需后端提供边界，也可用 `--boundary` 指定边界文件）。OSM 数据基准日期为 2026-07-15，非实时核验。用地授权、消防合格和配变可用余量仍需相应证据，不由地图存在对应要素推断。
+
+界面参考 `weidu_ev_webgis_planner_pss.html`，采用蓝白配色、紧凑顶栏、左侧地图与右侧分析面板。小屏改为上方地图、下方分析面板；空间供需通过页签和分页整理内容，不显示滚动条。车主端已从应用入口和导航移除，旧 `/charging`、`/charing` 及其子路径统一返回公开充电站分布；相关历史组件和后端接口保留但不再作为前端页面加载。参考 HTML 的演示模型与固定数值未引入正式计算。
 
 地图和完整分析栏的父容器使用可调整分栏与停靠布局：拖动分隔线或容器边缘时，两块区域联动增减，地图始终填满剩余空间，画布同步更新。拖动标题栏到方向提示处可切换左右或上下排列；内部卡片和表单跟随父容器。收起其中一块时另一块自动铺满，最大化后可还原。车网协同与双碳保持无地图的整页分析布局。各工作台分别记住布局，顶部可恢复默认排列，分隔线支持方向键调整。
 
@@ -12,37 +118,41 @@
 
 新增默认 1 桩、60 kW，均为模拟参数，可编辑名称、分类、桩数和功率。全区模式在研究区网格内编辑；定位模式仅在蓝圈内编辑和汇总需求评价，半径可选 500 米、1／2／3／5 公里。蓝圈不是影响区，模型保留圈外服务来源及完整需求竞争。切换定位、半径或数据范围重置方案；切换总览页签保留草稿和结果。分析方案后可切换模拟前后，修改配置后须重新分析。模拟不写入正式数据库。
 
-主结果不重复展示站点总数和最近距离。全区／周边评价展示薄弱需求占比、薄弱端服务和服务不均衡程度；定位另展示可达服务、备用保障及主力站依赖。补点方向在范围内需求位置比较同配置新增的边际收益；减少方向逐站独立撤去已知能力，比较服务损失，定位模式同时考虑此定位损失。方向提示可点击查看位置，仍由用户决定如何编辑；模型低损失不等于应淘汰。
+布局规划主结果显示新增触达需求、平均到站距离变化和具体受影响地点。完整建设核查、辅助服务指数、算法与运营参数集中在设置中；辅助候选仅供主动查看，不自动更换新增位置。未知用地、出入口、消防、泊位和配变资料均标记待核查；仅明确标注禁建或不满足建设条件时阻止落点。默认最小站间距为 0（不限制），可在设置中修改，它是情景阈值而非当地建设标准。
 
-地图左上角搜索框旁边的“图层管理”由独立组件 `src/components/MapLayerControl.vue` 提供，使用复选框直接更新地图，切换不跳转页面。面板保持展开，点击图层按钮、关闭按钮或 Escape 才收起；地图点选不关闭面板。分析专题精简为“充电站数量分布、潜在充电需求指数、供需失配指数、供需四象限分类、充电设施配置功率”，互斥显示；基础图层为“充电站点、居住需求样本、商业需求样本”，可独立叠加，快充筛选单列。菜单与图例共用名称；行政边界独立控制。站点热力图、小区数量专题及快充／普通充电需求估计专题已移除：分别属于视觉平滑、重复的单因子表达和选址评分中间结果，仍保留综合需求分析及选址计算所需数据。首次进入保留当前专题，无专题时默认显示失配；关闭后切换页签仍保留选择。参考专题使用所选站点范围对应的网格，已分析方案可切换前后。专题颜色与“方案模拟变化”分别查看，继续新增／减少时恢复所选参考专题；开关不改变草稿或分析结果。原监测路由仍支持直接访问。
+地图的「图层管理」由 `src/features/map/components/MapLayerControl.vue` 提供，充电站点默认显示。供需专题仅保留潜在充电需求指数、供需失配指数、充电设施配置功率，互斥显示；已移除地图上的充电站数量分布、四象限分类和居住／商业样本图层。原始样本继续参与模型计算。POI 分类复选框收在「POI 点位显示」下拉中，OSM 道路可独立叠加；图层开关不跳转页面、不改变方案。布局规划的搜索框位于右侧面板，搜索只定位，用户点击地图后原位新增。图例置于地图角落，随参考图层开关更新。
 
-“高德设施目录”单独提供停车场、写字楼、产业园、医院、学校、公园、商场、超市、住宅小区、公司企业、体育休闲设施、餐饮 12 类开关，默认关闭，支持多个类别叠加。数量来自 `/api/facility-pois` 返回的区内采集记录，多类别设施计入各自类别；无记录的类别禁用。目录与原五类地图数据并行加载，全部分页成功后更新地图，失败可在面板中重试，不中断主地图。设施坐标由 API 统一以 WGS84 返回，随底图转换；点击点位显示名称、类别、地址、采集时间和未现场核验说明，停车场另提示泊位及开放条件待核查。设施目录与供需模型原始需求样本分别展示，图层开关不改变模型输入。分类和地图样式位于 `src/utils/facilityMapLayers.js`；小屏面板可滚动浏览全部类别。
+「POI 点位显示」下拉提供停车场、写字楼、产业园、医院、学校、公园、商场、超市、住宅小区、公司企业、体育休闲设施、餐饮及政务交通设施 13 类开关，默认关闭，支持多个类别叠加。数量来自 `/api/facility-pois` 返回的区内采集记录，多类别设施计入各自类别；无记录的类别禁用。目录与原五类地图数据并行加载，全部分页成功后更新地图，失败可在面板中重试，不中断主地图。设施坐标由 API 统一以 WGS84 返回，随底图转换；点击点位显示名称、类别、地址、采集时间和未现场核验说明，停车场另提示泊位及开放条件待核查。设施目录显示与模型原始需求样本计算独立，图层开关不改变模型输入。分类和地图样式位于 `src/features/map/config/facilityMapLayers.js`；小屏面板可滚动浏览全部类别。
 
 服务计算参考 Zhang 与 Cao（2025）的 [Gaussian 2SFCA 充电设施可达性框架](https://doi.org/10.1016/j.jtrangeo.2025.104438)：先将每站配置能力分配给其附近的距离加权需求，再将各站贡献汇总到需求位置。距离权重为 `(exp(-0.5*(d/d0)^2)-exp(-0.5))/(1-exp(-0.5))`，本工具假设 `d0=1000 m` 直线距离，达到边界后权重为零；并非论文的道路／步行距离或当地建设标准。
 
-桩数乘单桩功率仅作配置能力代理，不等于实测吞吐量。需求使用原网格需求指数，在格内住宅与商业 POI 间均分，不推断居民数或车辆数；没有 POI 时使用标明的网格估计点。指标以模拟前全区已知总能力／总需求权重为固定基准，前后不重新归一化，可达服务指数截到 0～100；100 分不代表实际需求全部满足。
+桩数乘单桩功率仅作配置能力代理，不等于实测吞吐量。选址与推演使用当前时间场景需求，按活动分配到对应 POI；其余基础分析仍可使用原网格需求指数，在格内住宅与商业 POI 间均分。不推断居民数或车辆数，没有对应 POI 时使用标明的网格估计点。指标以同一场景模拟前全区已知总能力／总需求权重为固定基准，建设前后不重新归一化，可达服务指数截到 0～100；100 分不代表实际需求全部满足。
 
 薄弱需求为指数低于 50 的需求权重占比；薄弱端服务为最低 25% 需求权重的平均指数。这两个阈值是工具的比较设定。均衡度按未截断可达能力计算加权基尼系数，越低越均衡；全部无供给时显示资料不足，同时通过其他指标显示服务下降。备用保障为撤去对定位贡献最大的单站后剩余服务指数，主力站不一定最近。
 
 明确关闭或禁止进场的站点排除。未知桩数／功率不补值；基准能力全未知时指数、方向试算保持资料不足。演示能力明确标记，部分能力未知时指标只反映已知配置。道路、进场、排队、车辆适配、站内共享配电和研究区之外未记录的供给尚未计入。
 
-模型在 `src/utils/facilityDemand.js` 与 `src/utils/facilityDiagnostics.js`，区域联动在 `src/utils/combinedFacilitySimulation.js`，交互在 `src/composables/useFacilitySandbox.js`。地图只对实际发生指标变化的网格显示模拟变化，定位连线指向模型主要供给来源；不批量声称所有周边地点受益。
+模型在 `src/features/planning/models/facilityDemand.js` 与 `src/features/planning/models/facilityDiagnostics.js`，区域联动在 `src/features/planning/models/combinedFacilitySimulation.js`，交互在 `src/features/planning/composables/useFacilitySandbox.js`。地图只对实际发生指标变化的网格显示模拟变化，定位连线指向模型主要供给来源；不批量声称所有周边地点受益。
 
-地图上方保留搜索与“图层管理”面板；桌面右侧展示分析内容，手机上下分区以免遮挡地图。规划端样式在 `src/planner.css`，术语说明在 `src/utils/analysisTerms.js`。
+地图上方保留搜索与“图层管理”面板；桌面右侧展示分析内容，手机上下分区以免遮挡地图。规划端样式在 `src/styles/planner.css`，术语说明在 `src/shared/content/analysisTerms.js`。
 
 ## 参考 HTML 功能整合
 
-按桌面 `weidu_ev_webgis_planner_pss.html` 的四工作台整合，正式空间数据继续读取 PostgreSQL API。站点范围默认包含演示点位，总览、选址、推演、功率专题和车网情景使用同一范围；可切换为已记录点位，切换会重置当前草稿。
+按桌面 `weidu_ev_webgis_planner_pss.html` 的四工作台整合，正式空间数据继续读取 PostgreSQL API。当前正式站点范围只包含已记录地点，历史演示点已归档；总览、选址、推演、功率专题和车网情景使用当前数据。
 
-- 选址：快充／普通充电／停车／路网四类权重自动归一化。居民和商业因子来自数据库；2026-10-16 起，办公医教与停车 POI 数量同时读取高德设施目录的网格汇总。路网指数、可用泊位和配变余量仍需核查，可逐格作为本机情景补充。停车场 POI 不代表已核实公共开放或可建站。缺项不伪造，启用硬约束时未核查网格不通过。400 米为可编辑假设，非当地建设标准。批量候选同时校核新点彼此与草稿点间距，网格代表点不等于可直接建设的位置。
+- 选址：按居住、工作、购物、休闲、公共服务五类 POI 推断功能区，支持工作日白天、工作日晚间及夜间、周末三个需求情景。各类数量除以全区该类最大数量后计算占比，单类占比 ≥50% 为主导功能，否则为混合功能；无有效活动为资料不足区。交通枢纽资料尚缺，分区尚未结合用地边界或现场核验。地图可切换功能区、当前场景需求和基础专题；功能区筛选与地图候选、表格、批量纳入、CSV 保持一致。
+- 建设条件：路网指数、可用泊位和配变余量仍需核查，可逐格作为本机情景补充。停车场 POI 不代表已核实公共开放或可建站。缺项不伪造，启用硬约束时未核查网格不通过。400 米为可编辑假设，非当地建设标准。批量候选同时校核新点彼此与草稿点间距，网格代表点不等于可直接建设的位置。
 - 选址地图与表格使用同一套候选编号，格内已有 POI 名称和地址用于辨认区域；点击位置可查看候选范围、实际参照站名与直线连线，地图点选同步滚动到表格对应行，“查看全部”恢复候选全览。权重变化显示两位小数评分、绿／红分差、默认排名比较、排名箭头与进度条；缺资料因子禁用且显示原因。地图编号、排序与 CSV 随当前权重同步，小屏表格改为候选卡片。
 - 候选表上方提供 0～100 分的最低偏好评分滑条，默认 1 分以排除零分候选；门槛包含等于该分值的候选，调至 0 分可查看零分，评分资料不足不作为达标候选。地图、编号、批量纳入与 CSV 使用同一筛选结果；权重变化后按当前评分重新过滤，默认权重的分差和排名在当前候选集合内比较。
-- “评分公式与参数”公开两层加权平均公式：快充 `F快=(32C+26R+22P+20O)/Σ有效系数`，普通充电 `F普=(48H+32O+20P)/Σ有效系数`，总分 `S=100×(30F快+30F普+20P+20R)/Σ有效外层权重`。这些系数是本工具情景初值，不是文献或规范规定值；外层权重和七个内部系数均可滑动修改，页面提供所选网格的指标值及代入计算。H、C 读取数据库标准化指数（项目生成时采用 min-max）；O、P 按当前评估网格中的最大 POI 数归一化，R 为补充的 0～1 道路条件情景。缺资料项和零系数项逐层排除并按有效权重归一化，全无有效项保持未知。CSV 同时导出阈值、系数和归一化指标，便于复算；默认补点收益排序仍可切换为按评分排序。
-- 公平性：洛伦兹曲线与原 Gaussian 2SFCA 服务基尼使用相同的未截断可达服务和需求权重；全无已知服务时保持资料不足。MCDA 权重影响候选排序，服务比较仍使用数据库需求指数的固定基准。
+- “评分公式与参数”使用 `S=100×Σ(有效权重×因子值)/Σ有效权重`，默认权重为当前场景需求 50、现有站服务间距 25、停车资源 15、道路通达条件 10，可分别调整。需求为零时评分为零，需求未知或无有效权重时保持未知；缺资料项不参与加权。评分和排名以工作日白天默认权重作比较，默认仍按补点收益排序，也可切换为按综合评分排序。CSV 导出场景、功能区、评分与分差、需求指数、资料完整度、活动系数及评分权重。
+- 三个场景的活动系数按居住／工作／购物／休闲／公共服务分别为：白天 `0.35/1/0.55/0.35/0.75`、夜间 `1/0.15/0.8/0.8/0.45`、周末 `0.7/0.25/1/1/0.65`。场景需求为各类标准化数量乘活动系数之和，除以全区最大基础活动总强度；三个场景共用尺度。这些系数是实验情景设定，不是实测车流、订单或规范参数。需求按活动分配到对应 POI，无对应 POI 时使用标明的网格估计位置，并保持网格总权重守恒。
+- 场景联动：选址和推演共用同一需求场景。切换场景保留新增／移除草稿，使旧分析失效并提示重新分析；重新计算后仅与相同需求、供给基准及范围的备选方案比较。公平性洛伦兹曲线与 Gaussian 2SFCA 服务基尼共用当前场景的未截断可达服务和需求权重；全无已知服务时保持资料不足。
 - 投资情景：新增配置功率 × 24 小时 × 假设利用率得到日供电量，再按单车次电量、单位毛利、桩价、每站接电土建与年运维计算。净经营现金流不大于零不生成回收年限；减排另按共享的同里程汽油对照与电力间接排放模型计算，不直接使用参考页固定回收期或减排结论。
 - 配网情景：三类日内曲线、并发系数、基础负荷、功率因数、警戒线、光伏与储能参数可调整。未输入同评估范围的配变容量时不显示负载率或越限结论。储能从空电量起算，11～15 时充电、18～21 时放电，遵守功率、容量、效率和逐时能量守恒；未接入电网遥测、台区拓扑或车辆 V2G 回送。
 
-选址、评估和逐时负荷均可导出 CSV。新增实现位于 `src/utils/plannerPss.js`、`PlannerSiting.vue`、`PlannerScenarioAssessment.vue` 与 `PlannerGridCapacity.vue`；`tests/plannerPss.test.mjs` 验证缺项、约束、空间分区、情景估算与储能守恒。
+选址、评估和逐时负荷均可导出 CSV。新增实现位于 `src/features/planning/models/plannerPss.js`、`PlannerSiting.vue`、`PlannerScenarioAssessment.vue` 与 `PlannerGridCapacity.vue`；`tests/frontend/plannerPss.test.mjs` 验证缺项、约束、空间分区、情景估算与储能守恒。
+
+2026-10-21 续验功能区与时间需求情景：170 个网格、默认 54 个候选，三个时间情景的需求与评分联动、地图数据、功能区筛选、CSV、草稿保留及重新分析均通过。修复内部进入方案推演后页面路由未同步、顶部约束选址无法返回的问题。246 项 Node 测试和生产构建通过，390／320 像素页面无水平溢出。浏览器使用 2026-10-20 的数据库导出样本，登录与底图瓦片作隔离替换；不代表已验证实时外部服务。验收记录见 `docs/reports/demand-scenarios-verification.json`。
 
 ### 双碳与单次充电减排
 
@@ -56,7 +166,9 @@
 
 政策背景链接国家发展改革委对[“十五五”碳达峰行动方案的解读](https://www.ndrc.gov.cn/xxgk/jd/jd/202607/t20260709_1406391_ext.html)。未将政策目标直接套为单次固定减排比例；未计入整车、电池和设施制造、燃油上游与非 CO₂ 温室气体。
 
-## 许昌充电站数据维护
+## 许昌充电站数据维护（历史演示资料）
+
+以下为 2026-10-05 演示数据的历史维护说明，当前正式数据已由 `weidu_data/` 替换。不要将下述演示 CSV 重新导入当前研究库；当前更新方式见上方接入说明。
 
 数据库现保留 52 个原有 POI，补充 240 个**虚拟演示站点**。其中 120 个模拟点位于
 魏都区现有边界和网格内，其余 120 个分布在城区东、北、南、西的模拟分区。
@@ -124,9 +236,9 @@ API 支持 `?include_synthetic=false` 排除虚拟站点，`?scope=weidu` 限定
 
 ```powershell
 # 启动后端（项目根目录）
-.\backend\.venv\Scripts\python.exe -m uvicorn backend.main:app --reload
+.\backend\.venv\Scripts\python.exe -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload --reload-dir backend
 # 验证重复导入、真实替换、坐标、HTTP 与网格统计；测试修改全部回滚
-.\backend\.venv\Scripts\python.exe -m tests.check_station_catalog_live
+.\backend\.venv\Scripts\python.exe -m tests.integration.check_station_catalog_live
 ```
 
 基于 Vue 3、Vite、MapLibre GL 和 Turf 的地图应用。
@@ -147,15 +259,48 @@ Windows PowerShell 若禁止运行 npm.ps1，使用 `npm.cmd run dev`。
 若前端需要从 PostgreSQL 读取充电站，先在 `backend/` 安装依赖并配置密码：
 
 ```powershell
-cd backend
-python -m pip install -r requirements.txt
-Copy-Item .env.example .env.local
-# 编辑 .env.local，将 DB_PASSWORD 设为本机 postgres 用户的实际密码
-python -m uvicorn main:app --reload
+python -m pip install -r backend/requirements.txt
+Copy-Item backend/.env.example backend/.env.local
+# 编辑 backend/.env.local，将 DB_PASSWORD 设为本机 postgres 用户的实际密码
+python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload --reload-dir backend
 ```
 
 后端默认连接本机 `5433` 端口的 `nev_webgis` 数据库。密码也可以写在项目根目录现有的 `.env.local` 中；读取顺序为进程环境变量、`backend/.env.local`、项目根目录 `.env.local`。
 这些 `.env.local` 文件已被 Git 忽略，不要将密码提交到仓库。配置后重新启动后端。
+
+### 登录认证、前端守卫与 CORS
+
+```text
+① 打开页面（App.vue）→ GET /api/auth/session 恢复服务端会话
+  ↓
+② 点击工作台 / 访问受限网址 → 统一规范化路由并校验 /api/auth/authorize
+  ├─ 会话有效 → 更新网址和工作台；刷新、后退、前进均再次经过守卫
+  └─ 未登录 / 会话失效 / 服务不可用 → 保留目标，展示游客地图与登录窗口
+       ↓
+③ 提交账号密码 → 服务端校验密码、登录频率与来源 → 设置 HttpOnly 会话 Cookie
+  ├─ 成功 → 回到原目标或继续原操作
+  └─ 失败 → 保留表单并显示错误，不进入受限功能
+  ↓
+④ 到期 / 受限接口返回 401 / 其他标签页退出 → 清除受限界面与规划草稿
+  ↓
+⑤ 页面卸载 → 取消定时器、监听和登录请求，忽略迟到的会话响应
+```
+
+在 `backend/.env.local` 配置 `ADMIN_USERNAME` 与 `ADMIN_PASSWORD`。用户名为 1～8 个英文字母；密码为 8～256 个字符，须同时包含英文字母和数字。配置不符合要求时登录接口返回 503。输入框提供 Tooltip 及红绿格式提示，登录成功显示顶部 Toast；密码和会话令牌不写入 localStorage。项目现有本机管理员凭据保存在被 Git 忽略的 `backend/.env.local` 中。
+
+本机开发可在该文件设置 `AUTH_LOCAL_QUICK_LOGIN=true`，开启“管理员一键登录”。默认关闭；仅接受回环客户端、回环 Host 与本机 Origin，通过后端创建正常的 HttpOnly 会话，前端不保存或发送管理员密码。更改环境配置后重启后端。
+
+布局规划新增采用“地图点击或搜索选择中心 → 绘制搜索缓冲区 → 筛选已有停车及场地记录 → 选择候选 → 后端再次核查 → 加入共同方案”。候选抽屉保留地图操作，关闭或更换选区不会清空草稿。筛查覆盖已知禁建、水域、水边退让、加油设施避让、绿地农业及特殊用地、机动车道路连接、设置的站间距与已知累计泊位/配变限制。默认水边 20 m、加油设施 50 m、道路连接上限 200 m 为初筛情景参数，不是建设许可或法规安全距离；未知工程资料始终待核查。
+
+服务端使用 PBKDF2 校验密码、随机会话令牌、8 小时绝对过期、登录失败限流和退出撤销。Cookie 为 `HttpOnly; SameSite=Lax; Path=/api`，HTTPS 下自动启用 `Secure`，也可设置 `AUTH_COOKIE_SECURE=true`。旧版 `/api/auth` 路径 Cookie 会在登录或退出时清理。前端在切回标签页及已登录时每分钟校验会话，跨标签页只同步登录／退出事件，不传递密码或令牌。
+
+前端统一通过 `src/shared/api/client.js` 请求同源 `/api`，Vite 开发和 `npm run preview` 均代理到 `API_PROXY_TARGET`（默认 `http://127.0.0.1:8000`）。因此使用 `localhost`、`127.0.0.1` 或开发端口变化时，不再拼接出不同主机的接口地址。修改代理配置后重启 Vite；生产 Web 服务器也应将 `/api` 转发到后端。
+
+独立跨域部署才需要配置 `VITE_API_BASE_URL` 与后端 `CORS_ALLOWED_ORIGINS`。来源必须包含协议、主机和端口，以逗号分隔，不能使用 `*`；配置后会替换默认开发来源。默认允许 `localhost`、`127.0.0.1`、`[::1]` 的 5173、5174、5175、4173 端口。凭据请求、预检、401 和 500 响应使用同一来源规则；同源代理请求则保留 Host 校验来源。
+
+游客地图使用的站点、边界、网格与设施目录接口仍为公开读接口；`/api/facility-coverage` 等服务端分析入口使用会话依赖校验，不能仅靠前端状态绕过。道路方案分析通过 `/api/planning/analyze`、`/api/planning/optimize` 和 `/api/planning/experiments` 在后端执行，旧直线参考仍在浏览器计算。开发时使用上述热重载命令，避免前端更新后旧后端缺少规划接口而返回 404。当前会话存储为单进程内存，后端重启后需重新登录，多进程部署需要先接入共享会话存储。
+
+认证回归检查：`node --test tests/frontend/auth.test.mjs`、`python -m unittest tests.test_auth tests.test_auth_cors`；其余地图和导航测试继续使用 `tests/frontend/mapView.test.mjs`、`tests/frontend/navigationWindows.test.mjs`。
 
 `GET /api/stations/recommended?lng=113.8356&lat=34.0268&limit=5` 接收用户的 WGS84 坐标，
 先按当前搜索、距离范围和可选条件取得全部合格站点，以 PostGIS
@@ -174,7 +319,7 @@ python -m uvicorn main:app --reload
 `metadata.fallbackCount` 为最终返回结果中的降级站点数。前端现有距离缓冲区使用真实定位和直线半径，
 无需依赖高德路线接口；`ST_Distance` 计算距离需要已有用户坐标，不能替代定位。
 可执行 `.\backend\.venv\Scripts\python.exe -m unittest tests.test_backend -v -b` 验证成功、部分失败及全部降级，
-执行 `.\backend\.venv\Scripts\python.exe -m tests.check_recommended_api_live` 只读验证真实 PostGIS 和 HTTP；后者不会请求高德。
+执行 `.\backend\.venv\Scripts\python.exe -m tests.integration.check_recommended_api_live` 只读验证真实 PostGIS 和 HTTP；后者不会请求高德。
 
 以下为已下线车主端的历史实现说明，仅用于维护保留的组件与接口；当前所有车主地址返回规划首页。
 
@@ -287,7 +432,7 @@ GeoJSON 保留全部站点属性及 `simulatedFields`，增加 `rankingMode`、`
 元数据增加 `intent`、`excludedCount`，明确为估算。候选筛选先遍历完整池，再为至多 10～20 个候选算路，
 新模式最多并发 4 个候选，省钱模式额外查询直达与去终点的道路段，仍是候选推荐而非全局最优保证。
 
-执行 `node --test tests/charging.test.mjs tests/chargingView.test.mjs tests/chargingRecommendations.test.mjs tests/tripCharging.test.mjs` 验证用户端交互和渲染，
+执行 `node --test tests/frontend/charging.test.mjs tests/frontend/chargingView.test.mjs tests/frontend/chargingRecommendations.test.mjs tests/frontend/tripCharging.test.mjs` 验证用户端交互和渲染，
 执行 `.\backend\.venv\Scripts\python.exe -m unittest tests.test_backend tests.test_recommendations tests.test_trip_charging -v -b` 验证候选、费用及出行估算边界。
 
 通过地图、搜索或推荐列表选择充电站时，先定位到站点并展示详情；点击“查看路线”后才加载该站点最多 3 条驾车路线。
@@ -308,7 +453,7 @@ GeoJSON 保留全部站点属性及 `simulatedFields`，增加 `rankingMode`、`
 
 2026-10-16 已接入高德路线分段路况（TMC）：各路线属性增加 `trafficSegments`（WGS84 路段 Feature 数组）、`trafficAvailable`、`trafficStatus`、`trafficSource`、`trafficFetchedAt`、`trafficScope=route_only` 和 `trafficDistanceByStatus`（只汇总已返回路段的米数）。顶层 `traffic` 为可直接用于地图源的 FeatureCollection，每段带 `routeId`、`trafficStatus`、`distanceMeters`、`roadName`、`fetchedAt`。未知路况保持“未知”；路况缺失或异常时保留有效驾车方案，`trafficAvailable=false`，距离汇总为 `null`，不补造拥堵、速度或可用时间。获取时间是本次接口响应时间，高德未提供各段的实测时间。路况按请求获取，现有页面尚未增加实时路况图层或自动刷新。
 
-现有 Key 在许昌测试可返回驾车沿途的“畅通／缓行／未知”等路况；项目实际路线接口实测返回 3 条路线、214 段路况（数量随请求变化），详见 [路况实测报告](docs/amap-traffic-verification.json)。[高德交通态势查询](https://lbs.amap.com/api/webservice/guide/api-advanced/traffic-situation-inquiry)属于高级服务，当前官方公布的支持城市未包含许昌；本次区域矩形查询返回 `UNKNOWN_ERROR / 20003`，未取得区域数据，不能仅凭该错误确定具体原因。沿途 TMC 不作为全区道路网络，也不据此填充网格 `roadIndex`，完整路网分析仍需另行准备道路拓扑与相应的观测数据。
+现有 Key 在许昌测试可返回驾车沿途的“畅通／缓行／未知”等路况；项目实际路线接口实测返回 3 条路线、214 段路况（数量随请求变化），详见 [路况实测报告](docs/reports/amap-traffic-verification.json)。[高德交通态势查询](https://lbs.amap.com/api/webservice/guide/api-advanced/traffic-situation-inquiry)属于高级服务，当前官方公布的支持城市未包含许昌；本次区域矩形查询返回 `UNKNOWN_ERROR / 20003`，未取得区域数据，不能仅凭该错误确定具体原因。沿途 TMC 不作为全区道路网络，也不据此填充网格 `roadIndex`，完整路网分析仍需另行准备道路拓扑与相应的观测数据。
 
 主界面进入时自动请求浏览器真实定位，成功后标记当前位置并居中；数据加载不会覆盖已定位视野。
 定位失败保留研究区视图，提示允许位置权限或通过定位按钮重试。
@@ -321,7 +466,7 @@ GeoJSON 保留全部站点属性及 `simulatedFields`，增加 `rankingMode`、`
 
 ### 数据库导入与核查
 
-2026-10-16 通过项目已配置的[高德地点搜索接口](https://lbs.amap.com/api/webservice/guide/api-advanced/search)采集并正式入库 **1,817 个去重后的魏都区设施地点**，其中 **1,510 个 ID 为原业务表尚未收录**，保存在 `facility_pois`。这张表按高德 POI ID 更新，同一地点可有多个分类；与原充电站、小区、商业表通过位置与 POI ID 关联，不重复加入原供需模型。原始响应、分类配置、WGS84 导出和事务报告分别保存在 `data/raw/amap-facilities.json`、`data/managed/facility-categories.json`、`data/processed/weidu-facilities.json` 和 [入库报告](docs/facility-import-applied.json)。
+2026-10-16 通过项目已配置的[高德地点搜索接口](https://lbs.amap.com/api/webservice/guide/api-advanced/search)采集并正式入库 **1,817 个去重后的魏都区设施地点**，其中 **1,510 个 ID 为原业务表尚未收录**，保存在 `facility_pois`。这张表按高德 POI ID 更新，同一地点可有多个分类；与原充电站、小区、商业表通过位置与 POI ID 关联，不重复加入原供需模型。原始响应、分类配置、WGS84 导出和事务报告分别保存在 `data/raw/amap-facilities.json`、`data/managed/facility-categories.json`、`data/processed/weidu-facilities.json` 和 [入库报告](docs/reports/facility-import-applied.json)。
 
 | 分类 | 区内地点数 | 用途 |
 | --- | ---: | --- |
@@ -348,18 +493,18 @@ GeoJSON 保留全部站点属性及 `simulatedFields`，增加 `rankingMode`、`
 
 ```powershell
 .\backend\.venv\Scripts\python.exe -X utf8 -m backend.fetch_facility_pois
-.\backend\.venv\Scripts\python.exe -X utf8 -m backend.import_facilities --output docs/facility-import-dry-run.json
-.\backend\.venv\Scripts\python.exe -X utf8 -m backend.import_facilities --apply --output docs/facility-import-applied.json
-.\backend\.venv\Scripts\python.exe -X utf8 -m tests.check_facility_catalog_live
+.\backend\.venv\Scripts\python.exe -X utf8 -m backend.import_facilities --output docs/reports/facility-import-dry-run.json
+.\backend\.venv\Scripts\python.exe -X utf8 -m backend.import_facilities --apply --output docs/reports/facility-import-applied.json
+.\backend\.venv\Scripts\python.exe -X utf8 -m tests.integration.check_facility_catalog_live
 ```
 
-默认导入为事务试运行后回滚，`--apply` 会先完整备份再提交。重复导入按 ID 更新，不新增重复地点，不删除历史记录。`facility_grid_counts` 是实时网格汇总视图，共边点只归属一个网格；分类和地理坐标均有索引。真实数据库与 HTTP 检查结果见 [设施核验报告](docs/facility-verification.json)。
+默认导入为事务试运行后回滚，`--apply` 会先完整备份再提交。重复导入按 ID 更新，不新增重复地点，不删除历史记录。`facility_grid_counts` 是实时网格汇总视图，共边点只归属一个网格；分类和地理坐标均有索引。真实数据库与 HTTP 检查结果见 [设施核验报告](docs/reports/facility-verification.json)。
 
 更新现有网格分析结果，在项目根目录执行：
 
 ```powershell
 python -m backend.import_hex_grid
-python -m backend.audit_database --output docs/database-audit-20261004.json
+python -m backend.audit_database --output docs/reports/database-audit-20261004.json
 ```
 
 网格导入按 GeoJSON 的稳定 `id` 更新，重复运行不会追加重复网格；保留文件中不存在的数据库记录。
@@ -374,10 +519,10 @@ python -m backend.audit_database --output docs/database-audit-20261004.json
 另 1 个区内小区 `B0FFL4CBQ0` 距离最近的第 167 格约 3.985 米，处于原网格边缘缺口。
 重算采用明确的 5 米近邻归属容差，仅对区内但未被网格覆盖的点生效；超过 5 米会报错并回滚。
 共边点只归入一个网格（ID 最小者），区内小区统计总数为 224。
-五张业务表的几何均有效，均有 GiST 空间索引，详见 [迁移后核查结果](docs/database-audit-after-4326.json)。
+五张业务表的几何均有效，均有 GiST 空间索引，详见 [迁移后核查结果](docs/reports/database-audit-after-4326.json)。
 本次更新前的完整 PostgreSQL 备份保存在 `backend/backups/`，该目录已被 Git 忽略。
 本次已执行用户指定的五步：批量转换、坐标验证、空间关系验证、正式切换 EPSG:4326、重新计算供需指标。
-分享链接未能读取，执行依据为用户提供的五步流程与现有项目算法，完整证据见 [正式迁移报告](docs/database-migration-4326.json)。
+分享链接未能读取，执行依据为用户提供的五步流程与现有项目算法，完整证据见 [正式迁移报告](docs/reports/database-migration-4326.json)。
 回转误差验证检查的是转换算法的一致性，并不代表经过实测控制点校准的绝对定位精度。
 
 迁移执行与检查命令：
@@ -385,8 +530,8 @@ python -m backend.audit_database --output docs/database-audit-20261004.json
 ```powershell
 # 默认试运行后回滚；已迁移的数据库会识别记录并跳过，避免二次偏移。
 python -m backend.spatial_migration --output docs/database-migration-check.json
-python -m backend.audit_database --output docs/database-audit-after-4326.json
-# 手工查看 SQL 检查项：在 pgAdmin 执行 backend/verify_database.sql。
+python -m backend.audit_database --output docs/reports/database-audit-after-4326.json
+# 手工查看 SQL 检查项：在 pgAdmin 执行 backend/sql/verify_database.sql。
 ```
 
 供需重算基于转换后的 PostGIS 几何：站点数及两类 POI 数量做 Min-Max 标准化，
@@ -405,7 +550,7 @@ python -m backend.audit_database --output docs/database-audit-after-4326.json
 - `data/raw/`：原始数据。
 - `data/processed/`：转换及筛选结果。
 - `scripts/`：离线数据管线。
-- `docs/项目逻辑梳理.md`：数据流、运行时逻辑与已知问题的完整说明。
+- `docs/archive/项目逻辑梳理-2026-09.md`：数据流、运行时逻辑与已知问题的完整说明。
 - `vite.config.js`：开发与构建配置。
 
 整理前的外层依赖与包配置保存在 `.flatten-backup/`，该目录已忽略，不参与运行。
@@ -414,13 +559,13 @@ python -m backend.audit_database --output docs/database-audit-after-4326.json
 
 当前数据库站点维护使用本文开头的 CSV 导入流程。下面三条命令仅处理历史本地 POI 与 GeoJSON，不会同步本次新增属性或数据库：
 
-1. `node scripts/convertStations.mjs`：清洗本地原始 POI。
-2. `node scripts/filterWeiduStations.mjs`：按边界筛选，并同时更新处理结果与网页读取的
+1. `node scripts/data/convertStations.mjs`：清洗本地原始 POI。
+2. `node scripts/data/filterWeiduStations.mjs`：按边界筛选，并同时更新处理结果与网页读取的
    `public/geojson/stations.json`。
-3. `node scripts/buildHexGrid.mjs`：依据上一步的站点重新生成并统计
+3. `node scripts/data/buildHexGrid.mjs`：依据上一步的站点重新生成并统计
    `public/geojson/hex-grid.json`。
 
-只有需要重新请求高德数据时才执行 `node scripts/fetchAmapStations.mjs`。
+只有需要重新请求高德数据时才执行 `node scripts/data/fetchAmapStations.mjs`。
 
 地图与数量统计均采用空间范围口径，不再要求 `district` 同时等于“魏都区”。
 充电类型统一为快充 `fast` 与普通充电 `regular`，分别使用绿色实心闪电和蓝色圆润插头。
@@ -430,32 +575,48 @@ python -m backend.audit_database --output docs/database-audit-after-4326.json
 
 界面按“顶部工作台导航 + 可拖拽工作台（地图 + 右侧分析面板） + 底部数据状态”组织。样式分四层：
 
-- `src/planner.css`：**设计令牌唯一来源**（`:root` 里的品牌色、中性色、圆角、阴影、动效、尺寸）+ 顶栏、工作区、分析栏、地图浮层的布局。
-- `src/style.css`：基础控件、搜索框、图例、地图弹窗、占位页等通用样式，令牌与 `planner.css` 保持一致。
-- `src/workspace.css`：可拖拽面板的外壳、标题栏、拖拽把手、分隔条与容器查询。
-- `src/planner-pss.css`：空间供需 / 约束选址 / 方案推演 / 车网协同等业务面板的内部排版。
+- `src/styles/planner.css`：**设计令牌唯一来源**（`:root` 里的品牌色、中性色、圆角、阴影、动效、尺寸）+ 顶栏、工作区、分析栏、地图浮层的布局。
+- `src/styles/base.css`：基础控件、搜索框、图例、地图弹窗、占位页等通用样式，令牌与 `planner.css` 保持一致。
+- `src/styles/workspace.css`：可拖拽面板的外壳、标题栏、拖拽把手、分隔条与容器查询。
+- `src/styles/planning.css`：空间供需 / 约束选址 / 方案推演 / 车网协同等业务面板的内部排版。
 
 视觉方向是「能量网格」：六边形网格是本产品做供需分析的方法，靛蓝→青（`--brand-gradient`）是它的电学隐喻；数据层继续用绿（快充 / 供给）与琥珀、红（需求、缺口），保证语义不被品牌色抢走。改主题只需改 `planner.css` 顶部的 `:root`，不要在各组件里写死颜色。
 
-“空间供需”提供分布、四象限、间距参考圈、圈外需求点和裁剪到研究区的最近站泰森分区；“约束选址”提供 MCDA 权重、间距／泊位／配变过滤、逐个与批量纳入；“方案推演”提供新增、移除、参数编辑、服务对比、需求加权洛伦兹曲线和可编辑投资场景；“车网协同”提供同一草稿的 24 小时负荷、光伏与储能估算。切换四个工作台保留模拟草稿与结果。
+“空间供需”以地图选中地点为入口，在右侧分析面板展示时段需求、区域数据和充电站数据；“约束选址”提供功能区与需求场景、综合评分权重、间距／泊位／配变过滤、逐个与批量纳入；“方案推演”提供新增、移除、参数编辑、服务对比、需求加权洛伦兹曲线和可编辑投资场景；“车网协同”提供同一草稿的 24 小时负荷、光伏与储能估算。工作台内部跳转同步页面路由，切换四个工作台保留模拟草稿与结果；修改需求场景后须重新分析。
 
-搜索、合并后的图层与专题控制、底图、边界、测距、全屏、定位和网格详情均在地图区域内。右上角提供操作说明，建设中页面不再占用导航。原监测专题地址仍可直接打开；`/charging`、`/charing` 及车主别名统一返回规划首页。
+搜索、合并后的图层与专题控制、底图、边界、测距、全屏和定位在地图区域内；网格与充电站详情在右侧面板。右上角提供操作说明，建设中页面不再占用导航。原监测专题地址仍可直接打开；`/charging`、`/charing` 及车主别名统一返回规划首页。
+
+### 地图地点详情
+
+在规划地图点击六边形或充电站，会高亮所属网格；选中充电站另显示放大的描边标记。右侧面板渐进出现，分“时段需求 / 区域数据 / 充电站数据”三级查看，关闭或点击地图空白处后清除高亮。时段页可切换工作日、周末、0～23 时及公共充电倾向低/中/高情景。该曲线按 D=Σ(0.2 × A × Q × F) 计算：A 为人口密度及四类 POI 密度各自的 P95 相对强度，Q 为探索性倾向系数，F 为 v0.1 充电开始小时百分比除以 100；共用同一曲线纵轴。缺失人口或任一类别时完整指数不可用，不将缺失当作零。曲线仅代表相对需求情景，不是实测订单或充电负荷。区域页显示 GHSL 模型人口和 POI；充电站页显示格内记录与可用设备字段。
+
+未来按网格接入统计人口、逐小时订单、充电电量、峰值功率和更完整的站点设备资料时，使用 `data/templates/grid-temporal-data-template.json` 作为字段模板；其中 `null` 表示资料缺失，导入流程不得把它解释成 0。
 
 ### 地图符号与图标
 
-充电站标记在 `src/utils/chargingIcons.js` 里用 canvas 生成，不依赖外部字体或图片：
+充电站标记在 `src/features/stations/models/chargingIcons.js` 里用 canvas 生成，不依赖外部字体或图片：
 
 - **形状**：圆角方牌配短定位角，减少尖角和高光装饰，与底图上的圆形 POI 区分。
 - **两种类型**：快充为绿色 + 白色闪电，普通充电为蓝色 + 白色插头；颜色与图例、`UiIcon` 里的充电字形同源，改一处两边同步。
 - **绘制**：4 倍像素比绘制（画布 32×36 CSS 像素），纯色主体配白色轮廓和轻投影。字形按自身包围盒等比缩放，在浅色和深色底图上保持清晰。
 - **缩放**：`icon-size` 按 zoom 插值（低层级略收小、放大后恢复），减少密集城区互相压盖；站点开关、仅看快充、图例显隐仍通过原有 `stations-circle` / `stations-bolt` 图层控制。
 
-`src/components/UiIcon.vue` 统一 24×24 网格、1.8 描边、圆头圆角；`charge-fast` / `charge-regular` 直接复用 `CHARGING_ICONS` 的实心路径。新增图标时先确认没有走回退的 `info`。
+`src/shared/components/UiIcon.vue` 统一 24×24 网格、1.8 描边、圆头圆角；`charge-fast` / `charge-regular` 直接复用 `CHARGING_ICONS` 的实心路径。新增图标时先确认没有走回退的 `info`。
 
 ## 已知未接入的组件
 
-`src/components/map/LayerControl.vue`、`src/components/panels/AnalysisPanel.vue`、`src/components/charts/HexDistributionChart.vue` 三个组件当前没有被任何页面引用（`MapView` 直接实现了等价的图层开关与柱状分布图）。`docs/项目逻辑梳理.md` 和 `package.json` 里的 `echarts` 依赖仍按它们存在来描述。清理或复用这三者需要单独决定，改动前先确认没有其他入口引用。
+`src/legacy/unused/LayerControl.vue`、`src/legacy/unused/AnalysisPanel.vue`、`src/legacy/unused/HexDistributionChart.vue` 三个组件当前没有被任何页面引用（`MapView` 直接实现了等价的图层开关与柱状分布图）。`docs/archive/项目逻辑梳理-2026-09.md` 和 `package.json` 里的 `echarts` 依赖仍按它们存在来描述。清理或复用这三者需要单独决定，改动前先确认没有其他入口引用。
 
 坐标说明：历史原始 GeoJSON 使用 GCJ-02，数据库正式几何已转换为 WGS84 / EPSG:4326。CSV 导入会依据 `coordSystem` 实际转换坐标；虚拟站点位置仅供演示，不代表实测设施位置。
 
-运行 `node --test tests/*.mjs` 检查全部用例（转换、空间筛选、网格计数与 MapView 加载流程）。PowerShell 不会自动展开通配符，也可以逐个文件执行，例如 `node --test tests/mapView.test.mjs`。
+运行 `npm test` 检查前端用例，`npm run test:backend` 检查后端单元测试，`npm run check:structure` 检查目录引用。也可逐个运行，例如 `node --test tests/frontend/mapView.test.mjs`。真实服务检查位于 `tests/integration/`。
+
+## 真实站点设备资料
+
+地图点选站点或按站名搜索后，弹窗展示独立的“设备配置”：充电终端（桩）数、枪数、站内最高单枪功率、设备额定输出合计，以及按设备类型分组的数量和功率。展开“设备明细与来源”查看资料时期、公开来源和待核实项。原始演示属性保留其标记，不能作为真实设备资料展示。
+
+资料维护在 `data/managed/station-equipment.json`，后端 `station_equipment.py` 按高德 POI ID 和完整站名关联，通过正式 `/api/stations` 返回；非原始 POI 的实测目录与虚拟点位不借用这些资料。修改资料后重启后端。`docs/reports/station-equipment-report.json` 列出当前 52 个真实点位的字段完整度。
+
+本次关联 8 站公开资料：特斯拉两站有终端数量和站内最高单枪功率，但没有逐枪编号、枪数和全站共享输出；青梅路南海街、城发火车站的 2023 年检索存档未完成原文复核，只展示历史线索，不填入正式桩数、枪数或总功率；北俎庄使用 2023 年媒体设备报道，须运营方复核。保利堂悦不同来源的设备数量和电流／功率口径存在差异，只采纳厂商公布的站内单枪最高值；蔚来许都大剧院、万达特来电目录数保留为线索，不转写为正式枪数。其余点位待补充，并非均已获得逐枪清单；公开资料不证明当前实时可用或已经现场核验。
+
+双枪设备的额定功率按设备计一次，不默认除以二或给每枪填写相同功率；上游充电堆与下游终端不重复汇总。规划服务和逐时负荷使用独立设备资料的额定输出合计，缺少总容量时保持资料不足，不用枪数乘单枪峰值，也不回退到真实地点的演示功率。虚拟与沙盘点位仍使用明确的模拟参数。设备输出合计不等于配变容量、接电容量或实测功率。

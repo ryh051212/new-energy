@@ -1,17 +1,27 @@
 import vue from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
+import { fileURLToPath } from 'node:url'
 
 // https://vite.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+  const proxy = { '/api': { target: env.API_PROXY_TARGET || 'http://127.0.0.1:8000', changeOrigin: false } }
+  return {
   plugins: [vue()],
   server: {
+    proxy,
     // Generated QA artifacts can be held open by Chrome on Windows.
-    watch: { ignored: ['**/.tmp/**'] },
+    watch: { ignored: ['**/.tmp/**', '**/*.tmpdir/**'] },
   },
+  preview: { proxy },
   build: {
     // MapLibre's indivisible main module builds to about 544 kB.
     chunkSizeWarningLimit: 550,
     rolldownOptions: {
+      input: {
+        main: fileURLToPath(new URL('./index.html', import.meta.url)),
+        constructionReference: fileURLToPath(new URL('./construction-reference.html', import.meta.url)),
+      },
       output: {
         codeSplitting: {
           groups: [
@@ -24,4 +34,5 @@ export default defineConfig({
       },
     },
   },
+  }
 })

@@ -1,0 +1,455 @@
+/* ==========================================================================
+   全局基础样式 - CSS Reset + 基础元素样式
+
+   目标：
+   1. 统一浏览器默认样式
+   2. 设置基础排版
+   3. 优化用户体验
+   ========================================================================== */
+
+/* ==================== 1. CSS Reset ==================== */
+
+/* Box sizing 统一 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML 基础设置 */
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+/* Body 基础样式 */
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* 重置标题、段落边距 */
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl, dd, blockquote, figure {
+  margin: 0;
+  padding: 0;
+}
+
+/* 列表样式重置 */
+ul, ol {
+  list-style: none;
+}
+
+/* 链接样式 */
+a {
+  color: inherit;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* 图片和媒体 */
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 表单元素继承字体 */
+input, button, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+/* 按钮样式重置 */
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* 表格样式重置 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+/* ==================== 2. 排版系统 ==================== */
+
+/* 标题层级 */
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--text-primary);
+}
+
+h5 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--text-primary);
+}
+
+h6 {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-normal);
+  color: var(--text-secondary);
+}
+
+/* 段落 */
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--leading-relaxed);
+  color: var(--text-primary);
+}
+
+/* 小号文本 */
+small {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+/* 强调文本 */
+strong, b {
+  font-weight: var(--font-weight-semibold);
+}
+
+em, i {
+  font-style: italic;
+}
+
+/* 代码 */
+code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  padding: 0.125rem 0.25rem;
+  background: var(--neutral-100);
+  border-radius: var(--radius-sm);
+  color: var(--qing-700);
+}
+
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  line-height: var(--leading-relaxed);
+  padding: var(--padding-md);
+  background: var(--neutral-100);
+  border-radius: var(--radius-lg);
+  overflow-x: auto;
+}
+
+pre code {
+  padding: 0;
+  background: transparent;
+}
+
+/* 引用 */
+blockquote {
+  padding-left: var(--space-4);
+  border-left: 4px solid var(--border-strong);
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ==================== 3. 焦点样式 ==================== */
+
+/* 键盘导航焦点可见 */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* 鼠标点击焦点不可见 */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* 链接焦点 */
+a:focus-visible {
+  outline-color: var(--qing-500);
+  border-radius: var(--radius-sm);
+}
+
+/* ==================== 4. 选择样式 ==================== */
+
+::selection {
+  background: var(--qing-200);
+  color: var(--qing-900);
+}
+
+::-moz-selection {
+  background: var(--qing-200);
+  color: var(--qing-900);
+}
+
+/* ==================== 5. 滚动条样式（全局） ==================== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neutral-300) transparent;
+}
+
+/* Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neutral-300);
+  border-radius: var(--radius-full);
+  border: 2px solid var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400);
+}
+
+/* ==================== 6. 占位符样式 ==================== */
+
+::placeholder {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: var(--text-tertiary);
+}
+
+::-ms-input-placeholder {
+  color: var(--text-tertiary);
+}
+
+/* ==================== 7. 辅助功能 ==================== */
+
+/* 屏幕阅读器专用 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 跳过导航链接 */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: var(--z-max);
+  padding: var(--space-2) var(--space-4);
+  background: var(--qing-600);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+}
+
+.skip-to-content:focus {
+  top: var(--space-2);
+  left: var(--space-2);
+}
+
+/* ==================== 8. 打印样式 ==================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ==================== 9. 动画性能优化 ==================== */
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ==================== 10. 通用工具类 ==================== */
+
+/* 视觉隐藏但保留布局空间 */
+.invisible {
+  visibility: hidden;
+}
+
+/* 完全移除 */
+.hidden {
+  display: none !important;
+}
+
+/* 指针事件控制 */
+.pointer-events-none {
+  pointer-events: none;
+}
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+/* 用户选择控制 */
+.select-none {
+  user-select: none;
+}
+
+.select-text {
+  user-select: text;
+}
+
+.select-all {
+  user-select: all;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 禁用状态 */
+.disabled,
+[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* 加载状态 */
+.loading {
+  opacity: 0.6;
+  cursor: wait;
+  pointer-events: none;
+}
+
+/* ==================== 11. 数字等宽 ==================== */
+
+/* 数字统一用等宽显示，防止数字跳动 */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==================== 12. 文本对齐 ==================== */
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+/* ==================== 13. 垂直对齐 ==================== */
+
+.align-baseline { vertical-align: baseline; }
+.align-top { vertical-align: top; }
+.align-middle { vertical-align: middle; }
+.align-bottom { vertical-align: bottom; }
+.align-text-top { vertical-align: text-top; }
+.align-text-bottom { vertical-align: text-bottom; }

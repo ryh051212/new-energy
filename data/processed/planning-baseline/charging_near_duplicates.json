@@ -1,0 +1,218 @@
+[
+  {
+    "first_id": "amap:B0MBS6DMJ1",
+    "second_id": "amap:B0MUC6ZDII",
+    "first_name": "云快充汽车充电站(橙西公牛超充站)",
+    "second_name": "云快充目的地充电站(橙西公牛慢充站)",
+    "distance_m": 11.79,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IAM64GE0",
+    "second_id": "amap:B0MGVLFF1O",
+    "first_name": "城发新能源青梅路南海街充电站",
+    "second_name": "中央公园汽车充电站",
+    "distance_m": 1.78,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0M6M6U9DP",
+    "second_id": "amap:B0I25RGM7H",
+    "first_name": "云快充目的地充电站(金石国际停车场公牛充电站)",
+    "second_name": "快来充汽车充电站(金石许都府新能源充电项目)",
+    "distance_m": 3.92,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LRXKXWUQ",
+    "second_id": "amap:B0MD668778",
+    "first_name": "云快充超级充电站(橙南公牛超充站)",
+    "second_name": "比亚迪闪充汽车充电站(许昌水岸金城)",
+    "distance_m": 13.29,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MBZBBENU",
+    "second_id": "amap:B0LDY6EXQE",
+    "first_name": "中镉超充汽车充电站(许职体育馆充电站)",
+    "second_name": "海康威视汽车充电站(职业技术学院体育馆)",
+    "distance_m": 5.11,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0J2XPOV8J",
+    "second_id": "amap:B0J0A4AB60",
+    "first_name": "特来电充电站(许昌东城区万达充电站)",
+    "second_name": "广汽能源汽车充电站(昊铂许昌万达广场超充站)",
+    "distance_m": 15.29,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0RM563D",
+    "second_id": "amap:B0KA1SNGYG",
+    "first_name": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+    "second_name": "保利堂悦光储充检智慧场站",
+    "distance_m": 7.93,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0RM563D",
+    "second_id": "amap:B0MDFCA4SV",
+    "first_name": "特来电超级充电站(特来电许昌市投保利堂悦充电站)",
+    "second_name": "城发新能源超级充电站(保利堂悦充电站·华为超充技术支持)",
+    "distance_m": 23.31,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MBTCD0LN",
+    "second_id": "amap:B0KKR6ISU8",
+    "first_name": "玖行能源汽车充电站(何能超充)",
+    "second_name": "叮叮汽车充电站(许昌三国大酒店)",
+    "distance_m": 8.91,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IAPCQBO7",
+    "second_id": "amap:B0IAPCSI9L",
+    "first_name": "星星充电汽车充电站(城发新能源火车站充电站)",
+    "second_name": "城发新能源火车站充电站",
+    "distance_m": 13.29,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0K13LUMOR",
+    "second_id": "amap:B0L1RMA7F7",
+    "first_name": "极氪能源超级充电站(许昌亨源通世纪广场极充站)",
+    "second_name": "新电途充电站(许昌亨源通世纪广场极充站)",
+    "distance_m": 5.6,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0LGHRTQM2",
+    "second_id": "amap:B0LUO5JM1Z",
+    "first_name": "新电途汽车充电站(能效充电桩旗舰店充电站)",
+    "second_name": "能效邻里共享汽车充电站(能效充电桩许昌旗舰店)",
+    "distance_m": 8.48,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IUM7AQ8S",
+    "second_id": "amap:B0J0A4AB60",
+    "first_name": "蔚来换电站(许昌万达广场)",
+    "second_name": "广汽能源汽车充电站(昊铂许昌万达广场超充站)",
+    "distance_m": 19.41,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MUC6ZDII",
+    "second_id": "amap:B0MDL6D26Q",
+    "first_name": "云快充目的地充电站(橙西公牛慢充站)",
+    "second_name": "比亚迪闪充汽车充电站(许昌西关里文创社区)",
+    "distance_m": 29.39,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L3CLJVVR",
+    "second_id": "amap:B0L3CLKEPW",
+    "first_name": "特来电汽车充电站(万里西站电动汽车充电站)",
+    "second_name": "国家电网汽车充电站(河南省许昌市河南万里运输集团公司客运西站公用充电站)",
+    "distance_m": 17.45,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MUBU7I43",
+    "second_id": "amap:B0MDYAU8C4",
+    "first_name": "星星充电汽车充电站(豫来电王允的巷子快充站)",
+    "second_name": "豫来电-王允巷子充电站",
+    "distance_m": 29.28,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0IAPCSI9L",
+    "second_id": "amap:B0LR3UD7WM",
+    "first_name": "城发新能源火车站充电站",
+    "second_name": "铁塔能源充电站(中国铁塔许昌市紫薇苑充电站)",
+    "distance_m": 18.17,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MDFCA4SV",
+    "second_id": "amap:B0L2XCXTFW",
+    "first_name": "城发新能源超级充电站(保利堂悦充电站·华为超充技术支持)",
+    "second_name": "出租汽车司机驿站(文峰路超充站)",
+    "distance_m": 22.01,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0FFLI3WWG",
+    "second_id": "amap:B0LD999V4C",
+    "first_name": "三鼎华悦大酒店新能源汽车直流汽车充电站",
+    "second_name": "特斯拉汽车充电站(三鼎华悦大酒店站)",
+    "distance_m": 19.19,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0KA6HG6NM",
+    "second_id": "amap:B0LR3CD99C",
+    "first_name": "云快充汽车充电站(三鼎华悦大酒店充电站)",
+    "second_name": "世峰充电站(三鼎华悦大酒店)",
+    "distance_m": 5.37,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JB9Z0J9M",
+    "second_id": "amap:B0L0LP8UAB",
+    "first_name": "城发新能源超级充电站(灞陵公园充电站·华为超充技术支持)",
+    "second_name": "特来电超级充电站(特来电许昌市投霸陵景区光储充检示范场站)",
+    "distance_m": 11.98,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0L0LP8UAB",
+    "second_id": "amap:B0KUY6TF9Q",
+    "first_name": "特来电超级充电站(特来电许昌市投霸陵景区光储充检示范场站)",
+    "second_name": "万城充(许昌市城发新能源灞陵公园充电站)",
+    "distance_m": 28.35,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0MA2UQQFE",
+    "second_id": "amap:B0MUKRYNUY",
+    "first_name": "城发新能源超级充电站(大剧院充电站·华为超充技术支持)",
+    "second_name": "汽车充电站",
+    "distance_m": 21.43,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  },
+  {
+    "first_id": "amap:B0JKY7D5OK",
+    "second_id": "amap:B0M6H1DM8D",
+    "first_name": "许由路充电站",
+    "second_name": "中国石化汽车充电站(许由路充电站)",
+    "distance_m": 0.0,
+    "same_name": false,
+    "decision": "flag_only; different source IDs and co-location do not prove duplication"
+  }
+]

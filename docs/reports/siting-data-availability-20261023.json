@@ -1,0 +1,626 @@
+{
+  "checkedAt": "2026-10-23T13:41:25.313026+00:00",
+  "studyArea": "许昌市魏都区",
+  "queryExtent": [
+    33.96722455148921,
+    113.71331539054368,
+    34.11642552851079,
+    113.90325573945631
+  ],
+  "contextMarginKm": 2,
+  "osmBaseTimestamp": "2026-07-15T15:22:01Z",
+  "osmQuery": "[out:json][timeout:120];(\nnwr[\"amenity\"=\"parking\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnwr[\"amenity\"=\"parking_entrance\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnode[\"entrance\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnode[\"barrier\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnwr[\"landuse\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnwr[\"natural\"=\"water\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnwr[\"power\"~\"^(substation|transformer)$\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnwr[\"emergency\"~\"^(fire_hydrant|fire_water_pond|suction_point)$\"](33.9672246,113.7133154,34.1164255,113.9032557);\nnwr[\"amenity\"~\"^(fire_station|fuel)$\"](33.9672246,113.7133154,34.1164255,113.9032557);\n);out body geom;",
+  "osmEndpoint": "https://overpass.private.coffee/api/interpreter",
+  "osmRawSnapshot": "data\\raw\\osm-siting-elements-overpass.json",
+  "osmElementCounts": {
+    "barrier": {
+      "countInQueryExtent": 10,
+      "countIntersectingStudyArea": 2,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "barrier": 10,
+        "access": 4
+      },
+      "samples": [
+        {
+          "osmType": "node",
+          "osmId": 8917472792,
+          "tags": {
+            "access": "no",
+            "barrier": "gate"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/8917472792"
+        },
+        {
+          "osmType": "node",
+          "osmId": 8917503533,
+          "tags": {
+            "access": "no",
+            "barrier": "gate"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/8917503533"
+        },
+        {
+          "osmType": "node",
+          "osmId": 9315394747,
+          "tags": {
+            "access": "no",
+            "barrier": "gate"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/9315394747"
+        },
+        {
+          "osmType": "node",
+          "osmId": 9641720028,
+          "tags": {
+            "access": "no",
+            "barrier": "gate"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/9641720028"
+        },
+        {
+          "osmType": "node",
+          "osmId": 1360403192,
+          "tags": {
+            "barrier": "toll_booth"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/1360403192"
+        }
+      ]
+    },
+    "fuel": {
+      "countInQueryExtent": 10,
+      "countIntersectingStudyArea": 4,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "amenity": 10,
+        "brand": 2,
+        "brand:en": 2,
+        "brand:wikidata": 2,
+        "brand:zh": 2,
+        "name": 2,
+        "name:en": 2,
+        "name:zh": 2
+      },
+      "samples": [
+        {
+          "osmType": "node",
+          "osmId": 13871932953,
+          "tags": {
+            "amenity": "fuel",
+            "brand": "中国石化",
+            "brand:en": "Sinopec",
+            "brand:wikidata": "Q831445",
+            "brand:zh": "中国石化",
+            "name": "中国石化加油站",
+            "name:en": "Sinopec",
+            "name:zh": "中国石化"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/13871932953"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1239645614,
+          "tags": {
+            "amenity": "fuel",
+            "brand": "中国石油",
+            "brand:en": "PetroChina",
+            "brand:wikidata": "Q503182",
+            "brand:zh": "中国石油",
+            "name": "中国石油",
+            "name:en": "PetroChina",
+            "name:zh": "中国石油"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1239645614"
+        },
+        {
+          "osmType": "node",
+          "osmId": 8905022094,
+          "tags": {
+            "amenity": "fuel"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/8905022094"
+        },
+        {
+          "osmType": "node",
+          "osmId": 10226818453,
+          "tags": {
+            "amenity": "fuel"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/10226818453"
+        },
+        {
+          "osmType": "node",
+          "osmId": 10226818561,
+          "tags": {
+            "amenity": "fuel"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/10226818561"
+        }
+      ]
+    },
+    "transformer": {
+      "countInQueryExtent": 7,
+      "countIntersectingStudyArea": 3,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "power": 7
+      },
+      "samples": [
+        {
+          "osmType": "node",
+          "osmId": 8917442110,
+          "tags": {
+            "power": "transformer"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/8917442110"
+        },
+        {
+          "osmType": "node",
+          "osmId": 8917503538,
+          "tags": {
+            "power": "transformer"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/8917503538"
+        },
+        {
+          "osmType": "node",
+          "osmId": 8917503539,
+          "tags": {
+            "power": "transformer"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/8917503539"
+        },
+        {
+          "osmType": "node",
+          "osmId": 9315394770,
+          "tags": {
+            "power": "transformer"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/9315394770"
+        },
+        {
+          "osmType": "node",
+          "osmId": 9315394771,
+          "tags": {
+            "power": "transformer"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/9315394771"
+        }
+      ]
+    },
+    "parking": {
+      "countInQueryExtent": 5,
+      "countIntersectingStudyArea": 5,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "amenity": 5,
+        "operator": 1
+      },
+      "samples": [
+        {
+          "osmType": "node",
+          "osmId": 10744866587,
+          "tags": {
+            "amenity": "parking",
+            "operator": "未来东岸华城"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/10744866587"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1029259748,
+          "tags": {
+            "amenity": "parking"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1029259748"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1029259749,
+          "tags": {
+            "amenity": "parking"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1029259749"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1029259750,
+          "tags": {
+            "amenity": "parking"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1029259750"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1472243293,
+          "tags": {
+            "amenity": "parking"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1472243293"
+        }
+      ]
+    },
+    "entrance": {
+      "countInQueryExtent": 2,
+      "countIntersectingStudyArea": 2,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "entrance": 2
+      },
+      "samples": [
+        {
+          "osmType": "node",
+          "osmId": 12123477365,
+          "tags": {
+            "entrance": "yes"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/12123477365"
+        },
+        {
+          "osmType": "node",
+          "osmId": 12123481156,
+          "tags": {
+            "entrance": "yes"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/12123481156"
+        }
+      ]
+    },
+    "parking_entrance": {
+      "countInQueryExtent": 1,
+      "countIntersectingStudyArea": 1,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "amenity": 1
+      },
+      "samples": [
+        {
+          "osmType": "node",
+          "osmId": 13143182820,
+          "tags": {
+            "amenity": "parking_entrance"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/node/13143182820"
+        }
+      ]
+    },
+    "substation": {
+      "countInQueryExtent": 17,
+      "countIntersectingStudyArea": 7,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "frequency": 13,
+        "power": 17,
+        "voltage": 13,
+        "substation": 4,
+        "source": 1
+      },
+      "samples": [
+        {
+          "osmType": "way",
+          "osmId": 214783425,
+          "tags": {
+            "frequency": "50",
+            "power": "substation",
+            "substation": "distribution",
+            "voltage": "220000;110000"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/214783425"
+        },
+        {
+          "osmType": "way",
+          "osmId": 340350784,
+          "tags": {
+            "frequency": "50",
+            "power": "substation",
+            "substation": "distribution",
+            "voltage": "220000;110000"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/340350784"
+        },
+        {
+          "osmType": "way",
+          "osmId": 786190988,
+          "tags": {
+            "frequency": "50",
+            "power": "substation",
+            "substation": "distribution",
+            "voltage": "220000;110000"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/786190988"
+        },
+        {
+          "osmType": "way",
+          "osmId": 787547269,
+          "tags": {
+            "frequency": "50",
+            "power": "substation",
+            "substation": "distribution",
+            "voltage": "220000;110000"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/787547269"
+        },
+        {
+          "osmType": "way",
+          "osmId": 214769206,
+          "tags": {
+            "frequency": "50",
+            "power": "substation",
+            "voltage": "220000"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/214769206"
+        }
+      ]
+    },
+    "landuse": {
+      "countInQueryExtent": 243,
+      "countIntersectingStudyArea": 172,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {
+        "landuse": 243,
+        "name": 60,
+        "name:en": 1,
+        "source": 1,
+        "start_date": 1,
+        "addr:postcode": 1,
+        "residential": 72,
+        "religion": 1
+      },
+      "samples": [
+        {
+          "osmType": "way",
+          "osmId": 340364472,
+          "tags": {
+            "landuse": "industrial",
+            "name": "河南能信热电有限公司(已停运)",
+            "name:en": "Henan Nengxin Cogen power station",
+            "source": "https://www.gem.wiki/Henan_Nengxin_cogen_power_station",
+            "start_date": "2008"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/340364472"
+        },
+        {
+          "osmType": "way",
+          "osmId": 647917436,
+          "tags": {
+            "addr:postcode": "461000",
+            "landuse": "residential",
+            "name": "绿城小区"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/647917436"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1155391833,
+          "tags": {
+            "landuse": "residential",
+            "name": "府西·雅园",
+            "residential": "apartments"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1155391833"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1155391834,
+          "tags": {
+            "landuse": "residential",
+            "name": "未来东岸华城",
+            "residential": "apartments"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1155391834"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1155391837,
+          "tags": {
+            "landuse": "residential",
+            "name": "金石许都府",
+            "residential": "apartments"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1155391837"
+        }
+      ]
+    },
+    "water": {
+      "countInQueryExtent": 59,
+      "countIntersectingStudyArea": 33,
+      "studyAreaCheckUnknown": 11,
+      "tagCounts": {
+        "name": 2,
+        "natural": 59,
+        "water": 59,
+        "type": 11
+      },
+      "samples": [
+        {
+          "osmType": "way",
+          "osmId": 616048247,
+          "tags": {
+            "name": "东湖",
+            "natural": "water",
+            "water": "lake"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/616048247"
+        },
+        {
+          "osmType": "way",
+          "osmId": 1247093963,
+          "tags": {
+            "name": "东湖",
+            "natural": "water",
+            "water": "lake"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/way/1247093963"
+        },
+        {
+          "osmType": "relation",
+          "osmId": 17167499,
+          "tags": {
+            "natural": "water",
+            "type": "multipolygon",
+            "water": "lake"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/relation/17167499"
+        },
+        {
+          "osmType": "relation",
+          "osmId": 17167500,
+          "tags": {
+            "natural": "water",
+            "type": "multipolygon",
+            "water": "river"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/relation/17167500"
+        },
+        {
+          "osmType": "relation",
+          "osmId": 17167501,
+          "tags": {
+            "natural": "water",
+            "type": "multipolygon",
+            "water": "lake"
+          },
+          "sourceUrl": "https://www.openstreetmap.org/relation/17167501"
+        }
+      ]
+    },
+    "emergency": {
+      "countInQueryExtent": 0,
+      "countIntersectingStudyArea": 0,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {},
+      "samples": []
+    },
+    "fire_station": {
+      "countInQueryExtent": 0,
+      "countIntersectingStudyArea": 0,
+      "studyAreaCheckUnknown": 0,
+      "tagCounts": {},
+      "samples": []
+    }
+  },
+  "existingRoadData": {
+    "roadCount": 1487,
+    "drivewayWays": 4,
+    "parkingAisleWays": 0,
+    "explicitMotorAccess": {
+      "unspecified": 1479,
+      "restricted": 6,
+      "prohibited": 2
+    },
+    "withWidth": 0
+  },
+  "existingAmapParkingData": {
+    "rawParkingPoiCount": 225,
+    "parkingRecordsInsideStudyArea": 225,
+    "nonEmptyOptionalFields": {
+      "parking_type": 165
+    },
+    "notice": "原请求 extensions=base；POI 数量不是泊位数，没有车位数字不代表 0。"
+  },
+  "assessment": {
+    "roadAccess": "可用道路与入口标签做初筛；非合法出入口许可或实际连通核验。",
+    "parkingSpaces": "OSM capacity/官方停车清单可提供部分静态总泊位；不能当作增设充电桩可用泊位。",
+    "sitePermission": "OSM landuse 只是映射标签，不是法定用地或土地权属授权。",
+    "fireSafety": "消防设施和风险源要素仅作参考，不能转成消防审查合格布尔值。",
+    "availableKva": "OSM power 标签不提供带时间的负荷接入余量；额定容量不能替代剩余容量。"
+  },
+  "changesToPlanningJudgement": false,
+  "publicSourceChecks": [
+    {
+      "source": "parkingPlan",
+      "url": "https://zrzyhghj.xuchang.gov.cn/xxgg/013019/20220919/2500cd1e-440b-4f17-b81b-1d2da96a5dd1.html",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "attachments": [
+        "https://zrzyhghj.xuchang.gov.cn/BigFileUpLoadStorage/temp/2022-09-19/c3df6a6d-7814-46f2-aa0e-dcc2cb481f6a/智慧停车专项规划公示.zip"
+      ],
+      "attachmentChecks": [
+        {
+          "url": "https://zrzyhghj.xuchang.gov.cn/BigFileUpLoadStorage/temp/2022-09-19/c3df6a6d-7814-46f2-aa0e-dcc2cb481f6a/智慧停车专项规划公示.zip",
+          "status": 200,
+          "files": [
+            {
+              "name": "╬ó╨┼═╝╞¼_20220916110138.jpg",
+              "bytes": 8192400
+            },
+            {
+              "name": "╬ó╨┼═╝╞¼_20220916110119.jpg",
+              "bytes": 10437151
+            }
+          ],
+          "localSnapshot": ".tmp\\public-siting-sources\\parking-plan-0.zip"
+        }
+      ]
+    },
+    {
+      "source": "springAutumnParking",
+      "url": "https://www.xcstzzgs.cn/e/action/ShowInfo.php?classid=12&id=132",
+      "error": "HTTPSConnectionPool(host='www.xcstzzgs.cn', port=443): Max retries exceeded with url: /e/action/ShowInfo.php?classid=12&id=132 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate"
+    },
+    {
+      "source": "powerCapacityPortal",
+      "url": "https://www.95598.cn/osgweb/ipOpenCapacityAndRestrictions",
+      "status": 200,
+      "contentType": "text/html",
+      "attachments": []
+    }
+  ],
+  "capacityPortalCheck": {
+    "url": "https://www.95598.cn/osgweb/ipOpenCapacityAndRestrictions",
+    "httpStatus": 200,
+    "title": "95598智能互动网站-信息公开目录",
+    "captchaPresent": true,
+    "capacityRecordsAcquired": false,
+    "notice": "公开网页可访问，当前显示默认北京栏目并出现拼图验证；未操作验证、登录或取得魏都区容量明细。"
+  },
+  "publicEvidenceExamples": [
+    {
+      "field": "parkingTotalCapacity",
+      "name": "许昌市中心城区停车场（春秋广场）项目",
+      "value": 524,
+      "unit": "个",
+      "evidenceDate": "2021-11-18",
+      "valueKind": "项目公开设计规模，非实时空位或可改造泊位",
+      "source": "许昌市投资集团有限公司",
+      "sourceUrl": "https://www.xcstzzgs.cn/e/action/ShowInfo.php?classid=12&id=132",
+      "verification": "web 工具已读到正文，普通 requests 客户端遇到证书错误；未关闭证书验证"
+    },
+    {
+      "field": "landusePlanning",
+      "name": "魏都区先进制造业开发区70号地块控制性详细规划批前公示",
+      "evidenceDate": "2024-12-24",
+      "valueKind": "地块范围、用地性质与面积的批前公示，非当前建设许可",
+      "sourceUrl": "https://zrzyhghj.xuchang.gov.cn/xxgg/013019/20241224/6cd76167-2282-4ca1-80e1-a10c3bfaed83.html"
+    },
+    {
+      "field": "fireSafety",
+      "valueKind": "查到审验办理资料，未取得逐候选位置的消防审查合格结果",
+      "sourceUrl": "https://xcszjj.xuchang.gov.cn/gsgg/002003/20230316/f61e433e-da66-4f54-bab6-3d94bb36e2df.html"
+    },
+    {
+      "field": "availableKva",
+      "valueKind": "河南供电企业信息公开渠道的官方说明，非具体点位容量数值",
+      "sourceUrl": "https://henb.nea.gov.cn/dtyw/jggg/202504/t20250428_280312.html"
+    }
+  ],
+  "parkingPlanAttachmentFinding": {
+    "date": "2022-09-19",
+    "format": "ZIP 内 2 张 JPG，已解包查看",
+    "maps": [
+      "路内停车场布局规划图",
+      "路外公共停车场布局规划图"
+    ],
+    "usableAs": "人工解读、配准和数字化的参考，不能直接按 GIS 矢量叠加或当作现状泊位",
+    "sourceUrl": "https://zrzyhghj.xuchang.gov.cn/xxgg/013019/20220919/2500cd1e-440b-4f17-b81b-1d2da96a5dd1.html"
+  },
+  "dataQualityNotes": [
+    "查询范围为研究区外包矩形向外扩展约 2 km，表中单独列出与研究区相交的数量。",
+    "OSM 数据基准为 osmBaseTimestamp，不是抓取时刻；缺少标签不代表现实中不存在要素。",
+    "OSM landuse 非法定用地分类；entrance=yes 未证明机动车可通行。",
+    "查询内 5 处 OSM 停车设施均无 capacity；高德 225 条停车记录也未带总泊位字段。",
+    "7 处 OSM transformer 只有 power=transformer 标签，未提供额定或剩余容量。",
+    "OSM 消防站与所查询消防供水设施标签均未返回记录，仅表示本次查询覆盖不足。"
+  ]
+}

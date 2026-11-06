@@ -1,0 +1,62 @@
+{
+  "created_at": "2026-10-27T11:25:37.515323+00:00",
+  "observation_geography": "Not Weidu; external evidence only",
+  "private_car_daily_charging_events": {
+    "median": 0.4666666666666667,
+    "q1": 0.36666666666666664,
+    "q3": 0.6333333333333333,
+    "unit": "events_per_vehicle_day",
+    "basis": "observed_external_aggregate",
+    "source_doi": "10.5281/zenodo.13852045",
+    "not_a_probability": true,
+    "charging_scope": "all charging; public/private not separable"
+  },
+  "temporal_profiles": {
+    "file": "time_profiles.csv",
+    "rows": 192,
+    "interval_minutes": 15,
+    "basis": "observed_external_aggregate",
+    "source_file": "Fig2a.Daily usage patterns of EVs across different vehicle types and days.csv",
+    "end_point_index_96_excluded": "24:00 plotting endpoint; not counted as a 97th daily interval",
+    "metadata_caveat": "Archive description mistakenly describes a driving column as parked. Actual column names are retained; all three state shares sum to 1.",
+    "weidu_transfer": "Requires local calibration; cannot infer land-use-specific visitor counts."
+  },
+  "public_charging_session_summary_2022": {
+    "mean_session_energy_kwh": 25.6,
+    "mean_session_duration_minutes": 49.3,
+    "charging_peaks_local_hour_ranges": [
+      [
+        5,
+        7
+      ],
+      [
+        12,
+        16
+      ],
+      [
+        23,
+        25
+      ]
+    ],
+    "basis": "industry_observations_secondary_summary",
+    "source_url": "https://www.nea.gov.cn/2023-03/20/c_1310703965.htm",
+    "population": "Mixed public-platform users; may include commercial vehicles",
+    "suitable_as_private_Weidu_default": false
+  },
+  "home_or_work_charging_session_share_global": {
+    "approximate_value": 0.75,
+    "basis": "international_report_citing_survey",
+    "source_url": "https://www.iea.org/reports/global-ev-outlook-2026/electric-vehicle-charging-chap-6-and-10",
+    "unit": "share of charging occasions",
+    "not_equivalent_to": "Share of Weidu households with home charger, or public-charging-dependent vehicles",
+    "suitable_as_private_Weidu_default": false
+  },
+  "unavailable_local_parameters": [
+    "Weidu private EV fleet",
+    "EV ownership by neighbourhood",
+    "home charging availability",
+    "public charging dependence by household",
+    "hourly public session arrivals",
+    "parking duration distribution by local functional zone"
+  ]
+}

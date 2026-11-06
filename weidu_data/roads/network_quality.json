@@ -1,0 +1,22 @@
+{
+  "node_count_input": 16804,
+  "directed_edges_input": 28705,
+  "motor_scenario_nodes": 16547,
+  "motor_scenario_edges": 28023,
+  "weak_components": 11,
+  "strong_components": 1482,
+  "largest_weak_component_nodes": 16478,
+  "largest_weak_component_percent": 99.58300598295763,
+  "largest_strong_component_nodes": 15005,
+  "missing_endpoint_edges": 0,
+  "nonpositive_length_edges": 0,
+  "turn_restriction_records": 2,
+  "turn_restrictions_applied": false,
+  "barrier_nodes": 20,
+  "access_unspecified_edges_assumed_passable": 28023,
+  "snap_distance_max_m_assumption": 300,
+  "real_speed_data": false,
+  "network_context_margin_km": 10,
+  "ten_minute_analysis_status": "supports scenario preparation; turn restrictions/barriers/entrances require review. No real-time guarantee.",
+  "stations_over_300m_from_node": 1
+}

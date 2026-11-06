@@ -1,0 +1,8 @@
+﻿source_id,title,organization,year,url,used_for,evidence_type
+SRC-01,国家能源局发布2025年12月全国电动汽车充电设施数据,国家能源局,2026,https://www.nea.gov.cn/20260121/da0f536fbafe4545820a2f64465e773b/c.html,说明私人充电设施已成为全国充电基础设施主体之一；不直接下推为魏都区数量,国家统计背景
+SRC-02,电动汽车充电设施服务能力“三年倍增”行动方案（2025—2027年）,国家发展改革委等部门,2025,https://www.ndrc.gov.cn/xxgk/zcfb/tz/202510/P020251015595398499456.pdf,约束固定车位、私人桩比例和既有小区改造的情景方向,国家政策
+SRC-03,响水县居民住宅小区和公共建筑电动汽车充电基础设施建设管理办法,响水县人民政府,2022,https://www.xiangshui.gov.cn/art/2022/5/29/art_34192_4115477.html,私人自用桩7kW和固定车位/安装接入条件的技术情景参考；不是魏都区地方标准,地方政府公开规范
+SRC-04,Insights into Household Electric Vehicle Charging Behavior: Analysis and Predictive Modeling,Energies,2024,https://doi.org/10.3390/en17040925,家庭充电开始时间晚间上升、约17时附近出现峰值的曲线方向,同行评议论文（外地样本）
+SRC-05,Hourly charging profiles for electric vehicles and their effect on the aggregated consumption profile in Denmark,International Journal of Electrical Power & Energy Systems,2021,https://doi.org/10.1016/j.ijepes.2021.106900,家庭充电晚间/夜间峰值及工作日与周末差异的方向性约束,同行评议论文（丹麦样本）
+SRC-06,Electric Vehicle User Behavior: An Analysis of Charging Station Utilization in Canada,Energies,2023,https://doi.org/10.3390/en16041592,住宅充电主要在傍晚至次日早晨占用的方向性约束,同行评议论文（加拿大样本）
+SRC-07,魏都区项目住宅POI与2025人口投影六边形,本项目已有数据,2025,local://public/geojson/residential-pois.json;local://data/processed/planning-baseline/population-grid.geojson,保留住宅名称和坐标，并分配人口投影代理量,项目空间输入；人口未做本地总量校准

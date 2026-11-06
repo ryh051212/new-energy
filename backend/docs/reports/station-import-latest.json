@@ -1,0 +1,33 @@
+{
+  "input_records": 276,
+  "inserted": 0,
+  "updated": 276,
+  "retired_demo": 0,
+  "grid_analysis": {
+    "stations": 271,
+    "residential_pois": 224,
+    "commercial_pois": 406,
+    "classifications": {
+      "high-demand-high-supply": 43,
+      "high-demand-low-supply": 21,
+      "low-demand-high-supply": 12,
+      "low-demand-low-supply": 94
+    },
+    "edge_tolerance_metres": 5,
+    "edge_assignments": [
+      {
+        "table": "residential_pois",
+        "point_id": "B0FFL4CBQ0",
+        "grid_id": 167,
+        "distance_metres": 3.98541459,
+        "reason": "inside_boundary_but_grid_edge_gap"
+      }
+    ]
+  },
+  "active_stations": 322,
+  "synthetic_stations": 0,
+  "existing_or_real_stations": 322,
+  "committed": true,
+  "source_file": "stations-scenario-v1.csv",
+  "backup": "D:\\jstrae\\项目学习\\weidu-ev-webgis\\backend\\backend\\backups\\nev_webgis_before_wgs84_20261028_211840.dump"
+}

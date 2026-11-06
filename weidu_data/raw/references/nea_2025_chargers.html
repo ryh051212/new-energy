@@ -1,0 +1,139 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="source" content="新华网"> <meta name="publishdate" content="2026-01-21"> <meta name="contentid" content="2026012133ceb49dc4eb472aa48c62ab3b2ddbbb"> <meta name="subject" content=""> <meta name="catalogs" content="01009005000"> <meta name="author" content=""> <meta name="publishedtype" content="1"> <meta name="filetype" content="0"> <meta name="pagetype" content="1"> <meta name="templateId" content="b5427b58c834414690d6e6f7dca0826e"> <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta name="SiteName" content="国家能源局"> <meta name="SiteDomain" content="www.nea.gov.cn"> <meta name="SiteIDCode" content="bm62000002号"> <div data="datasource:2026012133ceb49dc4eb472aa48c62ab3b2ddbbb" datatype="content"><meta name="ArticleTitle" content="我国充电基础设施数量突破2000万大关 呈三方面特点"></div> <div data="datasource:2026012133ceb49dc4eb472aa48c62ab3b2ddbbb" datatype="content"><meta name="PubDate" content="2026-01-21 15:00:50"></div> <div data="datasource:2026012133ceb49dc4eb472aa48c62ab3b2ddbbb" datatype="content"><meta name="ContentSource" content="国家能源局"></div> <meta name="description" content="国家能源网"> <meta name="keywords" content="国家能源网"> <title data="datasource:2026012133ceb49dc4eb472aa48c62ab3b2ddbbb" datatype="content">
+            我国充电基础设施数量突破2000万大关 呈三方面特点---国家能源局
+        </title> <link href="http://www.nea.gov.cn/static/default/css/public/master_nyj_v1.0.css" rel="stylesheet" type="text/css"> <link href="http://www.nea.gov.cn/static/default/css/article.css" rel="stylesheet" type="text/css"> <link href="http://www.nea.gov.cn/2015nyj/xinban/topbase.css" rel="stylesheet"> <link href="http://www.nea.gov.cn/detail/css/cb_videoPlayer.css" rel="stylesheet"> <script src="http://www.nea.gov.cn/static/default/js/public/jquery-1.9.1.min.js" type="text/javascript"></script> <script language="javascript">
+        $(document).ready(function () {
+
+            var lefttmp = new Image();
+            lefttmp.src = "http://www.xinhuanet.com/photo/static/arr_left.cur";
+            var righttmp = new Image();
+            righttmp.src = "http://www.xinhuanet.com/photo/static/arr_right.cur";
+            leng = $("a", $("#div_currpage")).length;
+
+            if (leng != 0)
+            //curr里有a标签==稿件不止一页
+            {
+
+                //看一共有多少个a标签
+                leng = leng - 1;
+                var nextLin = $("a", $("#div_currpage"))[leng].href; //对于多页的情况，取得下一页的地址
+                var oneword = location.href + "#";
+                if (nextLin == oneword) {
+                    leng = leng - 1;
+                    nextLin = $("a", $("#div_currpage"))[leng].href;
+                }
+                var currurl = location
+                    .href; //当前页链接地址<meta http-equiv="expires" content="Sunday 26 October 2011 01:00 GMT" /> 
+
+                var underpd = currurl.substring(currurl.indexOf("c_") + 2, currurl.indexOf(".htm"));
+                if (underpd.indexOf("_") == -1) {
+
+                    prevLink = location.href; //如果是文章首页，则左键仍是替换到本页面
+                    nextLink = $("a", $("#div_currpage"))[0].href; //下一页的赋值
+                    setTimeout("window.opener=null;window.location.href='" + nextLink + "'", 60000); //30秒跳转到下一页
+                } else
+                //是末页，http://news.xinhuanet.com/photo/2011-08/06/c_121822530.htm
+                {
+                    //当前页分页号判断
+                    var currnum = currurl.indexOf(".htm"); //链接中第一次出现.htm的位置
+                    var underlineindex = currurl.lastIndexOf("_") + 1; //下划线甄别标识，第一页则不是下划线
+                    //下一页的分页号
+                    var nextnum = nextLin.indexOf(".htm"); //链接中第一次出现.htm的位置
+                    var underlinenext = nextLin.lastIndexOf("_") + 1; //下划线甄别标识，第一页则不是下划线
+                    var undernum = nextLin.substr(nextLin.indexOf("c_")).split("_").length - 1;
+
+                    var temp = currurl.substring(underlineindex, currnum); //当前页的分页号
+                    var nexttemp = nextLin.substring(underlinenext, nextnum); //最后a标签的分页号
+                    var boolx = parseInt(temp, 10) > parseInt(nexttemp, 10);
+
+                    if ((boolx) || (undernum == 1)) //末页
+
+                    {
+
+                        if ($("img", $("a", $("#content"))).length == 0) //没有带链接的图片
+
+                        {
+                            prevLink = nextLin;
+                            if (undernum == 1) {
+                                nextLink = nextLin;
+                            } else {
+                                nextLink = prevLink.substr(0, (prevLink.lastIndexOf("_"))) + ".htm";
+                            }
+                            setTimeout("window.opener=null;window.location.href='" + nextLink + "'",
+                                60000); //30秒跳转到下一页
+                        } else //末页正文图片有链接
+                        {
+                            prevLink = nextLin;
+                            nextLink = $("a", $("#content"))[0].href; //把正文第一个带链接的链接地址赋给下一页
+                        }
+
+                    } else //不是末页
+                    {
+
+                        prevLink = $("a", $("#div_currpage"))[0].href; //把正文第一个带链接的链接地址赋给下一页
+                        nextLink = nextLin; //把正文最后一个带链接的链接地址赋给下一页
+                    }
+
+                }
+            } else
+            //只有一页
+            {
+                prevLink = location.href;
+                nextLink = location.href;
+            }
+
+            document.onkeydown = pageEvent;
+
+            function pageEvent(evt) {
+                evt = evt || window.event;
+                var key = evt.which || evt.keyCode;
+                if (key == 37) location = prevLink;
+                if (key == 39) location = nextLink;
+            };
+
+            var lefturl = prevLink;
+            var righturl = nextLink;
+            var imgurl = righturl;
+
+            $("#content img").each(function () {
+                var width = $(this).width();
+                var thisImage = $(this);
+                //alert("01");
+                $(thisImage)[0].onmousemove = function () {
+
+                    if (event.offsetX < width / 2) {
+
+                        this.style.cursor = 'url(' + lefttmp.src + '),auto';
+                        imgurl = lefturl;
+                    } else {
+
+                        this.style.cursor = 'url(' + righttmp.src + '),auto';
+                        imgurl = righturl;
+                    }
+
+                }
+
+                $(thisImage)[0].onmouseup = function () {
+                    top.location = imgurl;
+
+                }
+            });
+
+        });
+    </script></head> <body><script src="http://www.nea.gov.cn/2015nyj/xinban/topnav.js" type="text/javascript"></script> <div class="main-colum"><div class="now-site">您当前位置：<a href="http://www.nea.gov.cn/" target="_blank">首页</a> &gt; 正文</div> <div class="channel-page"><div class="article-title" data="datasource:2026012133ceb49dc4eb472aa48c62ab3b2ddbbb" datatype="content"><div class="hr_10"></div> <div class="titles">
+                        我国充电基础设施数量突破2000万大关 呈三方面特点
+                    </div> <div class="hr_10"></div> <span class="times">
+                        发布时间：2026-01-21
+                    </span> <span class="author">
+                        来源：国家能源局
+                    </span> <span class="switchsize"><b class="bigger">大</b><b class="medium">中</b><b class="smaller">小</b></span> <div class="arrow"></div></div> <div class="article-box"><div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div> <div id="detail" data="datasource:2026012133ceb49dc4eb472aa48c62ab3b2ddbbb" datatype="content"><div class="article-content"><span id="detailContent"><p>&emsp;&emsp;截至2025年12月底，我国电动汽车充电设施数量达到2009.2万个，突破2000万大关。其中，公共充电设施（枪）471.7万个，私人充电设施（枪）1537.5万个。目前，我国已建成全球最大的电动汽车充电网络，支撑了超4000万辆新能源汽车的充电需求。</p><p>&emsp;&emsp;2025年我国充电设施发展持续提质升级，总体呈现三方面的特点：一是规模增长更快，从2006年我国建成首座充电站到2019年6月充电设施数量突破100万个，用了13年；从100万个到2024年6月突破1000万个，用了5年；但从1000万到2000万仅用了18个月。二是充电效率更高，大功率充电设施加快布局建设，全国公共场站单枪平均充电功率达到46.5千瓦，充电效率同比提升33%，充电服务体验明显提升。三是设施覆盖更广，全国高速公路服务区累计建成充电桩7.15万个，覆盖了全国超98%的服务区，19个省份实现了充电设施“乡乡全覆盖”。</p><p>&emsp;&emsp;2025年9月，国家发展改革委、国家能源局等六部门联合印发《电动汽车充电设施服务能力“三年倍增”行动方案（2025—2027年）》，明确了今后一段时期充电设施发展的目标和行动路径。下一步，国家能源局将加强工作统筹，完善政策体系，督促指导各地加快充电设施规划建设，有效促进新能源汽车消费，确保《行动方案》落地见效。</p></span></div></div> <div class="back-top"></div> <div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div></div> <div class="article-other"><div class="hr_10"></div> <div class="hr_10"></div> <div class="clear"></div></div> <div class="hr_10"></div> <div class="hr_10"></div> <div class="hr_10"></div></div></div> <script src="http://www.nea.gov.cn/2015nyj/xinban/bottom.js" type="text/javascript"></script> <script src="http://www.nea.gov.cn/static/default/js/public/article-font.js" type="text/javascript"></script> <script src="http://www.nea.gov.cn/detail/js/pager.js"></script> <script src="http://www.nea.gov.cn/detail/js/cb-video.js"></script> <script>
+        $(function () {
+            /* 分页调用 */
+            parsePagingFun({
+                // preText: 'prev',//上一页
+                // nextText: 'next',//下一页
+                id: 'detailContent', //正文分页id
+                num: 8 //显示页码数个数
+            })
+
+        })
+    </script><script src="//imgs.news.cn/webdig/xinhua_webdig.js" language="javascript" type="text/javascript" async></script></body></html>

@@ -1,0 +1,6 @@
+{
+  "file": "data/managed/xuchang-stations.csv",
+  "rows": 240,
+  "synthetic_rows": 240,
+  "action": "excluded; not copied into observed charging data"
+}

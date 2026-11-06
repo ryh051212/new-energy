@@ -1,0 +1,367 @@
+/* ==========================================================================
+   魏都区充电设施 WebGIS - 样式主入口
+
+   设计理念：
+   - 简约：减少不必要的装饰，专注内容呈现
+   - 层级分明：清晰的视觉层次和信息架构
+   - 一致性：统一的设计语言和交互模式
+
+   导入顺序说明：
+   1. design-tokens.css  - 设计令牌（颜色、间距、字体等）
+   2. reset.css          - CSS 重置和基础样式
+   3. layout.css         - 布局系统（网格、容器、侧边栏）
+   4. components.css     - 组件样式库（按钮、卡片、表单等）
+   5. 业务样式           - 特定功能的样式
+
+   使用方式：
+   在 src/main.js 中加载 src/styles/main.css。
+   ========================================================================== */
+
+/* ==================== 1. 基础层（Foundation） ==================== */
+@import './design-tokens.css';   /* 设计令牌 */
+@import './reset.css';           /* CSS 重置 */
+
+/* ==================== 2. 布局层（Layout） ==================== */
+@import './layout.css';          /* 布局系统 */
+
+/* ==================== 3. 组件层（Components） ==================== */
+@import './components.css';      /* 组件样式库 */
+
+/* ==================== 4. 业务层（Business） ==================== */
+/* 业务特定样式按需导入 */
+@import './auth.css';            /* 认证相关 */
+@import './workspace.css';       /* 工作区 */
+@import './planning.css';        /* 规划功能 */
+@import './planner.css';         /* 规划器 */
+
+/* ==================== 5. 应用特定样式 ==================== */
+
+/* 应用根容器 */
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 地图容器 */
+.map-container {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: var(--neutral-100);
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* MapLibre GL 地图样式覆盖 */
+.maplibregl-map {
+  font-family: var(--font-sans);
+}
+
+.maplibregl-ctrl-group {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.maplibregl-ctrl-group > button {
+  border-radius: var(--radius-md);
+}
+
+.maplibregl-popup-content {
+  background: var(--bg-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: var(--padding-md);
+  font-size: var(--font-size-sm);
+}
+
+.maplibregl-popup-tip {
+  border-top-color: var(--bg-surface);
+}
+
+/* 地图控件样式统一 */
+.map-control {
+  position: absolute;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--padding-sm);
+  z-index: var(--z-dropdown);
+}
+
+.map-control-top-left {
+  top: var(--space-3);
+  left: var(--space-3);
+}
+
+.map-control-top-right {
+  top: var(--space-3);
+  right: var(--space-3);
+}
+
+.map-control-bottom-left {
+  bottom: var(--space-3);
+  left: var(--space-3);
+}
+
+.map-control-bottom-right {
+  bottom: var(--space-3);
+  right: var(--space-3);
+}
+
+/* ==================== 6. 数据可视化增强 ==================== */
+
+/* 图表容器 */
+.chart-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  position: relative;
+}
+
+/* 指标卡片 */
+.metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--padding-md);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: var(--transition-base);
+}
+
+.metric-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+}
+
+.metric-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+  line-height: var(--leading-none);
+}
+
+.metric-change {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.metric-change-positive {
+  color: var(--success-600);
+}
+
+.metric-change-negative {
+  color: var(--error-600);
+}
+
+.metric-change-neutral {
+  color: var(--text-tertiary);
+}
+
+/* ==================== 7. 列表和数据表格 ==================== */
+
+/* 数据列表 */
+.data-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.data-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-sm);
+  border-radius: var(--radius-md);
+  transition: var(--transition-fast);
+}
+
+.data-list-item:hover {
+  background: var(--bg-hover);
+}
+
+.data-list-item-active {
+  background: var(--qing-50);
+  border-left: 3px solid var(--qing-500);
+}
+
+/* 数据表格 */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.data-table th {
+  padding: var(--space-3) var(--space-2);
+  text-align: left;
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-secondary);
+  border-bottom: 2px solid var(--border-strong);
+  background: var(--bg-page);
+}
+
+.data-table td {
+  padding: var(--space-3) var(--space-2);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.data-table tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ==================== 8. 状态指示器 ==================== */
+
+/* 状态点 */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: var(--space-2);
+}
+
+.status-dot-success {
+  background: var(--success-500);
+}
+
+.status-dot-warning {
+  background: var(--warning-500);
+}
+
+.status-dot-error {
+  background: var(--error-500);
+}
+
+.status-dot-neutral {
+  background: var(--neutral-400);
+}
+
+/* 状态标签 */
+.status-label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-full);
+}
+
+/* ==================== 9. 空状态 ==================== */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--padding-xl);
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.empty-state-icon {
+  width: 64px;
+  height: 64px;
+  color: var(--neutral-400);
+}
+
+.empty-state-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--text-primary);
+}
+
+.empty-state-description {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  max-width: 400px;
+}
+
+/* ==================== 10. 工具提示 ==================== */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-content {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--neutral-900);
+  color: var(--neutral-0);
+  font-size: var(--font-size-xs);
+  border-radius: var(--radius-md);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-fast) var(--ease-out);
+  z-index: var(--z-tooltip);
+}
+
+.tooltip:hover .tooltip-content {
+  opacity: 1;
+}
+
+/* ==================== 11. 响应式调整 ==================== */
+
+@media (max-width: 768px) {
+  :root {
+    --sidebar-width: 100%;
+    --header-height: var(--header-height-compact);
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .metric-value {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (min-width: 769px) {
+  .show-mobile-only {
+    display: none !important;
+  }
+}
+
+/* ==================== 12. 性能优化 ==================== */
+
+/* GPU 加速 */
+.gpu-accelerated {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* 防止布局抖动 */
+.prevent-layout-shift {
+  contain: layout;
+}

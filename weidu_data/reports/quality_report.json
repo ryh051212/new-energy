@@ -1,0 +1,289 @@
+{
+  "checked_at": "2026-10-27T11:38:11.199490+00:00",
+  "stages": {},
+  "boundary": {
+    "status": "acquired",
+    "count": 1,
+    "invalid_geometry": 0,
+    "empty_geometry": 0,
+    "duplicate_ids": 0,
+    "geometry_types": {
+      "Polygon": 1
+    },
+    "metadata": {
+      "crs": "EPSG:4326",
+      "processed_at": "2026-10-27T11:11:25.106894+00:00",
+      "feature_count": 1,
+      "source": "existing project boundary; not a new official survey",
+      "source_url": "http://127.0.0.1:8000/api/boundary",
+      "area_km2": 90.10933380303206,
+      "original_invalid": 0,
+      "license": "Original boundary redistribution rights not verified",
+      "accuracy_note": "Existing project research boundary; compare current administrative scope before population calibration."
+    }
+  },
+  "pois": {
+    "status": "acquired",
+    "count": 1993,
+    "invalid_geometry": 0,
+    "empty_geometry": 0,
+    "duplicate_ids": 0,
+    "geometry_types": {
+      "Point": 1993
+    },
+    "metadata": {
+      "crs": "EPSG:4326",
+      "processed_at": "2026-10-27T11:14:29.769787+00:00",
+      "feature_count": 1993,
+      "source": "AMap official place API snapshots",
+      "source_url": "https://lbs.amap.com/api/webservice/guide/api-advanced/search",
+      "categories": {
+        "public_service": 762,
+        "work": 379,
+        "leisure": 222,
+        "commercial": 406,
+        "residential": 224
+      },
+      "duplicates_by_source_id_removed": 50,
+      "outside_boundary_removed": 2,
+      "invalid_records_removed": 0,
+      "completeness": "Pagination termination is not a guarantee of complete real-world POI coverage; existing API category results may be capped.",
+      "license": "AMap developer agreement applies; local academic use. Bulk redistribution rights not confirmed.",
+      "meaning": "Location records, not population, visitors or charging counts."
+    },
+    "outside_boundary": 0,
+    "missing_fields": {
+      "name": 0,
+      "raw_category": 0,
+      "category": 0,
+      "source": 0,
+      "collected_at": 0,
+      "source_updated_at": 1993
+    },
+    "synthetic_rows": 0,
+    "categories": {
+      "public_service": 762,
+      "work": 379,
+      "leisure": 222,
+      "commercial": 406,
+      "residential": 224
+    },
+    "nearby_record_pairs_30m": 485
+  },
+  "charging": {
+    "status": "acquired",
+    "count": 247,
+    "invalid_geometry": 0,
+    "empty_geometry": 0,
+    "duplicate_ids": 0,
+    "geometry_types": {
+      "Point": 247
+    },
+    "metadata": {
+      "crs": "EPSG:4326",
+      "processed_at": "2026-10-27T11:35:16.847946+00:00",
+      "feature_count": 247,
+      "source": "AMap raw official API + explicit existing public evidence",
+      "inside_boundary": 201,
+      "context_buffer_m": 10000,
+      "observed_public_access_only": false,
+      "public_access_note": "Candidate charging locations; unknown public access remains null. Do not count all locations as verified public stations.",
+      "unknown_fields_remain_null": true,
+      "synthetic_rows_included": 0,
+      "license": "AMap terms; attached evidence retains source rights."
+    },
+    "outside_boundary": 46,
+    "missing_fields": {
+      "name": 0,
+      "source": 0,
+      "raw_category": 0,
+      "operator": 247,
+      "public_access": 247,
+      "gun_count": 247,
+      "charger_unit_count": 245,
+      "charge_type": 245,
+      "max_gun_power_kw": 245,
+      "installed_power_kw": 247,
+      "opening_hours": 245,
+      "source_updated_at": 247
+    },
+    "synthetic_rows": 0,
+    "categories": {
+      "charging": 247
+    },
+    "nearby_record_pairs_30m": 24
+  },
+  "roads": {
+    "status": "acquired",
+    "count": 2987,
+    "invalid_geometry": 0,
+    "empty_geometry": 0,
+    "duplicate_ids": 0,
+    "geometry_types": {
+      "LineString": 2987
+    },
+    "metadata": {
+      "fetchedAt": "2026-10-27T11:14:51.330371+00:00",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "bboxSouthWestNorthEast": [
+        33.89510394490118,
+        113.62689134887603,
+        34.18850192219665,
+        113.98963476517238
+      ],
+      "contextMarginKm": 10,
+      "query": "[out:json][timeout:180];(way[\"highway\"][\"area\"!=\"yes\"](33.8951039,113.6268913,34.1885019,113.9896348);relation[\"type\"=\"restriction\"](33.8951039,113.6268913,34.1885019,113.9896348);node[\"barrier\"](33.8951039,113.6268913,34.1885019,113.9896348););out meta geom;",
+      "coordSystem": "WGS84",
+      "source": "OpenStreetMap",
+      "license": "ODbL-1.0",
+      "attribution": "© OpenStreetMap contributors",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "osmBaseTimestamp": "2026-10-27T11:13:23Z",
+      "roadCount": 2987,
+      "nodeCount": 16804,
+      "directedEdgeCount": 28705,
+      "restrictionCount": 2,
+      "skippedWayCount": 0,
+      "roadTypes": {
+        "motorway": 348,
+        "primary": 229,
+        "unclassified": 465,
+        "residential": 374,
+        "primary_link": 31,
+        "motorway_link": 117,
+        "trunk_link": 69,
+        "trunk": 196,
+        "tertiary": 609,
+        "secondary": 301,
+        "tertiary_link": 11,
+        "service": 162,
+        "footway": 41,
+        "path": 3,
+        "secondary_link": 6,
+        "cycleway": 13,
+        "track": 1,
+        "construction": 2,
+        "steps": 2,
+        "services": 4,
+        "living_street": 3
+      },
+      "lengthKm": 3147.173,
+      "topology": "shared OSM node IDs; geometry crossings are not merged",
+      "turnRestrictionsApplied": false,
+      "routingReady": false
+    }
+  },
+  "buildings": {
+    "status": "acquired",
+    "count": 397,
+    "invalid_geometry": 0,
+    "empty_geometry": 0,
+    "duplicate_ids": 0,
+    "geometry_types": {
+      "Polygon": 172,
+      "Point": 225
+    },
+    "metadata": {
+      "crs": "EPSG:4326",
+      "processed_at": "2026-10-27T11:14:54.572848+00:00",
+      "feature_count": 397,
+      "source": "OpenStreetMap + AMap parking POIs",
+      "license": "Mixed: ODbL-1.0 / AMap terms; source field retained",
+      "categories": {
+        "landuse": 172,
+        "parking": 225
+      },
+      "invalid_osm_geometry": 0,
+      "osm_current_query_succeeded": false,
+      "completeness": "Volunteered mapping is incomplete. Point parking records may refer to polygon facilities; record count is not unique facility count."
+    }
+  },
+  "network": {
+    "node_count_input": 16804,
+    "directed_edges_input": 28705,
+    "motor_scenario_nodes": 16547,
+    "motor_scenario_edges": 28023,
+    "weak_components": 11,
+    "strong_components": 1482,
+    "largest_weak_component_nodes": 16478,
+    "largest_weak_component_percent": 99.58300598295763,
+    "largest_strong_component_nodes": 15005,
+    "missing_endpoint_edges": 0,
+    "nonpositive_length_edges": 0,
+    "turn_restriction_records": 2,
+    "turn_restrictions_applied": false,
+    "barrier_nodes": 20,
+    "access_unspecified_edges_assumed_passable": 28023,
+    "snap_distance_max_m_assumption": 300,
+    "real_speed_data": false,
+    "network_context_margin_km": 10,
+    "ten_minute_analysis_status": "supports scenario preparation; turn restrictions/barriers/entrances require review. No real-time guarantee.",
+    "stations_over_300m_from_node": 1
+  },
+  "population": {
+    "source": "GHS-POP",
+    "source_url": "https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_POP_GLOBE_R2023A/GHS_POP_E2025_GLOBE_R2023A_4326_3ss/V1-0/tiles/GHS_POP_E2025_GLOBE_R2023A_4326_3ss_V1_0_R6_C30.zip",
+    "metadata_url": "https://human-settlement.emergency.copernicus.eu/ghs_pop2023.php",
+    "reference_year": 2025,
+    "release": "R2023A V1-0",
+    "is_projection": true,
+    "units": "estimated persons per pixel; not persons/km2",
+    "crs": "EPSG:4326",
+    "resolution_degrees": [
+      0.0008333333300326924,
+      0.000833333329979504
+    ],
+    "resolution_m_at_study_centre": [
+      76.9533525364096,
+      92.43589419372974
+    ],
+    "dimensions": [
+      177,
+      137
+    ],
+    "nodata": -200.0,
+    "source_nodata": null,
+    "pixel_centres_inside": 12668,
+    "valid_cells": 12668,
+    "nodata_inside": 0,
+    "estimated_population_sum": 892502.8432060895,
+    "min": 0.0,
+    "max": 1558.4812215169272,
+    "negative_valid_values": 0,
+    "source_tile_bounds": [
+      109.99208292007663,
+      29.099583419121316,
+      119.99208288046893,
+      39.099583378875366
+    ],
+    "processed_at": "2026-10-27T11:36:30.788234+00:00",
+    "clip_method": "No resampling; pixel-centre mask. Border cells not area-weighted. Modelled total is not district census.",
+    "worldpop_attempt": "Official 2025 922251437-byte raster download interrupted after ~25 MiB; HTTP Range returned 200, not 206. Partial .part file is not a valid raster and is excluded.",
+    "validation_warning": "Government introduction reports about 500000/525000 people with mixed dates and scopes, while the cropped GHSL sum is about 892503. Review model/vintage/boundary mismatch before absolute demand scaling; do not call this the official district population."
+  },
+  "amap_query_completeness": [
+    {
+      "query": "charging",
+      "reported_count_peak": 594,
+      "unique_downloaded": 190,
+      "count_shortfall": 404,
+      "status": "api_result_window_exhausted",
+      "exhaustive": false
+    },
+    {
+      "query": "government_transport",
+      "reported_count_peak": 600,
+      "unique_downloaded": 225,
+      "count_shortfall": 375,
+      "status": "api_result_window_exhausted",
+      "exhaustive": false
+    }
+  ],
+  "boundary_comparison": {
+    "project_area_km2": 90.10933380303206,
+    "government_page_area_km2": 89.3729,
+    "government_url": "https://www.weidu.gov.cn/zjwd/walkIntoWD.html",
+    "difference_percent": 0.824001238666372,
+    "decision": "Do not force population totals to match a government figure with uncertain boundary/vintage."
+  }
+}

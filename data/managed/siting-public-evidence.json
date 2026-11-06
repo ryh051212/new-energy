@@ -1,0 +1,22 @@
+{
+  "parking": [
+    {
+      "amapId": "B0HDG5N918",
+      "expectedName": "春秋广场地下停车场",
+      "capacity": 524,
+      "capacityKind": "design",
+      "capacityDate": "2021-11-18",
+      "capacitySource": "许昌市投资集团有限公司",
+      "capacitySourceUrl": "https://www.xcstzzgs.cn/e/action/ShowInfo.php?classid=12&id=132"
+    }
+  ],
+  "documents": [
+    {"id":"parking-roadside","title":"路内停车场布局规划图","publishedAt":"2022-09-19","file":"weidu-parking-roadside-2022.jpg","sourceUrl":"https://zrzyhghj.xuchang.gov.cn/xxgg/013019/20220919/2500cd1e-440b-4f17-b81b-1d2da96a5dd1.html","kind":"规划公示图，非现状停车数据"},
+    {"id":"parking-offroad","title":"路外公共停车场布局规划图","publishedAt":"2022-09-19","file":"weidu-parking-offroad-2022.jpg","sourceUrl":"https://zrzyhghj.xuchang.gov.cn/xxgg/013019/20220919/2500cd1e-440b-4f17-b81b-1d2da96a5dd1.html","kind":"规划公示图，非现状停车数据"}
+  ],
+  "sources": [
+    {"title":"魏都区70号地块用地规划公示","date":"2024-12-24","url":"https://zrzyhghj.xuchang.gov.cn/xxgg/013019/20241224/6cd76167-2282-4ca1-80e1-a10c3bfaed83.html","note":"批前公示，仅作具体地块资料参考"},
+    {"title":"许昌消防设计审查办理资料","date":"2023-03-16","url":"https://xcszjj.xuchang.gov.cn/gsgg/002003/20230316/f61e433e-da66-4f54-bab6-3d94bb36e2df.html","note":"办理资料，不是当前点位的审验结果"},
+    {"title":"国网可开放容量公开查询","url":"https://www.95598.cn/osgweb/ipOpenCapacityAndRestrictions","note":"需按地区查询；本项目尚未取得许昌逐台配变余量"}
+  ]
+}

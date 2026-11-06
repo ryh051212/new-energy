@@ -1,0 +1,39 @@
+{
+  "gridId": null,
+  "population": {
+    "modelPopulation": null,
+    "modelPopulationDensityPerKm2": null,
+    "censusPopulation": null,
+    "privateEvCount": null,
+    "dataYear": null,
+    "dataBasis": null
+  },
+  "hourlyDemand": [
+    {
+      "dayType": "weekday",
+      "hour": 0,
+      "relativeDemandIndex": null,
+      "observedChargingSessions": null,
+      "energyKwh": null,
+      "peakPowerKw": null,
+      "dataBasis": null
+    }
+  ],
+  "stations": [
+    {
+      "id": null,
+      "name": null,
+      "operator": null,
+      "publicAccess": null,
+      "chargeType": null,
+      "totalCount": null,
+      "fastCount": null,
+      "regularCount": null,
+      "availableCount": null,
+      "powerKw": null,
+      "observedAt": null,
+      "dataSource": null
+    }
+  ],
+  "notes": "null 表示待接入；不得按 0 处理。relativeDemandIndex 是情景相对指数，observedChargingSessions、energyKwh 和 peakPowerKw 只接受相同网格及时段口径的数据。"
+}

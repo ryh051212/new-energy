@@ -1,0 +1,10 @@
+﻿id,geography,reference_period,indicator,value,unit,basis,source_url,note
+hn_cars,河南省,2025年末,民用汽车,2310.69,万辆,official_observed_statistic,https://dzb.henandaily.cn/html5/2026-04/16/content_15_1789157.htm,包含非私人车辆；不是新能源汽车数
+hn_private,河南省,2025年末,私人汽车,2146.15,万辆,official_observed_statistic,https://dzb.henandaily.cn/html5/2026-04/16/content_15_1789157.htm,全省全部能源私人汽车，不能直接分配成魏都区私人新能源车
+xc_target_stations,许昌市中心城区,2023–2025规划,拟建设充电站/桩群,126,座,planning_target,https://sfgw.xuchang.gov.cn/ztzl/079004/20241015/aedd6247-2372-436e-9802-663a32bfe930.html,规划目标，不是2025年底建成清单
+xc_target_chargers,许昌市中心城区,2023–2025规划,拟建设充电桩,5546,个,planning_target,https://sfgw.xuchang.gov.cn/ztzl/079004/20241015/aedd6247-2372-436e-9802-663a32bfe930.html,规划桩数，不是枪数或当前可用数
+xc_2024_new_stations,许昌市,2024年度截至8月上旬,该年度已建设完成充电站,87,个,government_reported_increment,https://xcszjj.xuchang.gov.cn/uploadfile/ce6559b0-1072-4373-91b3-1fac9b3e0718/20241112104420703.pdf,年度建设任务完成量，不是全市现状存量
+xc_2024_new_chargers,许昌市,2024年度截至8月上旬,该年度已建设完成充电桩,687,个,government_reported_increment,https://xcszjj.xuchang.gov.cn/uploadfile/ce6559b0-1072-4373-91b3-1fac9b3e0718/20241112104420703.pdf,不要与1181个枪混用
+xc_2024_new_guns,许昌市,2024年度截至8月上旬,该年度已建设完成充电枪,1181,个,government_reported_increment,https://xcszjj.xuchang.gov.cn/uploadfile/ce6559b0-1072-4373-91b3-1fac9b3e0718/20241112104420703.pdf,不要作为魏都区枪总数
+cn_public_2025,全国,2025年12月底,公共充电设施（枪）,471.7,万个,official_observed_statistic,https://www.nea.gov.cn/20260121/33ceb49dc4eb472aa48c62ab3b2ddbbb/c.html,全国参考，不是私家车公共充电依赖率
+cn_private_2025,全国,2025年12月底,私人充电设施（枪）,1537.5,万个,official_observed_statistic,https://www.nea.gov.cn/20260121/33ceb49dc4eb472aa48c62ab3b2ddbbb/c.html,桩车配比不等于有家充车辆比例

@@ -1,0 +1,18 @@
+{
+  "description": "每轮完成代码后检查项目，更新本地报告，并按 AGENTS.md 进行一次可读性复查。",
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/scripts/checks/code-quality-hook.mjs\"",
+            "commandWindows": "powershell.exe -NoProfile -NonInteractive -Command \"[Console]::OutputEncoding = [System.Text.UTF8Encoding]::new(); & node ((git rev-parse --show-toplevel) + '/scripts/checks/code-quality-hook.mjs')\"",
+            "timeout": 660,
+            "statusMessage": "检查代码并更新可读性复查报告"
+          }
+        ]
+      }
+    ]
+  }
+}

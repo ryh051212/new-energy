@@ -4,7 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "test": "node --test tests/frontend/*.test.mjs",
+    "test:backend": "node scripts/checks/test-backend.mjs",
+    "test:tooling": "node --test tests/tooling/*.test.mjs",
+    "check:structure": "node scripts/checks/check-structure.mjs",
+    "quality": "node scripts/checks/code-quality.mjs",
     "dev": "vite",
+    "dev:all": "node scripts/start-dev.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },

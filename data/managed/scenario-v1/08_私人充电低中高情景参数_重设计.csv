@@ -1,0 +1,4 @@
+﻿scenario_id,scenario_label,public_demand_level,ev_household_penetration,fixed_parking_share,private_install_success_share,public_charging_dependence_share,private_charging_probability_per_day,mean_energy_per_session_kwh,ac7_share,ac11_share,public_demand_multiplier,interpretation,parameter_nature,evidence_level,simulation_version
+low_public_demand,低公共充电需求,低,0.11,0.72,0.82,0.22,0.3,18,0.92,0.08,0.72,私人充电条件较好：固定车位和报装成功率较高，公共充电依赖较低。,研究者设定的敏感性情景，不是魏都区实测概率,低至中；方向受政策与文献约束，具体数值待本地调查校准,weidu-private-charging-scenario-v1.0-20261028
+base,中等公共充电需求,中,0.14,0.55,0.65,0.42,0.33,20,0.85,0.15,1,私人充电条件中等，作为主分析基准。,研究者设定的敏感性情景，不是魏都区实测概率,低至中；方向受政策与文献约束，具体数值待本地调查校准,weidu-private-charging-scenario-v1.0-20261028
+high_public_demand,高公共充电需求,高,0.17,0.36,0.45,0.65,0.36,22,0.78,0.22,1.32,新能源汽车家庭比例较高，但固定车位与报装条件受限，公共充电依赖显著提高。,研究者设定的敏感性情景，不是魏都区实测概率,低至中；方向受政策与文献约束，具体数值待本地调查校准,weidu-private-charging-scenario-v1.0-20261028

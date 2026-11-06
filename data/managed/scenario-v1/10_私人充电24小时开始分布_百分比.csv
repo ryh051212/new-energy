@@ -1,0 +1,3 @@
+﻿profile_id,charging_location,day_type,day_type_label,unit,H00,H01,H02,H03,H04,H05,H06,H07,H08,H09,H10,H11,H12,H13,H14,H15,H16,H17,H18,H19,H20,H21,H22,H23,row_sum_percent,profile_nature,simulation_version
+private_home_weekday_v0.1,private_home,weekday,工作日,percent_of_daily_private_charging_start_events,2,1,1,1,1,1,1,2,3,3,3,3,4,3,3,3,4,6,9,11,11,10,8,6,100,文献规律约束的初始情景曲线；非魏都区实测；各情景共用归一化形状，情景差异由总量参数控制,weidu-private-charging-scenario-v1.0-20261028
+private_home_weekend_v0.1,private_home,weekend,周末,percent_of_daily_private_charging_start_events,2,1,1,1,1,1,1,1,2,2,3,4,5,5,5,5,5,6,8,10,10,9,7,5,100,文献规律约束的初始情景曲线；非魏都区实测；各情景共用归一化形状，情景差异由总量参数控制,weidu-private-charging-scenario-v1.0-20261028
